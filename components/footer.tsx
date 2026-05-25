@@ -2,17 +2,16 @@ import Link from 'next/link'
 
 function LogoMarkCream() {
   return (
-    <svg viewBox="0 0 44 58" width="22" height="29" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <ellipse cx="24" cy="5" rx="3.5" ry="6" fill="rgba(247,242,232,0.5)" transform="rotate(-22 24 5)" />
+    <svg viewBox="0 0 62 86" width="18" height="25" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M 27 13 C 25 6 15 5 16 12 C 17 19 25 16 27 13 Z" fill="rgba(247,242,232,0.5)" />
       <path
-        d="M 26 9 C 24 3 16 1 11 5 C 6 9 7 17 12 20 C 17 23 22 21 22 27 C 22 33 14 37 10 42 C 6 47 9 54 18 54 C 27 54 34 47 30 42"
-        stroke="#F7F2E8" strokeWidth="2.3" strokeLinecap="round" strokeLinejoin="round"
+        d="M 28 14 C 40 8 56 20 51 34 C 46 48 24 46 20 56 C 14 66 20 78 34 76 C 48 74 56 62 47 56"
+        stroke="#F7F2E8" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"
       />
-      <path d="M 5 28 L 34 14" stroke="#F7F2E8" strokeWidth="2.3" strokeLinecap="round" />
-      <path d="M 30 42 C 36 38 39 43 34 50" stroke="#F7F2E8" strokeWidth="2.3" strokeLinecap="round" />
-      <path d="M 17 13 C 18 11 22 11 23 13 C 24 16 22 19 19 21 C 16 19 15 16 17 13 Z" fill="#E2845F" />
-      <ellipse cx="15" cy="54" rx="3.2" ry="5" fill="rgba(247,242,232,0.4)" transform="rotate(18 15 54)" />
-      <ellipse cx="25" cy="53" rx="2.8" ry="4.5" fill="rgba(247,242,232,0.4)" transform="rotate(-22 25 53)" />
+      <path d="M 8 55 L 52 32" stroke="#F7F2E8" strokeWidth="2.5" strokeLinecap="round" />
+      <path d="M 44 27 C 38 22 36 15 40 14 C 42 13 44 17 44 17 C 44 17 46 13 48 14 C 52 15 50 22 44 27 Z" fill="#E2845F" />
+      <path d="M 24 78 C 18 71 10 72 12 78 C 14 84 22 81 24 78 Z" fill="rgba(247,242,232,0.45)" />
+      <path d="M 36 77 C 42 70 50 71 48 77 C 46 83 38 80 36 77 Z" fill="rgba(247,242,232,0.45)" />
     </svg>
   )
 }
