@@ -1,4 +1,4 @@
-/* Dashboard Preview — fully coded, static, server component */
+/* Dashboard Preview: fully coded, static, server component */
 
 function LogoMarkSmall() {
   return (

@@ -116,7 +116,7 @@ export default function PricingCards() {
           </Link>
         </div>
 
-        {/* Sprout — featured */}
+        {/* Sprout (featured) */}
         <div
           className="bg-white rounded-2xl p-7 relative"
           style={{
@@ -146,7 +146,7 @@ export default function PricingCards() {
             </div>
             <div className="mt-2 flex items-center gap-1.5">
               <div className="w-1.5 h-1.5 rounded-full bg-sage-green" />
-              <p className="text-[12px] text-sage-green font-medium">14-day free trial — no credit card required</p>
+              <p className="text-[12px] text-sage-green font-medium">14-day free trial, no credit card required</p>
             </div>
             <p className="text-[13px] text-dark-text/50 mt-1">For licensed centers & home providers</p>
           </div>
@@ -209,7 +209,7 @@ export default function PricingCards() {
       {/* Footer note */}
       <div className="text-center mt-10 space-y-2">
         <p className="text-[13px] text-dark-text/45">
-          Fair Pricing Guarantee — we verify license type and enrollment to keep pricing fair for all.
+          Fair Pricing Guarantee: we verify license type and enrollment to keep pricing fair for all.
         </p>
         <p className="text-[13px] text-dark-text/40">
           🔒 SOC 2 compliant · Canadian data residency · 14-day free trial

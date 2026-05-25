@@ -20,9 +20,9 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  title: 'Sprout & Vine — Childcare Management Built for Canada',
+  title: 'Sprout & Vine | Childcare Management Built for Canada',
   description:
-    'Calm operational infrastructure for Canadian childcare centers. Attendance, billing, CWELCC tracking, and Smart Pickup Authorization — all in one platform.',
+    'Calm operational infrastructure for Canadian childcare centers. Attendance, billing, CWELCC tracking, and Smart Pickup Authorization. All in one platform.',
 }
 
 export default function RootLayout({

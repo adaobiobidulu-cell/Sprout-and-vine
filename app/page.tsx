@@ -1,8 +1,10 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import ROICalculator from '@/components/roi-calculator'
 import ProductTour from '@/components/product-tour'
 import PricingCards from '@/components/pricing-cards'
 import DashboardPreview from '@/components/dashboard-preview'
+import ScrollVine from '@/components/scroll-vine'
 
 /* ─── Data ───────────────────────────────────────────────────────── */
 
@@ -77,7 +79,7 @@ const features = [
   },
   {
     name: 'Enrollment & Waitlist',
-    desc: 'From first inquiry to first day — digitally managed.',
+    desc: 'From first inquiry to first day, digitally managed.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="#2F4A3A" strokeWidth="1.5" strokeLinecap="round">
         <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
@@ -136,11 +138,12 @@ function PhoneShell({ children }: { children: React.ReactNode }) {
 export default function Home() {
   return (
     <>
+      <ScrollVine />
       {/* ── SECTION 1: HERO ─────────────────────────────────────── */}
       <section className="py-16 md:py-24 px-5 md:px-8 bg-cream">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
 
-          {/* Text — renders 2nd on mobile (photo is first) */}
+          {/* Text: renders 2nd on mobile (photo is first) */}
           <div className="order-2 lg:order-1">
             <SectionLabel>Growing connections. Nurturing futures.</SectionLabel>
 
@@ -154,7 +157,7 @@ export default function Home() {
             </h1>
 
             <p className="text-[17px] text-dark-text/65 mb-9 max-w-[440px] leading-relaxed">
-              Attendance, billing, parent communication, staffing, and Smart Pickup Authorization — all in one calm operational platform.
+              Attendance, billing, parent communication, staffing, and Smart Pickup Authorization. All in one calm operational platform.
             </p>
 
             <div className="flex flex-wrap items-center gap-3 mb-9">
@@ -190,30 +193,21 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Photo + floating card — renders 1st on mobile */}
+          {/* Photo + floating card: renders 1st on mobile */}
           <div className="order-1 lg:order-2 relative">
             <div
               className="aspect-[4/3] rounded-3xl overflow-hidden relative"
               style={{ boxShadow: '0 24px 72px rgba(47,74,58,0.2)' }}
             >
-              {/* Warm placeholder until hero-photo.jpg is supplied */}
-              <div
-                className="absolute inset-0"
-                style={{
-                  background: 'linear-gradient(135deg, #5a8c6e 0%, #4a7a5c 35%, #3a6852 65%, #2F4A3A 100%)',
-                }}
-              >
-                <div
-                  className="absolute inset-0"
-                  style={{ background: 'radial-gradient(ellipse at 30% 35%, rgba(174,193,176,0.35) 0%, transparent 55%)' }}
-                />
-                <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
-                  <div className="text-5xl opacity-60">🌿</div>
-                  <p className="text-cream/25 text-[12px] font-medium">hero-photo.jpg</p>
-                </div>
-              </div>
+              <Image
+                src="/hero-photo.svg"
+                alt="Children engaged in creative activities with their educator at Little Learners Preschool"
+                fill
+                className="object-cover"
+                priority
+              />
 
-              {/* Vine decoration — top-left */}
+              {/* Vine decoration top-left */}
               <svg className="absolute top-0 left-0 w-20 h-44 pointer-events-none" viewBox="0 0 64 176" fill="none">
                 <path d="M 20 4 C 22 20 12 36 18 54 C 24 72 36 78 30 102 C 24 126 10 132 16 158" stroke="#2F4A3A" strokeWidth="1.8" strokeLinecap="round" opacity="0.65" />
                 <ellipse cx="26" cy="60" rx="7" ry="11" fill="#AEC1B0" transform="rotate(-20 26 60)" opacity="0.7" />
@@ -287,12 +281,12 @@ export default function Home() {
               </div>
               <p className="text-[13px] font-medium text-dark-text/50 mb-4">For aspiring childcare operators</p>
               <p className="text-[14px] text-dark-text/65 leading-relaxed mb-6">
-                Planning your center? Build your business plan, complete your provincial licensing checklist, and get everything ready — at no cost.
+                Planning your center? Build your business plan, complete your provincial licensing checklist, and get everything ready at no cost.
               </p>
               <Link href="/pricing" className="text-[14px] font-medium text-forest-green hover:underline">Start planning →</Link>
             </div>
 
-            {/* Sprout — featured */}
+            {/* Sprout (featured) */}
             <div
               className="bg-white rounded-2xl p-7 relative"
               style={{ border: '2px solid #2F4A3A', boxShadow: '0 12px 40px rgba(47,74,58,0.14)' }}
@@ -307,7 +301,7 @@ export default function Home() {
               </div>
               <p className="text-[13px] font-medium text-dark-text/50 mb-4">For growing centers & home providers</p>
               <p className="text-[14px] text-dark-text/65 leading-relaxed mb-6">
-                You're open. Now run daily operations beautifully — attendance, billing, parent communication, and Smart Pickup, all in one place.
+                You're open. Now run daily operations beautifully: attendance, billing, parent communication, and Smart Pickup, all in one place.
               </p>
               <Link href="/contact" className="text-[14px] font-medium text-forest-green hover:underline">Start free trial →</Link>
             </div>
@@ -351,7 +345,7 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Bottom row — centered 3 */}
+          {/* Bottom row: centered 3 */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-10 mt-10 md:max-w-3xl md:mx-auto">
             {features.slice(4).map(f => (
               <div key={f.name} className="flex flex-col items-center text-center">
@@ -380,12 +374,12 @@ export default function Home() {
               Peace of mind,<br />every single pickup.
             </h2>
             <p className="text-[16px] text-cream/65 leading-relaxed mb-8 max-w-lg">
-              Most apps tell parents their child was picked up. Sprout &amp; Vine tells them <em>who</em> picked up their child, shows a photo, and sends an instant notification — before they've left the parking lot.
+              Most apps tell parents their child was picked up. Sprout &amp; Vine tells them <em>who</em> picked up their child, shows a photo, and sends an instant notification before they've left the parking lot.
             </p>
             <ul className="space-y-4">
               {[
                 { icon: '🔒', text: 'Photo-verified authorized pickup list' },
-                { icon: '📱', text: 'Instant notification — name, photo, and timestamp' },
+                { icon: '📱', text: 'Instant notification: name, photo, and timestamp' },
                 { icon: '🚗', text: 'Real-time pickup ETA from parents and guardians' },
               ].map(item => (
                 <li key={item.text} className="flex items-start gap-3 text-[15px] text-cream/80">
@@ -489,7 +483,7 @@ export default function Home() {
           <div>
             <SectionLabel>Enrollment Made Simple</SectionLabel>
             <h2 className="font-display font-medium text-forest-green leading-[1.08] mb-6" style={{ fontSize: 'clamp(34px, 4vw, 50px)' }}>
-              From first inquiry to<br />first day — beautifully managed.
+              From first inquiry to<br />first day, beautifully managed.
             </h2>
             <p className="text-[16px] text-dark-text/65 leading-relaxed mb-8">
               Canadian centers carry waitlists of 2–3 years. Sprout &amp; Vine manages the entire journey: inquiry forms, waitlist positions, enrollment packages, e-signature, and subsidy paperwork pre-filled from your CWELCC data. No spreadsheets. No paper. No stress.
@@ -548,7 +542,7 @@ export default function Home() {
           <div className="order-1 lg:order-2">
             <SectionLabel>The Vine Parent App</SectionLabel>
             <h2 className="font-display font-medium text-forest-green leading-[1.08] mb-5" style={{ fontSize: 'clamp(34px, 4vw, 50px)' }}>
-              Parents aren't just notified —<br />they're connected.
+              Parents aren't just notified.<br />They're connected.
             </h2>
             <p className="text-[16px] text-dark-text/65 leading-relaxed mb-8">
               Most apps give parents a push notification. Vine gives them a window into their child's world. That trust is your most powerful enrollment tool.
@@ -560,7 +554,7 @@ export default function Home() {
                   icon: '👨‍👩‍👧',
                   title: 'Family Circle',
                   badge: 'Standout feature',
-                  desc: 'Mom, Dad, grandparents, step-parents, and nannies — each with role-based access. Co-parents in separate households both stay fully in the loop.',
+                  desc: 'Mom, Dad, grandparents, step-parents, and nannies, each with role-based access. Co-parents in separate households both stay fully in the loop.',
                 },
                 {
                   icon: '🔒',
@@ -570,7 +564,7 @@ export default function Home() {
                 {
                   icon: '🌱',
                   title: 'Milestone & Development Timeline',
-                  desc: 'Teachers tag everyday moments — first scissors, first friend, first full sentence. They auto-build a keepsake development story parents will treasure.',
+                  desc: 'Teachers tag everyday moments: first scissors, first friend, first full sentence. They auto-build a keepsake development story parents will treasure.',
                 },
                 {
                   icon: '📖',
@@ -618,7 +612,7 @@ export default function Home() {
             Built for the people<br />who show up every day.
           </h2>
           <p className="text-[16px] text-dark-text/65 leading-relaxed mb-10 max-w-2xl mx-auto">
-            Directors choose Sprout &amp; Vine. Educators love it. That's not a coincidence — we designed every daily workflow around the people actually using it.
+            Directors choose Sprout &amp; Vine. Educators love it. That's not a coincidence. We designed every daily workflow around the people actually using it.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10 text-left">
@@ -679,7 +673,7 @@ export default function Home() {
             The only platform built around<br />CWELCC from the ground up.
           </h2>
           <p className="text-[16px] text-dark-text/65 leading-relaxed mb-12 max-w-2xl">
-            Canada's childcare landscape is unlike any other. Sprout &amp; Vine is built specifically for Canadian operators — with CWELCC subsidy tracking, bilingual support (English &amp; French), and provincial compliance built in from day one. No US competitor comes close.
+            Canada's childcare landscape is unlike any other. Sprout &amp; Vine is built specifically for Canadian operators, with CWELCC subsidy tracking, bilingual support (English &amp; French), and provincial compliance built in from day one. No US competitor comes close.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -752,7 +746,7 @@ export default function Home() {
                   "{t.quote}"
                 </p>
                 <div>
-                  <p className="text-[14px] font-semibold text-dark-text">— {t.name}</p>
+                  <p className="text-[14px] font-semibold text-dark-text">{t.name}</p>
                   <p className="text-[12px] text-dark-text/45 mt-0.5">{t.role}</p>
                 </div>
               </div>

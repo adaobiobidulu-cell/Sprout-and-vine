@@ -64,7 +64,7 @@ function CheckInFrame({ step }: { step: number }) {
       </div>
       <p className="text-[14px] font-medium text-dark-text/60 text-center">Parent scans the classroom QR code<br />or staff taps a child's name</p>
       <div className="w-full py-3 rounded-xl bg-forest-green text-white text-[13px] font-medium text-center">
-        Tap to check in — Lucas Chen
+        Tap to check in: Lucas Chen
       </div>
     </div>
   )
@@ -142,7 +142,7 @@ function ReportFrame({ step }: { step: number }) {
       </div>
       <div className="rounded-xl border border-[rgba(47,74,58,0.1)] p-3">
         <p className="text-[12px] text-dark-text/70 leading-relaxed">
-          "Emma had a wonderful morning! She was engaged during art and spent extra time on her painting. She tried scissors for the first time — a big milestone! 🌱"
+          "Emma had a wonderful morning! She was engaged during art and spent extra time on her painting. She tried scissors for the first time. A big milestone! 🌱"
         </p>
       </div>
       <div className="flex gap-2">

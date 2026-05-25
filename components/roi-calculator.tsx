@@ -104,7 +104,7 @@ export default function ROICalculator() {
 
             <div className="border-t border-[rgba(47,74,58,0.08)] pt-5">
               <p className="text-[12px] text-dark-text/40 uppercase tracking-wide mb-1.5">
-                That's {annualHours} hours/year — worth
+                That's {annualHours} hours/year, worth
               </p>
               <div className="flex items-baseline gap-1.5">
                 <span className="font-display text-[38px] font-medium text-terracotta leading-none">
@@ -130,7 +130,7 @@ export default function ROICalculator() {
             href="/contact"
             className="mt-6 block bg-terracotta text-white text-[14px] font-medium px-6 py-3.5 rounded-lg text-center hover:bg-[#d4724e] transition-colors"
           >
-            Start your free trial — see the savings yourself
+            Start your free trial and see the savings yourself
           </Link>
         </div>
       </div>

@@ -11,7 +11,7 @@
 }
 
 @theme inline {
-  /* Fonts — reference CSS variables set by Next.js font optimization */
+  /* Fonts: reference CSS variables set by Next.js font optimization */
   --font-display: var(--font-cormorant);
   --font-sans: var(--font-dm-sans);
 }
@@ -36,7 +36,7 @@ html {
   animation: float 3s ease-in-out infinite;
 }
 
-/* Custom range slider — ROI calculator */
+/* Custom range slider for ROI calculator */
 input[type='range'] {
   -webkit-appearance: none;
   appearance: none;
