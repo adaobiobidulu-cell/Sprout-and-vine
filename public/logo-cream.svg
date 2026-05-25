@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 58" width="310" height="58" fill="none">
+  <defs>
+    <style>
+      .wordmark { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 42px; font-weight: 500; fill: #F7F2E8; }
+    </style>
+  </defs>
+  <!-- sprout -->
+  <text class="wordmark" x="0" y="45" letter-spacing="-0.5">sprout</text>
+  <!-- Botanical & mark — cream version -->
+  <g transform="translate(136, 2) scale(0.9)">
+    <ellipse cx="24" cy="5" rx="3.5" ry="6" fill="rgba(247,242,232,0.55)" transform="rotate(-22 24 5)"/>
+    <path d="M 26 9 C 24 3 16 1 11 5 C 6 9 7 17 12 20 C 17 23 22 21 22 27 C 22 33 14 37 10 42 C 6 47 9 54 18 54 C 27 54 34 47 30 42"
+          stroke="#F7F2E8" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 5 28 L 34 14" stroke="#F7F2E8" stroke-width="2.3" stroke-linecap="round"/>
+    <path d="M 30 42 C 36 38 39 43 34 50" stroke="#F7F2E8" stroke-width="2.3" stroke-linecap="round"/>
+    <path d="M 17 13 C 18 11 22 11 23 13 C 24 16 22 19 19 21 C 16 19 15 16 17 13 Z" fill="#E2845F"/>
+    <ellipse cx="15" cy="54" rx="3.2" ry="5" fill="rgba(247,242,232,0.45)" transform="rotate(18 15 54)"/>
+    <ellipse cx="25" cy="53" rx="2.8" ry="4.5" fill="rgba(247,242,232,0.45)" transform="rotate(-22 25 53)"/>
+  </g>
+  <!-- vine -->
+  <text class="wordmark" x="184" y="45" letter-spacing="-0.5">vine</text>
+</svg>

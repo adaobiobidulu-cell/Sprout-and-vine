@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand colors */
+  --color-forest-green: #2F4A3A;
+  --color-sage-green: #6EB76F;
+  --color-light-sage: #AEC1B0;
+  --color-terracotta: #E2845F;
+  --color-cream: #F7F2E8;
+  --color-dark-text: #1C2B22;
+}
+
+@theme inline {
+  /* Fonts — reference CSS variables set by Next.js font optimization */
+  --font-display: var(--font-cormorant);
+  --font-sans: var(--font-dm-sans);
+}
+
+/* Base styles */
+body {
+  background-color: #F7F2E8;
+  color: #1C2B22;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
