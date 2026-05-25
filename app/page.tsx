@@ -200,9 +200,10 @@ export default function Home() {
               style={{ boxShadow: '0 24px 72px rgba(47,74,58,0.2)' }}
             >
               <Image
-                src="/hero-photo.svg"
-                alt="Children engaged in creative activities with their educator at Little Learners Preschool"
+                src="/hero-photo.jpg"
+                alt="Educator giving a high-five to a child during a painting activity at a childcare centre"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
                 priority
               />
