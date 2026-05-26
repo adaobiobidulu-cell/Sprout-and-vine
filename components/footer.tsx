@@ -1,4 +1,7 @@
+'use client'
+
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 function LogoMarkCream() {
   return (
@@ -53,7 +56,14 @@ const footerColumns = [
   },
 ]
 
+const frenchPages: Record<string, string> = { '/': '/fr', '/pricing': '/fr/pricing' }
+
 export default function Footer() {
+  const pathname = usePathname()
+  const isFr = pathname.startsWith('/fr')
+  const frHref = frenchPages[pathname] ?? '/fr'
+  const enHref = isFr ? (pathname.replace(/^\/fr/, '') || '/') : pathname
+
   return (
     <footer className="bg-forest-green text-cream">
       {/* Main footer content */}
@@ -107,11 +117,11 @@ export default function Footer() {
       <div className="border-t border-cream/10">
         <div className="max-w-7xl mx-auto px-5 md:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
           <div className="flex items-center gap-3">
-            <Link href="/" className="text-[13px] font-semibold text-cream/80 hover:text-cream transition-colors">
+            <Link href={enHref} className={`text-[13px] transition-colors ${!isFr ? 'font-semibold text-cream' : 'text-cream/45 hover:text-cream'}`}>
               EN
             </Link>
             <span className="text-cream/25 text-[12px] select-none">|</span>
-            <Link href="/fr" className="text-[13px] text-cream/45 hover:text-cream transition-colors">
+            <Link href={frHref} className={`text-[13px] transition-colors ${isFr ? 'font-semibold text-cream' : 'text-cream/45 hover:text-cream'}`}>
               FR
             </Link>
           </div>

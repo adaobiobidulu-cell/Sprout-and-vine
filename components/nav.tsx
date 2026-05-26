@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 function LogoMark() {
   return (
@@ -24,6 +25,38 @@ function ChevronDown() {
     <svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true">
       <path d="M2 4l4 4 4-4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
+  )
+}
+
+/* Pages that have a /fr equivalent */
+const frenchPages: Record<string, string> = {
+  '/': '/fr',
+  '/pricing': '/fr/pricing',
+}
+
+function LangToggle() {
+  const pathname = usePathname()
+  const isFr = pathname.startsWith('/fr')
+
+  const frHref = frenchPages[pathname] ?? '/fr'
+  const enHref = isFr ? (pathname.replace(/^\/fr/, '') || '/') : pathname
+
+  return (
+    <div className="flex items-center gap-1.5 text-[13px] font-medium border border-[rgba(47,74,58,0.18)] rounded-full px-3 py-1">
+      <Link
+        href={enHref}
+        className={`transition-colors ${!isFr ? 'text-forest-green font-semibold' : 'text-dark-text/40 hover:text-forest-green'}`}
+      >
+        EN
+      </Link>
+      <span className="text-dark-text/20 select-none text-[11px]">|</span>
+      <Link
+        href={frHref}
+        className={`transition-colors ${isFr ? 'text-forest-green font-semibold' : 'text-dark-text/40 hover:text-forest-green'}`}
+      >
+        FR
+      </Link>
+    </div>
   )
 }
 
@@ -85,7 +118,8 @@ export default function Nav() {
         </nav>
 
         {/* Desktop CTAs */}
-        <div className="hidden md:flex items-center gap-5">
+        <div className="hidden md:flex items-center gap-4">
+          <LangToggle />
           <Link
             href="/login"
             className="text-[14px] font-medium text-dark-text/80 hover:text-forest-green transition-colors"
@@ -148,6 +182,9 @@ export default function Nav() {
               </Link>
             ))}
             <div className="pt-4 flex flex-col gap-3">
+              <div className="py-1">
+                <LangToggle />
+              </div>
               <Link
                 href="/login"
                 className="text-[15px] font-medium text-dark-text/70 hover:text-forest-green transition-colors"
