@@ -4,6 +4,7 @@ import './globals.css'
 import Nav from '@/components/nav'
 import Footer from '@/components/footer'
 import LanguageBanner from '@/components/language-banner'
+import { Analytics } from '@vercel/analytics/next'
 
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
@@ -21,6 +22,7 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://sproutandvine.ca'),
   title: 'Sprout & Vine | Childcare Management Built for Canada',
   description:
     'Calm operational infrastructure for Canadian childcare centers. Attendance, billing, CWELCC tracking, and Smart Pickup Authorization. All in one platform.',
@@ -52,6 +54,7 @@ export default function RootLayout({
         <Nav />
         <main className="flex-1">{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   )

@@ -25,33 +25,33 @@ const footerColumns = [
     links: [
       { label: 'Features', href: '/features' },
       { label: 'Pricing', href: '/pricing' },
-      { label: 'Changelog', href: '#' },
-      { label: 'Roadmap', href: '#' },
+      { label: 'Changelog', href: '/changelog' },
+      { label: 'Roadmap', href: '/roadmap' },
     ],
   },
   {
     title: 'Company',
     links: [
       { label: 'About', href: '/about' },
-      { label: 'Blog', href: '#' },
-      { label: 'Careers', href: '#' },
+      { label: 'Blog', href: '/blog' },
+      { label: 'Careers', href: '/careers' },
       { label: 'Contact', href: '/contact' },
     ],
   },
   {
     title: 'Resources',
     links: [
-      { label: 'CWELCC Guide', href: '#' },
-      { label: 'Licensing Checklist', href: '#' },
-      { label: 'Help Centre', href: '#' },
+      { label: 'CWELCC Guide', href: '/resources' },
+      { label: 'Licensing Checklist', href: '/resources' },
+      { label: 'Help Centre', href: '/help' },
     ],
   },
   {
     title: 'Legal',
     links: [
-      { label: 'Privacy Policy', href: '#' },
-      { label: 'Terms of Service', href: '#' },
-      { label: 'Security', href: '#' },
+      { label: 'Privacy Policy', href: '/privacy' },
+      { label: 'Terms of Service', href: '/terms' },
+      { label: 'Security', href: '/security' },
     ],
   },
 ]
@@ -132,11 +132,11 @@ export default function Footer() {
             </Link>
           </div>
           <div className="flex items-center gap-4">
-            <Link href="#" className="text-[12px] text-cream/45 hover:text-cream transition-colors">
+            <Link href="/privacy" className="text-[12px] text-cream/45 hover:text-cream transition-colors">
               Privacy
             </Link>
             <span className="text-cream/25 text-[12px] select-none">|</span>
-            <Link href="#" className="text-[12px] text-cream/45 hover:text-cream transition-colors">
+            <Link href="/terms" className="text-[12px] text-cream/45 hover:text-cream transition-colors">
               Terms
             </Link>
           </div>
