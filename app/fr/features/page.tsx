@@ -64,7 +64,7 @@ export default function FrFeaturesPage() {
             Conçu spécifiquement pour les opérateurs canadiens de services de garde, avec le suivi PÉLCN, le support bilingue et la conformité provinciale intégrés dès le premier jour.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link href="/contact" className="bg-forest-green text-white text-[14px] font-medium px-7 py-3.5 rounded-lg hover:bg-[#243d2f] transition-colors">
+            <Link href="/fr/contact" className="bg-forest-green text-white text-[14px] font-medium px-7 py-3.5 rounded-lg hover:bg-[#243d2f] transition-colors">
               Commencer l'essai gratuit
             </Link>
             <Link href="/fr/pricing" className="text-[14px] font-medium text-forest-green hover:underline">
@@ -115,7 +115,7 @@ export default function FrFeaturesPage() {
             14 jours gratuits sur Sprout. Aucune carte de crédit requise. Annulez à tout moment.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link href="/contact" className="bg-terracotta text-white text-[14px] font-medium px-8 py-3.5 rounded-lg hover:opacity-90 transition-opacity">
+            <Link href="/fr/contact" className="bg-terracotta text-white text-[14px] font-medium px-8 py-3.5 rounded-lg hover:opacity-90 transition-opacity">
               Commencer l'essai gratuit
             </Link>
             <Link href="/fr/pricing" className="text-cream/75 text-[14px] font-medium hover:text-cream transition-colors">

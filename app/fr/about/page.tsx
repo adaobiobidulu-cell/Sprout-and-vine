@@ -101,10 +101,10 @@ export default function FrAboutPage() {
             Commencez gratuitement. Aucune carte de crédit requise.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link href="/contact" className="bg-terracotta text-white text-[14px] font-medium px-8 py-3.5 rounded-lg hover:opacity-90 transition-opacity">
+            <Link href="/fr/contact" className="bg-terracotta text-white text-[14px] font-medium px-8 py-3.5 rounded-lg hover:opacity-90 transition-opacity">
               Commencer l'essai gratuit
             </Link>
-            <Link href="/contact" className="text-cream/75 text-[14px] font-medium hover:text-cream transition-colors">
+            <Link href="/fr/contact" className="text-cream/75 text-[14px] font-medium hover:text-cream transition-colors">
               Prendre rendez-vous
             </Link>
           </div>

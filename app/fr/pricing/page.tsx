@@ -145,7 +145,7 @@ export default function FrenchPricingPage() {
             <p className="text-[12px] text-dark-text/40 italic mb-5">
               "Quand vous serez prêt à ouvrir, Sprout vous attendra."
             </p>
-            <Link href="/contact" className="block text-center text-[14px] font-medium text-forest-green border-2 border-forest-green px-5 py-3 rounded-lg hover:bg-forest-green hover:text-white transition-colors">
+            <Link href="/fr/contact" className="block text-center text-[14px] font-medium text-forest-green border-2 border-forest-green px-5 py-3 rounded-lg hover:bg-forest-green hover:text-white transition-colors">
               Commencer gratuitement
             </Link>
           </div>
@@ -179,7 +179,7 @@ export default function FrenchPricingPage() {
                 </li>
               ))}
             </ul>
-            <Link href="/contact" className="block text-center text-[14px] font-medium text-cream bg-forest-green px-5 py-3 rounded-lg hover:bg-[#243d2f] transition-colors">
+            <Link href="/fr/contact" className="block text-center text-[14px] font-medium text-cream bg-forest-green px-5 py-3 rounded-lg hover:bg-[#243d2f] transition-colors">
               Commencer l'essai gratuit
             </Link>
           </div>
@@ -209,7 +209,7 @@ export default function FrenchPricingPage() {
                 </li>
               ))}
             </ul>
-            <Link href="/contact" className="block text-center text-[14px] font-medium text-forest-green border-2 border-forest-green px-5 py-3 rounded-lg hover:bg-forest-green hover:text-white transition-colors">
+            <Link href="/fr/contact" className="block text-center text-[14px] font-medium text-forest-green border-2 border-forest-green px-5 py-3 rounded-lg hover:bg-forest-green hover:text-white transition-colors">
               Prendre rendez-vous
             </Link>
           </div>

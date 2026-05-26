@@ -102,10 +102,10 @@ export default function FrenchHomePage() {
               Présences, facturation, communication avec les familles, personnel et autorisation de collecte sécurisée. Tout sur une seule plateforme calme.
             </p>
             <div className="flex flex-wrap items-center gap-3 mb-9">
-              <Link href="/contact" className="bg-forest-green text-white text-[14px] font-medium px-6 py-3.5 rounded-lg hover:bg-[#243d2f] transition-colors">
+              <Link href="/fr/contact" className="bg-forest-green text-white text-[14px] font-medium px-6 py-3.5 rounded-lg hover:bg-[#243d2f] transition-colors">
                 Commencer l'essai gratuit
               </Link>
-              <Link href="/features" className="flex items-center gap-2 text-[14px] font-medium text-dark-text/75 border border-[rgba(47,74,58,0.22)] px-6 py-3.5 rounded-lg hover:border-[rgba(47,74,58,0.45)] transition-colors">
+              <Link href="/fr/features" className="flex items-center gap-2 text-[14px] font-medium text-dark-text/75 border border-[rgba(47,74,58,0.22)] px-6 py-3.5 rounded-lg hover:border-[rgba(47,74,58,0.45)] transition-colors">
                 <span className="text-[11px]">▶</span> Explorer la plateforme
               </Link>
             </div>
@@ -417,10 +417,10 @@ export default function FrenchHomePage() {
             Rejoignez les opérateurs de garderies à travers le Canada qui grandissent avec Sprout &amp; Vine.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/contact" className="bg-terracotta text-white text-[14px] font-medium px-7 py-3.5 rounded-lg hover:bg-[#d4724e] transition-colors">
+            <Link href="/fr/contact" className="bg-terracotta text-white text-[14px] font-medium px-7 py-3.5 rounded-lg hover:bg-[#d4724e] transition-colors">
               Commencer l'essai gratuit
             </Link>
-            <Link href="/contact" className="text-cream border-2 border-cream/40 text-[14px] font-medium px-7 py-3.5 rounded-lg hover:border-cream transition-colors">
+            <Link href="/fr/contact" className="text-cream border-2 border-cream/40 text-[14px] font-medium px-7 py-3.5 rounded-lg hover:border-cream transition-colors">
               Prendre rendez-vous
             </Link>
           </div>
