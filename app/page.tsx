@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import FadeIn from '@/components/fade-in'
 import ROICalculator from '@/components/roi-calculator'
 import ProductTour from '@/components/product-tour'
 import PricingCards from '@/components/pricing-cards'
@@ -265,16 +266,17 @@ export default function Home() {
       {/* ── SECTION 3: THREE JOURNEYS ───────────────────────────── */}
       <section className="bg-cream py-20 md:py-24 px-5 md:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-14">
+          <FadeIn className="text-center mb-14">
             <SectionLabel>Three Journeys</SectionLabel>
             <h2 className="font-display font-medium text-forest-green leading-[1.1]" style={{ fontSize: 'clamp(36px, 4.5vw, 52px)' }}>
               One platform. Three stages of growth.
             </h2>
-          </div>
+          </FadeIn>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Seeds */}
-            <div className="bg-white rounded-2xl p-7 border border-[rgba(47,74,58,0.08)]" style={{ boxShadow: '0 4px 20px rgba(47,74,58,0.06)' }}>
+            <FadeIn delay={0.05}>
+            <div className="bg-white rounded-2xl p-7 border border-[rgba(47,74,58,0.08)] hover:-translate-y-1 transition-transform duration-200" style={{ boxShadow: '0 4px 20px rgba(47,74,58,0.06)' }}>
               <div className="text-2xl mb-4">🌱</div>
               <div className="flex items-center gap-2 mb-1">
                 <h3 className="font-display text-[26px] font-medium text-forest-green">Seeds</h3>
@@ -286,10 +288,12 @@ export default function Home() {
               </p>
               <Link href="/pricing" className="text-[14px] font-medium text-forest-green hover:underline">Start planning →</Link>
             </div>
+            </FadeIn>
 
             {/* Sprout (featured) */}
+            <FadeIn delay={0.1}>
             <div
-              className="bg-white rounded-2xl p-7 relative"
+              className="bg-white rounded-2xl p-7 relative hover:-translate-y-1 transition-transform duration-200"
               style={{ border: '2px solid #2F4A3A', boxShadow: '0 12px 40px rgba(47,74,58,0.14)' }}
             >
               <div className="absolute -top-3 left-7">
@@ -306,9 +310,11 @@ export default function Home() {
               </p>
               <Link href="/contact" className="text-[14px] font-medium text-forest-green hover:underline">Start free trial →</Link>
             </div>
+            </FadeIn>
 
             {/* Vine */}
-            <div className="bg-white rounded-2xl p-7 border border-[rgba(47,74,58,0.08)]" style={{ boxShadow: '0 4px 20px rgba(47,74,58,0.06)' }}>
+            <FadeIn delay={0.15}>
+            <div className="bg-white rounded-2xl p-7 border border-[rgba(47,74,58,0.08)] hover:-translate-y-1 transition-transform duration-200" style={{ boxShadow: '0 4px 20px rgba(47,74,58,0.06)' }}>
               <div className="text-2xl mb-4">🍃</div>
               <div className="flex items-center gap-2 mb-1">
                 <h3 className="font-display text-[26px] font-medium text-forest-green">Vine</h3>
@@ -320,6 +326,7 @@ export default function Home() {
               </p>
               <Link href="/contact" className="text-[14px] font-medium text-forest-green hover:underline">Book a demo →</Link>
             </div>
+            </FadeIn>
           </div>
         </div>
       </section>
@@ -731,15 +738,17 @@ export default function Home() {
       {/* ── SECTION 13: TESTIMONIALS ────────────────────────────── */}
       <section className="bg-white py-20 md:py-24 px-5 md:px-8">
         <div className="max-w-7xl mx-auto">
-          <h2 className="font-display font-medium text-forest-green text-center leading-[1.1] mb-14" style={{ fontSize: 'clamp(32px, 4vw, 48px)' }}>
-            What Canadian operators are saying
-          </h2>
+          <FadeIn>
+            <h2 className="font-display font-medium text-forest-green text-center leading-[1.1] mb-14" style={{ fontSize: 'clamp(32px, 4vw, 48px)' }}>
+              What Canadian operators are saying
+            </h2>
+          </FadeIn>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {testimonials.map(t => (
+            {testimonials.map((t, i) => (
+              <FadeIn key={t.name} delay={i * 0.1}>
               <div
-                key={t.name}
-                className="rounded-2xl p-7 flex flex-col gap-5"
+                className="rounded-2xl p-7 flex flex-col gap-5 hover:-translate-y-1 transition-transform duration-200"
                 style={{ background: '#F7F2E8', border: '1px solid rgba(47,74,58,0.08)' }}
               >
                 <div className="text-amber-400 text-sm tracking-wider">★★★★★</div>
@@ -751,6 +760,7 @@ export default function Home() {
                   <p className="text-[12px] text-dark-text/45 mt-0.5">{t.role}</p>
                 </div>
               </div>
+              </FadeIn>
             ))}
           </div>
         </div>

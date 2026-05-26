@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import FadeIn from '@/components/fade-in'
 
 export const metadata: Metadata = {
   title: 'About Us | Sprout & Vine',
@@ -127,7 +128,7 @@ export default function AboutPage() {
       <section className="bg-white py-20 px-5">
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
           {/* Text left */}
-          <div>
+          <FadeIn>
             <SectionLabel>OUR STORY</SectionLabel>
             <h2
               className="font-display font-medium text-forest-green leading-[1.1] mb-7"
@@ -143,10 +144,10 @@ export default function AboutPage() {
                 Sprout & Vine was born from a simple question: what would childcare management software look like if it was built specifically for Canada, specifically for the educators using it every day, and specifically with the families in mind? The answer is what you're looking at.
               </p>
             </div>
-          </div>
+          </FadeIn>
 
           {/* Accent card right */}
-          <div className="flex justify-center lg:justify-end">
+          <FadeIn delay={0.1} className="flex justify-center lg:justify-end">
             <div className="bg-cream rounded-2xl p-8 max-w-xs w-full">
               <div className="text-5xl mb-5">🌱</div>
               <p className="font-display italic text-forest-green leading-snug mb-4" style={{ fontSize: '22px' }}>
@@ -156,7 +157,7 @@ export default function AboutPage() {
                 The question that started it all
               </p>
             </div>
-          </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -208,8 +209,9 @@ export default function AboutPage() {
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {values.map((v) => (
-              <div key={v.name} className="bg-cream rounded-2xl p-7">
+            {values.map((v, i) => (
+              <FadeIn key={v.name} delay={i * 0.08}>
+              <div className="bg-cream rounded-2xl p-7 hover:-translate-y-1 transition-transform duration-200">
                 <div className="mb-4">{v.icon}</div>
                 <h3
                   className="font-display font-medium text-forest-green mb-2"
@@ -221,6 +223,7 @@ export default function AboutPage() {
                   {v.desc}
                 </p>
               </div>
+              </FadeIn>
             ))}
           </div>
         </div>
@@ -242,10 +245,10 @@ export default function AboutPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-            {team.map((member) => (
+            {team.map((member, i) => (
+              <FadeIn key={member.role} delay={i * 0.1}>
               <div
-                key={member.role}
-                className="bg-white rounded-2xl p-6 text-center"
+                className="bg-white rounded-2xl p-6 text-center hover:-translate-y-1 transition-transform duration-200"
               >
                 <div className="w-20 h-20 bg-forest-green/10 flex items-center justify-center rounded-full mx-auto mb-4 text-3xl">
                   {member.emoji}
@@ -260,6 +263,7 @@ export default function AboutPage() {
                   {member.bio}
                 </p>
               </div>
+              </FadeIn>
             ))}
           </div>
 

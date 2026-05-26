@@ -62,6 +62,14 @@ const frenchPages: Record<string, string> = {
   '/features': '/fr/features',
   '/about': '/fr/about',
   '/contact': '/fr/contact',
+  '/blog': '/fr/blog',
+  '/changelog': '/fr/changelog',
+  '/roadmap': '/fr/roadmap',
+  '/careers': '/fr/careers',
+  '/help': '/fr/help',
+  '/privacy': '/fr/privacy',
+  '/terms': '/fr/terms',
+  '/security': '/fr/security',
 }
 
 export default function Footer() {

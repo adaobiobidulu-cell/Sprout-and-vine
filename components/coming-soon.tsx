@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import FadeIn from '@/components/fade-in'
 
 interface Props {
   title: string
@@ -15,7 +16,7 @@ export default function ComingSoon({
 }: Props) {
   return (
     <div className="min-h-[70vh] flex items-center justify-center px-5">
-      <div className="text-center max-w-md">
+      <FadeIn className="text-center max-w-md">
         <div className="inline-flex items-center gap-2 bg-sage/20 text-forest-green text-[12px] font-semibold uppercase tracking-[0.12em] px-4 py-2 rounded-full mb-8">
           Coming Soon
         </div>
@@ -34,7 +35,7 @@ export default function ComingSoon({
         >
           {backLabel}
         </Link>
-      </div>
+      </FadeIn>
     </div>
   )
 }
