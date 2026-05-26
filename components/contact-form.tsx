@@ -42,10 +42,26 @@ export default function ContactForm() {
   const [phone, setPhone] = useState('')
   const [message, setMessage] = useState('')
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
-    setSubmitted(true)
+    setLoading(true)
+    setError('')
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, centerName, province, childrenCount, email, phone, message }),
+      })
+      if (!res.ok) throw new Error('send_failed')
+      setSubmitted(true)
+    } catch {
+      setError('Something went wrong sending your message. Please email us directly at hello@sproutandvine.ca.')
+    } finally {
+      setLoading(false)
+    }
   }
 
   if (submitted) {
@@ -192,12 +208,20 @@ export default function ContactForm() {
         />
       </div>
 
+      {/* Error */}
+      {error && (
+        <p className="text-[13px] text-terracotta bg-terracotta/10 rounded-lg px-4 py-3 leading-relaxed">
+          {error}
+        </p>
+      )}
+
       {/* Submit */}
       <button
         type="submit"
-        className="w-full bg-forest-green text-white py-3.5 rounded-lg text-[15px] font-medium hover:bg-[#243d2f] transition-colors"
+        disabled={loading}
+        className="w-full bg-forest-green text-white py-3.5 rounded-lg text-[15px] font-medium hover:bg-[#243d2f] transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
       >
-        Book my demo
+        {loading ? 'Sending...' : 'Book my demo'}
       </button>
     </form>
   )
