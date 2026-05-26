@@ -6,16 +6,19 @@ import { usePathname } from 'next/navigation'
 
 function LogoMark() {
   return (
-    <svg viewBox="0 0 62 86" width="20" height="28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <path d="M 27 13 C 25 6 15 5 16 12 C 17 19 25 16 27 13 Z" fill="#AEC1B0" />
-      <path
-        d="M 28 14 C 40 8 56 20 51 34 C 46 48 24 46 20 56 C 14 66 20 78 34 76 C 48 74 56 62 47 56"
-        stroke="#2F4A3A" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"
-      />
-      <path d="M 8 55 L 52 32" stroke="#2F4A3A" strokeWidth="2.5" strokeLinecap="round" />
-      <path d="M 44 27 C 38 22 36 15 40 14 C 42 13 44 17 44 17 C 44 17 46 13 48 14 C 52 15 50 22 44 27 Z" fill="#E2845F" />
-      <path d="M 24 78 C 18 71 10 72 12 78 C 14 84 22 81 24 78 Z" fill="#AEC1B0" />
-      <path d="M 36 77 C 42 70 50 71 48 77 C 46 83 38 80 36 77 Z" fill="#AEC1B0" />
+    <svg viewBox="0 0 58 84" width="20" height="28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      {/* Top leaf */}
+      <path d="M 22 14 C 18 8 10 8 12 14 C 14 18 19 16 22 14 Z" fill="#2F4A3A" />
+      {/* Upper loop of the & */}
+      <path d="M 22 14 C 32 8 46 12 50 24 C 54 36 46 46 34 46 C 22 46 14 38 16 28 C 18 20 26 16 34 18 C 42 20 46 30 42 38" stroke="#2F4A3A" strokeWidth="2.2" strokeLinecap="round" fill="none" />
+      {/* Lower diagonal body */}
+      <path d="M 18 32 C 14 42 12 58 18 66 C 24 74 38 76 48 70 C 56 65 56 55 50 52 C 44 49 34 52 30 56" stroke="#2F4A3A" strokeWidth="2.2" strokeLinecap="round" fill="none" />
+      {/* Terracotta heart */}
+      <path d="M 44 22 C 44 20 42 18 40 20 C 38 18 36 20 36 22 C 36 25 40 29 40 29 C 40 29 44 25 44 22 Z" fill="#E2845F" />
+      {/* Bottom leaf left */}
+      <path d="M 18 64 C 10 62 8 68 14 69 C 16 69 18 67 18 64 Z" fill="#AEC1B0" />
+      {/* Bottom leaf right */}
+      <path d="M 50 68 C 58 66 60 72 54 73 C 52 73 50 71 50 68 Z" fill="#AEC1B0" />
     </svg>
   )
 }

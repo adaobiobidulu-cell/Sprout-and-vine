@@ -15,63 +15,21 @@ export default function AppleIcon() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          position: 'relative',
         }}
       >
-        {/* Top arc of S */}
-        <div
-          style={{
-            position: 'absolute',
-            top: '32px',
-            left: '54px',
-            width: '68px',
-            height: '48px',
-            borderRadius: '34px 34px 0 0',
-            border: '8px solid rgba(247,242,232,0.92)',
-            borderBottom: 'none',
-            display: 'flex',
-          }}
-        />
-        {/* Bottom arc of S */}
-        <div
-          style={{
-            position: 'absolute',
-            bottom: '32px',
-            right: '54px',
-            width: '68px',
-            height: '48px',
-            borderRadius: '0 0 34px 34px',
-            border: '8px solid rgba(247,242,232,0.92)',
-            borderTop: 'none',
-            display: 'flex',
-          }}
-        />
-        {/* Center vertical connector */}
-        <div
-          style={{
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            width: '8px',
-            height: '52px',
-            background: 'rgba(247,242,232,0.92)',
-            transform: 'translate(-50%, -50%)',
-            display: 'flex',
-          }}
-        />
-        {/* Terracotta heart */}
-        <div
-          style={{
-            position: 'absolute',
-            top: '26px',
-            right: '38px',
-            width: '24px',
-            height: '24px',
-            borderRadius: '50%',
-            background: '#E2845F',
-            display: 'flex',
-          }}
-        />
+        <svg
+          viewBox="0 0 58 84"
+          width="110"
+          height="160"
+          style={{ display: 'flex' }}
+        >
+          <path d="M 22 14 C 18 8 10 8 12 14 C 14 18 19 16 22 14 Z" fill="rgba(247,242,232,0.8)" />
+          <path d="M 22 14 C 32 8 46 12 50 24 C 54 36 46 46 34 46 C 22 46 14 38 16 28 C 18 20 26 16 34 18 C 42 20 46 30 42 38" stroke="#F7F2E8" strokeWidth="2.2" strokeLinecap="round" fill="none" />
+          <path d="M 18 32 C 14 42 12 58 18 66 C 24 74 38 76 48 70 C 56 65 56 55 50 52 C 44 49 34 52 30 56" stroke="#F7F2E8" strokeWidth="2.2" strokeLinecap="round" fill="none" />
+          <path d="M 44 22 C 44 20 42 18 40 20 C 38 18 36 20 36 22 C 36 25 40 29 40 29 C 40 29 44 25 44 22 Z" fill="#E2845F" />
+          <path d="M 18 64 C 10 62 8 68 14 69 C 16 69 18 67 18 64 Z" fill="rgba(247,242,232,0.5)" />
+          <path d="M 50 68 C 58 66 60 72 54 73 C 52 73 50 71 50 68 Z" fill="rgba(247,242,232,0.5)" />
+        </svg>
       </div>
     ),
     size,
