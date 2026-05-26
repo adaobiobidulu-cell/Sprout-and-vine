@@ -132,7 +132,8 @@ export default function PricingPage() {
             Compare plans
           </h2>
 
-          <div className="bg-white rounded-2xl overflow-hidden" style={{ boxShadow: '0 4px 32px rgba(47,74,58,0.09)' }}>
+          <div className="overflow-x-auto -mx-5 md:mx-0">
+          <div className="min-w-[580px] bg-white md:rounded-2xl overflow-hidden" style={{ boxShadow: '0 4px 32px rgba(47,74,58,0.09)' }}>
             {/* Table header */}
             <div className="grid grid-cols-4 border-b border-[rgba(47,74,58,0.08)]">
               <div className="p-5" />
@@ -156,7 +157,7 @@ export default function PricingPage() {
                 style={{ background: i % 2 === 0 ? 'white' : 'rgba(247,242,232,0.45)' }}
               >
                 <div className="p-4 pl-5">
-                  <p className="text-[13px] text-dark-text/75">{row.feature}</p>
+                  <p className="text-[12px] md:text-[13px] text-dark-text/75">{row.feature}</p>
                 </div>
                 {[row.seeds, row.sprout, row.vine].map((val, j) => (
                   <div key={j} className="p-4 flex items-center justify-center border-l border-[rgba(47,74,58,0.05)]">
@@ -185,6 +186,7 @@ export default function PricingPage() {
                 </div>
               ))}
             </div>
+          </div>
           </div>
         </div>
       </section>

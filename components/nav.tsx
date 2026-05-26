@@ -32,6 +32,9 @@ function ChevronDown() {
 const frenchPages: Record<string, string> = {
   '/': '/fr',
   '/pricing': '/fr/pricing',
+  '/features': '/fr/features',
+  '/about': '/fr/about',
+  '/contact': '/fr/contact',
 }
 
 function LangToggle() {

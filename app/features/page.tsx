@@ -1,5 +1,11 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import ProductTour from '@/components/product-tour'
+
+export const metadata: Metadata = {
+  title: 'Features | Sprout & Vine',
+  description: 'Attendance tracking, CWELCC grant management, Smart Pickup Authorization, daily reports, family messaging, and billing — all in one Canadian childcare platform.',
+}
 
 /* ─── Section label ───────────────────────────────────────────────── */
 function SectionLabel({ children }: { children: React.ReactNode }) {

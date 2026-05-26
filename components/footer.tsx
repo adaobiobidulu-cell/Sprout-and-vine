@@ -56,7 +56,13 @@ const footerColumns = [
   },
 ]
 
-const frenchPages: Record<string, string> = { '/': '/fr', '/pricing': '/fr/pricing' }
+const frenchPages: Record<string, string> = {
+  '/': '/fr',
+  '/pricing': '/fr/pricing',
+  '/features': '/fr/features',
+  '/about': '/fr/about',
+  '/contact': '/fr/contact',
+}
 
 export default function Footer() {
   const pathname = usePathname()
