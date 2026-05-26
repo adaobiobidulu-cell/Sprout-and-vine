@@ -263,7 +263,7 @@ export default function FrenchPricingPage() {
 
       {/* Calculateur ROI */}
       <section className="py-20 px-5 md:px-8" style={{ background: '#2F4A3A' }}>
-        <ROICalculator />
+        <ROICalculator locale="fr" />
       </section>
 
       {/* FAQ */}
