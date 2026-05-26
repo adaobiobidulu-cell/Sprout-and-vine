@@ -32,7 +32,7 @@ export default function ResourceDownload({ resource, label }: Props) {
       <div className="flex items-center gap-3 bg-sage-green/10 rounded-lg px-4 py-3">
         <span className="text-sage-green text-lg">✓</span>
         <p className="text-[13px] text-forest-green font-medium">
-          You're on the list — we'll email you at <span className="font-semibold">{email}</span> when it's ready.
+          You're on the list. We'll email you at <span className="font-semibold">{email}</span> when it's ready.
         </p>
       </div>
     )

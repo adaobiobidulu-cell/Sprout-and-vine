@@ -121,7 +121,7 @@ export default function TermsPage() {
       <h3>Cancellation and refunds</h3>
       <p>
         You may cancel your subscription at any time through your account settings or by contacting us. Cancellation
-        takes effect at the end of the current billing period — you will retain full access until then. We do not
+        takes effect at the end of the current billing period. You will retain full access until then. We do not
         issue prorated refunds for unused time in a billing period, except where required by law or at our
         sole discretion in exceptional circumstances.
       </p>
@@ -224,7 +224,7 @@ export default function TermsPage() {
       <p>
         We do not warrant that the Services will be uninterrupted, error-free, or free of viruses or other
         harmful components. We do not warrant the accuracy of any CWELCC subsidy calculations or compliance
-        guidance — you remain responsible for verifying regulatory compliance with your provincial authority.
+        guidance. You remain responsible for verifying regulatory compliance with your provincial authority.
       </p>
 
       <h2 id="liability">10. Limitation of Liability</h2>

@@ -4,7 +4,7 @@ import FadeIn from '@/components/fade-in'
 
 export const metadata: Metadata = {
   title: 'About Us | Sprout & Vine',
-  description: 'Sprout & Vine is built by Prime Horizon Inc. to give Canadian childcare operators calm, modern infrastructure — so they can focus on the children in their care.',
+  description: 'Sprout & Vine is built by Prime Horizon Inc. to give Canadian childcare operators calm, modern infrastructure, so they can focus on the children in their care.',
 }
 
 /* ── Shared section label ──────────────────────────────────────── */

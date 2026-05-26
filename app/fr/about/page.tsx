@@ -11,7 +11,7 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
 }
 
 const values = [
-  { icon: '🌱', title: 'Croissance', desc: "Chaque fonctionnalité que nous construisons aide les centres à se développer — qu'il s'agisse d'accueillir plus d'enfants, de réduire la charge administrative ou d'améliorer l'expérience des familles." },
+  { icon: '🌱', title: 'Croissance', desc: "Chaque fonctionnalité que nous construisons aide les centres à se développer, qu'il s'agisse d'accueillir plus d'enfants, de réduire la charge administrative ou d'améliorer l'expérience des familles." },
   { icon: '🤝', title: 'Connexion', desc: "Les meilleures garderies prospèrent grâce aux relations. Nous construisons des outils qui renforcent les liens entre les éducateurs, les familles et les enfants." },
   { icon: '🛡️', title: 'Confiance', desc: "Les parents nous confient ce qui leur est le plus précieux. Nous prenons la sécurité des données, la confidentialité et la fiabilité très au sérieux." },
   { icon: '💚', title: 'Soin', desc: "Nous sommes au service de personnes qui prennent soin des enfants. Cette responsabilité guide tout ce que nous faisons, de la conception à l'assistance." },
@@ -42,7 +42,7 @@ export default function FrAboutPage() {
               Les garderies méritent une technologie aussi attentionnée que leur travail.
             </h2>
             <p className="text-[15px] text-dark-text/65 leading-relaxed mb-5">
-              Les directeurs de garderies canadiennes jonglent avec les présences, la facturation, les subventions PÉLCN, la communication avec les familles et les demandes réglementaires provinciales — souvent avec des outils fragmentés qui ne se parlent pas.
+              Les directeurs de garderies canadiennes jonglent avec les présences, la facturation, les subventions PÉLCN, la communication avec les familles et les demandes réglementaires provinciales, souvent avec des outils fragmentés qui ne se parlent pas.
             </p>
             <p className="text-[15px] text-dark-text/65 leading-relaxed">
               Nous avons construit Sprout & Vine parce que ce problème avait une solution évidente. Une plateforme calme et intégrée, construite spécifiquement pour le contexte canadien.

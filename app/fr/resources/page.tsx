@@ -4,8 +4,8 @@ import FadeIn from '@/components/fade-in'
 import ResourceDownload from '@/components/resource-download'
 
 export const metadata: Metadata = {
-  title: 'Resources | Sprout & Vine',
-  description: 'Free guides and tools for Canadian childcare operators: CWELCC subsidy guide, provincial licensing checklists, and more.',
+  title: 'Ressources | Sprout & Vine',
+  description: 'Guides et outils gratuits pour les exploitants canadiens de services de garde: guide des subventions PÉLCN, listes de contrôle des permis provinciaux et plus encore.',
 }
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
@@ -17,37 +17,37 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
 }
 
 const cwelccInside = [
-  'How CWELCC subsidies are calculated across all provinces',
-  'Documentation requirements and common audit triggers',
-  'How to reconcile subsidy payments against invoices',
-  'What changes when your province renegotiates its agreement',
-  'A province-by-province subsidy rate reference (updated 2026)',
+  'Comment les subventions PÉLCN sont calculées dans toutes les provinces',
+  "Exigences documentaires et déclencheurs courants d'audit",
+  'Comment réconcilier les paiements de subventions avec les factures',
+  "Ce qui change lorsque votre province renégocie son accord",
+  "Taux de subvention provinciaux de référence (mis à jour en 2026)",
 ]
 
 const checklistInside = [
-  'Room-by-room documentation checklist for licensing inspections',
-  'Staff qualification and ratio requirements by province',
-  'Health, safety, and nutrition policy templates',
-  'Emergency plan and incident report templates',
-  'What inspectors look for, and common reasons centres fail',
+  "Liste de contrôle documentaire pièce par pièce pour les inspections de permis",
+  "Exigences de qualification du personnel et de ratio par province",
+  "Modèles de politiques de santé, sécurité et nutrition",
+  "Modèles de plan d'urgence et de rapport d'incident",
+  "Ce que les inspecteurs recherchent et les raisons courantes d'échec",
 ]
 
-export default function ResourcesPage() {
+export default function FrResourcesPage() {
   return (
     <>
       {/* Hero */}
       <section className="bg-cream py-20 px-5 md:px-8">
         <div className="max-w-4xl mx-auto">
           <FadeIn>
-            <SectionLabel>Resources</SectionLabel>
+            <SectionLabel>Ressources</SectionLabel>
             <h1
               className="font-display font-medium text-forest-green leading-[1.05] mb-6"
               style={{ fontSize: 'clamp(40px, 5.5vw, 64px)' }}
             >
-              Free tools for Canadian childcare operators.
+              Outils gratuits pour les exploitants canadiens de services de garde.
             </h1>
             <p className="text-[17px] text-dark-text/60 leading-relaxed max-w-2xl">
-              We're building practical guides for the things that take up the most time: CWELCC subsidy management, provincial licensing, and compliance documentation.
+              Nous créons des guides pratiques pour les sujets qui demandent le plus de temps: la gestion des subventions PÉLCN, les permis provinciaux et la documentation de conformité.
             </p>
           </FadeIn>
         </div>
@@ -63,19 +63,19 @@ export default function ResourcesPage() {
               <div className="bg-forest-green px-8 py-6 flex items-start gap-5">
                 <div className="text-4xl flex-shrink-0 mt-0.5">🍁</div>
                 <div>
-                  <p className="text-[11px] uppercase tracking-[0.14em] text-sage-green font-semibold mb-1">Free Guide</p>
+                  <p className="text-[11px] uppercase tracking-[0.14em] text-sage-green font-semibold mb-1">Guide gratuit</p>
                   <h2 className="font-display font-medium text-cream leading-tight" style={{ fontSize: 'clamp(22px, 3vw, 30px)' }}>
-                    The Complete CWELCC Subsidy Guide for Canadian Operators
+                    Le guide complet des subventions PÉLCN pour les exploitants canadiens
                   </h2>
                 </div>
               </div>
               <div className="px-8 py-7">
                 <p className="text-[15px] text-dark-text/65 leading-relaxed mb-7">
-                  The Canada-Wide Early Learning &amp; Child Care framework is the biggest shift in Canadian childcare funding in a generation, and the subsidy mechanics vary significantly by province. This guide cuts through the complexity so you can stop guessing and start planning.
+                  Le cadre du Programme d'apprentissage et de garde des jeunes enfants à l'échelle du Canada représente le plus grand changement dans le financement des services de garde depuis une génération, et les mécanismes de subvention varient considérablement selon la province. Ce guide simplifie la complexité pour que vous puissiez cesser de deviner et commencer à planifier.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
                   <div>
-                    <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-dark-text/40 mb-3">What's inside</p>
+                    <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-dark-text/40 mb-3">Ce que vous trouverez</p>
                     <ul className="space-y-2.5">
                       {cwelccInside.map(item => (
                         <li key={item} className="flex items-start gap-2.5">
@@ -90,10 +90,10 @@ export default function ResourcesPage() {
                   </div>
                   <div className="bg-cream rounded-xl p-6 flex flex-col justify-between gap-4">
                     <div>
-                      <p className="text-[13px] font-semibold text-forest-green mb-1">Get notified when it's ready</p>
-                      <p className="text-[12px] text-dark-text/50 mb-4">We'll email you the guide as soon as it's published. Free, no strings attached.</p>
+                      <p className="text-[13px] font-semibold text-forest-green mb-1">Soyez averti dès sa publication</p>
+                      <p className="text-[12px] text-dark-text/50 mb-4">Nous vous enverrons le guide par courriel dès sa publication. Gratuit, sans engagement.</p>
                     </div>
-                    <ResourceDownload resource="cwelcc-guide" label="The Complete CWELCC Subsidy Guide" />
+                    <ResourceDownload resource="cwelcc-guide" label="Le guide complet des subventions PÉLCN" />
                   </div>
                 </div>
               </div>
@@ -106,19 +106,19 @@ export default function ResourcesPage() {
               <div className="bg-cream px-8 py-6 flex items-start gap-5 border-b border-[rgba(47,74,58,0.1)]">
                 <div className="text-4xl flex-shrink-0 mt-0.5">📋</div>
                 <div>
-                  <p className="text-[11px] uppercase tracking-[0.14em] text-sage-green font-semibold mb-1">Free Checklist</p>
+                  <p className="text-[11px] uppercase tracking-[0.14em] text-sage-green font-semibold mb-1">Liste de contrôle gratuite</p>
                   <h2 className="font-display font-medium text-forest-green leading-tight" style={{ fontSize: 'clamp(22px, 3vw, 30px)' }}>
-                    Provincial Licensing Checklist for New and Existing Centres
+                    Liste de contrôle provinciale des permis pour les centres nouveaux et existants
                   </h2>
                 </div>
               </div>
               <div className="px-8 py-7">
                 <p className="text-[15px] text-dark-text/65 leading-relaxed mb-7">
-                  Whether you're opening a new centre or preparing for your next inspection, this checklist covers every documentation, staffing, and compliance requirement, broken down by province, so you only see what's relevant to you.
+                  Que vous ouvriez un nouveau centre ou que vous prépariez votre prochaine inspection, cette liste couvre toutes les exigences en matière de documentation, de personnel et de conformité, détaillées par province afin que vous ne voyiez que ce qui vous concerne.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
                   <div>
-                    <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-dark-text/40 mb-3">What's inside</p>
+                    <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-dark-text/40 mb-3">Ce que vous trouverez</p>
                     <ul className="space-y-2.5">
                       {checklistInside.map(item => (
                         <li key={item} className="flex items-start gap-2.5">
@@ -133,10 +133,10 @@ export default function ResourcesPage() {
                   </div>
                   <div className="bg-cream rounded-xl p-6 flex flex-col justify-between gap-4">
                     <div>
-                      <p className="text-[13px] font-semibold text-forest-green mb-1">Get notified when it's ready</p>
-                      <p className="text-[12px] text-dark-text/50 mb-4">We'll email you the checklist as soon as it's published. Free, no strings attached.</p>
+                      <p className="text-[13px] font-semibold text-forest-green mb-1">Soyez averti dès sa publication</p>
+                      <p className="text-[12px] text-dark-text/50 mb-4">Nous vous enverrons la liste par courriel dès sa publication. Gratuite, sans engagement.</p>
                     </div>
-                    <ResourceDownload resource="licensing-checklist" label="Provincial Licensing Checklist" />
+                    <ResourceDownload resource="licensing-checklist" label="Liste de contrôle provinciale des permis" />
                   </div>
                 </div>
               </div>
@@ -145,34 +145,34 @@ export default function ResourcesPage() {
         </div>
       </section>
 
-      {/* Help Centre + Coming up */}
+      {/* Also available */}
       <section className="bg-cream py-16 md:py-20 px-5 md:px-8">
         <div className="max-w-5xl mx-auto">
           <FadeIn>
-            <SectionLabel>Also Available</SectionLabel>
+            <SectionLabel>Également disponible</SectionLabel>
           </FadeIn>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
             {[
               {
                 icon: '💬',
-                title: 'Help Centre',
-                desc: 'Step-by-step guides and video tutorials for every Sprout & Vine feature. Coming soon.',
-                href: '/help',
-                cta: 'Visit Help Centre',
+                title: "Centre d'aide",
+                desc: "Guides étape par étape et tutoriels vidéo pour toutes les fonctionnalités de Sprout & Vine. Bientôt disponible.",
+                href: '/fr/help',
+                cta: "Visiter le centre d'aide",
               },
               {
                 icon: '📓',
-                title: 'Blog',
-                desc: 'Insights on childcare operations, CWELCC funding, and running a thriving Canadian centre.',
-                href: '/blog',
-                cta: 'Read the Blog',
+                title: 'Blogue',
+                desc: "Réflexions sur la gestion des services de garde, le financement PÉLCN et la gestion d'un centre prospère au Canada.",
+                href: '/fr/blog',
+                cta: 'Lire le blogue',
               },
               {
                 icon: '🗺️',
-                title: 'Product Roadmap',
-                desc: "See what we're building next. We share our roadmap publicly so you know where Sprout & Vine is headed.",
-                href: '/roadmap',
-                cta: 'View Roadmap',
+                title: 'Feuille de route',
+                desc: "Découvrez ce que nous construisons ensuite. Nous partageons notre feuille de route publiquement.",
+                href: '/fr/roadmap',
+                cta: 'Voir la feuille de route',
               },
             ].map((item, i) => (
               <FadeIn key={item.title} delay={i * 0.08}>
@@ -194,23 +194,23 @@ export default function ResourcesPage() {
       <section className="bg-forest-green py-16 px-5 md:px-8 text-center">
         <div className="max-w-2xl mx-auto">
           <h2 className="font-display font-medium text-cream leading-[1.08] mb-5" style={{ fontSize: 'clamp(30px, 4vw, 46px)' }}>
-            Ready to put all of this into practice?
+            Prêt à mettre tout cela en pratique?
           </h2>
           <p className="text-cream/65 text-[15px] leading-relaxed mb-8">
-            Sprout &amp; Vine handles the CWELCC tracking, licensing documentation, and compliance automatically, so your team can focus on children, not paperwork.
+            Sprout &amp; Vine gère automatiquement le suivi PÉLCN, la documentation des permis et la conformité, afin que votre équipe puisse se concentrer sur les enfants, pas sur la paperasse.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
-              href="/contact"
+              href="/fr/contact"
               className="bg-terracotta text-white text-[14px] font-medium px-7 py-3.5 rounded-lg hover:opacity-90 transition-opacity"
             >
-              Book a demo
+              Prendre rendez-vous
             </Link>
             <Link
-              href="/features"
+              href="/fr/features"
               className="text-cream/75 text-[14px] font-medium hover:text-cream transition-colors"
             >
-              Explore the platform →
+              Explorer la plateforme →
             </Link>
           </div>
         </div>

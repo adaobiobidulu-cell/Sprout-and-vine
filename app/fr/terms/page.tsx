@@ -104,7 +104,7 @@ export default function FrTermsPage() {
       <h3>Annulation et remboursements</h3>
       <p>
         Vous pouvez annuler votre abonnement à tout moment via les paramètres de votre compte ou en nous
-        contactant. L'annulation prend effet à la fin de la période de facturation en cours — vous conserverez
+        contactant. L'annulation prend effet à la fin de la période de facturation en cours. Vous conserverez
         un accès complet jusqu'à cette date. Nous n'effectuons pas de remboursements au prorata pour le temps
         non utilisé dans une période de facturation, sauf lorsque la loi l'exige.
       </p>
@@ -170,7 +170,7 @@ export default function FrTermsPage() {
       </p>
       <p>
         Nous ne garantissons pas que les Services seront ininterrompus ou exempts d'erreurs. Nous ne garantissons
-        pas l'exactitude des calculs de subventions PÉLCN — vous restez responsable de vérifier la conformité
+        pas l'exactitude des calculs de subventions PÉLCN. Vous restez responsable de vérifier la conformité
         réglementaire auprès de votre autorité provinciale.
       </p>
 

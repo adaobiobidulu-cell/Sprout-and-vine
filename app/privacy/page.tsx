@@ -87,7 +87,7 @@ export default function PrivacyPage() {
         <li>Process payments and manage your subscription.</li>
         <li>Respond to your support requests, questions, and feedback.</li>
         <li>Send you service-related communications (account notices, security alerts, billing receipts).</li>
-        <li>Send you product updates, feature announcements, and occasional promotional content — you may opt out at any time.</li>
+        <li>Send you product updates, feature announcements, and occasional promotional content. You may opt out at any time.</li>
         <li>Monitor and improve the performance, security, and functionality of the Services.</li>
         <li>Comply with legal obligations, including tax and regulatory requirements.</li>
         <li>Enforce our Terms of Service and protect the rights of our users.</li>
@@ -188,9 +188,9 @@ export default function PrivacyPage() {
       <h2 id="third-parties">10. Third-Party Services</h2>
       <p>We use the following key third-party service providers. Each is bound by its own privacy policy:</p>
       <ul>
-        <li><strong>Vercel Inc.</strong> — website hosting and edge network delivery. <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li>
-        <li><strong>Stripe Inc.</strong> — payment processing. Stripe handles all payment card data under PCI-DSS compliance. <a href="https://stripe.com/en-ca/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li>
-        <li><strong>Google LLC</strong> — transactional email delivery via Gmail SMTP (contact form submissions). <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li>
+        <li><strong>Vercel Inc.</strong>: website hosting and edge network delivery. <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li>
+        <li><strong>Stripe Inc.</strong>: payment processing. Stripe handles all payment card data under PCI-DSS compliance. <a href="https://stripe.com/en-ca/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li>
+        <li><strong>Google LLC</strong>: transactional email delivery via Gmail SMTP (contact form submissions). <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li>
       </ul>
       <p>
         We review the privacy practices of our service providers before engagement and where possible select
@@ -199,7 +199,7 @@ export default function PrivacyPage() {
 
       <h2 id="children">11. Children's Data</h2>
       <p>
-        Our Services are intended for use by childcare operators and their staff — adults operating licensed
+        Our Services are intended for use by childcare operators and their staff, specifically adults operating licensed
         childcare facilities. We do not knowingly collect personal information directly from children under
         the age of 13. Information about children enrolled in a childcare centre is entered by the centre operator
         and processed on their behalf.

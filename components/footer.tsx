@@ -19,7 +19,7 @@ function LogoMarkCream() {
   )
 }
 
-const footerColumns = [
+const footerColumnsEn = [
   {
     title: 'Product',
     links: [
@@ -56,6 +56,43 @@ const footerColumns = [
   },
 ]
 
+const footerColumnsFr = [
+  {
+    title: 'Produit',
+    links: [
+      { label: 'Fonctionnalités', href: '/fr/features' },
+      { label: 'Tarifs', href: '/fr/pricing' },
+      { label: 'Journal', href: '/fr/changelog' },
+      { label: 'Feuille de route', href: '/fr/roadmap' },
+    ],
+  },
+  {
+    title: 'Entreprise',
+    links: [
+      { label: 'À propos', href: '/fr/about' },
+      { label: 'Blogue', href: '/fr/blog' },
+      { label: 'Carrières', href: '/fr/careers' },
+      { label: 'Contact', href: '/fr/contact' },
+    ],
+  },
+  {
+    title: 'Ressources',
+    links: [
+      { label: 'Guide PÉLCN', href: '/fr/resources' },
+      { label: 'Liste de vérification', href: '/fr/resources' },
+      { label: "Centre d'aide", href: '/fr/help' },
+    ],
+  },
+  {
+    title: 'Légal',
+    links: [
+      { label: 'Confidentialité', href: '/fr/privacy' },
+      { label: "Conditions d'utilisation", href: '/fr/terms' },
+      { label: 'Sécurité', href: '/fr/security' },
+    ],
+  },
+]
+
 const frenchPages: Record<string, string> = {
   '/': '/fr',
   '/pricing': '/fr/pricing',
@@ -67,6 +104,7 @@ const frenchPages: Record<string, string> = {
   '/roadmap': '/fr/roadmap',
   '/careers': '/fr/careers',
   '/help': '/fr/help',
+  '/resources': '/fr/resources',
   '/privacy': '/fr/privacy',
   '/terms': '/fr/terms',
   '/security': '/fr/security',
@@ -77,6 +115,7 @@ export default function Footer() {
   const isFr = pathname.startsWith('/fr')
   const frHref = frenchPages[pathname] ?? '/fr'
   const enHref = isFr ? (pathname.replace(/^\/fr/, '') || '/') : pathname
+  const footerColumns = isFr ? footerColumnsFr : footerColumnsEn
 
   return (
     <footer className="bg-forest-green text-cream">
@@ -86,19 +125,19 @@ export default function Footer() {
 
           {/* Left: brand block */}
           <div className="flex-shrink-0 lg:max-w-[260px]">
-            <Link href="/" className="flex items-center gap-1.5 mb-5" aria-label="Sprout & Vine home">
+            <Link href={isFr ? '/fr' : '/'} className="flex items-center gap-1.5 mb-5" aria-label="Sprout & Vine home">
               <span className="font-display text-[23px] font-medium text-cream leading-none tracking-tight">sprout</span>
               <LogoMarkCream />
               <span className="font-display text-[23px] font-medium text-cream leading-none tracking-tight">vine</span>
             </Link>
             <p className="text-[11px] text-cream/60 uppercase tracking-[0.12em] mb-5 font-medium">
-              Growing connections. Nurturing futures.
+              {isFr ? 'Créer des liens. Nourrir les avenirs.' : 'Growing connections. Nurturing futures.'}
             </p>
             <p className="text-[13px] text-cream/55 leading-relaxed">
-              Sprout &amp; Vine operates as Prime Horizon Inc.
+              {isFr ? 'Sprout & Vine est exploité par Prime Horizon Inc.' : 'Sprout & Vine operates as Prime Horizon Inc.'}
             </p>
             <p className="text-[12px] text-cream/40 mt-3">
-              © 2025 Prime Horizon Inc. All rights reserved.
+              © 2026 Prime Horizon Inc.{isFr ? ' Tous droits réservés.' : ' All rights reserved.'}
             </p>
           </div>
 
@@ -140,12 +179,12 @@ export default function Footer() {
             </Link>
           </div>
           <div className="flex items-center gap-4">
-            <Link href="/privacy" className="text-[12px] text-cream/45 hover:text-cream transition-colors">
-              Privacy
+            <Link href={isFr ? '/fr/privacy' : '/privacy'} className="text-[12px] text-cream/45 hover:text-cream transition-colors">
+              {isFr ? 'Confidentialité' : 'Privacy'}
             </Link>
             <span className="text-cream/25 text-[12px] select-none">|</span>
-            <Link href="/terms" className="text-[12px] text-cream/45 hover:text-cream transition-colors">
-              Terms
+            <Link href={isFr ? '/fr/terms' : '/terms'} className="text-[12px] text-cream/45 hover:text-cream transition-colors">
+              {isFr ? 'Conditions' : 'Terms'}
             </Link>
           </div>
         </div>

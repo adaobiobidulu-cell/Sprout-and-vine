@@ -17,7 +17,7 @@ export default function LegalLayout({ title, effectiveDate, lastUpdated, toc, ch
       {/* Draft banner */}
       <div className="bg-amber-50 border-b border-amber-200 px-5 py-3 text-center">
         <p className="text-[13px] text-amber-800 font-medium">
-          Draft document — pending professional legal review. Not yet final.{' '}
+          Draft document, pending professional legal review. Not yet final.{' '}
           <a href="mailto:legal@sproutandvine.ca" className="underline hover:text-amber-900">
             Questions? Email legal@sproutandvine.ca
           </a>

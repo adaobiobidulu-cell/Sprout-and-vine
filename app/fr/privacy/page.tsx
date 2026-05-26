@@ -92,7 +92,7 @@ export default function FrPrivacyPage() {
         <li>Traiter les paiements et gérer votre abonnement.</li>
         <li>Répondre à vos demandes d'assistance, questions et commentaires.</li>
         <li>Vous envoyer des communications relatives au service (avis de compte, alertes de sécurité, reçus de facturation).</li>
-        <li>Vous envoyer des mises à jour de produits et des annonces de fonctionnalités — vous pouvez vous désabonner en tout temps.</li>
+        <li>Vous envoyer des mises à jour de produits et des annonces de fonctionnalités. Vous pouvez vous désabonner en tout temps.</li>
         <li>Surveiller et améliorer la performance, la sécurité et les fonctionnalités des Services.</li>
         <li>Respecter les obligations légales, y compris les exigences fiscales et réglementaires.</li>
       </ul>
@@ -171,14 +171,14 @@ export default function FrPrivacyPage() {
       <h2 id="third-parties">10. Services tiers</h2>
       <p>Nous faisons appel aux principaux fournisseurs de services tiers suivants :</p>
       <ul>
-        <li><strong>Vercel Inc.</strong> — hébergement du site web et livraison via réseau de périphérie. <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">Politique de confidentialité</a></li>
-        <li><strong>Stripe Inc.</strong> — traitement des paiements. Stripe gère toutes les données de carte de paiement sous conformité PCI-DSS. <a href="https://stripe.com/fr-ca/privacy" target="_blank" rel="noopener noreferrer">Politique de confidentialité</a></li>
-        <li><strong>Google LLC</strong> — livraison de courriels transactionnels via Gmail SMTP. <a href="https://policies.google.com/privacy?hl=fr" target="_blank" rel="noopener noreferrer">Politique de confidentialité</a></li>
+        <li><strong>Vercel Inc.</strong>: hébergement du site web et livraison via réseau de périphérie. <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">Politique de confidentialité</a></li>
+        <li><strong>Stripe Inc.</strong>: traitement des paiements. Stripe gère toutes les données de carte de paiement sous conformité PCI-DSS. <a href="https://stripe.com/fr-ca/privacy" target="_blank" rel="noopener noreferrer">Politique de confidentialité</a></li>
+        <li><strong>Google LLC</strong>: livraison de courriels transactionnels via Gmail SMTP. <a href="https://policies.google.com/privacy?hl=fr" target="_blank" rel="noopener noreferrer">Politique de confidentialité</a></li>
       </ul>
 
       <h2 id="children">11. Données sur les enfants</h2>
       <p>
-        Nos Services sont destinés aux exploitants de services de garde et à leur personnel — des adultes exploitant
+        Nos Services sont destinés aux exploitants de services de garde et à leur personnel, à savoir des adultes exploitant
         des installations de garde d'enfants agréées. Nous ne collectons pas sciemment de renseignements personnels
         directement auprès d'enfants de moins de 13 ans. Les renseignements sur les enfants inscrits à un centre
         de garde sont saisis par l'exploitant du centre et traités en son nom.

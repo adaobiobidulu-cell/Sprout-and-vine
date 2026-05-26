@@ -62,7 +62,7 @@ export default function ForEducatorsPage() {
               <div className="space-y-4">
                 {[
                   { time: '8:00 AM', task: 'Morning drop-off and check-ins', icon: '👋' },
-                  { time: '9:30 AM', task: 'Activity — painting with Emma', icon: '🎨' },
+                  { time: '9:30 AM', task: 'Activity: painting with Emma', icon: '🎨' },
                   { time: '11:00 AM', task: 'Log meals for 18 children', icon: '🍎' },
                   { time: '12:30 PM', task: 'Nap time, then daily reports', icon: '📋' },
                   { time: '3:00 PM', task: 'Tag 2 milestones, reply to 4 messages', icon: '🌱' },

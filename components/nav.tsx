@@ -33,6 +33,7 @@ const frenchPages: Record<string, string> = {
   '/': '/fr',
   '/pricing': '/fr/pricing',
   '/features': '/fr/features',
+  '/resources': '/fr/resources',
   '/about': '/fr/about',
   '/contact': '/fr/contact',
 }
@@ -66,6 +67,9 @@ function LangToggle() {
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const pathname = usePathname()
+  const isFr = pathname.startsWith('/fr')
+  const p = (en: string) => isFr ? `/fr${en}` : en
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 10)
@@ -86,7 +90,7 @@ export default function Nav() {
       <div className="max-w-7xl mx-auto px-5 md:px-8 h-full flex items-center justify-between">
 
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-1.5" aria-label="Sprout & Vine home">
+        <Link href={isFr ? '/fr' : '/'} className="flex items-center gap-1.5" aria-label="Sprout & Vine home">
           <span className="font-display text-[26px] font-medium text-forest-green leading-none tracking-tight">sprout</span>
           <LogoMark />
           <span className="font-display text-[26px] font-medium text-forest-green leading-none tracking-tight">vine</span>
@@ -95,28 +99,28 @@ export default function Nav() {
         {/* Desktop nav links */}
         <nav className="hidden md:flex items-center gap-7" aria-label="Primary navigation">
           <Link
-            href="/features"
+            href={p('/features')}
             className="flex items-center gap-1 text-[14px] font-medium text-dark-text/80 hover:text-forest-green transition-colors"
           >
-            Features <ChevronDown />
+            {isFr ? 'Fonctionnalités' : 'Features'} <ChevronDown />
           </Link>
           <Link
-            href="/pricing"
+            href={p('/pricing')}
             className="text-[14px] font-medium text-dark-text/80 hover:text-forest-green transition-colors"
           >
-            Pricing
+            {isFr ? 'Tarifs' : 'Pricing'}
           </Link>
           <Link
-            href="/resources"
+            href={p('/resources')}
             className="flex items-center gap-1 text-[14px] font-medium text-dark-text/80 hover:text-forest-green transition-colors"
           >
-            Resources <ChevronDown />
+            {isFr ? 'Ressources' : 'Resources'} <ChevronDown />
           </Link>
           <Link
-            href="/about"
+            href={p('/about')}
             className="text-[14px] font-medium text-dark-text/80 hover:text-forest-green transition-colors"
           >
-            About
+            {isFr ? 'À propos' : 'About'}
           </Link>
         </nav>
 
@@ -127,13 +131,13 @@ export default function Nav() {
             href="/login"
             className="text-[14px] font-medium text-dark-text/80 hover:text-forest-green transition-colors"
           >
-            Log in
+            {isFr ? 'Connexion' : 'Log in'}
           </Link>
           <Link
-            href="/contact"
+            href={p('/contact')}
             className="bg-forest-green text-white text-[13px] font-medium px-5 py-[10px] rounded-lg hover:bg-[#243d2f] transition-colors"
           >
-            Start Free Trial
+            {isFr ? 'Essai gratuit' : 'Start Free Trial'}
           </Link>
         </div>
 
@@ -170,10 +174,10 @@ export default function Nav() {
         >
           <nav className="px-5 py-5 flex flex-col gap-1" aria-label="Mobile navigation">
             {[
-              { label: 'Features', href: '/features' },
-              { label: 'Pricing', href: '/pricing' },
-              { label: 'Resources', href: '/resources' },
-              { label: 'About', href: '/about' },
+              { label: isFr ? 'Fonctionnalités' : 'Features', href: p('/features') },
+              { label: isFr ? 'Tarifs' : 'Pricing', href: p('/pricing') },
+              { label: isFr ? 'Ressources' : 'Resources', href: p('/resources') },
+              { label: isFr ? 'À propos' : 'About', href: p('/about') },
             ].map(({ label, href }) => (
               <Link
                 key={href}
@@ -193,14 +197,14 @@ export default function Nav() {
                 className="text-[15px] font-medium text-dark-text/70 hover:text-forest-green transition-colors"
                 onClick={() => setMobileOpen(false)}
               >
-                Log in
+                {isFr ? 'Connexion' : 'Log in'}
               </Link>
               <Link
-                href="/contact"
+                href={p('/contact')}
                 className="bg-forest-green text-white text-[14px] font-medium px-5 py-3 rounded-lg text-center hover:bg-[#243d2f] transition-colors"
                 onClick={() => setMobileOpen(false)}
               >
-                Start Free Trial
+                {isFr ? 'Essai gratuit' : 'Start Free Trial'}
               </Link>
             </div>
           </nav>

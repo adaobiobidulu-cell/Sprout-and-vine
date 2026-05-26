@@ -102,7 +102,7 @@ export default function Image() {
               fontFamily: 'system-ui, sans-serif',
             }}
           >
-            Attendance, billing, CWELCC tracking, and Smart Pickup Authorization — all in one calm platform.
+            Attendance, billing, CWELCC tracking, and Smart Pickup Authorization. All in one calm platform.
           </div>
         </div>
 

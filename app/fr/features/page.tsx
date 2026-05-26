@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Fonctionnalités | Sprout & Vine',
-  description: 'Présences, subventions PÉLCN, autorisation de collecte sécurisée, rapports quotidiens, messagerie familiale et facturation — tout en un pour les garderies canadiennes.',
+  description: 'Présences, subventions PÉLCN, autorisation de collecte sécurisée, rapports quotidiens, messagerie familiale et facturation, tout en un pour les garderies canadiennes.',
 }
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
@@ -44,7 +44,7 @@ const features = [
   {
     label: "Messagerie Familiale",
     headline: "Communication directe. Sans votre numéro personnel.",
-    body: "Toutes les communications avec les familles passent par l'application Vine. Les parents peuvent rejoindre leur équipe, poser des questions ou recevoir des alertes importantes — sans jamais vous écrire à 23h.",
+    body: "Toutes les communications avec les familles passent par l'application Vine. Les parents peuvent rejoindre leur équipe, poser des questions ou recevoir des alertes importantes, sans jamais vous écrire à 23h.",
     bullets: ["Messagerie dans l'application", "Annonces de groupe", "Alertes d'urgence", "Aucun numéro personnel partagé"],
   },
 ]
