@@ -3,11 +3,10 @@ import Link from 'next/link'
 import FadeIn from '@/components/fade-in'
 
 export const metadata: Metadata = {
-  title: 'About Us | Sprout & Vine',
-  description: 'Sprout & Vine is built by Prime Horizon Inc. to give Canadian childcare operators calm, modern infrastructure, so they can focus on the children in their care.',
+  title: 'About | Sprout & Vine',
+  description: 'The story behind Sprout & Vine. Built by Canadian operators for Canadian operators. We are building the infrastructure the childcare sector has needed for a long time.',
 }
 
-/* ── Shared section label ──────────────────────────────────────── */
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
     <p className="text-[11px] uppercase tracking-[0.16em] text-sage-green font-semibold mb-5">
@@ -16,180 +15,151 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
   )
 }
 
-/* ── Value card SVG icons ──────────────────────────────────────── */
-function GrowthIcon() {
-  return (
-    <svg viewBox="0 0 32 32" width="32" height="32" fill="none" aria-hidden="true">
-      <path d="M16 26 L16 8" stroke="#2F4A3A" strokeWidth="1.5" strokeLinecap="round" />
-      <path d="M10 14 L16 8 L22 14" stroke="#2F4A3A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M16 8 C16 8 14 5 16 3 C18 5 16 8 16 8 Z" fill="#2F4A3A" />
-    </svg>
-  )
-}
-
-function ConnectionIcon() {
-  return (
-    <svg viewBox="0 0 32 32" width="32" height="32" fill="none" aria-hidden="true">
-      <circle cx="12" cy="16" r="7" stroke="#2F4A3A" strokeWidth="1.5" />
-      <circle cx="20" cy="16" r="7" stroke="#2F4A3A" strokeWidth="1.5" />
-    </svg>
-  )
-}
-
-function TrustIcon() {
-  return (
-    <svg viewBox="0 0 32 32" width="32" height="32" fill="none" aria-hidden="true">
-      <path d="M16 4 L26 8 L26 16 C26 21.5 21.5 26.5 16 28 C10.5 26.5 6 21.5 6 16 L6 8 Z" stroke="#2F4A3A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  )
-}
-
-function CareIcon() {
-  return (
-    <svg viewBox="0 0 32 32" width="32" height="32" fill="none" aria-hidden="true">
-      <path d="M16 26 C16 26 5 19 5 12 C5 8.7 7.7 6 11 6 C13 6 14.8 7 16 8.5 C17.2 7 19 6 21 6 C24.3 6 27 8.7 27 12 C27 19 16 26 16 26 Z" stroke="#2F4A3A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M16 8.5 C16 8.5 18 6 20 7 C21 7.5 21 9 20 9.5" stroke="#2F4A3A" strokeWidth="1.5" strokeLinecap="round" />
-    </svg>
-  )
-}
-
-/* ── Values data ───────────────────────────────────────────────── */
-const values = [
+const founders = [
   {
-    icon: <GrowthIcon />,
-    name: 'Growth',
-    desc: 'We build tools that help centers grow sustainably, one child at a time.',
+    name: 'Ada Obidulu',
+    role: 'Co-founder',
+    bio: 'I spent years in customer success at software companies before I found the problem I could not stop thinking about. Canadian childcare operators are doing some of the most important work in the country and they are doing it with tools that were never built for them. I am building the platform I wish had existed from the beginning.',
   },
   {
-    icon: <ConnectionIcon />,
-    name: 'Connection',
-    desc: 'We believe technology should bring families and educators closer, not create distance.',
-  },
-  {
-    icon: <TrustIcon />,
-    name: 'Trust',
-    desc: 'Every feature we ship earns the trust of operators, educators, and the families they serve.',
-  },
-  {
-    icon: <CareIcon />,
-    name: 'Care',
-    desc: 'We care about the people using our platform as much as we care about the children in their centers.',
+    name: 'Co-founder',
+    role: 'Technology',
+    bio: 'Building the technical foundation that Canadian childcare operators deserve. Clear, fast, reliable, and built to last.',
   },
 ]
 
-/* ── Team data ─────────────────────────────────────────────────── */
-const team = [
-  {
-    emoji: '🌱',
-    name: 'Team Member',
-    role: 'Founder & CEO',
-    bio: 'Building Sprout & Vine with the operators we serve.',
-  },
-  {
-    emoji: '🎨',
-    name: 'Team Member',
-    role: 'Head of Product',
-    bio: 'Building Sprout & Vine with the operators we serve.',
-  },
-  {
-    emoji: '💚',
-    name: 'Team Member',
-    role: 'Head of Customer Success',
-    bio: 'Building Sprout & Vine with the operators we serve.',
-  },
-]
-
-/* ── Page ──────────────────────────────────────────────────────── */
 export default function AboutPage() {
   return (
     <>
-      {/* ── SECTION 1: HERO ──────────────────────────────────────── */}
-      <section className="bg-cream py-20 px-5 text-center">
-        <div className="max-w-3xl mx-auto">
-          <p className="text-[11px] uppercase tracking-[0.16em] text-sage-green font-semibold mb-5">
-            ABOUT US
-          </p>
+      {/* Hero */}
+      <section className="bg-cream py-20 md:py-28 px-5 md:px-8">
+        <div className="max-w-3xl mx-auto text-center">
+          <SectionLabel>Our story</SectionLabel>
           <h1
-            className="font-display font-medium text-forest-green leading-[1.08] mb-6"
-            style={{ fontSize: 'clamp(44px, 5.5vw, 68px)' }}
+            className="font-display font-medium text-forest-green leading-[1.05] mb-8"
+            style={{ fontSize: 'clamp(40px, 5.5vw, 66px)' }}
           >
-            We believe every child deserves a well-run, calm, and caring environment.
+            We are building the infrastructure Canadian childcare has always needed.
           </h1>
-          <p
-            className="text-dark-text/65 leading-relaxed max-w-2xl mx-auto"
-            style={{ fontSize: '17px' }}
-          >
-            That belief drove us to build the childcare management platform we wish had existed from day one.
+          <p className="text-[17px] text-dark-text/65 leading-relaxed">
+            Not another app. Not a tool ported from the US with Canadian compliance bolted on. Something built here, for the people doing this work every day.
           </p>
         </div>
       </section>
 
-      {/* ── SECTION 2: OUR STORY ─────────────────────────────────── */}
-      <section className="bg-white py-20 px-5">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
-          {/* Text left */}
+      {/* The Gap */}
+      <section className="bg-forest-green py-16 md:py-20 px-5 md:px-8">
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="font-display italic text-cream/85 leading-relaxed" style={{ fontSize: 'clamp(22px, 3vw, 32px)' }}>
+            "The gap is not passion. The gap is information and infrastructure."
+          </p>
+          <p className="text-[13px] text-cream/45 mt-5 uppercase tracking-[0.12em] font-medium">
+            Ada Obidulu, Co-founder
+          </p>
+        </div>
+      </section>
+
+      {/* Founder story */}
+      <section className="bg-white py-20 md:py-24 px-5 md:px-8">
+        <div className="max-w-4xl mx-auto">
           <FadeIn>
-            <SectionLabel>OUR STORY</SectionLabel>
+            <SectionLabel>Why we are building this</SectionLabel>
             <h2
-              className="font-display font-medium text-forest-green leading-[1.1] mb-7"
-              style={{ fontSize: 'clamp(40px, 4vw, 50px)' }}
+              className="font-display font-medium text-forest-green leading-[1.1] mb-10"
+              style={{ fontSize: 'clamp(36px, 4vw, 50px)' }}
             >
-              Built by someone who has seen the chaos firsthand.
+              I have seen the chaos firsthand.
             </h2>
-            <div className="space-y-5">
-              <p className="text-[16px] text-dark-text/65 leading-relaxed">
-                After years working in customer success across software companies, our founder spent time supporting childcare operators through technology transitions. What became clear quickly: the tools available were either built for US regulations, too complex for small teams, or simply not built with care. Canadian operators were left duct-taping together spreadsheets, paper forms, and apps that didn't talk to each other.
-              </p>
-              <p className="text-[16px] text-dark-text/65 leading-relaxed">
-                Sprout & Vine was born from a simple question: what would childcare management software look like if it was built specifically for Canada, specifically for the educators using it every day, and specifically with the families in mind? The answer is what you're looking at.
-              </p>
-            </div>
           </FadeIn>
 
-          {/* Accent card right */}
-          <FadeIn delay={0.1} className="flex justify-center lg:justify-end">
-            <div className="bg-cream rounded-2xl p-8 max-w-xs w-full">
-              <div className="text-5xl mb-5">🌱</div>
-              <p className="font-display italic text-forest-green leading-snug mb-4" style={{ fontSize: '22px' }}>
-                "What would this look like if it was built with real care?"
+          <FadeIn delay={0.05}>
+            <div className="space-y-6 text-[17px] text-dark-text/70 leading-relaxed max-w-3xl">
+              <p>
+                I spent years in customer success across software companies. I thought I understood what it meant to help people adopt technology. Then I started working with childcare operators.
               </p>
-              <p className="text-[13px] text-dark-text/40">
-                The question that started it all
+              <p>
+                What I found was a sector doing essential work with tools that were never designed for them. The software available was either built for US regulations, too expensive for small operations, or so complicated that educators were spending more time navigating the platform than doing their actual job. Canadian operators were duct-taping together spreadsheets, paper sign-in sheets, and apps that did not communicate with each other.
+              </p>
+              <p>
+                The CWELCC program added another layer. Suddenly operators were tracking subsidy rates, reconciling receipts, and managing compliance paperwork that did not exist two years ago. The existing tools had no answer for this. Some of them still do not.
+              </p>
+              <p>
+                I kept asking the same question: why is there no platform built specifically for Canadian childcare? One that understands CWELCC from the ground up, that works in both English and French, that is simple enough for a team of three and powerful enough for an organization with ten locations?
+              </p>
+              <p>
+                The answer was that nobody had built it yet. So we are building it.
+              </p>
+              <p>
+                Sprout and Vine is not a passion project. It is a serious attempt to give Canadian childcare operators the infrastructure they need to run sustainable, high-quality programs. The gap in this sector is not a lack of dedication from the people doing the work. The gap is the tools they have been given to do it.
               </p>
             </div>
           </FadeIn>
         </div>
       </section>
 
-      {/* ── SECTION 3: COMPANY ───────────────────────────────────── */}
-      <section className="bg-cream py-16 px-5">
-        <div className="max-w-2xl mx-auto text-center">
-          {/* Pill badge */}
-          <span className="inline-block bg-forest-green/10 text-forest-green text-[11px] font-semibold uppercase tracking-[0.14em] px-4 py-1.5 rounded-full mb-6">
-            PROUDLY CANADIAN
-          </span>
+      {/* What we believe */}
+      <section className="bg-cream py-20 md:py-24 px-5 md:px-8">
+        <div className="max-w-4xl mx-auto">
+          <FadeIn className="mb-12">
+            <h2 className="font-display font-medium text-forest-green leading-[1.1]" style={{ fontSize: 'clamp(34px, 4vw, 48px)' }}>
+              What we believe
+            </h2>
+          </FadeIn>
 
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {[
+              {
+                title: 'Operators deserve real tools',
+                desc: 'Not workarounds. Not ported-from-somewhere-else software that almost fits. A platform designed for the actual regulatory environment, the actual workflows, and the actual constraints of running a Canadian childcare centre.',
+              },
+              {
+                title: 'Educators deserve to focus on children',
+                desc: 'Every minute an educator spends on paperwork is a minute not spent with a child. We measure our success by how much time we give back to the people in the room.',
+              },
+              {
+                title: 'Families deserve to be informed',
+                desc: 'Parents who trust you are more than enrolled families. They are your strongest advocates. The right tools make that trust easy to build and easy to keep.',
+              },
+              {
+                title: 'Canada deserves a Canadian solution',
+                desc: 'CWELCC, provincial licensing, bilingual requirements, data residency. These are not edge cases. They are the foundation. We build from that foundation, not on top of something that ignores it.',
+              },
+            ].map((item, i) => (
+              <FadeIn key={item.title} delay={i * 0.08}>
+              <div className="bg-white rounded-2xl p-7 border border-[rgba(47,74,58,0.08)]" style={{ boxShadow: '0 2px 16px rgba(47,74,58,0.06)' }}>
+                <h3 className="font-display text-[22px] font-medium text-forest-green mb-3">{item.title}</h3>
+                <p className="text-[14px] text-dark-text/65 leading-relaxed">{item.desc}</p>
+              </div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Company */}
+      <section className="bg-white py-16 md:py-20 px-5 md:px-8">
+        <div className="max-w-2xl mx-auto text-center">
+          <span className="inline-block bg-forest-green/10 text-forest-green text-[11px] font-semibold uppercase tracking-[0.14em] px-4 py-1.5 rounded-full mb-6">
+            Proudly Canadian
+          </span>
           <h2
             className="font-display font-medium text-forest-green leading-[1.1] mb-6"
-            style={{ fontSize: 'clamp(36px, 4vw, 46px)' }}
+            style={{ fontSize: 'clamp(32px, 4vw, 44px)' }}
           >
-            Built under Prime Horizon Inc.
+            Sprout &amp; Vine is operated by Prime Horizon Inc.
           </h2>
-
-          <p className="text-[16px] text-dark-text/60 leading-relaxed max-w-xl mx-auto mb-10">
-            Sprout & Vine is a product of Prime Horizon Inc., a proudly Canadian company. Our data stays in Canada. Our focus stays on Canada. Our team understands the unique regulatory landscape every Canadian operator navigates.
+          <p className="text-[16px] text-dark-text/60 leading-relaxed mb-10 max-w-xl mx-auto">
+            We are a proudly Canadian company. Our data stays in Canada. Our focus stays on Canada. Our team understands the unique regulatory landscape every Canadian operator navigates every day.
           </p>
-
-          {/* Trust chips */}
           <div className="flex flex-wrap items-center justify-center gap-3">
             {[
               '🍁 Canadian company',
               '🔒 Canadian data residency',
-              '🌐 Bilingual platform',
-            ].map((chip) => (
+              '🌐 Fully bilingual (EN/FR)',
+            ].map(chip => (
               <span
                 key={chip}
-                className="bg-white border border-[rgba(47,74,58,0.15)] text-dark-text/70 text-[13px] font-medium px-4 py-2 rounded-full"
+                className="bg-cream border border-[rgba(47,74,58,0.15)] text-dark-text/70 text-[13px] font-medium px-4 py-2 rounded-full"
               >
                 {chip}
               </span>
@@ -198,111 +168,54 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── SECTION 4: VALUES ────────────────────────────────────── */}
-      <section className="bg-white py-20 px-5">
-        <div className="max-w-6xl mx-auto">
-          <h2
-            className="font-display font-medium text-forest-green text-center mb-12"
-            style={{ fontSize: '40px' }}
-          >
-            What we stand for
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {values.map((v, i) => (
-              <FadeIn key={v.name} delay={i * 0.08}>
-              <div className="bg-cream rounded-2xl p-7 hover:-translate-y-1 transition-transform duration-200">
-                <div className="mb-4">{v.icon}</div>
-                <h3
-                  className="font-display font-medium text-forest-green mb-2"
-                  style={{ fontSize: '24px' }}
-                >
-                  {v.name}
-                </h3>
-                <p className="text-[13px] text-dark-text/60 leading-relaxed">
-                  {v.desc}
-                </p>
-              </div>
-              </FadeIn>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── SECTION 5: TEAM ──────────────────────────────────────── */}
-      <section className="bg-cream py-20 px-5">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-12">
-            <h2
-              className="font-display font-medium text-forest-green mb-4"
-              style={{ fontSize: '40px' }}
-            >
-              The team behind the platform
+      {/* Founders */}
+      <section className="bg-cream py-20 md:py-24 px-5 md:px-8">
+        <div className="max-w-4xl mx-auto">
+          <FadeIn className="mb-12">
+            <SectionLabel>The team</SectionLabel>
+            <h2 className="font-display font-medium text-forest-green leading-[1.1]" style={{ fontSize: 'clamp(32px, 4vw, 46px)' }}>
+              We are a small team doing serious work.
             </h2>
-            <p className="text-[16px] text-dark-text/55">
-              A small, focused team building something meaningful for Canadian childcare.
-            </p>
-          </div>
+          </FadeIn>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-            {team.map((member, i) => (
-              <FadeIn key={member.role} delay={i * 0.1}>
-              <div
-                className="bg-white rounded-2xl p-6 text-center hover:-translate-y-1 transition-transform duration-200"
-              >
-                <div className="w-20 h-20 bg-forest-green/10 flex items-center justify-center rounded-full mx-auto mb-4 text-3xl">
-                  {member.emoji}
-                </div>
-                <p className="text-[15px] font-semibold text-dark-text mb-1">
-                  {member.name}
-                </p>
-                <p className="text-[13px] text-dark-text/40 mb-3">
-                  {member.role}
-                </p>
-                <p className="text-[12px] text-dark-text/40 italic">
-                  {member.bio}
-                </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {founders.map((f, i) => (
+              <FadeIn key={f.name} delay={i * 0.1}>
+              <div className="bg-white rounded-2xl p-7 border border-[rgba(47,74,58,0.08)]" style={{ boxShadow: '0 2px 16px rgba(47,74,58,0.06)' }}>
+                <p className="text-[18px] font-semibold text-dark-text mb-1">{f.name}</p>
+                <p className="text-[13px] text-dark-text/45 mb-4 uppercase tracking-[0.08em] font-medium">{f.role}</p>
+                <p className="text-[14px] text-dark-text/65 leading-relaxed">{f.bio}</p>
               </div>
               </FadeIn>
             ))}
           </div>
-
-          {/* Join our team CTA */}
-          <div className="text-center">
-            <p className="text-[16px] text-dark-text/55 mb-4">
-              We're growing.
-            </p>
-            <Link
-              href="/contact"
-              className="inline-block border-2 border-forest-green text-forest-green text-[14px] font-medium px-6 py-3 rounded-lg hover:bg-forest-green hover:text-white transition-colors"
-            >
-              See open roles
-            </Link>
-          </div>
         </div>
       </section>
 
-      {/* ── SECTION 6: CTA ───────────────────────────────────────── */}
-      <section className="bg-forest-green py-20 px-5 text-center">
+      {/* CTA */}
+      <section className="bg-forest-green py-20 px-5 md:px-8 text-center">
         <div className="max-w-2xl mx-auto">
           <h2
-            className="font-display font-medium text-cream leading-[1.08] mb-10"
-            style={{ fontSize: 'clamp(40px, 5vw, 60px)' }}
+            className="font-display font-medium text-cream leading-[1.08] mb-5"
+            style={{ fontSize: 'clamp(36px, 4.5vw, 52px)' }}
           >
-            Ready to see it in action?
+            Build this with us.
           </h2>
+          <p className="text-[16px] text-cream/60 mb-10 leading-relaxed">
+            The Founding Operators Program is open now. Apply and help shape what Sprout &amp; Vine becomes.
+          </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Link
-              href="/contact"
+              href="/founding"
               className="bg-terracotta text-white text-[14px] font-medium px-8 py-4 rounded-lg hover:bg-[#d4724e] transition-colors"
             >
-              Start free trial
+              Apply to the Founding Program
             </Link>
             <Link
-              href="/contact"
+              href="/features"
               className="text-cream text-[14px] font-medium px-8 py-4 rounded-lg border-2 border-cream/40 hover:border-cream/70 transition-colors"
             >
-              Book a demo
+              See the platform
             </Link>
           </div>
         </div>
