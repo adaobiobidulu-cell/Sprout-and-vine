@@ -32,6 +32,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/seeds/funding`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${base}/seeds/cwelcc-readiness`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
 
+    // Features
+    { url: `${base}/features/smart-pickup`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+
+    // Comparison pages — deep
+    { url: `${base}/compare`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${base}/compare/lillio`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+
     // Content / community — EN
     { url: `${base}/blog`, lastModified: now, changeFrequency: 'weekly', priority: 0.6 },
     { url: `${base}/changelog`, lastModified: now, changeFrequency: 'weekly', priority: 0.5 },

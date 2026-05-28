@@ -124,7 +124,7 @@ export default function Home() {
           </h1>
 
           <p className="text-[18px] text-dark-text/65 mb-10 max-w-xl mx-auto leading-relaxed">
-            Attendance, billing, parent communication, staffing, and Smart Pickup Authorization. All in one calm operational platform, built specifically for Canada.
+            The only childcare platform built around CWELCC from the ground up. Attendance, billing, photo-verified Smart Pickup, and parent communication, all designed for how Canadian centres actually operate.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-3">
