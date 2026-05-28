@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'À propos | Sprout & Vine',
-  description: "Sprout & Vine est développé par Prime Horizon Inc. pour offrir aux opérateurs canadiens de services de garde une infrastructure moderne et apaisante.",
+  description: "Sprout & Vine est développé pour offrir aux opérateurs canadiens de services de garde une infrastructure moderne et apaisante.",
 }
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
@@ -28,7 +28,7 @@ export default function FrAboutPage() {
             Construire l'infrastructure dont les garderies canadiennes méritent.
           </h1>
           <p className="text-[18px] text-dark-text/60 leading-relaxed max-w-2xl">
-            Sprout & Vine est développé par Prime Horizon Inc. avec une mission simple: donner aux opérateurs canadiens de services de garde le temps et la clarté pour se concentrer sur les enfants.
+            Sprout & Vine est développé avec une mission simple: donner aux opérateurs canadiens de services de garde le temps et la clarté pour se concentrer sur les enfants.
           </p>
         </div>
       </section>
@@ -57,15 +57,15 @@ export default function FrAboutPage() {
         </div>
       </section>
 
-      {/* Prime Horizon */}
+      {/* Proudly Canadian */}
       <section className="bg-cream py-16 px-5 md:px-8">
         <div className="max-w-4xl mx-auto">
-          <SectionLabel>Prime Horizon Inc.</SectionLabel>
+          <SectionLabel>Fièrement canadien</SectionLabel>
           <h2 className="font-display font-medium text-forest-green leading-[1.1] mb-5" style={{ fontSize: 'clamp(28px, 3.5vw, 40px)' }}>
-            L'entreprise derrière Sprout & Vine
+            Construit au Canada, pour le Canada.
           </h2>
           <p className="text-[15px] text-dark-text/65 leading-relaxed max-w-2xl">
-            Sprout & Vine est un produit de Prime Horizon Inc., une société canadienne dont la mission est de créer des logiciels d'infrastructure pour les secteurs sous-desservis. Nous opérons depuis le Canada, avec des données stockées au Canada, pour des opérateurs canadiens.
+            Sprout & Vine est une entreprise canadienne. Nous opérons depuis le Canada, avec des données stockées au Canada, pour des opérateurs canadiens.
           </p>
         </div>
       </section>

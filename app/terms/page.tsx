@@ -34,8 +34,7 @@ export default function TermsPage() {
       <h2 id="agreement">1. Agreement to Terms</h2>
       <p>
         These Terms of Service ("Terms") are a legally binding agreement between you and{' '}
-        <strong>Prime Horizon Inc.</strong> ("Prime Horizon," "we," "our," or "us"), operating as{' '}
-        <strong>Sprout &amp; Vine</strong>, governing your use of our childcare management platform, website at
+        <strong>Sprout &amp; Vine</strong> ("we," "our," or "us"), governing your use of our childcare management platform, website at
         sproutandvine.ca, and related services (collectively, the "Services").
       </p>
       <p>
@@ -80,7 +79,7 @@ export default function TermsPage() {
       <h3>Account security</h3>
       <p>
         You are responsible for maintaining the confidentiality of your login credentials. You must notify us
-        immediately at <a href="mailto:support@sproutandvine.ca">support@sproutandvine.ca</a> if you
+        immediately at <a href="mailto:hello@sproutandvine.ca">hello@sproutandvine.ca</a> if you
         suspect unauthorized access to your account. We are not liable for losses resulting from unauthorized
         use of your credentials where you have not exercised reasonable care.
       </p>
@@ -184,7 +183,7 @@ export default function TermsPage() {
       <h2 id="ip">7. Intellectual Property</h2>
       <p>
         The Sprout &amp; Vine platform, including its software, design, user interface, trademarks, logos,
-        and all related intellectual property, is owned by Prime Horizon Inc. and protected by Canadian and
+        and all related intellectual property, is owned by Sprout &amp; Vine and protected by Canadian and
         international copyright, trademark, and other intellectual property laws.
       </p>
       <p>
@@ -217,7 +216,7 @@ export default function TermsPage() {
       <h2 id="disclaimers">9. Disclaimers</h2>
       <p>
         THE SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTY OF ANY KIND. TO THE MAXIMUM
-        EXTENT PERMITTED BY APPLICABLE LAW, PRIME HORIZON INC. EXPRESSLY DISCLAIMS ALL WARRANTIES, WHETHER
+        EXTENT PERMITTED BY APPLICABLE LAW, SPROUT &amp; VINE EXPRESSLY DISCLAIMS ALL WARRANTIES, WHETHER
         EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE, INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
         PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
       </p>
@@ -229,7 +228,7 @@ export default function TermsPage() {
 
       <h2 id="liability">10. Limitation of Liability</h2>
       <p>
-        TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, PRIME HORIZON INC. AND ITS OFFICERS, DIRECTORS,
+        TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, SPROUT &amp; VINE AND ITS OFFICERS, DIRECTORS,
         EMPLOYEES, AND AGENTS WILL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR
         PUNITIVE DAMAGES, INCLUDING LOSS OF PROFITS, DATA, BUSINESS, OR GOODWILL, ARISING OUT OF OR IN
         CONNECTION WITH THESE TERMS OR THE SERVICES.
@@ -246,7 +245,7 @@ export default function TermsPage() {
 
       <h2 id="indemnification">11. Indemnification</h2>
       <p>
-        You agree to indemnify, defend, and hold harmless Prime Horizon Inc. and its affiliates, officers,
+        You agree to indemnify, defend, and hold harmless Sprout &amp; Vine and its affiliates, officers,
         directors, employees, and agents from and against any claims, liabilities, damages, losses, and expenses
         (including reasonable legal fees) arising out of or relating to (a) your use of the Services, (b) your
         violation of these Terms, (c) your violation of any third-party right, including privacy rights, or
@@ -284,7 +283,7 @@ export default function TermsPage() {
         For questions about these Terms, contact us at:
       </p>
       <p>
-        <strong>Prime Horizon Inc.</strong> (operating as Sprout &amp; Vine)<br />
+        <strong>Sprout &amp; Vine</strong><br />
         <a href="mailto:legal@sproutandvine.ca">legal@sproutandvine.ca</a>
       </p>
       <p>

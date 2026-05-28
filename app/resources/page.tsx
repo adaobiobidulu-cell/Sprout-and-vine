@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import FadeIn from '@/components/fade-in'
-import ResourceDownload from '@/components/resource-download'
 import EmailCapture from '@/components/email-capture'
 
 export const metadata: Metadata = {
@@ -48,7 +47,7 @@ export default function ResourcesPage() {
               Free tools for Canadian childcare operators.
             </h1>
             <p className="text-[17px] text-dark-text/60 leading-relaxed max-w-2xl">
-              We're building practical guides for the things that take up the most time: CWELCC subsidy management, provincial licensing, and compliance documentation.
+              Practical guides for the things that take up the most time: CWELCC subsidy management, provincial licensing, and compliance documentation.
             </p>
           </FadeIn>
         </div>
@@ -66,7 +65,7 @@ export default function ResourcesPage() {
                 <div>
                   <p className="text-[11px] uppercase tracking-[0.14em] text-sage-green font-semibold mb-1">Free Guide</p>
                   <h2 className="font-display font-medium text-cream leading-tight" style={{ fontSize: 'clamp(22px, 3vw, 30px)' }}>
-                    The Complete CWELCC Subsidy Guide for Canadian Operators
+                    The Complete CWELCC Guide for Canadian Operators
                   </h2>
                 </div>
               </div>
@@ -76,7 +75,7 @@ export default function ResourcesPage() {
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
                   <div>
-                    <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-dark-text/40 mb-3">What's inside</p>
+                    <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-dark-text/40 mb-3">What is inside</p>
                     <ul className="space-y-2.5">
                       {cwelccInside.map(item => (
                         <li key={item} className="flex items-start gap-2.5">
@@ -90,11 +89,15 @@ export default function ResourcesPage() {
                     </ul>
                   </div>
                   <div className="bg-cream rounded-xl p-6 flex flex-col justify-between gap-4">
-                    <div>
-                      <p className="text-[13px] font-semibold text-forest-green mb-1">Get notified when it's ready</p>
-                      <p className="text-[12px] text-dark-text/50 mb-4">We'll email you the guide as soon as it's published. Free, no strings attached.</p>
-                    </div>
-                    <ResourceDownload resource="cwelcc-guide" label="The Complete CWELCC Subsidy Guide" />
+                    <p className="text-[14px] text-dark-text/70 leading-relaxed">
+                      Everything you need to understand CWELCC funding, fee caps, subsidy tracking, and provincial compliance. Free, no sign-up required.
+                    </p>
+                    <Link
+                      href="/resources/cwelcc-guide"
+                      className="block w-full text-center bg-forest-green text-white text-[13px] font-medium px-5 py-3 rounded-lg hover:bg-[#243d2f] transition-colors"
+                    >
+                      Read the CWELCC Guide →
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -115,11 +118,11 @@ export default function ResourcesPage() {
               </div>
               <div className="px-8 py-7">
                 <p className="text-[15px] text-dark-text/65 leading-relaxed mb-7">
-                  Whether you're opening a new centre or preparing for your next inspection, this checklist covers every documentation, staffing, and compliance requirement, broken down by province, so you only see what's relevant to you.
+                  Whether you are opening a new centre or preparing for your next inspection, this checklist covers every documentation, staffing, and compliance requirement, broken down by province.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
                   <div>
-                    <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-dark-text/40 mb-3">What's inside</p>
+                    <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-dark-text/40 mb-3">What is inside</p>
                     <ul className="space-y-2.5">
                       {checklistInside.map(item => (
                         <li key={item} className="flex items-start gap-2.5">
@@ -132,12 +135,16 @@ export default function ResourcesPage() {
                       ))}
                     </ul>
                   </div>
-                  <div className="bg-cream rounded-xl p-6 flex flex-col justify-between gap-4">
-                    <div>
-                      <p className="text-[13px] font-semibold text-forest-green mb-1">Get notified when it's ready</p>
-                      <p className="text-[12px] text-dark-text/50 mb-4">We'll email you the checklist as soon as it's published. Free, no strings attached.</p>
-                    </div>
-                    <ResourceDownload resource="licensing-checklist" label="Provincial Licensing Checklist" />
+                  <div className="bg-white rounded-xl p-6 flex flex-col justify-between gap-4 border border-[rgba(47,74,58,0.08)]">
+                    <p className="text-[14px] text-dark-text/70 leading-relaxed">
+                      A complete inspection-ready checklist covering Ontario, BC, Alberta, Manitoba, and Quebec. Free, no sign-up required.
+                    </p>
+                    <Link
+                      href="/resources/licensing-checklist"
+                      className="block w-full text-center bg-forest-green text-white text-[13px] font-medium px-5 py-3 rounded-lg hover:bg-[#243d2f] transition-colors"
+                    >
+                      View the Licensing Checklist →
+                    </Link>
                   </div>
                 </div>
               </div>

@@ -31,7 +31,7 @@ export default function PostPage() {
             Why we are building Sprout &amp; Vine
           </h1>
           <div className="flex items-center gap-4 text-cream/45 text-[13px]">
-            <span>Ada Obidulu</span>
+            <span>Ada</span>
             <span className="text-cream/25">·</span>
             <time dateTime="2026-05-01">May 1, 2026</time>
             <span className="text-cream/25">·</span>
@@ -157,7 +157,7 @@ export default function PostPage() {
               AO
             </div>
             <div>
-              <p className="text-[14px] font-semibold text-dark-text">Ada Obidulu</p>
+              <p className="text-[14px] font-semibold text-dark-text">Ada</p>
               <p className="text-[13px] text-dark-text/50 mt-0.5">Co-founder, Sprout &amp; Vine</p>
               <p className="text-[13px] text-dark-text/55 mt-2 leading-relaxed">
                 Building Sprout &amp; Vine with the Canadian childcare operators who will use it every day.

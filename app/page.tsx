@@ -111,7 +111,7 @@ export default function Home() {
         <div className="max-w-3xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-terracotta/10 text-terracotta text-[12px] font-semibold px-4 py-2 rounded-full mb-8">
             <span className="w-1.5 h-1.5 rounded-full bg-terracotta animate-pulse" />
-            Founding Operators Program — Now Open
+            Founding Operators Program · Now Open
           </div>
 
           <h1
@@ -151,7 +151,7 @@ export default function Home() {
             "The gap is not passion. The gap is information and infrastructure."
           </p>
           <p className="text-[13px] text-cream/45 mt-4 uppercase tracking-[0.12em] font-medium">
-            Ada Obidulu, Co-founder of Sprout &amp; Vine
+            Ada, Co-founder of Sprout &amp; Vine
           </p>
         </div>
       </section>
