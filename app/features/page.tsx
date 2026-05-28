@@ -464,6 +464,56 @@ export default function FeaturesPage() {
         )
       })}
 
+      {/* ── INTEGRATIONS ──────────────────────────────────────── */}
+      <section className="bg-cream py-16 md:py-20 px-5 md:px-8">
+        <div className="max-w-4xl mx-auto">
+          <SectionLabel>Integrations</SectionLabel>
+          <h2
+            className="font-display font-medium text-forest-green leading-[1.08] mb-4"
+            style={{ fontSize: 'clamp(28px, 3.5vw, 42px)' }}
+          >
+            Works with the tools you already use.
+          </h2>
+          <p className="text-[15px] text-dark-text/65 leading-relaxed mb-10 max-w-2xl">
+            Sprout &amp; Vine connects with QuickBooks Online and Xero so your billing data flows directly to your bookkeeper without double-entry. Payment processing is built in through Stripe, with no separate merchant account needed.
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+            {[
+              {
+                name: 'QuickBooks Online',
+                icon: '📊',
+                status: 'Coming Q3 2026',
+              },
+              {
+                name: 'Xero',
+                icon: '🧮',
+                status: 'Coming Q3 2026',
+              },
+              {
+                name: 'Stripe',
+                icon: '💳',
+                status: 'Built in',
+              },
+              {
+                name: 'Canada Post',
+                icon: '📮',
+                status: 'Coming Q4 2026',
+              },
+            ].map(item => (
+              <div
+                key={item.name}
+                className="bg-white rounded-xl p-5 border border-[rgba(47,74,58,0.1)] text-center"
+                style={{ boxShadow: '0 2px 12px rgba(47,74,58,0.05)' }}
+              >
+                <span className="text-3xl block mb-3">{item.icon}</span>
+                <p className="text-[13px] font-semibold text-dark-text mb-1">{item.name}</p>
+                <p className="text-[11px] font-medium text-dark-text/40">{item.status}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── CTA ───────────────────────────────────────────────── */}
       <section className="bg-forest-green py-20 px-5 md:px-8">
         <div className="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">

@@ -122,7 +122,7 @@ const featureRows = [
   { feature: 'Provincial licensing checklists', cols: [true, true, true, true, true, true, true] },
   { feature: 'CWELCC readiness guide', cols: [true, true, true, true, true, true, true] },
   { feature: 'Resource library', cols: [true, true, true, true, true, true, true] },
-  { feature: 'Community access', cols: [true, true, true, true, true, true, true] },
+  { feature: 'Operator community (private Slack group)', cols: [true, true, true, true, true, true, true] },
   { feature: 'Attendance tracking', cols: [false, true, true, true, true, true, true] },
   { feature: 'Daily reports and parent messaging', cols: [false, true, true, true, true, true, true] },
   { feature: 'Vine parent app', cols: [false, true, true, true, true, true, true] },

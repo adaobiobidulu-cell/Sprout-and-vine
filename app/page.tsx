@@ -473,6 +473,11 @@ export default function Home() {
                 </div>
               ))}
             </div>
+
+            <div className="mt-7 pt-6 border-t border-[rgba(47,74,58,0.1)]">
+              <p className="text-[13px] font-medium text-dark-text/55 mb-1">Available on iOS and Android.</p>
+              <p className="text-[12px] text-dark-text/40">Built with full feature parity, no Android tax.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -570,6 +575,19 @@ export default function Home() {
                 <p className="text-[14px] text-dark-text/60 leading-relaxed">{item.desc}</p>
               </div>
             ))}
+          </div>
+
+          <div className="mt-12 pt-8 border-t border-[rgba(47,74,58,0.1)]">
+            <p className="text-[12px] font-medium text-dark-text/40 uppercase tracking-[0.12em] mb-3">
+              Centres across
+            </p>
+            <div className="flex flex-wrap gap-x-4 gap-y-2">
+              {['Ontario', 'British Columbia', 'Alberta', 'Manitoba', 'Québec'].map((province, i, arr) => (
+                <span key={province} className="text-[14px] font-medium text-dark-text/55">
+                  {province}{i < arr.length - 1 ? <span className="text-dark-text/25 ml-4">·</span> : null}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </section>

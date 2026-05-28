@@ -59,6 +59,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/fr/about`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${base}/fr/contact`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
 
+    // Features — FR
+    { url: `${base}/fr/features/autorisation-ramassage`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+
+    // Comparison — FR
+    { url: `${base}/fr/compare/lillio`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
+
     // Content / community — FR
     { url: `${base}/fr/blog`, lastModified: now, changeFrequency: 'weekly', priority: 0.5 },
     { url: `${base}/fr/changelog`, lastModified: now, changeFrequency: 'weekly', priority: 0.4 },

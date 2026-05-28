@@ -25,20 +25,20 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://sproutandvine.ca'),
   title: 'Sprout & Vine | Childcare Management Built for Canada',
   description:
-    'Calm operational infrastructure for Canadian childcare centers. Attendance, billing, CWELCC tracking, and Smart Pickup Authorization. All in one platform.',
+    'The only childcare platform built around CWELCC from day one. Attendance, billing, photo-verified Smart Pickup Authorization, and bilingual parent communication, designed for Canadian operators.',
   openGraph: {
     type: 'website',
     siteName: 'Sprout & Vine',
     title: 'Sprout & Vine | Childcare Management Built for Canada',
     description:
-      'Calm operational infrastructure for Canadian childcare centers. Attendance, billing, CWELCC tracking, and Smart Pickup Authorization. All in one platform.',
+      'The only childcare platform built around CWELCC from day one. Attendance, billing, photo-verified Smart Pickup Authorization, and bilingual parent communication, designed for Canadian operators.',
     url: 'https://sproutandvine.ca',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Sprout & Vine | Childcare Management Built for Canada',
     description:
-      'Calm operational infrastructure for Canadian childcare centers. Attendance, billing, CWELCC tracking, and Smart Pickup Authorization.',
+      'The only childcare platform built around CWELCC from day one. Attendance, billing, photo-verified Smart Pickup Authorization, and bilingual parent communication.',
   },
 }
 
