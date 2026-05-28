@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import FadeIn from '@/components/fade-in'
 import ResourceDownload from '@/components/resource-download'
+import EmailCapture from '@/components/email-capture'
 
 export const metadata: Metadata = {
   title: 'Resources | Sprout & Vine',
@@ -191,27 +192,28 @@ export default function ResourcesPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-forest-green py-16 px-5 md:px-8 text-center">
-        <div className="max-w-2xl mx-auto">
-          <h2 className="font-display font-medium text-cream leading-[1.08] mb-5" style={{ fontSize: 'clamp(30px, 4vw, 46px)' }}>
-            Ready to put all of this into practice?
-          </h2>
-          <p className="text-cream/65 text-[15px] leading-relaxed mb-8">
-            Sprout &amp; Vine handles the CWELCC tracking, licensing documentation, and compliance automatically, so your team can focus on children, not paperwork.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <section className="bg-forest-green py-16 px-5 md:px-8">
+        <div className="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 className="font-display font-medium text-cream leading-[1.08] mb-5" style={{ fontSize: 'clamp(28px, 4vw, 42px)' }}>
+              Ready to put all of this into practice?
+            </h2>
+            <p className="text-cream/65 text-[14px] leading-relaxed mb-6">
+              Sprout &amp; Vine handles the CWELCC tracking, licensing documentation, and compliance automatically.
+            </p>
             <Link
-              href="/contact"
-              className="bg-terracotta text-white text-[14px] font-medium px-7 py-3.5 rounded-lg hover:opacity-90 transition-opacity"
+              href="/founding"
+              className="inline-block bg-terracotta text-white text-[14px] font-medium px-7 py-3.5 rounded-lg hover:bg-[#d4724e] transition-colors"
             >
-              Book a demo
+              Apply to the Founding Program
             </Link>
-            <Link
-              href="/features"
-              className="text-cream/75 text-[14px] font-medium hover:text-cream transition-colors"
-            >
-              Explore the platform →
-            </Link>
+          </div>
+          <div className="bg-white/10 rounded-2xl p-7">
+            <EmailCapture
+              heading="New resources, delivered."
+              subheading="We publish guides on CWELCC, licensing, and running a Canadian childcare program. Get them as they come out."
+              source="resources-page"
+            />
           </div>
         </div>
       </section>
