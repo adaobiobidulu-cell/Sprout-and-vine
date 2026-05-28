@@ -147,8 +147,92 @@ const featureRows = [
   { feature: 'Phone support', cols: [false, false, false, false, false, false, true] },
 ]
 
-export default function PricingTiersClient() {
+const featureRowsFr = [
+  { feature: "Outils de planification d'entreprise", cols: [true, true, true, true, true, true, true] },
+  { feature: 'Listes de vérification provinciales', cols: [true, true, true, true, true, true, true] },
+  { feature: 'Guide de préparation au PÉLCPN', cols: [true, true, true, true, true, true, true] },
+  { feature: 'Bibliothèque de ressources', cols: [true, true, true, true, true, true, true] },
+  { feature: 'Communauté des opérateurs (Slack privé)', cols: [true, true, true, true, true, true, true] },
+  { feature: 'Suivi des présences', cols: [false, true, true, true, true, true, true] },
+  { feature: 'Rapports quotidiens et messagerie', cols: [false, true, true, true, true, true, true] },
+  { feature: 'Application Vine pour les familles', cols: [false, true, true, true, true, true, true] },
+  { feature: 'Facturation et paiements', cols: [false, true, true, true, true, true, true] },
+  { feature: 'Suivi des subventions PÉLCPN', cols: [false, true, true, true, true, true, true] },
+  { feature: 'Autorisation de ramassage intelligent', cols: [false, true, true, true, true, true, true] },
+  { feature: "Inscriptions et liste d'attente", cols: [false, true, true, true, true, true, true] },
+  { feature: 'Bilingue FR/EN', cols: [false, true, true, true, true, true, true] },
+  { feature: 'Planification du personnel', cols: [false, false, true, true, true, true, true] },
+  { feature: 'Suivi des ratios et alertes', cols: [false, false, true, true, true, true, true] },
+  { feature: "Jalons de développement de l'enfant", cols: [false, false, true, true, true, true, true] },
+  { feature: "Rapports d'incidents", cols: [false, false, false, true, true, true, true] },
+  { feature: 'Formulaires et documentation personnalisés', cols: [false, false, false, true, true, true, true] },
+  { feature: 'Assistance courriel prioritaire', cols: [false, false, false, false, true, true, true] },
+  { feature: 'Tableau de bord multi-salles', cols: [false, false, false, false, true, true, true] },
+  { feature: 'Rapports PÉLCPN avancés', cols: [false, false, false, false, true, true, true] },
+  { feature: "Appel d'intégration dédié", cols: [false, false, false, false, false, true, true] },
+  { feature: 'Tableau de bord multi-installations', cols: [false, false, false, false, false, false, true] },
+  { feature: 'Rapports croisés entre installations', cols: [false, false, false, false, false, false, true] },
+  { feature: 'Image de marque personnalisée', cols: [false, false, false, false, false, false, true] },
+  { feature: 'Accès API', cols: [false, false, false, false, false, false, true] },
+  { feature: 'Support téléphonique', cols: [false, false, false, false, false, false, true] },
+]
+
+const uiStrings = {
+  en: {
+    monthly: 'Monthly',
+    annual: 'Annual',
+    twoMonthsFree: '2 months free',
+    free: 'Free',
+    custom: 'Custom',
+    billedAnnually: 'billed annually',
+    compareAll: 'Compare all features',
+    getStarted: 'Get started',
+    applyNow: 'Apply now',
+    bookDemo: 'Book demo',
+  },
+  fr: {
+    monthly: 'Mensuel',
+    annual: 'Annuel',
+    twoMonthsFree: '2 mois gratuits',
+    free: 'Gratuit',
+    custom: 'Sur mesure',
+    billedAnnually: 'facturé annuellement',
+    compareAll: 'Comparer toutes les fonctionnalités',
+    getStarted: 'Commencer',
+    applyNow: 'Postuler',
+    bookDemo: 'Réserver',
+  },
+}
+
+const tiersFr = tiers.map(tier => ({
+  ...tier,
+  enrollment: tier.id === 'seeds' ? "Jusqu'à 3 enfants"
+    : tier.id === 'sprout-home' ? '4 à 8 enfants'
+    : tier.id === 'sprout-starter' ? '9 à 20 enfants'
+    : tier.id === 'sprout-grow' ? '21 à 40 enfants'
+    : tier.id === 'vine' ? '41 à 75 enfants'
+    : tier.id === 'canopy' ? '76 à 120 enfants'
+    : '120+ enfants ou multi-sites',
+  tagline: tier.id === 'seeds' ? 'Planifiez votre centre avant d\'ouvrir les portes.'
+    : tier.id === 'sprout-home' ? 'Tout ce qu\'il faut pour gérer votre garderie en milieu familial.'
+    : tier.id === 'sprout-starter' ? 'Votre centre grandit. Vos outils aussi.'
+    : tier.id === 'sprout-grow' ? 'Plus d\'enfants, plus de salles, un seul tableau de bord.'
+    : tier.id === 'vine' ? 'La plateforme complète pour les centres canadiens établis.'
+    : tier.id === 'canopy' ? 'La puissance d\'un grand centre, sans la complexité.'
+    : 'Un tableau de bord. Chaque installation. Clarté totale.',
+  cta: {
+    href: tier.cta.href,
+    label: tier.id === 'seeds' ? 'Commencer gratuitement'
+      : tier.id === 'grove' ? 'Réserver une démo'
+      : 'Rejoindre le programme fondateur',
+  },
+}))
+
+export default function PricingTiersClient({ locale = 'en' }: { locale?: 'en' | 'fr' }) {
   const [isAnnual, setIsAnnual] = useState(false)
+  const s = uiStrings[locale]
+  const activeTiers = locale === 'fr' ? tiersFr : tiers
+  const activeFeatureRows = locale === 'fr' ? featureRowsFr : featureRows
 
   return (
     <>
@@ -162,7 +246,7 @@ export default function PricingTiersClient() {
                 !isAnnual ? 'bg-white text-dark-text shadow-sm' : 'text-dark-text/50 hover:text-dark-text/75'
               }`}
             >
-              Monthly
+              {s.monthly}
             </button>
             <button
               onClick={() => setIsAnnual(true)}
@@ -170,9 +254,9 @@ export default function PricingTiersClient() {
                 isAnnual ? 'bg-white text-dark-text shadow-sm' : 'text-dark-text/50 hover:text-dark-text/75'
               }`}
             >
-              Annual
+              {s.annual}
               <span className="text-[10px] font-semibold text-sage-green bg-sage-green/15 px-2 py-0.5 rounded-full whitespace-nowrap">
-                2 months free
+                {s.twoMonthsFree}
               </span>
             </button>
           </div>
@@ -184,7 +268,7 @@ export default function PricingTiersClient() {
         <div className="max-w-7xl mx-auto">
           <div className="overflow-x-auto -mx-5 md:-mx-8 lg:mx-0 pb-2">
             <div className="flex gap-3 px-5 md:px-8 lg:px-0 min-w-max lg:min-w-0 lg:grid lg:grid-cols-7">
-              {tiers.map(tier => (
+              {activeTiers.map(tier => (
                 <div
                   key={tier.id}
                   className={`bg-white rounded-2xl p-5 flex flex-col w-[190px] lg:w-auto relative`}
@@ -212,9 +296,9 @@ export default function PricingTiersClient() {
 
                   <div className="mb-3 min-h-[52px] flex flex-col justify-center">
                     {tier.isFree ? (
-                      <p className="font-display text-[26px] font-medium text-forest-green">Free</p>
+                      <p className="font-display text-[26px] font-medium text-forest-green">{s.free}</p>
                     ) : (tier as { isCustom?: boolean }).isCustom ? (
-                      <p className="font-display text-[20px] font-medium text-forest-green">Custom</p>
+                      <p className="font-display text-[20px] font-medium text-forest-green">{s.custom}</p>
                     ) : (
                       <>
                         <div className="flex items-baseline gap-0.5">
@@ -225,7 +309,7 @@ export default function PricingTiersClient() {
                           <span className="text-[12px] text-dark-text/45">/mo</span>
                         </div>
                         {isAnnual && (
-                          <p className="text-[10px] text-dark-text/40 mt-0.5">billed annually</p>
+                          <p className="text-[10px] text-dark-text/40 mt-0.5">{s.billedAnnually}</p>
                         )}
                       </>
                     )}
@@ -257,7 +341,7 @@ export default function PricingTiersClient() {
             className="font-display font-medium text-forest-green text-center mb-8"
             style={{ fontSize: 'clamp(26px, 3vw, 38px)' }}
           >
-            Compare all features
+            {s.compareAll}
           </h2>
 
           <div className="overflow-x-auto -mx-5 md:-mx-8 lg:mx-0">
@@ -271,16 +355,16 @@ export default function PricingTiersClient() {
                 style={{ gridTemplateColumns: '200px repeat(7, 1fr)' }}
               >
                 <div className="p-4" />
-                {tiers.map(tier => (
+                {activeTiers.map(tier => (
                   <div key={tier.id} className="p-3 text-center border-l border-[rgba(47,74,58,0.07)]">
                     <p className="font-display text-[13px] font-medium text-forest-green leading-snug">
                       {tier.name}
                     </p>
                     <p className="text-[10px] text-dark-text/35 mt-0.5">
                       {tier.isFree
-                        ? 'Free'
+                        ? s.free
                         : (tier as { isCustom?: boolean }).isCustom
-                        ? 'Custom'
+                        ? s.custom
                         : `$${isAnnual ? tier.annual : tier.monthly}/mo`}
                     </p>
                   </div>
@@ -288,7 +372,7 @@ export default function PricingTiersClient() {
               </div>
 
               {/* Rows */}
-              {featureRows.map((row, i) => (
+              {activeFeatureRows.map((row, i) => (
                 <div
                   key={row.feature}
                   className="grid border-b border-[rgba(47,74,58,0.05)]"
@@ -317,13 +401,13 @@ export default function PricingTiersClient() {
                 style={{ gridTemplateColumns: '200px repeat(7, 1fr)' }}
               >
                 <div className="p-4" />
-                {tiers.map(tier => (
+                {activeTiers.map(tier => (
                   <div key={tier.id} className="p-3 text-center border-l border-[rgba(47,74,58,0.07)]">
                     <Link
                       href={tier.cta.href}
                       className="block text-[11px] font-medium text-forest-green border border-forest-green/35 px-2 py-2 rounded-lg hover:bg-forest-green hover:text-white transition-colors"
                     >
-                      {tier.isFree ? 'Get started' : (tier as { isCustom?: boolean }).isCustom ? 'Book demo' : 'Apply now'}
+                      {tier.isFree ? s.getStarted : (tier as { isCustom?: boolean }).isCustom ? s.bookDemo : s.applyNow}
                     </Link>
                   </div>
                 ))}

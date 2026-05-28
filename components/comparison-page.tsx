@@ -10,6 +10,9 @@ export type Testimonial = {
   quote: string
   name: string
   role: string
+  centreName?: string
+  location?: string
+  detail?: string
 }
 
 type Props = {
@@ -83,11 +86,11 @@ export default function ComparisonPage({
             {heroSubtext}
           </p>
           <div className="flex flex-wrap justify-center gap-3">
-            <Link href="/contact" className="bg-forest-green text-white text-[14px] font-medium px-6 py-3.5 rounded-lg hover:bg-[#243d2f] transition-colors">
-              Start free trial
+            <Link href="/founding" className="bg-forest-green text-white text-[14px] font-medium px-6 py-3.5 rounded-lg hover:bg-[#243d2f] transition-colors">
+              Apply to the Founding Operators Program
             </Link>
-            <Link href="/contact" className="text-[14px] font-medium text-forest-green border-2 border-forest-green px-6 py-3.5 rounded-lg hover:bg-forest-green hover:text-white transition-colors">
-              Book a demo
+            <Link href="/pricing" className="text-[14px] font-medium text-forest-green border-2 border-forest-green px-6 py-3.5 rounded-lg hover:bg-forest-green hover:text-white transition-colors">
+              See all pricing
             </Link>
           </div>
         </div>
@@ -163,9 +166,17 @@ export default function ComparisonPage({
                 <p className="text-[15px] text-dark-text/75 leading-relaxed flex-1">
                   &ldquo;{t.quote}&rdquo;
                 </p>
-                <div>
-                  <p className="text-[14px] font-semibold text-dark-text">{t.name}</p>
-                  <p className="text-[12px] text-dark-text/45 mt-0.5">{t.role}</p>
+                <div className="border-t border-[rgba(47,74,58,0.08)] pt-4">
+                  <p className="text-[14px] font-semibold text-dark-text">
+                    {t.name}
+                    {t.role && <span className="font-normal text-dark-text/60">, {t.role}</span>}
+                  </p>
+                  {t.centreName && (
+                    <p className="text-[12px] text-dark-text/55 mt-0.5">{t.centreName}{t.location ? `, ${t.location}` : ''}</p>
+                  )}
+                  {t.detail && (
+                    <p className="text-[11px] text-dark-text/35 mt-0.5">{t.detail}</p>
+                  )}
                 </div>
               </div>
             ))}
@@ -189,7 +200,7 @@ export default function ComparisonPage({
               <p className="font-display text-[36px] font-medium text-forest-green leading-none mb-2">{usPrice}</p>
               <p className="text-[13px] text-dark-text/50 mb-5">per centre, flat rate. No per-child fees.</p>
               <ul className="space-y-2 text-left">
-                {['14-day free trial', 'No credit card required', 'Canadian data residency', 'Cancel anytime'].map(f => (
+                {['Seeds tier free forever', 'No credit card required', 'Canadian data residency', 'Cancel anytime'].map(f => (
                   <li key={f} className="flex items-center gap-2 text-[13px] text-dark-text/70">
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="flex-shrink-0">
                       <path d="M2.5 7l3 3 6-6" stroke="#6EB76F" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />

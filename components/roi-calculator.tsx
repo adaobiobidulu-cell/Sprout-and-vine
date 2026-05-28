@@ -46,11 +46,21 @@ function Slider({
   )
 }
 
+function getTierMonthlyPrice(children: number): { name: string; price: number } | null {
+  if (children <= 3) return null
+  if (children <= 8) return { name: 'Sprout Home', price: 39 }
+  if (children <= 20) return { name: 'Sprout Starter', price: 69 }
+  if (children <= 40) return { name: 'Sprout Grow', price: 109 }
+  if (children <= 75) return { name: 'Vine', price: 149 }
+  if (children <= 120) return { name: 'Canopy', price: 199 }
+  return { name: 'Grove', price: 199 }
+}
+
 const t = {
   en: {
     label: 'Calculate Your Savings',
     heading: <>How much time is<br />admin costing you?</>,
-    subheading: 'Most centers reclaim 8–12 hours per week with Sprout & Vine.',
+    subheading: 'Most centres reclaim 8 to 12 hours per week with Sprout & Vine.',
     slider1: 'Children enrolled',
     slider2: 'Staff members',
     slider3: 'Hours/week on billing & invoicing',
@@ -58,12 +68,13 @@ const t = {
     currentlySpend: 'You currently spend',
     onBilling: 'on billing and reporting',
     saves: 'Sprout & Vine saves approximately',
-    worth: (h: number) => `That's ${h} hours/year, worth`,
+    worth: (h: number) => `That is ${h} hours/year, worth`,
     at: 'at $25/hr',
-    roiLabel: 'Your ROI at CAD $69/month',
+    roiLabel: (tier: { name: string; price: number } | null) =>
+      tier ? `Your ROI at CAD $${tier.price}/mo (${tier.name})` : 'Free tier (Seeds)',
     roiReturn: 'return',
-    cta: 'Start your free trial and see the savings yourself',
-    ctaHref: '/contact',
+    cta: 'Apply to the Founding Operators Program',
+    ctaHref: '/founding',
     hrsWeek: 'hrs/week',
   },
   fr: {
@@ -79,10 +90,11 @@ const t = {
     saves: 'Sprout et Vine vous fait économiser environ',
     worth: (h: number) => `Soit ${h} heures/an, valant`,
     at: 'à 25 $/h',
-    roiLabel: 'Votre ROI à 69 $ CA/mois',
+    roiLabel: (tier: { name: string; price: number } | null) =>
+      tier ? `Votre ROI à ${tier.price} $ CA/mois (${tier.name})` : 'Niveau gratuit (Seeds)',
     roiReturn: 'de retour',
-    cta: 'Commencez votre essai gratuit et voyez les économies',
-    ctaHref: '/fr/contact',
+    cta: 'Rejoindre le Programme des opérateurs fondateurs',
+    ctaHref: '/founding',
     hrsWeek: 'h/semaine',
   },
 }
@@ -97,12 +109,12 @@ export default function ROICalculator({ locale = 'en' }: { locale?: 'en' | 'fr' 
   const weeklyHours = billing * 0.75 + reports * 0.8
   const annualHours = Math.round(weeklyHours * 52)
   const dollarValue = Math.round(annualHours * 25)
-  const roi = (dollarValue / (69 * 12)).toFixed(1)
+  const tier = getTierMonthlyPrice(children)
+  const roi = tier ? (dollarValue / (tier.price * 12)).toFixed(1) : null
   const totalAdmin = billing + reports
 
   return (
     <div className="max-w-5xl mx-auto">
-      {/* Header */}
       <div className="text-center mb-14">
         <p className="text-[11px] uppercase tracking-[0.16em] text-sage-green font-semibold mb-5">
           {s.label}
@@ -116,7 +128,6 @@ export default function ROICalculator({ locale = 'en' }: { locale?: 'en' | 'fr' 
       </div>
 
       <div className="grid md:grid-cols-2 gap-10 items-start">
-        {/* Sliders */}
         <div className="flex flex-col gap-8">
           <Slider label={s.slider1} value={children} min={5} max={150} onChange={setChildren} />
           <Slider label={s.slider2} value={staff} min={1} max={30} onChange={setStaff} />
@@ -124,7 +135,6 @@ export default function ROICalculator({ locale = 'en' }: { locale?: 'en' | 'fr' 
           <Slider label={s.slider4} value={reports} min={1} max={15} unit="h" onChange={setReports} />
         </div>
 
-        {/* Output panel */}
         <div className="bg-white rounded-2xl p-7 shadow-xl" style={{ boxShadow: '0 24px 64px rgba(0,0,0,0.18)' }}>
           <div className="space-y-5">
             <div>
@@ -156,16 +166,18 @@ export default function ROICalculator({ locale = 'en' }: { locale?: 'en' | 'fr' 
               </div>
             </div>
 
-            <div className="rounded-xl p-4 flex items-center justify-between" style={{ background: 'rgba(47,74,58,0.05)' }}>
-              <div>
-                <p className="text-[11px] text-dark-text/45 mb-0.5">{s.roiLabel}</p>
-                <div className="flex items-baseline gap-1">
-                  <span className="font-display text-[28px] font-medium text-forest-green leading-none">{roi}x</span>
-                  <span className="text-[13px] text-dark-text/40">{s.roiReturn}</span>
+            {roi && (
+              <div className="rounded-xl p-4 flex items-center justify-between" style={{ background: 'rgba(47,74,58,0.05)' }}>
+                <div>
+                  <p className="text-[11px] text-dark-text/45 mb-0.5">{s.roiLabel(tier)}</p>
+                  <div className="flex items-baseline gap-1">
+                    <span className="font-display text-[28px] font-medium text-forest-green leading-none">{roi}x</span>
+                    <span className="text-[13px] text-dark-text/40">{s.roiReturn}</span>
+                  </div>
                 </div>
+                <div className="text-2xl">🌿</div>
               </div>
-              <div className="text-2xl">🌿</div>
-            </div>
+            )}
           </div>
 
           <Link
