@@ -11,7 +11,7 @@ const posts = [
     slug: 'why-we-are-building-sprout-and-vine',
     title: 'Why we are building Sprout & Vine',
     excerpt: 'We are not building another app. We are building infrastructure. Here is what we found when we looked closely at Canadian childcare operations, and why it changed everything.',
-    author: 'Ada Obidulu',
+    author: 'Ada',
     date: 'May 1, 2026',
     dateIso: '2026-05-01',
     readTime: '8 min',

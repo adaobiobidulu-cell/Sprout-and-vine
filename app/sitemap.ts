@@ -20,6 +20,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/vs-lillio`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${base}/vs-procare`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
 
+    // Resources — EN
+    { url: `${base}/resources/cwelcc-guide`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${base}/resources/licensing-checklist`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+
+    // Seeds hub — EN
+    { url: `${base}/seeds`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${base}/seeds/home-daycare`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${base}/seeds/childcare-centre`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${base}/seeds/qualifications`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${base}/seeds/funding`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${base}/seeds/cwelcc-readiness`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+
     // Content / community — EN
     { url: `${base}/blog`, lastModified: now, changeFrequency: 'weekly', priority: 0.6 },
     { url: `${base}/changelog`, lastModified: now, changeFrequency: 'weekly', priority: 0.5 },

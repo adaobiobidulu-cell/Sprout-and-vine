@@ -3,7 +3,7 @@ import LegalLayout from '@/components/legal-layout'
 
 export const metadata: Metadata = {
   title: 'Politique de confidentialité | Sprout & Vine',
-  description: 'Comment Sprout & Vine et Prime Horizon Inc. collectent, utilisent et protègent vos renseignements personnels.',
+  description: 'Comment Sprout & Vine collecte, utilise et protège vos renseignements personnels.',
 }
 
 const toc = [
@@ -32,9 +32,8 @@ export default function FrPrivacyPage() {
     >
       <h2 id="about">1. À propos de cette politique</h2>
       <p>
-        La présente politique de confidentialité explique comment <strong>Prime Horizon Inc.</strong> («&nbsp;Prime Horizon&nbsp;»,
-        «&nbsp;nous&nbsp;», «&nbsp;notre&nbsp;» ou «&nbsp;nos&nbsp;»), exploitant sous le nom de{' '}
-        <strong>Sprout &amp; Vine</strong>, collecte, utilise, divulgue et protège les renseignements personnels
+        La présente politique de confidentialité explique comment <strong>Sprout &amp; Vine</strong>{' '}
+        («&nbsp;nous&nbsp;», «&nbsp;notre&nbsp;» ou «&nbsp;nos&nbsp;») collecte, utilise, divulgue et protège les renseignements personnels
         lorsque vous utilisez notre plateforme, le site web sproutandvine.ca et les services connexes
         (collectivement, les «&nbsp;Services&nbsp;»).
       </p>
@@ -46,9 +45,9 @@ export default function FrPrivacyPage() {
 
       <h2 id="who-we-are">2. Qui nous sommes</h2>
       <p>
-        Prime Horizon Inc. est une société canadienne. Sprout &amp; Vine est notre plateforme de gestion de
-        services de garde conçue pour les exploitants canadiens. Notre adresse et les demandes relatives à la
-        vie privée peuvent être acheminées à{' '}
+        Sprout &amp; Vine est une entreprise canadienne. Notre plateforme de gestion de services de garde
+        est conçue pour les exploitants canadiens. Les demandes relatives à la vie privée peuvent être
+        acheminées à{' '}
         <a href="mailto:privacy@sproutandvine.ca">privacy@sproutandvine.ca</a>.
       </p>
       <p>
@@ -116,7 +115,7 @@ export default function FrPrivacyPage() {
       <p>Nous protégeons vos données grâce à :</p>
       <ul>
         <li>Le chiffrement en transit (TLS 1.2+) et au repos.</li>
-        <li>Des contrôles d'accès basés sur les rôles limitant qui, au sein de Prime Horizon, peut accéder aux données des utilisateurs.</li>
+        <li>Des contrôles d'accès basés sur les rôles limitant qui, au sein de Sprout &amp; Vine, peut accéder aux données des utilisateurs.</li>
         <li>Des évaluations de sécurité régulières et une surveillance des vulnérabilités.</li>
         <li>Des journaux d'accès sécurisés et audités pour les actions administratives.</li>
       </ul>
@@ -202,7 +201,7 @@ export default function FrPrivacyPage() {
       </p>
       <p>
         <strong>Responsable de la protection des renseignements personnels</strong><br />
-        Prime Horizon Inc. (exploitant sous le nom de Sprout &amp; Vine)<br />
+        Sprout &amp; Vine<br />
         <a href="mailto:privacy@sproutandvine.ca">privacy@sproutandvine.ca</a>
       </p>
       <p>

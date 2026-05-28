@@ -63,7 +63,7 @@ export default function FoundingForm() {
       if (!res.ok) throw new Error('send_failed')
       setSubmitted(true)
     } catch {
-      setError('Something went wrong submitting your application. Please email us directly at founders@sproutandvine.ca.')
+      setError('Something went wrong submitting your application. Please email us directly at hello@sproutandvine.ca.')
     } finally {
       setLoading(false)
     }
@@ -81,8 +81,8 @@ export default function FoundingForm() {
         </p>
         <p className="text-[14px] text-dark-text/45">
           Questions? Email us at{' '}
-          <a href="mailto:founders@sproutandvine.ca" className="text-forest-green underline underline-offset-2">
-            founders@sproutandvine.ca
+          <a href="mailto:hello@sproutandvine.ca" className="text-forest-green underline underline-offset-2">
+            hello@sproutandvine.ca
           </a>
         </p>
       </div>
@@ -178,7 +178,7 @@ export default function FoundingForm() {
           className="mt-0.5 w-4 h-4 flex-shrink-0"
         />
         <label htmlFor="marketing-consent" className="text-[12px] text-dark-text/55 leading-relaxed cursor-pointer">
-          I agree to receive updates about the Sprout &amp; Vine platform, the Founding Operators Program, and related announcements from Sprout &amp; Vine (operated by Prime Horizon Inc.). I can unsubscribe at any time.
+          I agree to receive updates about the Sprout &amp; Vine platform, the Founding Operators Program, and related announcements from Sprout &amp; Vine. I can unsubscribe at any time.
         </label>
       </div>
 
@@ -187,7 +187,7 @@ export default function FoundingForm() {
         <Link href="/privacy" className="underline underline-offset-2 hover:text-forest-green transition-colors">
           Privacy Policy
         </Link>
-        . Sprout &amp; Vine (Prime Horizon Inc.) will use your information to process your application and contact you about the Founding Operators Program.
+        . Sprout &amp; Vine will use your information to process your application and contact you about the Founding Operators Program.
       </p>
 
       <button

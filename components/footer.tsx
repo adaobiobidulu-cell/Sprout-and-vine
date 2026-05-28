@@ -46,8 +46,9 @@ const footerColumnsEn = [
   {
     title: 'Resources',
     links: [
-      { label: 'CWELCC Guide', href: '/resources' },
-      { label: 'Licensing Checklist', href: '/resources' },
+      { label: 'CWELCC Guide', href: '/resources/cwelcc-guide' },
+      { label: 'Licensing Checklist', href: '/resources/licensing-checklist' },
+      { label: 'Blog', href: '/blog' },
       { label: 'Help Centre', href: '/help' },
     ],
   },
@@ -85,6 +86,7 @@ const footerColumnsFr = [
     links: [
       { label: 'Guide PÉLCN', href: '/fr/resources' },
       { label: 'Liste de vérification', href: '/fr/resources' },
+      { label: 'Blogue', href: '/fr/blog' },
       { label: "Centre d'aide", href: '/fr/help' },
     ],
   },
@@ -138,11 +140,8 @@ export default function Footer() {
             <p className="text-[11px] text-cream/60 uppercase tracking-[0.12em] mb-5 font-medium">
               {isFr ? 'Créer des liens. Nourrir les avenirs.' : 'Growing connections. Nurturing futures.'}
             </p>
-            <p className="text-[13px] text-cream/55 leading-relaxed">
-              {isFr ? 'Sprout & Vine est exploité par Prime Horizon Inc.' : 'Sprout & Vine operates as Prime Horizon Inc.'}
-            </p>
             <p className="text-[12px] text-cream/40 mt-3">
-              © 2026 Prime Horizon Inc.{isFr ? ' Tous droits réservés.' : ' All rights reserved.'}
+              {isFr ? '© 2026 Sprout & Vine. Tous droits réservés.' : '© 2026 Sprout & Vine. All rights reserved.'}
             </p>
           </div>
 

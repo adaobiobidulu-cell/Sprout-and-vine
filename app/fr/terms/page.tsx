@@ -34,9 +34,8 @@ export default function FrTermsPage() {
       <h2 id="agreement">1. Acceptation des conditions</h2>
       <p>
         Les présentes conditions d'utilisation («&nbsp;Conditions&nbsp;») constituent un accord légalement
-        contraignant entre vous et <strong>Prime Horizon Inc.</strong> («&nbsp;Prime Horizon&nbsp;», «&nbsp;nous&nbsp;»,
-        «&nbsp;notre&nbsp;» ou «&nbsp;nos&nbsp;»), exploitant sous le nom de <strong>Sprout &amp; Vine</strong>,
-        régissant votre utilisation de notre plateforme de gestion de services de garde, du site web
+        contraignant entre vous et <strong>Sprout &amp; Vine</strong> («&nbsp;nous&nbsp;», «&nbsp;notre&nbsp;»
+        ou «&nbsp;nos&nbsp;»), régissant votre utilisation de notre plateforme de gestion de services de garde, du site web
         sproutandvine.ca et des services connexes (collectivement, les «&nbsp;Services&nbsp;»).
       </p>
       <p>
@@ -75,7 +74,7 @@ export default function FrTermsPage() {
       <p>
         Vous êtes responsable de la confidentialité de vos identifiants de connexion. Vous devez nous aviser
         immédiatement à{' '}
-        <a href="mailto:support@sproutandvine.ca">support@sproutandvine.ca</a> si vous soupçonnez un accès non
+        <a href="mailto:hello@sproutandvine.ca">hello@sproutandvine.ca</a> si vous soupçonnez un accès non
         autorisé à votre compte.
       </p>
 
@@ -146,8 +145,8 @@ export default function FrTermsPage() {
       <h2 id="ip">7. Propriété intellectuelle</h2>
       <p>
         La plateforme Sprout &amp; Vine, y compris ses logiciels, sa conception, son interface utilisateur,
-        ses marques de commerce, ses logos et toute propriété intellectuelle connexe, appartient à Prime Horizon
-        Inc. et est protégée par les lois canadiennes et internationales sur la propriété intellectuelle.
+        ses marques de commerce, ses logos et toute propriété intellectuelle connexe, appartient à Sprout &amp; Vine
+        et est protégée par les lois canadiennes et internationales sur la propriété intellectuelle.
       </p>
       <p>
         Vous conservez tous les droits sur vos Données client. En saisissant des Données client dans la
@@ -165,7 +164,7 @@ export default function FrTermsPage() {
       <h2 id="disclaimers">9. Exclusions de garantie</h2>
       <p>
         LES SERVICES SONT FOURNIS «&nbsp;TELS QUELS&nbsp;» ET «&nbsp;SELON DISPONIBILITÉ&nbsp;» SANS GARANTIE
-        D'AUCUNE SORTE. DANS LA MESURE PERMISE PAR LA LOI APPLICABLE, PRIME HORIZON INC. EXCLUT EXPRESSÉMENT
+        D'AUCUNE SORTE. DANS LA MESURE PERMISE PAR LA LOI APPLICABLE, SPROUT &amp; VINE EXCLUT EXPRESSÉMENT
         TOUTES LES GARANTIES, QU'ELLES SOIENT EXPRESSES, IMPLICITES, LÉGALES OU AUTRES.
       </p>
       <p>
@@ -176,7 +175,7 @@ export default function FrTermsPage() {
 
       <h2 id="liability">10. Limitation de responsabilité</h2>
       <p>
-        DANS LA MESURE MAXIMALE PERMISE PAR LA LOI APPLICABLE, PRIME HORIZON INC. ET SES DIRIGEANTS, ADMINISTRATEURS,
+        DANS LA MESURE MAXIMALE PERMISE PAR LA LOI APPLICABLE, SPROUT &amp; VINE ET SES DIRIGEANTS, ADMINISTRATEURS,
         EMPLOYÉS ET AGENTS NE SERONT PAS RESPONSABLES DES DOMMAGES INDIRECTS, ACCESSOIRES, SPÉCIAUX, CONSÉCUTIFS
         OU PUNITIFS.
       </p>
@@ -188,7 +187,7 @@ export default function FrTermsPage() {
 
       <h2 id="indemnification">11. Indemnisation</h2>
       <p>
-        Vous acceptez d'indemniser et de dégager de toute responsabilité Prime Horizon Inc. et ses affiliés,
+        Vous acceptez d'indemniser et de dégager de toute responsabilité Sprout &amp; Vine et ses affiliés,
         dirigeants, administrateurs, employés et agents contre toute réclamation, responsabilité, dommage, perte
         et dépense (y compris les honoraires d'avocat raisonnables) découlant de votre utilisation des Services,
         de votre violation des présentes Conditions ou de vos Données client.
@@ -220,7 +219,7 @@ export default function FrTermsPage() {
         Pour toute question concernant les présentes Conditions, communiquez avec nous à :
       </p>
       <p>
-        <strong>Prime Horizon Inc.</strong> (exploitant sous le nom de Sprout &amp; Vine)<br />
+        <strong>Sprout &amp; Vine</strong><br />
         <a href="mailto:legal@sproutandvine.ca">legal@sproutandvine.ca</a>
       </p>
       <p>

@@ -3,7 +3,7 @@ import LegalLayout from '@/components/legal-layout'
 
 export const metadata: Metadata = {
   title: 'Privacy Policy | Sprout & Vine',
-  description: 'How Sprout & Vine and Prime Horizon Inc. collect, use, and protect your personal information.',
+  description: 'How Sprout & Vine collects, uses, and protects your personal information.',
 }
 
 const toc = [
@@ -32,8 +32,8 @@ export default function PrivacyPage() {
     >
       <h2 id="about">1. About This Policy</h2>
       <p>
-        This Privacy Policy explains how <strong>Prime Horizon Inc.</strong> ("Prime Horizon," "we," "our," or "us"),
-        operating as <strong>Sprout &amp; Vine</strong>, collects, uses, discloses, and protects personal information
+        This Privacy Policy explains how <strong>Sprout &amp; Vine</strong> ("we," "our," or "us")
+        collects, uses, discloses, and protects personal information
         when you use our platform, website at sproutandvine.ca, and related services (collectively, the "Services").
       </p>
       <p>
@@ -43,9 +43,8 @@ export default function PrivacyPage() {
 
       <h2 id="who-we-are">2. Who We Are</h2>
       <p>
-        Prime Horizon Inc. is a Canadian corporation. Sprout &amp; Vine is our childcare management platform
-        designed for Canadian childcare operators. Our registered address and privacy inquiries may be directed
-        to <a href="mailto:privacy@sproutandvine.ca">privacy@sproutandvine.ca</a>.
+        Sprout &amp; Vine is a Canadian company building childcare management software for Canadian operators.
+        Privacy inquiries may be directed to <a href="mailto:privacy@sproutandvine.ca">privacy@sproutandvine.ca</a>.
       </p>
       <p>
         We are subject to the <strong>Personal Information Protection and Electronic Documents Act (PIPEDA)</strong>{' '}
@@ -104,7 +103,7 @@ export default function PrivacyPage() {
       <ul>
         <li><strong>Service providers:</strong> we share data with trusted vendors who help us operate the platform (hosting, payment processing, email delivery). These vendors are contractually required to protect your data and may only use it as directed by us. See Section 10 for a list of key third parties.</li>
         <li><strong>Legal requirements:</strong> we may disclose information when required by law, court order, or government authority, or when we believe disclosure is necessary to protect our legal rights or prevent harm.</li>
-        <li><strong>Business transfers:</strong> if Prime Horizon Inc. is involved in a merger, acquisition, or sale of assets, your information may be transferred. We will notify you before your personal information is transferred and becomes subject to a different privacy policy.</li>
+        <li><strong>Business transfers:</strong> if Sprout &amp; Vine is involved in a merger, acquisition, or sale of assets, your information may be transferred. We will notify you before your personal information is transferred and becomes subject to a different privacy policy.</li>
         <li><strong>With your consent:</strong> we may share information for any other purpose with your explicit consent.</li>
       </ul>
       <p>We do not share personal information with advertisers or data brokers.</p>
@@ -117,14 +116,14 @@ export default function PrivacyPage() {
       <p>We protect your data using:</p>
       <ul>
         <li>Encryption in transit (TLS 1.2+) and encryption at rest.</li>
-        <li>Role-based access controls limiting who within Prime Horizon can access user data.</li>
+        <li>Role-based access controls limiting who within Sprout &amp; Vine can access user data.</li>
         <li>Regular security assessments and vulnerability monitoring.</li>
         <li>Secure, audited access logs for administrative actions.</li>
       </ul>
       <p>
         No method of transmission over the internet is 100% secure. While we use commercially reasonable
         safeguards, we cannot guarantee absolute security. If you become aware of any security issue, please
-        contact us immediately at <a href="mailto:security@sproutandvine.ca">security@sproutandvine.ca</a>.
+        contact us immediately at <a href="mailto:hello@sproutandvine.ca">hello@sproutandvine.ca</a>.
       </p>
 
       <h2 id="retention">7. Retention</h2>
@@ -227,7 +226,7 @@ export default function PrivacyPage() {
       </p>
       <p>
         <strong>Privacy Officer</strong><br />
-        Prime Horizon Inc. (operating as Sprout &amp; Vine)<br />
+        Sprout &amp; Vine<br />
         <a href="mailto:privacy@sproutandvine.ca">privacy@sproutandvine.ca</a>
       </p>
       <p>

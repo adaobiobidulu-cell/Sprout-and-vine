@@ -1,10 +1,9 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import FadeIn from '@/components/fade-in'
 
 export const metadata: Metadata = {
-  title: 'About | Sprout & Vine',
-  description: 'The story behind Sprout & Vine. Built by Canadian operators for Canadian operators. We are building the infrastructure the childcare sector has needed for a long time.',
+  title: 'Our Story | Ada and Chuck, Co-Founders of Sprout and Vine',
+  description: 'Sprout and Vine was built by Ada and Chuck after the arrival of their first child and a frustrating search for how Canada\'s childcare system actually works. Read their story.',
 }
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
@@ -15,96 +14,144 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
   )
 }
 
-const founders = [
-  {
-    name: 'Ada Obidulu',
-    role: 'Co-founder',
-    bio: 'I spent years in customer success at software companies before I found the problem I could not stop thinking about. Canadian childcare operators are doing some of the most important work in the country and they are doing it with tools that were never built for them. I am building the platform I wish had existed from the beginning.',
-  },
-  {
-    name: 'Co-founder',
-    role: 'Technology',
-    bio: 'Building the technical foundation that Canadian childcare operators deserve. Clear, fast, reliable, and built to last.',
-  },
-]
-
 export default function AboutPage() {
   return (
     <>
       {/* Hero */}
       <section className="bg-cream py-20 md:py-28 px-5 md:px-8">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-3xl mx-auto">
           <SectionLabel>Our story</SectionLabel>
           <h1
-            className="font-display font-medium text-forest-green leading-[1.05] mb-8"
+            className="font-display font-medium text-forest-green leading-[1.05] mb-6"
             style={{ fontSize: 'clamp(40px, 5.5vw, 66px)' }}
           >
-            We are building the infrastructure Canadian childcare has always needed.
+            We had our first baby and fell completely in love.
           </h1>
-          <p className="text-[17px] text-dark-text/65 leading-relaxed">
-            Not another app. Not a tool ported from the US with Canadian compliance bolted on. Something built here, for the people doing this work every day.
+          <p className="text-[18px] text-dark-text/65 leading-relaxed">
+            That is how Sprout and Vine started. Not with a business plan. With a feeling.
           </p>
         </div>
       </section>
 
-      {/* The Gap */}
+      {/* Founder narrative */}
+      <section className="bg-white py-20 md:py-24 px-5 md:px-8">
+        <div className="max-w-2xl mx-auto">
+          <div className="space-y-6 text-[17px] text-dark-text/75 leading-relaxed">
+
+            <p>
+              When our first child arrived, something shifted in me that I had not fully expected. I wanted to stay close to that world: the world of small children, of early learning, of those first extraordinary years. And like a lot of new parents, I started asking what that actually looked like as a career. Could I open a home daycare? Could I care for a small group of children and do this work that suddenly felt so important?
+            </p>
+
+            <p>
+              So I started researching. And I hit a wall.
+            </p>
+
+            <p>
+              There was no single place that explained how any of it worked. Licensing requirements were buried in government PDFs. CWELCC funding, which is supposed to help new operators get started, was nearly impossible to navigate without already knowing someone inside the system. The agencies, the ratios, the space requirements, the inspections, the insurance: every piece of information lived somewhere different, written for people who already knew what they were doing.
+            </p>
+
+            <p>
+              I kept thinking: if I am struggling to find this information, and I have a background in operations and customer success, what is it like for someone who does not?
+            </p>
+
+            <p>
+              I also kept running into the waitlist problem. Canada is in a childcare crisis that everyone acknowledges and nobody seems to be fixing. Families wait two or three years for a licensed spot. Working parents are making impossible choices. And meanwhile, there are people who genuinely want to care for children, who are called to this work, who could open a home daycare tomorrow if they just knew how.
+            </p>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Callout */}
       <section className="bg-forest-green py-16 md:py-20 px-5 md:px-8">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="font-display italic text-cream/85 leading-relaxed" style={{ fontSize: 'clamp(22px, 3vw, 32px)' }}>
-            "The gap is not passion. The gap is information and infrastructure."
+          <p className="font-display font-medium text-cream leading-relaxed" style={{ fontSize: 'clamp(24px, 3.5vw, 36px)' }}>
+            The gap is not passion.<br />The gap is information and infrastructure.
           </p>
-          <p className="text-[13px] text-cream/45 mt-5 uppercase tracking-[0.12em] font-medium">
-            Ada Obidulu, Co-founder
+          <p className="text-[16px] text-cream/65 mt-6 leading-relaxed">
+            This is why Sprout and Vine exists.
           </p>
         </div>
       </section>
 
-      {/* Founder story */}
+      {/* Continued narrative */}
       <section className="bg-white py-20 md:py-24 px-5 md:px-8">
-        <div className="max-w-4xl mx-auto">
-          <FadeIn>
-            <SectionLabel>Why we are building this</SectionLabel>
-            <h2
-              className="font-display font-medium text-forest-green leading-[1.1] mb-10"
-              style={{ fontSize: 'clamp(36px, 4vw, 50px)' }}
-            >
-              I have seen the chaos firsthand.
-            </h2>
-          </FadeIn>
+        <div className="max-w-2xl mx-auto">
+          <div className="space-y-6 text-[17px] text-dark-text/75 leading-relaxed">
 
-          <FadeIn delay={0.05}>
-            <div className="space-y-6 text-[17px] text-dark-text/70 leading-relaxed max-w-3xl">
-              <p>
-                I spent years in customer success across software companies. I thought I understood what it meant to help people adopt technology. Then I started working with childcare operators.
-              </p>
-              <p>
-                What I found was a sector doing essential work with tools that were never designed for them. The software available was either built for US regulations, too expensive for small operations, or so complicated that educators were spending more time navigating the platform than doing their actual job. Canadian operators were duct-taping together spreadsheets, paper sign-in sheets, and apps that did not communicate with each other.
-              </p>
-              <p>
-                The CWELCC program added another layer. Suddenly operators were tracking subsidy rates, reconciling receipts, and managing compliance paperwork that did not exist two years ago. The existing tools had no answer for this. Some of them still do not.
-              </p>
-              <p>
-                I kept asking the same question: why is there no platform built specifically for Canadian childcare? One that understands CWELCC from the ground up, that works in both English and French, that is simple enough for a team of three and powerful enough for an organization with ten locations?
-              </p>
-              <p>
-                The answer was that nobody had built it yet. So we are building it.
-              </p>
-              <p>
-                Sprout and Vine is not a passion project. It is a serious attempt to give Canadian childcare operators the infrastructure they need to run sustainable, high-quality programs. The gap in this sector is not a lack of dedication from the people doing the work. The gap is the tools they have been given to do it.
+            <p>
+              I came to Canada from Nigeria at sixteen. I know what it feels like to navigate a system that was not designed with you in mind, to ask questions other people seem to already know the answers to, to work hard just to find the starting line. I spent years in hospitality as a chef, a bartender, and a banquet server, learning how to operate under pressure and take care of people. I lived a dream as a flight attendant. I eventually landed in SaaS, in customer success and operations, where I learned how good software changes people's working lives.
+            </p>
+
+            <p>
+              When I brought this idea to Chuck, he did not hesitate. That is Chuck. He started his career as a chemist, which gave him a way of looking at problems that I think only makes sense once you have watched him work. He found his way into software, spent years deep in the Salesforce world, and became the kind of developer who genuinely loves what he does. He is not building Sprout and Vine because it is a good opportunity. He is building it because he believes in it. That matters to me more than anything else on his resume.
+            </p>
+
+            <p>
+              Together we are building the platform I wished existed when I started researching childcare: a consolidated, step-by-step guide that walks aspiring operators from idea to open doors. A compliance system that does the heavy lifting so operators can focus on the children. A tool built specifically for Canada, for CWELCC, for our provinces, for our regulations, and not adapted from an American product that does not understand how our system works.
+            </p>
+
+            <p>
+              We want every person called to care for children in Canada to have a clear, honest path to doing it. And we want every parent dropping off their child to feel genuine peace of mind.
+            </p>
+
+            <p>
+              We are building this now. We are not launched yet, and we will not launch until it is right. While we build, we have put everything we know about Canadian childcare compliance in one place, free, for anyone who needs it. And we are looking for fifty founding operators to help us build something worth building.
+            </p>
+
+            <p>
+              I believe we are called to the work that is right in front of us. For me, right now, this is it.
+            </p>
+
+            <p>
+              If that is you, we would love to hear from you.
+            </p>
+
+          </div>
+
+          <p className="mt-10 text-[15px] font-medium text-dark-text/60">
+            Ada, Co-Founder, Sprout and Vine
+          </p>
+        </div>
+      </section>
+
+      {/* Founder bios */}
+      <section className="bg-cream py-20 md:py-24 px-5 md:px-8">
+        <div className="max-w-3xl mx-auto">
+          <SectionLabel>The founders</SectionLabel>
+          <h2
+            className="font-display font-medium text-forest-green leading-[1.1] mb-12"
+            style={{ fontSize: 'clamp(32px, 4vw, 46px)' }}
+          >
+            We are a small team doing serious work.
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-2xl p-7 border border-[rgba(47,74,58,0.08)]" style={{ boxShadow: '0 2px 16px rgba(47,74,58,0.06)' }}>
+              <p className="text-[18px] font-semibold text-dark-text mb-1">Ada</p>
+              <p className="text-[13px] text-dark-text/45 mb-4 uppercase tracking-[0.08em] font-medium">Co-Founder</p>
+              <p className="text-[14px] text-dark-text/65 leading-relaxed">
+                Nigerian-Canadian. Spent her career learning how to take care of people and build things that work. Now doing both at once.
               </p>
             </div>
-          </FadeIn>
+
+            <div className="bg-white rounded-2xl p-7 border border-[rgba(47,74,58,0.08)]" style={{ boxShadow: '0 2px 16px rgba(47,74,58,0.06)' }}>
+              <p className="text-[18px] font-semibold text-dark-text mb-1">Chuck</p>
+              <p className="text-[13px] text-dark-text/45 mb-4 uppercase tracking-[0.08em] font-medium">Co-Founder</p>
+              <p className="text-[14px] text-dark-text/65 leading-relaxed">
+                Started out as a chemist, which turns out to be excellent training for solving problems nobody has solved before. Found his way into software, spent years building in the Salesforce world, and somewhere along the way fell completely in love with what good technology can do for people. Sprout and Vine is the most important thing he has built yet.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* What we believe */}
-      <section className="bg-cream py-20 md:py-24 px-5 md:px-8">
+      <section className="bg-white py-20 md:py-24 px-5 md:px-8">
         <div className="max-w-4xl mx-auto">
-          <FadeIn className="mb-12">
-            <h2 className="font-display font-medium text-forest-green leading-[1.1]" style={{ fontSize: 'clamp(34px, 4vw, 48px)' }}>
-              What we believe
-            </h2>
-          </FadeIn>
+          <h2 className="font-display font-medium text-forest-green leading-[1.1] mb-12" style={{ fontSize: 'clamp(34px, 4vw, 48px)' }}>
+            What we believe
+          </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
@@ -124,20 +171,18 @@ export default function AboutPage() {
                 title: 'Canada deserves a Canadian solution',
                 desc: 'CWELCC, provincial licensing, bilingual requirements, data residency. These are not edge cases. They are the foundation. We build from that foundation, not on top of something that ignores it.',
               },
-            ].map((item, i) => (
-              <FadeIn key={item.title} delay={i * 0.08}>
-              <div className="bg-white rounded-2xl p-7 border border-[rgba(47,74,58,0.08)]" style={{ boxShadow: '0 2px 16px rgba(47,74,58,0.06)' }}>
+            ].map(item => (
+              <div key={item.title} className="bg-cream rounded-2xl p-7 border border-[rgba(47,74,58,0.08)]" style={{ boxShadow: '0 2px 16px rgba(47,74,58,0.06)' }}>
                 <h3 className="font-display text-[22px] font-medium text-forest-green mb-3">{item.title}</h3>
                 <p className="text-[14px] text-dark-text/65 leading-relaxed">{item.desc}</p>
               </div>
-              </FadeIn>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Company */}
-      <section className="bg-white py-16 md:py-20 px-5 md:px-8">
+      {/* Proudly Canadian */}
+      <section className="bg-cream py-16 md:py-20 px-5 md:px-8">
         <div className="max-w-2xl mx-auto text-center">
           <span className="inline-block bg-forest-green/10 text-forest-green text-[11px] font-semibold uppercase tracking-[0.14em] px-4 py-1.5 rounded-full mb-6">
             Proudly Canadian
@@ -146,7 +191,7 @@ export default function AboutPage() {
             className="font-display font-medium text-forest-green leading-[1.1] mb-6"
             style={{ fontSize: 'clamp(32px, 4vw, 44px)' }}
           >
-            Sprout &amp; Vine is operated by Prime Horizon Inc.
+            Proudly built in Canada.
           </h2>
           <p className="text-[16px] text-dark-text/60 leading-relaxed mb-10 max-w-xl mx-auto">
             We are a proudly Canadian company. Our data stays in Canada. Our focus stays on Canada. Our team understands the unique regulatory landscape every Canadian operator navigates every day.
@@ -159,34 +204,10 @@ export default function AboutPage() {
             ].map(chip => (
               <span
                 key={chip}
-                className="bg-cream border border-[rgba(47,74,58,0.15)] text-dark-text/70 text-[13px] font-medium px-4 py-2 rounded-full"
+                className="bg-white border border-[rgba(47,74,58,0.15)] text-dark-text/70 text-[13px] font-medium px-4 py-2 rounded-full"
               >
                 {chip}
               </span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Founders */}
-      <section className="bg-cream py-20 md:py-24 px-5 md:px-8">
-        <div className="max-w-4xl mx-auto">
-          <FadeIn className="mb-12">
-            <SectionLabel>The team</SectionLabel>
-            <h2 className="font-display font-medium text-forest-green leading-[1.1]" style={{ fontSize: 'clamp(32px, 4vw, 46px)' }}>
-              We are a small team doing serious work.
-            </h2>
-          </FadeIn>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {founders.map((f, i) => (
-              <FadeIn key={f.name} delay={i * 0.1}>
-              <div className="bg-white rounded-2xl p-7 border border-[rgba(47,74,58,0.08)]" style={{ boxShadow: '0 2px 16px rgba(47,74,58,0.06)' }}>
-                <p className="text-[18px] font-semibold text-dark-text mb-1">{f.name}</p>
-                <p className="text-[13px] text-dark-text/45 mb-4 uppercase tracking-[0.08em] font-medium">{f.role}</p>
-                <p className="text-[14px] text-dark-text/65 leading-relaxed">{f.bio}</p>
-              </div>
-              </FadeIn>
             ))}
           </div>
         </div>
@@ -199,17 +220,17 @@ export default function AboutPage() {
             className="font-display font-medium text-cream leading-[1.08] mb-5"
             style={{ fontSize: 'clamp(36px, 4.5vw, 52px)' }}
           >
-            Build this with us.
+            Want to help us build this right?
           </h2>
           <p className="text-[16px] text-cream/60 mb-10 leading-relaxed">
-            The Founding Operators Program is open now. Apply and help shape what Sprout &amp; Vine becomes.
+            We are looking for 50 founding operators across Canada.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Link
               href="/founding"
               className="bg-terracotta text-white text-[14px] font-medium px-8 py-4 rounded-lg hover:bg-[#d4724e] transition-colors"
             >
-              Apply to the Founding Program
+              Join the program
             </Link>
             <Link
               href="/features"

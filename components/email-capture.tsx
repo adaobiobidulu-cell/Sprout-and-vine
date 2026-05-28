@@ -96,7 +96,7 @@ export default function EmailCapture({
           className="mt-0.5 w-3.5 h-3.5 flex-shrink-0"
         />
         <label htmlFor={`consent-${source}`} className="text-[11px] text-dark-text/50 leading-relaxed cursor-pointer">
-          I agree to receive updates from Sprout &amp; Vine (Prime Horizon Inc.). I can unsubscribe at any time.{' '}
+          I agree to receive updates from Sprout &amp; Vine. I can unsubscribe at any time.{' '}
           <Link href="/privacy" className="underline underline-offset-2 hover:text-forest-green transition-colors">
             Privacy Policy
           </Link>
