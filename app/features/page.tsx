@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import ProductTour from '@/components/product-tour'
+import EmailCapture from '@/components/email-capture'
 
 export const metadata: Metadata = {
   title: 'Features | Sprout & Vine',
@@ -464,30 +465,28 @@ export default function FeaturesPage() {
       })}
 
       {/* ── CTA ───────────────────────────────────────────────── */}
-      <section className="bg-forest-green py-20 px-5 md:px-8 text-center">
-        <div className="max-w-2xl mx-auto">
-          <h2
-            className="font-display font-medium text-cream leading-[1.08] mb-5"
-            style={{ fontSize: 'clamp(40px, 5vw, 60px)' }}
-          >
-            Ready to simplify your operations?
-          </h2>
-          <p className="text-[16px] text-cream/60 mb-10">
-            Join childcare operators across Canada growing with Sprout &amp; Vine.
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-4">
-            <Link
-              href="/contact"
-              className="bg-terracotta text-white text-[14px] font-medium px-8 py-4 rounded-lg hover:bg-[#d4724e] transition-colors"
+      <section className="bg-forest-green py-20 px-5 md:px-8">
+        <div className="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2
+              className="font-display font-medium text-cream leading-[1.08] mb-5"
+              style={{ fontSize: 'clamp(34px, 4vw, 50px)' }}
             >
-              Start free trial
-            </Link>
+              Ready to run your centre with tools built for it?
+            </h2>
             <Link
-              href="/contact"
-              className="text-cream text-[14px] font-medium px-8 py-4 rounded-lg border-2 border-cream/40 hover:border-cream/70 transition-colors"
+              href="/founding"
+              className="inline-block bg-terracotta text-white text-[14px] font-medium px-7 py-3.5 rounded-lg hover:bg-[#d4724e] transition-colors"
             >
-              Book a demo
+              Apply to the Founding Program
             </Link>
+          </div>
+          <div className="bg-white/10 rounded-2xl p-7">
+            <EmailCapture
+              heading="Get notified when we launch."
+              subheading="We will let you know when Sprout and Vine is ready, and share what we are building along the way."
+              source="features-page"
+            />
           </div>
         </div>
       </section>

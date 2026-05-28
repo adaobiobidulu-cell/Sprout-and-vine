@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import EmailCapture from '@/components/email-capture'
 
 export const metadata: Metadata = {
   title: 'For Educators | Sprout & Vine',
@@ -197,18 +198,25 @@ export default function ForEducatorsPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-white py-16 px-5 md:px-8 text-center border-t border-[rgba(47,74,58,0.07)]">
-        <div className="max-w-xl mx-auto">
-          <p className="text-[16px] text-dark-text/55 mb-6">
-            Already convinced? Start your centre's free trial today.
-          </p>
-          <div className="flex flex-wrap justify-center gap-3">
-            <Link href="/contact" className="bg-forest-green text-white text-[14px] font-medium px-6 py-3.5 rounded-lg hover:bg-[#243d2f] transition-colors">
-              Start free trial
+      <section className="bg-white py-16 px-5 md:px-8 border-t border-[rgba(47,74,58,0.07)]">
+        <div className="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+          <div>
+            <p className="font-display text-[26px] font-medium text-forest-green mb-3">
+              Share this with your director.
+            </p>
+            <p className="text-[15px] text-dark-text/55 leading-relaxed mb-5">
+              Sprout and Vine is designed for educators, but directors make the call. The Founding Operators Program is open now.
+            </p>
+            <Link href="/founding" className="inline-block bg-forest-green text-white text-[14px] font-medium px-6 py-3.5 rounded-lg hover:bg-[#243d2f] transition-colors">
+              Learn about the Founding Program
             </Link>
-            <Link href="/pricing" className="text-[14px] font-medium text-forest-green border-2 border-forest-green px-6 py-3.5 rounded-lg hover:bg-forest-green hover:text-white transition-colors">
-              See pricing
-            </Link>
+          </div>
+          <div className="bg-cream rounded-2xl p-6">
+            <EmailCapture
+              heading="Stay in the loop."
+              subheading="Get updates on when the platform launches and follow what we are building."
+              source="for-educators-page"
+            />
           </div>
         </div>
       </section>
