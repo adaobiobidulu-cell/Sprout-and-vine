@@ -144,6 +144,24 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── HEART LINE */}
+      <section className="bg-white py-16 md:py-20 px-5 md:px-8 text-center">
+        <div className="max-w-2xl mx-auto">
+          <p
+            className="font-display font-medium leading-snug mb-4"
+            style={{ fontSize: 'clamp(22px, 2.8vw, 32px)', color: '#0F6E56' }}
+          >
+            The gap is not passion. The gap is information and infrastructure.
+          </p>
+          <p className="text-[16px] text-dark-text/60 mb-6">
+            That is why we built Sprout &amp; Vine for Canada.
+          </p>
+          <Link href="/about" className="text-[14px] font-medium text-forest-green hover:underline">
+            Read our story →
+          </Link>
+        </div>
+      </section>
+
       {/* ── SECTION 3: THREE JOURNEYS */}
       <section className="bg-cream py-20 md:py-24 px-5 md:px-8">
         <div className="max-w-7xl mx-auto">

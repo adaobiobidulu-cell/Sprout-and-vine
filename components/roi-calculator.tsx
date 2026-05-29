@@ -147,12 +147,12 @@ function Slider({
 
 function getTierMonthlyPrice(children: number): { name: string; price: number } | null {
   if (children <= 3) return null
-  if (children <= 8) return { name: 'Sprout Home', price: 39 }
-  if (children <= 20) return { name: 'Sprout Starter', price: 69 }
-  if (children <= 40) return { name: 'Sprout Grow', price: 109 }
-  if (children <= 75) return { name: 'Vine', price: 149 }
-  if (children <= 120) return { name: 'Canopy', price: 199 }
-  return { name: 'Grove', price: 199 }
+  if (children <= 8) return { name: 'Sprout Home', price: 49 }
+  if (children <= 20) return { name: 'Sprout Starter', price: 89 }
+  if (children <= 40) return { name: 'Sprout Grow', price: 139 }
+  if (children <= 75) return { name: 'Vine', price: 189 }
+  if (children <= 120) return { name: 'Canopy', price: 249 }
+  return { name: 'Grove', price: 249 }
 }
 
 const t = {

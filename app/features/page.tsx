@@ -464,6 +464,151 @@ export default function FeaturesPage() {
         )
       })}
 
+      {/* ── SCHEDULING & PAYROLL ─────────────────────────────── */}
+      <section className="bg-white py-20 px-5 md:px-8">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <SectionLabel>Scheduling &amp; Payroll</SectionLabel>
+            <h2
+              className="font-display font-medium text-forest-green leading-[1.08] mb-5"
+              style={{ fontSize: 'clamp(30px, 3.5vw, 48px)' }}
+            >
+              Scheduling that protects your licence.<br />Payroll that respects your time.
+            </h2>
+            <div className="text-[16px] text-dark-text/65 leading-relaxed max-w-2xl mx-auto space-y-4">
+              <p>
+                Every shift at your centre is connected to your ratio requirements. The moment a room is at risk of falling below the legal minimum, you know. Before a child arrives. Before an inspector does.
+              </p>
+              <p>
+                Educators log in and see their schedule. They clock in, clock out, and know exactly which children they are responsible for that day. Directors see everything: who is scheduled, who has arrived, and which rooms are covered. In real time.
+              </p>
+              <p>
+                When payday comes, hours flow directly to Wagepoint. No spreadsheets. No double entry. No Sunday night data transfers. For RECE staff, the CWELCC wage enhancement is tracked automatically. When your CMSM asks for documentation, it is already there.
+              </p>
+              <p>
+                And for families: book a tour before you enroll. Book a check-in with your child's educator from the parent app. No phone tag. No waiting for a callback. Just a time that works.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            {[
+              { icon: '📅', title: 'Shift scheduling by room', tier: 'Sprout Starter+' },
+              { icon: '📊', title: 'Live ratio monitoring', tier: 'Sprout Starter+' },
+              { icon: '⏱️', title: 'Educator clock in / clock out', tier: 'All paid tiers' },
+              { icon: '🖥️', title: 'Director real-time dashboard', tier: 'Sprout Starter+' },
+              { icon: '📆', title: 'Parent appointment booking', tier: 'Sprout Starter+' },
+              { icon: '🚪', title: 'Tour booking for prospective families', tier: 'All paid tiers' },
+              { icon: '💰', title: 'CWELCC wage enhancement tracker', tier: 'Sprout Starter+' },
+              { icon: '🔗', title: 'Wagepoint payroll integration', tier: 'Sprout Grow+' },
+              { icon: '📋', title: 'Inspection-ready ratio reports', tier: 'Sprout Starter+' },
+            ].map(item => (
+              <div
+                key={item.title}
+                className="bg-cream rounded-xl p-5 border border-[rgba(47,74,58,0.08)]"
+                style={{ boxShadow: '0 2px 10px rgba(47,74,58,0.05)' }}
+              >
+                <span className="text-2xl block mb-3">{item.icon}</span>
+                <p className="text-[14px] font-semibold text-dark-text mb-1">{item.title}</p>
+                <p className="text-[11px] text-dark-text/40 font-medium">{item.tier}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── AI FEATURES ───────────────────────────────────────── */}
+      <section className="bg-cream py-20 px-5 md:px-8">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <SectionLabel>AI Built for Canada</SectionLabel>
+            <h2
+              className="font-display font-medium text-forest-green leading-[1.08] mb-5"
+              style={{ fontSize: 'clamp(30px, 3.5vw, 48px)' }}
+            >
+              Built for Canada. Every feature,<br />every regulation, every family.
+            </h2>
+            <p className="text-[16px] text-dark-text/65 leading-relaxed max-w-2xl mx-auto">
+              Every AI feature is built around Canadian childcare: CWELCC requirements, Ontario ratios, BC CCFRI, and the CPE system in Quebec. This is the depth no US competitor can replicate.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            {[
+              {
+                icon: '📝',
+                title: 'AI Daily Report Writer',
+                tier: 'Sprout Starter+',
+                desc: 'Educator enters two or three brief observations. AI drafts a complete, warm, parent-facing daily report in seconds. Read, edit if needed, send with one tap.',
+              },
+              {
+                icon: '🍁',
+                title: 'CWELCC Compliance Assistant',
+                tier: 'Sprout Starter+',
+                desc: 'Ask compliance questions in plain language and receive accurate, province-specific answers instantly. What is my wage enhancement obligation? What does my Program Advisor need to see? Answered in seconds.',
+              },
+              {
+                icon: '⚠️',
+                title: 'AI Incident Report Helper',
+                tier: 'Sprout Starter+',
+                desc: 'Guided, structured incident documentation. AI drafts the formal report from staff observations. Reduces the risk of incomplete records that create licensing exposure.',
+              },
+              {
+                icon: '📆',
+                title: 'AI Schedule Builder',
+                tier: 'Sprout Grow+',
+                desc: 'Build a weekly schedule that satisfies every ratio requirement across every room. AI optimises shift patterns, flags gaps before they happen, and adjusts automatically when staff availability changes.',
+              },
+              {
+                icon: '✅',
+                title: 'AI Licensing Readiness Checker',
+                tier: 'Seeds and above',
+                desc: 'Aspiring operators answer guided questions about their space, qualifications, and preparation. AI generates a readiness score and a prioritised action list specific to their province.',
+              },
+              {
+                icon: '📬',
+                title: 'AI Parent Newsletter Writer',
+                tier: 'Sprout Starter+',
+                desc: 'Enter this month\'s key topics and events in bullet points. AI drafts a warm, professional monthly newsletter. Review, edit, and send to all enrolled families.',
+              },
+              {
+                icon: '🌐',
+                title: 'Multi-Language Parent Communication',
+                tier: 'Sprout Home+',
+                desc: 'Parents select their preferred language during onboarding. Daily reports, newsletters, and messages arrive automatically in English, French, Mandarin, Tagalog, Spanish, Punjabi, or Arabic.',
+              },
+            ].map(item => (
+              <div
+                key={item.title}
+                className="bg-white rounded-2xl p-6 border border-[rgba(47,74,58,0.08)]"
+                style={{ boxShadow: '0 4px 20px rgba(47,74,58,0.07)' }}
+              >
+                <div className="flex items-start gap-4">
+                  <div
+                    className="w-11 h-11 rounded-xl flex items-center justify-center text-2xl flex-shrink-0"
+                    style={{ background: 'rgba(47,74,58,0.06)' }}
+                  >
+                    {item.icon}
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2 mb-1 flex-wrap">
+                      <h3 className="font-display text-[18px] font-medium text-forest-green">{item.title}</h3>
+                      <span
+                        className="text-[10px] font-semibold px-2 py-0.5 rounded-full flex-shrink-0"
+                        style={{ background: 'rgba(110,183,111,0.12)', color: '#6EB76F' }}
+                      >
+                        {item.tier}
+                      </span>
+                    </div>
+                    <p className="text-[13px] text-dark-text/60 leading-relaxed">{item.desc}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── INTEGRATIONS ──────────────────────────────────────── */}
       <section className="bg-cream py-16 md:py-20 px-5 md:px-8">
         <div className="max-w-4xl mx-auto">
