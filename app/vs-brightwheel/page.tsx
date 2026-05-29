@@ -52,7 +52,7 @@ export default function VsBrightwheelPage() {
         </>
       }
       heroSubtext="Great platform. Wrong country."
-      keyAngle="Brightwheel is a well-made product built for American childcare regulations, American subsidy programs, and American data laws. If you're running a centre in Canada, that mismatch costs you real time and money every month."
+      keyAngle="Brightwheel is a well-made product built for American childcare regulations, American subsidy programs, and American data laws. If you are running a centre in Canada, that mismatch costs you real time and money every month."
       rows={rows}
       testimonials={testimonials}
       usPrice="from CAD $39/mo"

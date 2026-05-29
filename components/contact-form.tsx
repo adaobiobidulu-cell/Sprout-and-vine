@@ -7,7 +7,7 @@ const labelClass = 'block text-[13px] font-medium text-dark-text/70 mb-1.5'
 const inputClass =
   'w-full border border-[rgba(47,74,58,0.2)] rounded-lg px-4 py-3 text-[14px] text-dark-text bg-white focus:outline-none focus:border-forest-green transition-colors'
 
-const provinces = [
+const provincesEn = [
   { value: '', label: 'Select your province...' },
   { value: 'BC', label: 'BC' },
   { value: 'AB', label: 'AB' },
@@ -24,7 +24,24 @@ const provinces = [
   { value: 'NU', label: 'NU' },
 ]
 
-const childrenCounts = [
+const provincesFr = [
+  { value: '', label: 'Sélectionnez votre province...' },
+  { value: 'BC', label: 'BC' },
+  { value: 'AB', label: 'AB' },
+  { value: 'SK', label: 'SK' },
+  { value: 'MB', label: 'MB' },
+  { value: 'ON', label: 'ON' },
+  { value: 'QC', label: 'QC' },
+  { value: 'NB', label: 'NB' },
+  { value: 'NS', label: 'NS' },
+  { value: 'PEI', label: 'PEI' },
+  { value: 'NL', label: 'NL' },
+  { value: 'YT', label: 'YT' },
+  { value: 'NT', label: 'NT' },
+  { value: 'NU', label: 'NU' },
+]
+
+const childrenCountsEn = [
   { value: '', label: 'Select enrolled count...' },
   { value: 'under-15', label: 'Under 15' },
   { value: '15-30', label: '15 to 30' },
@@ -33,7 +50,55 @@ const childrenCounts = [
   { value: 'over-100', label: 'Over 100' },
 ]
 
-export default function ContactForm() {
+const childrenCountsFr = [
+  { value: '', label: "Sélectionnez le nombre d'inscrits..." },
+  { value: 'under-15', label: 'Moins de 15' },
+  { value: '15-30', label: '15 à 30' },
+  { value: '31-60', label: '31 à 60' },
+  { value: '61-100', label: '61 à 100' },
+  { value: 'over-100', label: 'Plus de 100' },
+]
+
+const copy = {
+  en: {
+    nameLabel: 'Your name',
+    centreLabel: 'Centre name',
+    provinceLabel: 'Province',
+    childrenLabel: 'Number of children enrolled',
+    emailLabel: 'Your email',
+    phoneLabel: 'Your phone',
+    optional: '(optional)',
+    messageLabel: 'Message',
+    messagePlaceholder: 'Anything you would like us to know before our call...',
+    sending: 'Sending...',
+    submit: 'Book my demo',
+    errorMsg: 'Something went wrong sending your message. Please email us directly at hello@sproutandvine.ca.',
+    thankYouHeading: (name: string) => `Thanks, ${name}!`,
+    thankYouBody: 'We will be in touch within one business day. In the meantime, you can start exploring with a free Seeds account.',
+    thankYouCta: 'Start with Seeds',
+    thankYouHref: '/contact',
+  },
+  fr: {
+    nameLabel: 'Votre nom',
+    centreLabel: 'Nom du centre',
+    provinceLabel: 'Province',
+    childrenLabel: "Nombre d'enfants inscrits",
+    emailLabel: 'Votre courriel',
+    phoneLabel: 'Votre téléphone',
+    optional: '(facultatif)',
+    messageLabel: 'Message',
+    messagePlaceholder: 'Ce que vous souhaitez nous dire avant notre appel...',
+    sending: 'Envoi...',
+    submit: 'Réserver ma démo',
+    errorMsg: 'Un problème est survenu. Envoyez-nous un courriel à hello@sproutandvine.ca.',
+    thankYouHeading: (name: string) => `Merci, ${name} !`,
+    thankYouBody: 'Nous vous contacterons dans un délai d\'un jour ouvrable. En attendant, vous pouvez explorer librement avec un compte Seeds gratuit.',
+    thankYouCta: 'Commencer avec Seeds',
+    thankYouHref: '/fr/contact',
+  },
+}
+
+export default function ContactForm({ locale = 'en' }: { locale?: 'en' | 'fr' }) {
   const [name, setName] = useState('')
   const [centerName, setCenterName] = useState('')
   const [province, setProvince] = useState('')
@@ -44,6 +109,10 @@ export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
+
+  const s = copy[locale]
+  const provinces = locale === 'fr' ? provincesFr : provincesEn
+  const childrenCounts = locale === 'fr' ? childrenCountsFr : childrenCountsEn
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
@@ -58,7 +127,7 @@ export default function ContactForm() {
       if (!res.ok) throw new Error('send_failed')
       setSubmitted(true)
     } catch {
-      setError('Something went wrong sending your message. Please email us directly at hello@sproutandvine.ca.')
+      setError(s.errorMsg)
     } finally {
       setLoading(false)
     }
@@ -72,16 +141,16 @@ export default function ContactForm() {
           className="font-display font-medium text-forest-green mb-4"
           style={{ fontSize: '32px' }}
         >
-          Thanks, {name}!
+          {s.thankYouHeading(name)}
         </h2>
         <p className="text-[16px] text-dark-text/65 leading-relaxed mb-8">
-          We'll be in touch within 1 business day. In the meantime, you can start exploring with a free Seeds account.
+          {s.thankYouBody}
         </p>
         <Link
-          href="/contact"
+          href={s.thankYouHref}
           className="inline-block bg-forest-green text-white text-[15px] font-medium px-8 py-3.5 rounded-lg hover:bg-[#243d2f] transition-colors"
         >
-          Start with Seeds
+          {s.thankYouCta}
         </Link>
       </div>
     )
@@ -89,10 +158,10 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
-      {/* Your name */}
+      {/* Name */}
       <div>
         <label htmlFor="name" className={labelClass}>
-          Your name
+          {s.nameLabel}
         </label>
         <input
           id="name"
@@ -108,7 +177,7 @@ export default function ContactForm() {
       {/* Centre name */}
       <div>
         <label htmlFor="centerName" className={labelClass}>
-          Centre name
+          {s.centreLabel}
         </label>
         <input
           id="centerName"
@@ -124,7 +193,7 @@ export default function ContactForm() {
       {/* Province */}
       <div>
         <label htmlFor="province" className={labelClass}>
-          Province
+          {s.provinceLabel}
         </label>
         <select
           id="province"
@@ -144,7 +213,7 @@ export default function ContactForm() {
       {/* Number of children enrolled */}
       <div>
         <label htmlFor="childrenCount" className={labelClass}>
-          Number of children enrolled
+          {s.childrenLabel}
         </label>
         <select
           id="childrenCount"
@@ -164,7 +233,7 @@ export default function ContactForm() {
       {/* Email */}
       <div>
         <label htmlFor="email" className={labelClass}>
-          Your email
+          {s.emailLabel}
         </label>
         <input
           id="email"
@@ -180,8 +249,8 @@ export default function ContactForm() {
       {/* Phone */}
       <div>
         <label htmlFor="phone" className={labelClass}>
-          Your phone{' '}
-          <span className="text-dark-text/40 font-normal">(optional)</span>
+          {s.phoneLabel}{' '}
+          <span className="text-dark-text/40 font-normal">{s.optional}</span>
         </label>
         <input
           id="phone"
@@ -196,15 +265,15 @@ export default function ContactForm() {
       {/* Message */}
       <div>
         <label htmlFor="message" className={labelClass}>
-          Message{' '}
-          <span className="text-dark-text/40 font-normal">(optional)</span>
+          {s.messageLabel}{' '}
+          <span className="text-dark-text/40 font-normal">{s.optional}</span>
         </label>
         <textarea
           id="message"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           className={`${inputClass} h-28 resize-none`}
-          placeholder="Anything you'd like us to know before our call..."
+          placeholder={s.messagePlaceholder}
         />
       </div>
 
@@ -221,7 +290,7 @@ export default function ContactForm() {
         disabled={loading}
         className="w-full bg-forest-green text-white py-3.5 rounded-lg text-[15px] font-medium hover:bg-[#243d2f] transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
       >
-        {loading ? 'Sending...' : 'Book my demo'}
+        {loading ? s.sending : s.submit}
       </button>
     </form>
   )

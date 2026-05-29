@@ -10,7 +10,7 @@ export default function CareersPage() {
   return (
     <ComingSoon
       title="Come grow with us"
-      description="We're a small, focused team building tools that genuinely help Canadian childcare centres thrive. We'll post openings here when we're ready to grow."
+      description="We are a small, focused team building tools that genuinely help Canadian childcare centres thrive. We will post openings here when we are ready to grow."
       backLabel="Learn about us"
       backHref="/about"
     />

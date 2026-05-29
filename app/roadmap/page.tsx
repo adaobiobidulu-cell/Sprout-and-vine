@@ -4,7 +4,7 @@ import FadeIn from '@/components/fade-in'
 
 export const metadata: Metadata = {
   title: 'Roadmap | Sprout & Vine',
-  description: "We share our roadmap publicly so you know exactly what we're building and when. No surprises.",
+  description: "We share our roadmap publicly so you know exactly what we are building and when. No surprises.",
 }
 
 function SectionLabel({ children }: { children: React.ReactNode }) {

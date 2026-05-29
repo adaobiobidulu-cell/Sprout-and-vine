@@ -46,9 +46,9 @@ const footerColumnsEn = [
   {
     title: 'Resources',
     links: [
+      { label: 'Seeds Hub', href: '/seeds' },
       { label: 'CWELCC Guide', href: '/resources/cwelcc-guide' },
       { label: 'Licensing Checklist', href: '/resources/licensing-checklist' },
-      { label: 'Blog', href: '/blog' },
       { label: 'Help Centre', href: '/help' },
     ],
   },
@@ -84,9 +84,9 @@ const footerColumnsFr = [
   {
     title: 'Ressources',
     links: [
+      { label: 'Seeds', href: '/fr/seeds' },
       { label: 'Guide PÉLCPN', href: '/fr/resources/guide-pelcpn' },
       { label: 'Liste de vérification', href: '/fr/resources/liste-verification-licences' },
-      { label: 'Blogue', href: '/fr/blog' },
       { label: "Centre d'aide", href: '/fr/help' },
     ],
   },

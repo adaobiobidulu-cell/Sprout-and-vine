@@ -19,7 +19,7 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
 const faqs = [
   {
     q: 'What happens if my enrollment grows into the next tier?',
-    a: "We will notify you when you consistently exceed your tier's enrollment limit and make the transition simple. You will never be charged mid-month — changes take effect on your next billing date.",
+    a: "We will notify you when you consistently exceed your tier's enrollment limit and make the transition simple. You will never be charged mid-month. Changes take effect on your next billing date.",
   },
   {
     q: 'Do you charge per child or per staff member?',
@@ -27,7 +27,7 @@ const faqs = [
   },
   {
     q: 'Is there a contract or commitment?',
-    a: 'Monthly plans have no minimum commitment — cancel anytime. Annual plans are billed upfront and save you 2 months.',
+    a: 'Monthly plans have no minimum commitment. Cancel anytime. Annual plans are billed upfront and save you 2 months.',
   },
   {
     q: 'Does the Vine parent app cost extra?',

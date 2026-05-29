@@ -178,7 +178,7 @@ export default function ResourcesPage() {
               {
                 icon: '🗺️',
                 title: 'Product Roadmap',
-                desc: "See what we're building next. We share our roadmap publicly so you know where Sprout & Vine is headed.",
+                desc: "See what we are building next. We share our roadmap publicly so you know where Sprout & Vine is headed.",
                 href: '/roadmap',
                 cta: 'View Roadmap',
               },

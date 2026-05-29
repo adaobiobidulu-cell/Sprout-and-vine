@@ -105,7 +105,7 @@ export default function PricingCards() {
           </ul>
 
           <p className="text-[12px] text-dark-text/40 italic mb-5">
-            "When you're ready to open, Sprout will be waiting."
+            "When you are ready to open, Sprout will be waiting."
           </p>
 
           <Link

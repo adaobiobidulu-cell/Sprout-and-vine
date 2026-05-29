@@ -187,9 +187,9 @@ function calcScore(d: FormData): number {
 function calcNextSteps(d: FormData): string[] {
   const steps: string[] = []
   if (!d.hasFirstAid || d.hasFirstAid === 'no') steps.push('Book a Standard First Aid and infant/child CPR course (required before licensing).')
-  if (!d.hasVSC || d.hasVSC === 'no') steps.push('Apply for a Vulnerable Sector Check at your local police service — allow 2 to 8 weeks.')
+  if (!d.hasVSC || d.hasVSC === 'no') steps.push('Apply for a Vulnerable Sector Check at your local police service. Allow 2 to 8 weeks.')
   if (!d.eceStatus || d.eceStatus === 'no') steps.push('Consider enrolling in an ECE diploma program. Not legally required for home daycares, but strongly recommended.')
-  if (d.programType === 'home' && (!d.contactedAgency || d.contactedAgency === 'no')) steps.push('Find and contact a licensed home child care agency in your area (required in Ontario — you cannot licence independently).')
+  if (d.programType === 'home' && (!d.contactedAgency || d.contactedAgency === 'no')) steps.push('Find and contact a licensed home child care agency in your area. In Ontario this is required: you cannot licence independently.')
   if ((d.programType === 'small' || d.programType === 'large') && (!d.contactedSSM || d.contactedSSM === 'no')) steps.push('Contact your local service system manager (CMSM or DSSAB) to understand CWELCC space allocations and funding priorities in your region.')
   if (!d.hasLocation || d.hasLocation === 'no') steps.push('Identify and confirm your operating space. Check municipal zoning before signing any lease.')
   if (d.hasLocation === 'yes' && d.zoned !== 'yes') steps.push('Confirm your space is zoned for childcare use with your municipal zoning department.')

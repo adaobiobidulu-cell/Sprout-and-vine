@@ -51,8 +51,8 @@ export default function VsProcarePage() {
           Sprout &amp; Vine is built for how you actually work.
         </>
       }
-      heroSubtext="Procare is powerful. It's also complex, expensive, and built for large American operations. Most Canadian centres don't need enterprise software. They need calm, capable tools."
-      keyAngle="Procare was built for large US childcare chains. If you're running one to five locations in Canada, you're paying for features you'll never use, learning a system that takes weeks to set up, and still doing CWELCC reconciliation in a spreadsheet."
+      heroSubtext="Procare is powerful. It is also complex, expensive, and built for large American operations. Most Canadian centres do not need enterprise software. They need calm, capable tools."
+      keyAngle="Procare was built for large US childcare chains. If you are running one to five locations in Canada, you are paying for features you will never use, learning a system that takes weeks to set up, and still doing CWELCC reconciliation in a spreadsheet."
       rows={rows}
       testimonials={testimonials}
       usPrice="from CAD $39/mo"

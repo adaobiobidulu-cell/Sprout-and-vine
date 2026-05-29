@@ -19,7 +19,7 @@ export default function FrContactPage() {
           <p className="text-[16px] text-dark-text/60 leading-relaxed mb-10">
             Démarrez votre essai gratuit de 14 jours ou prenez rendez-vous pour une démonstration personnalisée.
           </p>
-          <ContactForm />
+          <ContactForm locale="fr" />
         </div>
 
         {/* What to expect */}

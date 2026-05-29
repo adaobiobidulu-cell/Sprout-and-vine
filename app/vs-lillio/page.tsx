@@ -51,7 +51,7 @@ export default function VsLillioPage() {
           Sprout &amp; Vine goes further.
         </>
       }
-      heroSubtext="Lillio (formerly HiMama) is a well-known name in Canadian childcare. But well-known doesn't mean complete."
+      heroSubtext="Lillio (formerly HiMama) is a well-known name in Canadian childcare. But well-known does not mean complete."
       keyAngle="Lillio does parent communication well. Where it falls short: CWELCC subsidy tracking, full enrollment and waitlist management, Smart Pickup Authorization, and the per-centre pricing model that growing centres need. Sprout & Vine fills every one of those gaps."
       rows={rows}
       testimonials={testimonials}
