@@ -40,24 +40,6 @@ const trustLogos = [
   { name: 'Arc-en-Ciel', icon: '☀️' },
 ]
 
-const testimonials = [
-  {
-    quote: "Depuis qu'on utilise Sprout & Vine, je passe moitié moins de temps sur la paperasse. Les rapports quotidiens se font en quelques minutes et les familles sont ravies.",
-    name: 'Marie-Claude B.',
-    role: 'Directrice, Montréal, QC',
-  },
-  {
-    quote: "Le suivi des subventions PÉLCN était un cauchemar en feuilles de calcul. Maintenant, tout est automatique. C'est une vraie différence pour notre centre.",
-    name: 'Sophie L.',
-    role: 'Directrice, Ottawa, ON',
-  },
-  {
-    quote: "L'application Vine a transformé notre relation avec les familles. Les parents adorent recevoir les photos et les jalons de leur enfant en temps réel.",
-    name: 'Nathalie G.',
-    role: 'Directrice, Québec, QC',
-  },
-]
-
 const faqFr = [
   {
     q: "Y a-t-il un essai gratuit?",
@@ -367,29 +349,6 @@ export default function FrenchHomePage() {
       </section>
 
       {/* ── SECTION 11: TÉMOIGNAGES ─────────────────────────────── */}
-      <section className="bg-white py-20 md:py-24 px-5 md:px-8">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-12">
-            <SectionLabel>Ce que disent les directeurs</SectionLabel>
-            <h2 className="font-display font-medium text-forest-green leading-[1.08]" style={{ fontSize: 'clamp(34px, 4vw, 50px)' }}>
-              Des vraies personnes. De vraies garderies.
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {testimonials.map(t => (
-              <div key={t.name} className="rounded-2xl p-7 flex flex-col gap-4" style={{ background: '#F7F2E8', border: '1px solid rgba(47,74,58,0.08)' }}>
-                <div className="text-amber-400 text-sm tracking-wider">★★★★★</div>
-                <p className="text-[15px] text-dark-text/75 leading-relaxed flex-1">&ldquo;{t.quote}&rdquo;</p>
-                <div>
-                  <p className="text-[14px] font-semibold text-dark-text">{t.name}</p>
-                  <p className="text-[12px] text-dark-text/45 mt-0.5">{t.role}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── SECTION 12: FAQ ─────────────────────────────────────── */}
       <section className="bg-cream py-20 px-5 md:px-8">
         <div className="max-w-3xl mx-auto">

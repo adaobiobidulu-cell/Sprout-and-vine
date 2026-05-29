@@ -22,25 +22,6 @@ const rows = [
   { feature: 'Milestone tracking',              us: true,          them: true },
 ]
 
-const testimonials = [
-  {
-    quote: "Lillio was great for parent communication but we kept hitting walls. No CWELCC tracking, no real waitlist management. We were still in spreadsheets for half our work.",
-    name: 'Priya R.',
-    role: 'Director',
-    centreName: 'Sunrise Early Learning Centre',
-    location: 'Vancouver, BC',
-    detail: 'Licensed since 2019 · 28 children enrolled',
-  },
-  {
-    quote: "Switching to Sprout & Vine felt like finally having one tool that does everything. The waitlist and enrollment flow alone saved us hours every week.",
-    name: 'James T.',
-    role: 'Director',
-    centreName: 'Riverbend Child Development Centre',
-    location: 'Calgary, AB',
-    detail: 'Licensed since 2017 · 34 children enrolled',
-  },
-]
-
 export default function VsLillioPage() {
   return (
     <ComparisonPage
@@ -54,7 +35,6 @@ export default function VsLillioPage() {
       heroSubtext="Lillio (formerly HiMama) is a well-known name in Canadian childcare. But well-known does not mean complete."
       keyAngle="Lillio does parent communication well. Where it falls short: CWELCC subsidy tracking, full enrollment and waitlist management, Smart Pickup Authorization, and the per-centre pricing model that growing centres need. Sprout & Vine fills every one of those gaps."
       rows={rows}
-      testimonials={testimonials}
       usPrice="from CAD $39/mo"
       themPrice="Per child"
       themPriceNote="Per-child model means costs grow unpredictably with enrollment."

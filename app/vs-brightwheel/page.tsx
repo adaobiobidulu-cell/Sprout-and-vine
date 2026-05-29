@@ -22,25 +22,6 @@ const rows = [
   { feature: 'Messaging',                     us: true,      them: true },
 ]
 
-const testimonials = [
-  {
-    quote: "We were on Brightwheel for two years. It is a solid platform, but every time CWELCC changed something we were doing manual reconciliation. Sprout & Vine just handles it.",
-    name: 'Sandra P.',
-    role: 'Director',
-    centreName: 'Meadowbrook Early Learning',
-    location: 'Ottawa, ON',
-    detail: 'Licensed since 2016 · 40 children enrolled',
-  },
-  {
-    quote: "The bilingual support alone made the switch worth it for us. Half our families communicate primarily in French. With Brightwheel, they were always second-class users.",
-    name: 'Marie-Claude B.',
-    role: 'Director',
-    centreName: 'Garderie Les Petits Explorateurs',
-    location: 'Gatineau, QC',
-    detail: 'Licensed since 2020 · 22 children enrolled',
-  },
-]
-
 export default function VsBrightwheelPage() {
   return (
     <ComparisonPage
@@ -54,7 +35,6 @@ export default function VsBrightwheelPage() {
       heroSubtext="Great platform. Wrong country."
       keyAngle="Brightwheel is a well-made product built for American childcare regulations, American subsidy programs, and American data laws. If you are running a centre in Canada, that mismatch costs you real time and money every month."
       rows={rows}
-      testimonials={testimonials}
       usPrice="from CAD $39/mo"
       themPrice="Per child"
       themPriceNote="Pricing scales with enrollment. Costs rise as you grow."

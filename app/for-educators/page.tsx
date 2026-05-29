@@ -138,34 +138,6 @@ export default function ForEducatorsPage() {
         </div>
       </section>
 
-      {/* Section 3: Testimonial */}
-      <section className="bg-forest-green py-20 px-5 md:px-8 text-center">
-        <div className="max-w-2xl mx-auto">
-          <div className="text-3xl mb-6 opacity-50">"</div>
-          <blockquote
-            className="font-display font-medium text-cream leading-[1.15] mb-6"
-            style={{ fontSize: 'clamp(24px, 3vw, 36px)' }}
-          >
-            I used to spend 45 minutes at the end of the day on reports. Now it's 8 minutes and I'm home on time.
-          </blockquote>
-          <p className="text-cream/50 text-[14px]">ECE, Ontario</p>
-
-          <div className="mt-12 pt-10 border-t border-cream/10">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
-              {[
-                { stat: '8 min', label: 'Average daily report time' },
-                { stat: '2 taps', label: 'To tag a milestone' },
-                { stat: '0 texts', label: 'To your personal number' },
-              ].map(item => (
-                <div key={item.label}>
-                  <p className="font-display text-[40px] font-medium text-cream leading-none mb-1">{item.stat}</p>
-                  <p className="text-[12px] text-cream/50">{item.label}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Section 4: Tell your director */}
       <section className="bg-cream py-20 px-5 md:px-8 text-center">

@@ -6,22 +6,12 @@ export type ComparisonRow = {
   them: string | boolean
 }
 
-export type Testimonial = {
-  quote: string
-  name: string
-  role: string
-  centreName?: string
-  location?: string
-  detail?: string
-}
-
 type Props = {
   competitorName: string
   heroHeadline: React.ReactNode
   heroSubtext: string
   keyAngle: string
   rows: ComparisonRow[]
-  testimonials: Testimonial[]
   usPrice: string
   themPrice: string
   themPriceNote: string
@@ -65,7 +55,6 @@ export default function ComparisonPage({
   heroSubtext,
   keyAngle,
   rows,
-  testimonials,
   usPrice,
   themPrice,
   themPriceNote,
@@ -144,39 +133,6 @@ export default function ComparisonPage({
                 </div>
                 <div className="p-4 border-l border-[rgba(47,74,58,0.05)]">
                   <CellValue value={row.them} />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="bg-white py-20 px-5 md:px-8">
-        <div className="max-w-4xl mx-auto">
-          <SectionLabel>From Operators Who Switched</SectionLabel>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {testimonials.map(t => (
-              <div
-                key={t.name}
-                className="rounded-2xl p-7 flex flex-col gap-4"
-                style={{ background: '#F7F2E8', border: '1px solid rgba(47,74,58,0.08)' }}
-              >
-                <div className="text-amber-400 text-sm tracking-wider">★★★★★</div>
-                <p className="text-[15px] text-dark-text/75 leading-relaxed flex-1">
-                  &ldquo;{t.quote}&rdquo;
-                </p>
-                <div className="border-t border-[rgba(47,74,58,0.08)] pt-4">
-                  <p className="text-[14px] font-semibold text-dark-text">
-                    {t.name}
-                    {t.role && <span className="font-normal text-dark-text/60">, {t.role}</span>}
-                  </p>
-                  {t.centreName && (
-                    <p className="text-[12px] text-dark-text/55 mt-0.5">{t.centreName}{t.location ? `, ${t.location}` : ''}</p>
-                  )}
-                  {t.detail && (
-                    <p className="text-[11px] text-dark-text/35 mt-0.5">{t.detail}</p>
-                  )}
                 </div>
               </div>
             ))}

@@ -144,18 +144,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── SECTION 2: FOUNDER QUOTE */}
-      <section className="bg-forest-green py-16 px-5 md:px-8">
-        <div className="max-w-3xl mx-auto text-center">
-          <p className="font-display italic text-cream/85 leading-relaxed" style={{ fontSize: 'clamp(22px, 3vw, 30px)' }}>
-            "The gap is not passion. The gap is information and infrastructure."
-          </p>
-          <p className="text-[13px] text-cream/45 mt-4 uppercase tracking-[0.12em] font-medium">
-            Ada, Co-founder of Sprout &amp; Vine
-          </p>
-        </div>
-      </section>
-
       {/* ── SECTION 3: THREE JOURNEYS */}
       <section className="bg-cream py-20 md:py-24 px-5 md:px-8">
         <div className="max-w-7xl mx-auto">
