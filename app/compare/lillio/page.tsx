@@ -82,6 +82,41 @@ const comparisonRows: {
     sprout: { status: '✅', detail: 'Pre-loaded for all provinces' },
     lillio: { status: '⚠️', detail: 'Ontario-focused' },
   },
+  {
+    feature: 'Role-based access (6 levels)',
+    sprout: { status: '✅', detail: 'Owner, Director, Lead Educator, Educator, Parent, Prospective Parent' },
+    lillio: { status: '⚠️', detail: 'Limited role separation' },
+  },
+  {
+    feature: 'Real-time ratio alerts',
+    sprout: { status: '✅', detail: 'Live room-by-room ratio monitoring with compliance alerts' },
+    lillio: { status: '❌', detail: 'Not available' },
+  },
+  {
+    feature: 'Educator self-service schedule view',
+    sprout: { status: '✅', detail: 'Educators see their own schedule and assigned children only' },
+    lillio: { status: '❌', detail: 'Not available' },
+  },
+  {
+    feature: 'Parent appointment booking',
+    sprout: { status: '✅', detail: 'Parent-educator and director check-ins bookable from the Vine app' },
+    lillio: { status: '❌', detail: 'Not available' },
+  },
+  {
+    feature: 'Tour booking (prospective families)',
+    sprout: { status: '✅', detail: 'No account required to book a tour' },
+    lillio: { status: '❌', detail: 'Not available' },
+  },
+  {
+    feature: 'CWELCC wage enhancement tracking',
+    sprout: { status: '✅', detail: 'Automated tracking per RECE staff member with year-end CMSM report' },
+    lillio: { status: '❌', detail: 'Not available' },
+  },
+  {
+    feature: 'Payroll integration (Canadian)',
+    sprout: { status: '✅', detail: 'Wagepoint (all tiers) and Humi (Vine and above)' },
+    lillio: { status: '❌', detail: 'Not available' },
+  },
 ]
 
 function StatusBadge({ status }: { status: RowStatus }) {

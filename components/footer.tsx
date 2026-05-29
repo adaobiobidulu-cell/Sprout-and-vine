@@ -84,8 +84,8 @@ const footerColumnsFr = [
   {
     title: 'Ressources',
     links: [
-      { label: 'Guide PÉLCN', href: '/fr/resources' },
-      { label: 'Liste de vérification', href: '/fr/resources' },
+      { label: 'Guide PÉLCPN', href: '/fr/resources/guide-pelcpn' },
+      { label: 'Liste de vérification', href: '/fr/resources/liste-verification-licences' },
       { label: 'Blogue', href: '/fr/blog' },
       { label: "Centre d'aide", href: '/fr/help' },
     ],

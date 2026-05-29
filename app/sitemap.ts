@@ -31,6 +31,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/seeds/qualifications`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${base}/seeds/funding`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${base}/seeds/cwelcc-readiness`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${base}/seeds/business-plan`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
 
     // Features
     { url: `${base}/features/smart-pickup`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
@@ -61,6 +62,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // Features — FR
     { url: `${base}/fr/features/autorisation-ramassage`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+
+    // Resources — FR
+    { url: `${base}/fr/resources/guide-pelcpn`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${base}/fr/resources/liste-verification-licences`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+
+    // Seeds hub — FR
+    { url: `${base}/fr/seeds`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${base}/fr/seeds/garderie-milieu-familial`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${base}/fr/seeds/centre-de-la-petite-enfance`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${base}/fr/seeds/qualifications`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${base}/fr/seeds/financement`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${base}/fr/seeds/plan-affaires`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${base}/fr/seeds/preparation-pelcpn`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
 
     // Comparison — FR
     { url: `${base}/fr/compare/lillio`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },

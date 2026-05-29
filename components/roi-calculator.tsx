@@ -3,6 +3,105 @@
 import { useState } from 'react'
 import Link from 'next/link'
 
+function ROIEmailShare({ hours, value, roi, tier, locale }: {
+  hours: number; value: number; roi: string; tier: { name: string; price: number } | null; locale: 'en' | 'fr'
+}) {
+  const [email, setEmail] = useState('')
+  const [consent, setConsent] = useState(false)
+  const [sent, setSent] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [err, setErr] = useState('')
+
+  const label = locale === 'fr' ? 'Partager cette estimation' : 'Share this estimate'
+  const hint = locale === 'fr'
+    ? 'Voulez-vous partager ceci avec votre conseil ou votre propriétaire?'
+    : 'Want to share this with your board or owner?'
+  const btnText = locale === 'fr' ? "M'envoyer l'estimation" : 'Email me this estimate'
+  const fine = locale === 'fr'
+    ? 'Nous vous enverrons un résumé de vos résultats. Un seul courriel.'
+    : 'We will send you a summary of your results. One email, that is it.'
+  const consentLabel = locale === 'fr'
+    ? "J'accepte de recevoir ce courriel de Sprout & Vine."
+    : 'I agree to receive this email from Sprout & Vine.'
+  const doneMsg = locale === 'fr' ? 'Envoyé. Vérifiez votre boîte de réception.' : 'Sent. Check your inbox.'
+
+  async function submit(e: React.FormEvent) {
+    e.preventDefault()
+    if (!consent) { setErr(locale === 'fr' ? 'Veuillez cocher la case.' : 'Please check the box.'); return }
+    setLoading(true)
+    setErr('')
+    try {
+      await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: email.split('@')[0],
+          centerName: 'ROI Calculator result',
+          province: 'N/A',
+          childrenCount: 'N/A',
+          email,
+          message: [
+            `Source: roi-calculator email-share`,
+            `Locale: ${locale}`,
+            `Annual hours saved: ${hours}`,
+            `Dollar value: $${value.toLocaleString()}`,
+            tier ? `Tier: ${tier.name} at CAD $${tier.price}/mo` : 'Tier: Seeds (free)',
+            tier ? `ROI: ${roi}x` : '',
+            'Marketing consent: Yes',
+          ].filter(Boolean).join('\n'),
+        }),
+      })
+      setSent(true)
+    } catch {
+      setErr(locale === 'fr' ? 'Erreur. Réessayez.' : 'Something went wrong. Try again.')
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  if (sent) return <p className="text-[13px] text-sage-green font-medium">{doneMsg}</p>
+
+  return (
+    <div className="border-t border-[rgba(47,74,58,0.08)] pt-5 mt-5">
+      <p className="text-[12px] text-dark-text/40 uppercase tracking-wide mb-2">{label}</p>
+      <p className="text-[13px] text-dark-text/55 mb-3">{hint}</p>
+      <form onSubmit={submit}>
+        <div className="flex gap-2 mb-2">
+          <input
+            type="email"
+            required
+            value={email}
+            onChange={e => setEmail(e.target.value)}
+            placeholder="your@centre.ca"
+            className="flex-1 border border-[rgba(47,74,58,0.2)] rounded-lg px-3 py-2 text-[13px] bg-white focus:outline-none focus:border-forest-green transition-colors"
+          />
+          <button
+            type="submit"
+            disabled={loading}
+            className="bg-forest-green/10 text-forest-green text-[12px] font-medium px-4 py-2 rounded-lg hover:bg-forest-green/20 transition-colors disabled:opacity-50 whitespace-nowrap flex-shrink-0"
+          >
+            {loading ? '...' : btnText}
+          </button>
+        </div>
+        <div className="flex items-start gap-2 mb-1">
+          <input
+            id="roi-share-consent"
+            type="checkbox"
+            checked={consent}
+            onChange={e => setConsent(e.target.checked)}
+            className="mt-0.5 w-3 h-3 flex-shrink-0"
+          />
+          <label htmlFor="roi-share-consent" className="text-[11px] text-dark-text/40 leading-relaxed cursor-pointer">
+            {consentLabel}
+          </label>
+        </div>
+        <p className="text-[11px] text-dark-text/35">{fine}</p>
+        {err && <p className="text-[11px] text-terracotta mt-1">{err}</p>}
+      </form>
+    </div>
+  )
+}
+
 function Slider({
   label,
   value,
@@ -186,6 +285,14 @@ export default function ROICalculator({ locale = 'en' }: { locale?: 'en' | 'fr' 
           >
             {s.cta}
           </Link>
+
+          <ROIEmailShare
+            hours={annualHours}
+            value={dollarValue}
+            roi={roi ?? '0'}
+            tier={tier}
+            locale={locale}
+          />
         </div>
       </div>
     </div>

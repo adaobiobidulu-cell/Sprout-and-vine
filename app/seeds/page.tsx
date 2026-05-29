@@ -77,8 +77,8 @@ const moreResources = [
     title: 'Business Plan Builder',
     desc: 'An interactive tool to build your childcare business plan step by step.',
     href: '/seeds/business-plan',
-    cta: 'Interactive tool coming soon',
-    comingSoon: true,
+    cta: 'Build your business plan',
+    comingSoon: false,
   },
 ]
 
