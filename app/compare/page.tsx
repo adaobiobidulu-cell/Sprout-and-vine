@@ -24,7 +24,7 @@ const comparisons = [
     highlights: [
       'Transparent flat-rate pricing vs. hidden pricing model',
       'Built-in CWELCC and cost-based funding support',
-      'Home daycare tier starting at CAD $39/mo',
+      'Home daycare tier starting at CAD $49/mo',
       'Full bilingual EN/FR across the entire platform',
     ],
     hq: 'Toronto, ON',

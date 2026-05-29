@@ -35,7 +35,7 @@ export default function VsLillioPage() {
       heroSubtext="Lillio (formerly HiMama) is a well-known name in Canadian childcare. But well-known does not mean complete."
       keyAngle="Lillio does parent communication well. Where it falls short: CWELCC subsidy tracking, full enrollment and waitlist management, Smart Pickup Authorization, and the per-centre pricing model that growing centres need. Sprout & Vine fills every one of those gaps."
       rows={rows}
-      usPrice="from CAD $39/mo"
+      usPrice="from CAD $49/mo"
       themPrice="Per child"
       themPriceNote="Per-child model means costs grow unpredictably with enrollment."
     />

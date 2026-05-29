@@ -3,9 +3,9 @@ import type { Metadata } from 'next'
 import PricingTiersClient from '@/components/pricing-tiers-client'
 
 export const metadata: Metadata = {
-  title: 'Pricing | Sprout & Vine',
+  title: 'Pricing | Sprout & Vine | Transparent, Enrollment-Based Childcare Software Pricing',
   description:
-    'Enrollment-based pricing for Canadian childcare operators. Seven tiers from free to custom. Flat rate per enrollment range, no per-child charges. All prices in CAD.',
+    'Simple, enrollment-based pricing for Canadian childcare operators. From home daycares at CAD $49/mo to multi-location networks. No hidden fees. No per-child charges. All prices in CAD.',
 }
 
 function SectionLabel({ children }: { children: React.ReactNode }) {

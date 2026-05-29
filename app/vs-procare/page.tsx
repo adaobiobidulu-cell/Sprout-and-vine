@@ -35,7 +35,7 @@ export default function VsProcarePage() {
       heroSubtext="Procare is powerful. It is also complex, expensive, and built for large American operations. Most Canadian centres do not need enterprise software. They need calm, capable tools."
       keyAngle="Procare was built for large US childcare chains. If you are running one to five locations in Canada, you are paying for features you will never use, learning a system that takes weeks to set up, and still doing CWELCC reconciliation in a spreadsheet."
       rows={rows}
-      usPrice="from CAD $39/mo"
+      usPrice="from CAD $49/mo"
       themPrice="Custom"
       themPriceNote="Enterprise licensing. Implementation fees. Annual contracts."
     />

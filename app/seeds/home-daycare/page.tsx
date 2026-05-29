@@ -63,7 +63,7 @@ const startupCostRows = [
   { item: 'Art and program supplies', cost: '$200 to $500' },
   { item: 'Insurance (childcare/liability)', cost: '$600 to $1,200/year' },
   { item: 'Agency fee (varies by agency)', cost: '$0 to $500' },
-  { item: 'Sprout Home plan (software)', cost: '$39/mo CAD' },
+  { item: 'Sprout Home plan (software)', cost: '$49/mo CAD' },
   { item: 'TOTAL STARTUP ESTIMATE', cost: '$2,000 to $5,000', bold: true },
   { item: 'Monthly operating estimate', cost: '$300 to $600' },
 ]

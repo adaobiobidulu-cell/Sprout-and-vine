@@ -39,7 +39,7 @@ const comparisonRows: {
   },
   {
     feature: 'Home daycare pricing',
-    sprout: { status: '✅', detail: 'From CAD $39/mo (Sprout Home)' },
+    sprout: { status: '✅', detail: 'From CAD $49/mo (Sprout Home)' },
     lillio: { status: '❌', detail: 'Not designed for home daycares' },
   },
   {
