@@ -5,6 +5,8 @@ import Nav from '@/components/nav'
 import Footer from '@/components/footer'
 import LanguageBanner from '@/components/language-banner'
 import AnnouncementBar from '@/components/announcement-bar'
+import MobileStickyCTA from '@/components/mobile-sticky-bar'
+import ExitIntent from '@/components/exit-intent'
 import { Analytics } from '@vercel/analytics/next'
 
 const cormorant = Cormorant_Garamond({
@@ -57,6 +59,8 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <Footer />
         <Analytics />
+        <MobileStickyCTA />
+        <ExitIntent />
       </body>
     </html>
   )

@@ -113,7 +113,7 @@ export default function Nav() {
             href={p('/pricing')}
             className="text-[14px] font-medium text-dark-text/80 hover:text-forest-green transition-colors"
           >
-            {isFr ? 'Tarifs' : 'Pricing'}
+            {isFr ? 'Tarifs' : 'How Pricing Works'}
           </Link>
           <Link
             href={p('/resources')}
@@ -180,7 +180,7 @@ export default function Nav() {
           <nav className="px-5 py-5 flex flex-col gap-1" aria-label="Mobile navigation">
             {[
               { label: isFr ? 'Fonctionnalités' : 'Features', href: p('/features') },
-              { label: isFr ? 'Tarifs' : 'Pricing', href: p('/pricing') },
+              { label: isFr ? 'Tarifs' : 'How Pricing Works', href: p('/pricing') },
               { label: isFr ? 'Ressources' : 'Resources', href: p('/resources') },
               { label: isFr ? 'À propos' : 'About', href: p('/about') },
             ].map(({ label, href }) => (

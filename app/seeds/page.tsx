@@ -241,9 +241,23 @@ export default function SeedsPage() {
             >
               Ready to take the first step?
             </h2>
-            <p className="text-cream/65 text-[15px] leading-relaxed">
+            <p className="text-cream/65 text-[15px] leading-relaxed mb-7">
               Join operators across Canada who are using Sprout and Vine to plan, launch, and run their childcare programs.
             </p>
+            <div className="flex flex-wrap gap-3">
+              <Link
+                href="/features"
+                className="inline-block bg-terracotta text-white text-[14px] font-medium px-6 py-3 rounded-lg hover:bg-[#d4724e] transition-colors"
+              >
+                Explore Features
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-block text-cream text-[14px] font-medium px-6 py-3 rounded-lg border-2 border-cream/40 hover:border-cream/70 transition-colors"
+              >
+                Book a Discovery Call
+              </Link>
+            </div>
           </div>
           <div className="bg-white/10 rounded-2xl p-7">
             <EmailCapture

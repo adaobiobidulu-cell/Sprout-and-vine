@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import FadeIn from '@/components/fade-in'
+import EmailCapture from '@/components/email-capture'
 
 export const metadata: Metadata = {
   title: 'Roadmap | Sprout & Vine',
@@ -171,7 +172,7 @@ export default function RoadmapPage() {
 
       {/* Founding operator note */}
       <section className="bg-cream py-16 md:py-20 px-5 md:px-8">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl mx-auto space-y-6">
           <div className="bg-forest-green rounded-2xl p-8 md:p-10">
             <p className="text-[11px] uppercase tracking-[0.16em] text-sage-green font-semibold mb-4">
               Founding operators
@@ -188,6 +189,14 @@ export default function RoadmapPage() {
             >
               Apply to the Founding Program
             </Link>
+          </div>
+
+          <div className="bg-white rounded-2xl p-8 border border-[rgba(47,74,58,0.08)]" style={{ boxShadow: '0 2px 16px rgba(47,74,58,0.06)' }}>
+            <EmailCapture
+              heading="Not ready to apply? Stay updated."
+              subheading="We share what we are building, what we are shipping, and when we are ready for new operators."
+              source="roadmap-page"
+            />
           </div>
         </div>
       </section>

@@ -8,6 +8,7 @@ interface Props {
   subheading?: string
   buttonText?: string
   source?: string
+  showFirstName?: boolean
 }
 
 export default function EmailCapture({
@@ -15,7 +16,9 @@ export default function EmailCapture({
   subheading = 'We share updates on what we are building, what we are learning, and when the platform is ready for you.',
   buttonText = 'Get updates',
   source = 'general',
+  showFirstName = false,
 }: Props) {
+  const [firstName, setFirstName] = useState('')
   const [email, setEmail] = useState('')
   const [consent, setConsent] = useState(false)
   const [submitted, setSubmitted] = useState(false)
@@ -35,7 +38,7 @@ export default function EmailCapture({
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          name: email.split('@')[0],
+          name: showFirstName && firstName ? firstName : email.split('@')[0],
           centerName: 'Email capture',
           province: 'N/A',
           childrenCount: 'N/A',
@@ -63,10 +66,23 @@ export default function EmailCapture({
 
   return (
     <form onSubmit={handleSubmit} className="w-full">
-      <div className="mb-4">
-        <p className="text-[16px] font-semibold text-forest-green mb-1">{heading}</p>
-        <p className="text-[13px] text-dark-text/60 leading-relaxed">{subheading}</p>
-      </div>
+      {(heading || subheading) && (
+        <div className="mb-4">
+          {heading && <p className="text-[16px] font-semibold text-forest-green mb-1">{heading}</p>}
+          {subheading && <p className="text-[13px] text-dark-text/60 leading-relaxed">{subheading}</p>}
+        </div>
+      )}
+
+      {showFirstName && (
+        <input
+          type="text"
+          required
+          value={firstName}
+          onChange={e => setFirstName(e.target.value)}
+          placeholder="First name"
+          className="w-full border border-[rgba(47,74,58,0.2)] rounded-lg px-4 py-2.5 text-[14px] text-dark-text bg-white focus:outline-none focus:border-forest-green transition-colors mb-2"
+        />
+      )}
 
       <div className="flex gap-2 mb-3">
         <input

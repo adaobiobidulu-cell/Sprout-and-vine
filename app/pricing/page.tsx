@@ -83,10 +83,10 @@ export default function PricingPage() {
               Join the Founding Operators Program
             </Link>
             <Link
-              href="/seeds"
+              href="/contact"
               className="inline-block text-[14px] font-medium text-dark-text/65 border border-[rgba(47,74,58,0.22)] px-6 py-3.5 rounded-lg hover:border-[rgba(47,74,58,0.45)] transition-colors"
             >
-              Explore the Seeds hub free
+              Book a Discovery Call
             </Link>
           </div>
         </div>

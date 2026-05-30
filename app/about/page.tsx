@@ -230,13 +230,13 @@ export default function AboutPage() {
               href="/founding"
               className="bg-terracotta text-white text-[14px] font-medium px-8 py-4 rounded-lg hover:bg-[#d4724e] transition-colors"
             >
-              Join the program
+              Join the Founding Operators Program
             </Link>
             <Link
-              href="/features"
+              href="/contact"
               className="text-cream text-[14px] font-medium px-8 py-4 rounded-lg border-2 border-cream/40 hover:border-cream/70 transition-colors"
             >
-              See the platform
+              Book a Discovery Call
             </Link>
           </div>
         </div>

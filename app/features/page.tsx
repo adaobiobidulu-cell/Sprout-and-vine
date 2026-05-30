@@ -701,14 +701,22 @@ export default function FeaturesPage() {
               className="font-display font-medium text-cream leading-[1.08] mb-5"
               style={{ fontSize: 'clamp(34px, 4vw, 50px)' }}
             >
-              Ready to run your centre with tools built for it?
+              Ready to see the platform in action?
             </h2>
-            <Link
-              href="/founding"
-              className="inline-block bg-terracotta text-white text-[14px] font-medium px-7 py-3.5 rounded-lg hover:bg-[#d4724e] transition-colors"
-            >
-              Apply to the Founding Program
-            </Link>
+            <div className="flex flex-wrap gap-3">
+              <Link
+                href="/contact"
+                className="inline-block bg-terracotta text-white text-[14px] font-medium px-7 py-3.5 rounded-lg hover:bg-[#d4724e] transition-colors"
+              >
+                Book a Discovery Call
+              </Link>
+              <Link
+                href="/founding"
+                className="inline-block text-cream text-[14px] font-medium px-7 py-3.5 rounded-lg border-2 border-cream/40 hover:border-cream/70 transition-colors"
+              >
+                Join the Founding Operators Program
+              </Link>
+            </div>
           </div>
           <div className="bg-white/10 rounded-2xl p-7">
             <EmailCapture

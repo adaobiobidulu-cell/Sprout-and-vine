@@ -3,6 +3,7 @@ import FadeIn from '@/components/fade-in'
 import ProductTour from '@/components/product-tour'
 import DashboardPreview from '@/components/dashboard-preview'
 import ScrollVine from '@/components/scroll-vine'
+import EmailCapture from '@/components/email-capture'
 
 const features = [
   {
@@ -127,19 +128,34 @@ export default function Home() {
             The only childcare platform built around CWELCC from the ground up. Attendance, billing, photo-verified Smart Pickup, and parent communication, all designed for how Canadian centres actually operate.
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-3">
+          <div className="flex flex-col items-center gap-4">
             <Link
+              id="hero-primary-cta"
               href="/founding"
-              className="bg-forest-green text-white text-[14px] font-medium px-7 py-3.5 rounded-lg hover:bg-[#243d2f] transition-colors"
+              className="w-full sm:w-auto bg-forest-green text-white text-[14px] font-medium px-8 py-3.5 rounded-lg hover:bg-[#243d2f] transition-colors text-center"
             >
               Join the Founding Operators Program
             </Link>
-            <Link
-              href="/features"
-              className="flex items-center gap-2 text-[14px] font-medium text-dark-text/75 border border-[rgba(47,74,58,0.22)] px-6 py-3.5 rounded-lg hover:border-[rgba(47,74,58,0.45)] transition-colors"
-            >
-              <span className="text-[11px]">▶</span> See the platform
-            </Link>
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 w-full sm:w-auto">
+              <Link
+                href="/features"
+                className="text-[13px] font-medium text-dark-text/70 border border-[rgba(47,74,58,0.22)] px-5 py-2.5 rounded-lg hover:border-[rgba(47,74,58,0.45)] hover:text-dark-text transition-colors text-center"
+              >
+                Explore Features
+              </Link>
+              <Link
+                href="/contact"
+                className="text-[13px] font-medium text-dark-text/70 border border-[rgba(47,74,58,0.22)] px-5 py-2.5 rounded-lg hover:border-[rgba(47,74,58,0.45)] hover:text-dark-text transition-colors text-center"
+              >
+                Book a Discovery Call
+              </Link>
+              <Link
+                href="/roadmap"
+                className="text-[13px] font-medium text-dark-text/70 border border-[rgba(47,74,58,0.22)] px-5 py-2.5 rounded-lg hover:border-[rgba(47,74,58,0.45)] hover:text-dark-text transition-colors text-center"
+              >
+                View Roadmap
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -327,6 +343,21 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* ── CONTEXTUAL CTA: Book a Discovery Call ── */}
+      <div className="bg-white py-8 px-5 md:px-8 border-y border-[rgba(47,74,58,0.07)]">
+        <div className="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-[15px] text-dark-text/65 font-medium text-center sm:text-left">
+            Want to see Smart Pickup and the full platform in action?
+          </p>
+          <Link
+            href="/contact"
+            className="flex-shrink-0 bg-forest-green text-white text-[13px] font-medium px-6 py-2.5 rounded-lg hover:bg-[#243d2f] transition-colors whitespace-nowrap"
+          >
+            Book a Discovery Call
+          </Link>
+        </div>
+      </div>
 
       {/* ── SECTION 6: ENROLLMENT & WAITLIST */}
       <section className="bg-cream py-20 md:py-24 px-5 md:px-8">
@@ -549,6 +580,21 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── CONTEXTUAL CTA: Explore Features ── */}
+      <div className="bg-cream py-8 px-5 md:px-8 border-y border-[rgba(47,74,58,0.07)]">
+        <div className="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-[15px] text-dark-text/65 font-medium text-center sm:text-left">
+            Curious about everything else the platform can do?
+          </p>
+          <Link
+            href="/features"
+            className="flex-shrink-0 border-2 border-forest-green text-forest-green text-[13px] font-medium px-6 py-2.5 rounded-lg hover:bg-forest-green hover:text-white transition-colors whitespace-nowrap"
+          >
+            Explore Features
+          </Link>
+        </div>
+      </div>
+
       {/* ── SECTION 9: DASHBOARD PREVIEW */}
       <section className="bg-cream py-20 md:py-24 px-5 md:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[35%_1fr] gap-12 items-center">
@@ -625,6 +671,21 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── CONTEXTUAL CTA: How Pricing Works ── */}
+      <div className="bg-white py-8 px-5 md:px-8 border-y border-[rgba(47,74,58,0.07)]">
+        <div className="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-[15px] text-dark-text/65 font-medium text-center sm:text-left">
+            Built for Canada means built for your budget, too.
+          </p>
+          <Link
+            href="/pricing"
+            className="flex-shrink-0 border-2 border-forest-green text-forest-green text-[13px] font-medium px-6 py-2.5 rounded-lg hover:bg-forest-green hover:text-white transition-colors whitespace-nowrap"
+          >
+            How Pricing Works
+          </Link>
+        </div>
+      </div>
+
       {/* ── SECTION 11: INTERACTIVE PRODUCT TOUR */}
       <section className="bg-cream py-20 md:py-24 px-5 md:px-8">
         <div className="max-w-7xl mx-auto">
@@ -684,6 +745,33 @@ export default function Home() {
             >
               Our story
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── EMAIL CAPTURE STRIP ── */}
+      <section className="bg-white py-16 md:py-20 px-5 md:px-8 border-t border-[rgba(47,74,58,0.08)]">
+        <div className="max-w-xl mx-auto text-center">
+          <p className="text-[11px] uppercase tracking-[0.14em] text-sage-green font-semibold mb-3">
+            Stay in the loop
+          </p>
+          <h2
+            className="font-display font-medium text-forest-green leading-snug mb-3"
+            style={{ fontSize: 'clamp(24px, 3vw, 32px)' }}
+          >
+            Not ready yet? Get updates as we build.
+          </h2>
+          <p className="text-[15px] text-dark-text/55 mb-8 leading-relaxed">
+            No commitment. We share what we are building, what we are learning, and when we are ready for you.
+          </p>
+          <div className="max-w-md mx-auto">
+            <EmailCapture
+              showFirstName
+              heading=""
+              subheading=""
+              buttonText="Get updates"
+              source="homepage-strip"
+            />
           </div>
         </div>
       </section>
