@@ -82,7 +82,7 @@ export async function POST(request: Request) {
 
     await transporter.sendMail({
       from: `"Sprout & Vine" <${process.env.GMAIL_USER}>`,
-      to: process.env.GMAIL_USER,
+      to: 'hello@sproutandvine.ca',
       replyTo: data.email,
       subject: `New demo request: ${data.centerName} (${data.province})`,
       html: buildHtml(data),
