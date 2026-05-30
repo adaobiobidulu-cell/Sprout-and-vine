@@ -4,6 +4,7 @@ import './globals.css'
 import Nav from '@/components/nav'
 import Footer from '@/components/footer'
 import LanguageBanner from '@/components/language-banner'
+import AnnouncementBar from '@/components/announcement-bar'
 import { Analytics } from '@vercel/analytics/next'
 
 const cormorant = Cormorant_Garamond({
@@ -50,6 +51,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${cormorant.variable} ${dmSans.variable}`}>
       <body className="min-h-full flex flex-col antialiased">
+        <AnnouncementBar />
         <LanguageBanner />
         <Nav />
         <main className="flex-1">{children}</main>
