@@ -41,6 +41,7 @@ const frenchPages: Record<string, string> = {
   '/resources': '/fr/resources',
   '/about': '/fr/about',
   '/contact': '/fr/contact',
+  '/roadmap': '/fr/roadmap',
 }
 
 function LangToggle() {
@@ -122,6 +123,12 @@ export default function Nav() {
             {isFr ? 'Ressources' : 'Resources'} <ChevronDown />
           </Link>
           <Link
+            href={p('/roadmap')}
+            className="text-[14px] font-medium text-dark-text/80 hover:text-forest-green transition-colors"
+          >
+            {isFr ? 'Feuille de route' : 'Roadmap'}
+          </Link>
+          <Link
             href={p('/about')}
             className="text-[14px] font-medium text-dark-text/80 hover:text-forest-green transition-colors"
           >
@@ -182,6 +189,7 @@ export default function Nav() {
               { label: isFr ? 'Fonctionnalités' : 'Features', href: p('/features') },
               { label: isFr ? 'Tarifs' : 'How Pricing Works', href: p('/pricing') },
               { label: isFr ? 'Ressources' : 'Resources', href: p('/resources') },
+              { label: isFr ? 'Feuille de route' : 'Roadmap', href: p('/roadmap') },
               { label: isFr ? 'À propos' : 'About', href: p('/about') },
             ].map(({ label, href }) => (
               <Link

@@ -311,7 +311,7 @@ const sections = [
   {
     label: 'ENROLLMENT',
     h2: 'From first inquiry to first day, beautifully managed.',
-    body: 'Canadian centers carry waitlists of 2 to 3 years. Manage the entire journey digitally: inquiry, waitlist, enrollment, e-signature, and subsidy paperwork.',
+    body: 'Canadian centres carry waitlists of 2 to 3 years. Manage the entire journey digitally: inquiry, waitlist, enrollment, e-signature, and subsidy paperwork.',
     bullets: [
       'Online inquiry with instant waitlist placement',
       'Digital enrollment packages with e-signature',
@@ -384,7 +384,7 @@ export default function FeaturesPage() {
             className="font-display font-medium text-forest-green leading-[1.05] mb-5"
             style={{ fontSize: 'clamp(44px, 6vw, 72px)' }}
           >
-            Every feature your center needs. Nothing you don&apos;t.
+            Every feature your centre needs. Nothing you don&apos;t.
           </h1>
           <p className="text-[17px] text-dark-text/65 mb-9 leading-relaxed">
             One platform built for Canadian childcare.
@@ -394,13 +394,13 @@ export default function FeaturesPage() {
               href="/contact"
               className="bg-forest-green text-white text-[14px] font-medium px-7 py-3.5 rounded-lg hover:bg-[#243d2f] transition-colors"
             >
-              Start free trial
+              Book a Discovery Call
             </Link>
             <Link
-              href="/pricing"
+              href="/founding"
               className="text-forest-green text-[14px] font-medium px-7 py-3.5 rounded-lg border-2 border-forest-green hover:bg-forest-green hover:text-white transition-colors"
             >
-              See pricing
+              Join Founding Operators
             </Link>
           </div>
         </div>
@@ -435,34 +435,19 @@ export default function FeaturesPage() {
             </ul>
             {(section as { appBadges?: boolean }).appBadges && (
               <div className="mt-7 pt-6 border-t border-[rgba(47,74,58,0.1)]">
-                <p className="text-[12px] text-dark-text/40 mb-3">Available on iOS and Android. Built with full feature parity, no Android tax.</p>
                 <div className="flex flex-wrap gap-3">
-                  <a
-                    href="/founding"
-                    className="inline-flex items-center gap-2.5 bg-dark-text text-white px-4 py-2.5 rounded-lg hover:bg-[#1a1a1a] transition-colors"
-                    style={{ minWidth: '140px' }}
-                  >
-                    <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 flex-shrink-0" aria-hidden="true">
+                  <span className="inline-flex items-center gap-2 bg-forest-green/8 text-forest-green text-[12px] font-medium px-4 py-2 rounded-lg">
+                    <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 flex-shrink-0" aria-hidden="true">
                       <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
                     </svg>
-                    <div>
-                      <p className="text-[9px] leading-none text-white/70">Download on the</p>
-                      <p className="text-[13px] font-semibold leading-tight">App Store</p>
-                    </div>
-                  </a>
-                  <a
-                    href="/founding"
-                    className="inline-flex items-center gap-2.5 bg-dark-text text-white px-4 py-2.5 rounded-lg hover:bg-[#1a1a1a] transition-colors"
-                    style={{ minWidth: '140px' }}
-                  >
-                    <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 flex-shrink-0" aria-hidden="true">
+                    iOS app coming Q4 2026
+                  </span>
+                  <span className="inline-flex items-center gap-2 bg-forest-green/8 text-forest-green text-[12px] font-medium px-4 py-2 rounded-lg">
+                    <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 flex-shrink-0" aria-hidden="true">
                       <path d="M3.18 23.76c.3.17.64.22.99.16l12.87-7.43-2.82-2.82-11.04 10.09zm-1.65-20.4A1.99 1.99 0 001 4.96v14.08c0 .65.28 1.24.72 1.64l.09.08 7.89-7.89v-.19L1.53 4.8l-.01-.01v-.01zm19.65 7.47l-2.76-1.6-3.14 3.14 3.14 3.13 2.79-1.61c.79-.46.79-1.21-.03-1.66zM4.17.24L17.04 7.68l-2.82 2.82L1.35.41c.35-.06.71 0 1.01.17l1.81 1.07V.24z"/>
                     </svg>
-                    <div>
-                      <p className="text-[9px] leading-none text-white/70">Get it on</p>
-                      <p className="text-[13px] font-semibold leading-tight">Google Play</p>
-                    </div>
-                  </a>
+                    Android app planned for 2027
+                  </span>
                 </div>
               </div>
             )}

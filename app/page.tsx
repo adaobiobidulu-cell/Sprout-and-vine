@@ -120,7 +120,7 @@ export default function Home() {
             style={{ fontSize: 'clamp(42px, 5.5vw, 72px)' }}
           >
             Every child rooted.<br />
-            Every center{' '}
+            Every centre{' '}
             <em className="text-terracotta not-italic">growing.</em>
           </h1>
 
@@ -187,7 +187,7 @@ export default function Home() {
               One platform. Three stages of growth.
             </h2>
             <p className="text-[16px] text-dark-text/55 mt-4 max-w-xl mx-auto">
-              Whether you are planning to open, running a single center, or managing multiple locations, Sprout &amp; Vine scales with you.
+              Whether you are planning to open, running a single centre, or managing multiple locations, Sprout &amp; Vine scales with you.
             </p>
           </FadeIn>
 
@@ -198,7 +198,7 @@ export default function Home() {
               <h3 className="font-display text-[26px] font-medium text-forest-green mb-1">Seeds</h3>
               <p className="text-[13px] font-medium text-dark-text/50 mb-4">For aspiring childcare operators</p>
               <p className="text-[14px] text-dark-text/65 leading-relaxed mb-6">
-                Planning your center? Build your business plan, complete your provincial licensing checklist, and get everything ready before day one.
+                Planning your centre? Build your business plan, complete your provincial licensing checklist, and get everything ready before day one.
               </p>
               <Link href="/features" className="text-[14px] font-medium text-forest-green hover:underline">Start planning →</Link>
             </div>
@@ -228,7 +228,7 @@ export default function Home() {
               </div>
               <p className="text-[13px] font-medium text-dark-text/50 mb-4">For scaling multi-location organizations</p>
               <p className="text-[14px] text-dark-text/65 leading-relaxed mb-6">
-                Multiple locations, one calm dashboard. Oversee everything, report across centers, and scale without the chaos.
+                Multiple locations, one calm dashboard. Oversee everything, report across centres, and scale without the chaos.
               </p>
               <Link href="/founding" className="text-[14px] font-medium text-forest-green hover:underline">Join the founding program →</Link>
             </div>
@@ -408,7 +408,7 @@ export default function Home() {
               From first inquiry to<br />first day, beautifully managed.
             </h2>
             <p className="text-[16px] text-dark-text/65 leading-relaxed mb-8">
-              Canadian centers carry waitlists of 2 to 3 years. Sprout &amp; Vine manages the entire journey: inquiry forms, waitlist positions, enrollment packages, e-signature, and subsidy paperwork pre-filled from your CWELCC data. No spreadsheets. No paper. No stress.
+              Canadian centres carry waitlists of 2 to 3 years. Sprout &amp; Vine manages the entire journey: inquiry forms, waitlist positions, enrollment packages, e-signature, and subsidy paperwork pre-filled from your CWELCC data. No spreadsheets. No paper. No stress.
             </p>
             <ul className="space-y-4">
               {[
@@ -512,34 +512,19 @@ export default function Home() {
             </div>
 
             <div className="mt-7 pt-6 border-t border-[rgba(47,74,58,0.1)]">
-              <p className="text-[12px] text-dark-text/40 mb-3">Available on iOS and Android. Built with full feature parity, no Android tax.</p>
               <div className="flex flex-wrap gap-3">
-                <a
-                  href="/founding"
-                  className="inline-flex items-center gap-2.5 bg-dark-text text-white px-4 py-2.5 rounded-lg hover:bg-[#1a1a1a] transition-colors"
-                  style={{ minWidth: '140px' }}
-                >
-                  <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 flex-shrink-0" aria-hidden="true">
+                <span className="inline-flex items-center gap-2 bg-forest-green/8 text-forest-green text-[12px] font-medium px-4 py-2 rounded-lg">
+                  <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 flex-shrink-0" aria-hidden="true">
                     <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
                   </svg>
-                  <div>
-                    <p className="text-[9px] leading-none text-white/70">Download on the</p>
-                    <p className="text-[13px] font-semibold leading-tight">App Store</p>
-                  </div>
-                </a>
-                <a
-                  href="/founding"
-                  className="inline-flex items-center gap-2.5 bg-dark-text text-white px-4 py-2.5 rounded-lg hover:bg-[#1a1a1a] transition-colors"
-                  style={{ minWidth: '140px' }}
-                >
-                  <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 flex-shrink-0" aria-hidden="true">
+                  iOS app coming Q4 2026
+                </span>
+                <span className="inline-flex items-center gap-2 bg-forest-green/8 text-forest-green text-[12px] font-medium px-4 py-2 rounded-lg">
+                  <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 flex-shrink-0" aria-hidden="true">
                     <path d="M3.18 23.76c.3.17.64.22.99.16l12.87-7.43-2.82-2.82-11.04 10.09zm-1.65-20.4A1.99 1.99 0 001 4.96v14.08c0 .65.28 1.24.72 1.64l.09.08 7.89-7.89v-.19L1.53 4.8l-.01-.01v-.01zm19.65 7.47l-2.76-1.6-3.14 3.14 3.14 3.13 2.79-1.61c.79-.46.79-1.21-.03-1.66zM4.17.24L17.04 7.68l-2.82 2.82L1.35.41c.35-.06.71 0 1.01.17l1.81 1.07V.24z"/>
                   </svg>
-                  <div>
-                    <p className="text-[9px] leading-none text-white/70">Get it on</p>
-                    <p className="text-[13px] font-semibold leading-tight">Google Play</p>
-                  </div>
-                </a>
+                  Android app planned for 2027
+                </span>
               </div>
             </div>
           </div>
@@ -600,7 +585,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[35%_1fr] gap-12 items-center">
           <div>
             <h2 className="font-display font-medium text-forest-green leading-[1.08] mb-5" style={{ fontSize: 'clamp(32px, 3.5vw, 48px)' }}>
-              Designed for busy centers.<br />Built for what matters most. 🌿
+              Designed for busy centres.<br />Built for what matters most. 🌿
             </h2>
             <p className="text-[16px] text-dark-text/65 leading-relaxed mb-7">
               From enrollment to everyday operations, Sprout &amp; Vine helps you save time, reduce stress, and focus on the children in your care.
@@ -730,7 +715,7 @@ export default function Home() {
             We are building Sprout &amp; Vine in public, with the operators who will use it. Founding members lock in their pricing, shape the roadmap, and get early access before public launch.
           </p>
           <p className="text-[14px] text-cream/45 mb-10">
-            Spots are limited. Applications reviewed in the order they are received.
+            We are accepting 50 founding operators. Applications reviewed in the order they are received.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Link

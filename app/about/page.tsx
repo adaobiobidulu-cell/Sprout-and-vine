@@ -33,8 +33,19 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Founder summary */}
+      <section className="bg-white py-10 px-5 md:px-8">
+        <div className="max-w-3xl mx-auto">
+          <div className="bg-cream rounded-2xl px-8 py-7 border border-[rgba(47,74,58,0.1)]">
+            <p className="text-[15px] text-dark-text/70 leading-relaxed">
+              Built by Ada and Chuck — parents, operators, and software builders creating childcare tools for Canada.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Founder narrative */}
-      <section className="bg-white py-20 md:py-24 px-5 md:px-8">
+      <section className="bg-white py-16 md:py-20 px-5 md:px-8">
         <div className="max-w-2xl mx-auto">
           <div className="space-y-6 text-[17px] text-dark-text/75 leading-relaxed">
 
