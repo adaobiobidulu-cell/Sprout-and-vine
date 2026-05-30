@@ -641,6 +641,21 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── FOUNDER STORY CALLOUT */}
+      <section className="bg-cream py-16 md:py-20 px-5 md:px-8 text-center">
+        <div className="max-w-xl mx-auto">
+          <p
+            className="font-display font-medium text-forest-green leading-snug mb-6"
+            style={{ fontSize: 'clamp(22px, 2.8vw, 30px)' }}
+          >
+            Built by a team passionate about supporting Canadian childcare operators, educators, and families.
+          </p>
+          <Link href="/about" className="inline-flex items-center gap-2 text-[14px] font-medium text-forest-green border-2 border-forest-green px-6 py-3 rounded-lg hover:bg-forest-green hover:text-white transition-colors">
+            Meet our story →
+          </Link>
+        </div>
+      </section>
+
       {/* ── SECTION 12: FOUNDING PROGRAM CTA */}
       <section className="bg-forest-green py-24 md:py-32 px-5 md:px-8 text-center">
         <div className="max-w-2xl mx-auto">
