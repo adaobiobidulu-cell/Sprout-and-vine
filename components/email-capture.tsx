@@ -34,16 +34,13 @@ export default function EmailCapture({
     setLoading(true)
     setError('')
     try {
-      const res = await fetch('/api/contact', {
+      const res = await fetch('/api/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          name: showFirstName && firstName ? firstName : email.split('@')[0],
-          centerName: 'Email capture',
-          province: 'N/A',
-          childrenCount: 'N/A',
           email,
-          message: `Source: ${source} email capture\nMarketing consent: Yes`,
+          firstName: showFirstName && firstName ? firstName.trim() : undefined,
+          source,
         }),
       })
       if (!res.ok) throw new Error('send_failed')
