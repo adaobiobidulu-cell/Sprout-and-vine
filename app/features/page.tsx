@@ -413,6 +413,73 @@ export default function FeaturesPage() {
         </div>
       </section>
 
+      {/* ── CHILD PROFILE SECTION ─────────────────────────────── */}
+      <section className="bg-cream py-20 px-5 md:px-8">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+          <div>
+            <SectionLabel>The Child Profile</SectionLabel>
+            <h2
+              className="font-display font-medium text-forest-green leading-[1.08] mb-5"
+              style={{ fontSize: 'clamp(30px, 3.5vw, 44px)' }}
+            >
+              The record that belongs to the family.
+            </h2>
+            <p className="text-[16px] text-dark-text/65 leading-relaxed mb-7">
+              Every child enrolled in Sprout &amp; Vine has a profile that is theirs — not the centre's. Educators add to it daily. Parents see it in real time. And when a child moves on, the complete record moves with them: every update, every milestone, every photo, every document. Nothing is lost. Nothing is locked away.
+            </p>
+            <ul className="space-y-3">
+              {[
+                'Created at enrollment, owned by the family permanently',
+                'Every daily report, photo, and milestone attached automatically',
+                'Fully portable — exportable and transferable on school change',
+                'Role-based access: educators contribute, parents own',
+              ].map(b => (
+                <Bullet key={b} text={b} />
+              ))}
+            </ul>
+          </div>
+
+          {/* Profile + timeline mockup */}
+          <div className="space-y-3">
+            {/* Profile card */}
+            <div className="bg-white rounded-xl border border-[rgba(47,74,58,0.1)] overflow-hidden" style={{ boxShadow: '0 4px 20px rgba(47,74,58,0.08)' }}>
+              <div className="bg-forest-green px-5 py-3.5 flex items-center gap-3">
+                <div className="w-9 h-9 rounded-full bg-light-sage flex items-center justify-center text-forest-green text-[12px] font-bold flex-shrink-0">EJ</div>
+                <div>
+                  <p className="text-cream font-semibold text-[14px] leading-tight">Emma Johnson</p>
+                  <p className="text-cream/60 text-[11px]">Butterflies Room · 3 yrs, 2 mo · Enrolled Sep 2024</p>
+                </div>
+              </div>
+              <div className="px-5 py-3 flex flex-wrap gap-2">
+                {['🌱 First scissors · May 14', '💬 First sentence · May 20', '🎨 Drew a shape · May 23'].map(tag => (
+                  <span key={tag} className="text-[11px] bg-sage-green/12 text-forest-green font-medium px-2.5 py-1 rounded-full">{tag}</span>
+                ))}
+              </div>
+            </div>
+
+            {/* Timeline entries */}
+            <div className="bg-white rounded-xl border border-[rgba(47,74,58,0.08)] overflow-hidden" style={{ boxShadow: '0 4px 20px rgba(47,74,58,0.06)' }}>
+              <div className="divide-y divide-[rgba(47,74,58,0.06)]">
+                {[
+                  { icon: '📋', label: 'Daily report', detail: 'Nap 1h 20m · Ate well · Watercolour painting', time: 'Today 12:45 PM' },
+                  { icon: '🌱', label: 'Milestone tagged', detail: 'Drew a recognizable shape (circle)', time: 'May 23' },
+                  { icon: '📸', label: 'Photo added', detail: 'Painting shared with family', time: 'May 22' },
+                ].map(entry => (
+                  <div key={entry.label} className="px-5 py-3.5 flex items-start gap-3">
+                    <div className="w-8 h-8 rounded-full bg-forest-green/8 flex items-center justify-center flex-shrink-0 text-sm mt-0.5">{entry.icon}</div>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-[13px] font-semibold text-dark-text">{entry.label}</p>
+                      <p className="text-[12px] text-dark-text/50 leading-snug">{entry.detail}</p>
+                    </div>
+                    <span className="text-[11px] text-dark-text/30 flex-shrink-0">{entry.time}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── FEATURE SECTIONS ──────────────────────────────────── */}
       {sections.map((section, i) => {
         const isOdd = i % 2 === 0

@@ -72,6 +72,8 @@ const phases: {
       { name: 'API access for custom integrations' },
       { name: 'Auto-generated yearbook', note: 'Annual photo and milestone keepsake' },
       { name: 'Vine parent app (Android)' },
+      { name: 'Child Profile — Memory Layer', note: 'Full longitudinal timeline from daycare through primary school. Family-owned and portable.' },
+      { name: 'Parent Profile App — Keepsake Mode', note: 'Annual memory recap, photobook export, and milestone highlights.' },
     ],
   },
 ]
@@ -197,6 +199,38 @@ export default function RoadmapPage() {
               subheading="We share what we are building, what we are shipping, and when we are ready for new operators."
               source="roadmap-page"
             />
+          </div>
+        </div>
+      </section>
+
+      {/* Horizon vision */}
+      <section className="bg-cream py-16 md:py-20 px-5 md:px-8">
+        <div className="max-w-3xl mx-auto">
+          <p className="text-[11px] uppercase tracking-[0.16em] text-sage-green font-semibold mb-4">
+            On the horizon
+          </p>
+          <h2 className="font-display font-medium text-forest-green leading-[1.08] mb-4" style={{ fontSize: 'clamp(28px, 3.5vw, 40px)' }}>
+            The longer vision.
+          </h2>
+          <p className="text-[15px] text-dark-text/55 leading-relaxed mb-10">
+            Sprout &amp; Vine is built to follow a child further than daycare. Here is where we are headed — not as a commitment, but as a signal of what we believe this platform becomes.
+          </p>
+          <div className="space-y-4">
+            {[
+              { icon: '🧒', title: 'Child Profile — Memory Layer', desc: 'Every milestone, photo, and document from daycare onward, owned by the family, portable forever.' },
+              { icon: '🏫', title: 'Primary School Expansion', desc: 'The record follows the child into school. Families already on the platform. Schools join them.' },
+              { icon: '🤝', title: 'Verified Family Community', desc: 'Playdates, local activities, and real connections between families in the same schools and centres.' },
+              { icon: '🛡️', title: 'Sprout Space', desc: 'A safe, parent-monitored space where children can connect with their actual school friends.' },
+              { icon: '🧠', title: 'AI Intelligence Layer', desc: 'Patterns, celebrations, and opportunities surfaced across a child\'s complete educational history.' },
+            ].map(item => (
+              <div key={item.title} className="flex items-start gap-4 bg-white rounded-xl p-5 border border-[rgba(47,74,58,0.08)]" style={{ boxShadow: '0 2px 12px rgba(47,74,58,0.05)' }}>
+                <span className="text-2xl flex-shrink-0">{item.icon}</span>
+                <div>
+                  <p className="text-[14px] font-semibold text-dark-text mb-1">{item.title}</p>
+                  <p className="text-[13px] text-dark-text/55 leading-relaxed">{item.desc}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

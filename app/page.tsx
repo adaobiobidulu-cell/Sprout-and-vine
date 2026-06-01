@@ -4,6 +4,7 @@ import ProductTour from '@/components/product-tour'
 import DashboardPreview from '@/components/dashboard-preview'
 import ScrollVine from '@/components/scroll-vine'
 import EmailCapture from '@/components/email-capture'
+import { FOUNDING_SPOTS_REMAINING, FOUNDING_SPOTS_TOTAL } from '@/lib/config'
 
 const features = [
   {
@@ -531,6 +532,115 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── CHILD PROFILE SECTION ── */}
+      <section className="bg-cream py-20 md:py-24 px-5 md:px-8">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <SectionLabel>The Child Profile</SectionLabel>
+            <h2
+              className="font-display font-medium text-forest-green leading-[1.05] mb-5"
+              style={{ fontSize: 'clamp(34px, 4vw, 52px)' }}
+            >
+              Every child. One profile.<br />A record that grows with them.
+            </h2>
+            <p className="text-[16px] text-dark-text/65 leading-relaxed mb-4">
+              The child profile starts the moment they enroll. It travels with them when they leave.
+            </p>
+            <p className="text-[16px] text-dark-text/65 leading-relaxed mb-8">
+              From day one, every update, every milestone, every photo, and every document lives in a single profile that belongs to the family — not the centre. Educators contribute to it. Parents treasure it. And when the time comes to move on, it moves with them.
+            </p>
+            <div className="space-y-3 mb-8">
+              {[
+                { icon: '🔒', text: 'Owned by the family, not the centre' },
+                { icon: '📁', text: 'Every photo, report, and milestone in one place' },
+                { icon: '🚀', text: 'Portable — moves with your child, always' },
+              ].map(item => (
+                <div key={item.text} className="flex items-center gap-3">
+                  <span className="text-xl flex-shrink-0">{item.icon}</span>
+                  <span className="text-[15px] text-dark-text/75">{item.text}</span>
+                </div>
+              ))}
+            </div>
+            <Link
+              href="/features"
+              className="inline-flex items-center gap-2 text-[14px] font-medium text-forest-green hover:underline"
+            >
+              See how the profile builds over time →
+            </Link>
+          </div>
+
+          {/* Profile card mockup */}
+          <div>
+            <div
+              className="bg-white rounded-2xl overflow-hidden border border-[rgba(47,74,58,0.1)]"
+              style={{ boxShadow: '0 8px 40px rgba(47,74,58,0.12)' }}
+            >
+              {/* Card header */}
+              <div className="bg-forest-green px-6 py-4 flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-light-sage flex items-center justify-center text-forest-green text-[14px] font-bold flex-shrink-0">
+                  EJ
+                </div>
+                <div>
+                  <p className="text-cream font-semibold text-[15px] leading-tight">Emma Johnson</p>
+                  <p className="text-cream/60 text-[12px]">Butterflies Room · 3 yrs, 2 mo</p>
+                </div>
+                <div className="ml-auto">
+                  <span className="text-[10px] font-medium text-sage-green bg-sage-green/20 px-2.5 py-1 rounded-full">Active</span>
+                </div>
+              </div>
+
+              {/* Info row */}
+              <div className="px-6 py-4 border-b border-[rgba(47,74,58,0.07)] grid grid-cols-2 gap-4">
+                <div>
+                  <p className="text-[11px] text-dark-text/40 uppercase tracking-[0.08em] mb-1">Enrolled</p>
+                  <p className="text-[13px] font-semibold text-dark-text">September 2024</p>
+                </div>
+                <div>
+                  <p className="text-[11px] text-dark-text/40 uppercase tracking-[0.08em] mb-1">Room</p>
+                  <p className="text-[13px] font-semibold text-dark-text">Butterflies</p>
+                </div>
+              </div>
+
+              {/* Milestone tags */}
+              <div className="px-6 py-4 border-b border-[rgba(47,74,58,0.07)]">
+                <p className="text-[11px] text-dark-text/40 uppercase tracking-[0.08em] mb-3">Recent milestones</p>
+                <div className="flex flex-col gap-2">
+                  {[
+                    { icon: '🌱', text: 'First scissors', date: 'May 14' },
+                    { icon: '💬', text: 'First full sentence', date: 'May 20' },
+                    { icon: '🎨', text: 'Drew a shape', date: 'May 23' },
+                  ].map(m => (
+                    <div key={m.text} className="flex items-center justify-between">
+                      <span className="flex items-center gap-2 text-[13px] text-dark-text/75">
+                        <span>{m.icon}</span> {m.text}
+                      </span>
+                      <span className="text-[11px] text-dark-text/35">{m.date}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Timeline bar */}
+              <div className="px-6 py-4">
+                <p className="text-[11px] text-dark-text/40 uppercase tracking-[0.08em] mb-3">Journey</p>
+                <div className="flex items-center gap-2">
+                  <span className="text-[11px] font-medium text-forest-green whitespace-nowrap">Enrolled</span>
+                  <div className="flex-1 flex items-center gap-1">
+                    <div className="h-1.5 rounded-full bg-sage-green flex-1" style={{ maxWidth: '45%' }} />
+                    <div className="w-2.5 h-2.5 rounded-full bg-forest-green border-2 border-white ring-2 ring-forest-green flex-shrink-0" />
+                    <div className="h-1.5 rounded-full flex-1" style={{ background: 'linear-gradient(to right, rgba(110,183,111,0.3), rgba(110,183,111,0.05))' }} />
+                  </div>
+                  <span className="text-[11px] font-medium text-dark-text/30 whitespace-nowrap">…</span>
+                </div>
+                <div className="flex justify-center mt-1">
+                  <span className="text-[10px] text-dark-text/35">Today</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── SECTION 8: EDUCATOR SECTION */}
       <section className="py-20 md:py-24 px-5 md:px-8" style={{ background: 'rgba(174,193,176,0.15)' }}>
         <div className="max-w-4xl mx-auto text-center">
@@ -702,6 +812,31 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── SOCIAL PROOF ── */}
+      <section className="bg-white py-16 md:py-20 px-5 md:px-8">
+        <div className="max-w-3xl mx-auto text-center">
+          <div className="inline-flex items-center gap-2 mb-6">
+            <span className="w-1.5 h-1.5 rounded-full bg-sage-green" />
+            <p className="text-[11px] uppercase tracking-[0.16em] text-sage-green font-semibold">
+              Community
+            </p>
+          </div>
+          <p
+            className="font-display font-medium text-forest-green leading-snug mb-4"
+            style={{ fontSize: 'clamp(24px, 3vw, 36px)' }}
+          >
+            Founding operators from Ontario, BC, Alberta,<br className="hidden sm:block" /> Manitoba, and Québec have already joined.
+          </p>
+          <p className="text-[15px] text-dark-text/55 mb-8 leading-relaxed">
+            Applications are reviewed in order received.
+          </p>
+          <div className="inline-flex items-center gap-2 bg-terracotta/10 text-terracotta text-[14px] font-semibold px-6 py-3 rounded-full">
+            <span className="w-2 h-2 rounded-full bg-terracotta animate-pulse" />
+            {FOUNDING_SPOTS_REMAINING} of {FOUNDING_SPOTS_TOTAL} founding spots remaining
+          </div>
+        </div>
+      </section>
+
       {/* ── SECTION 12: FOUNDING PROGRAM CTA */}
       <section className="bg-forest-green py-24 md:py-32 px-5 md:px-8 text-center">
         <div className="max-w-2xl mx-auto">
@@ -714,8 +849,11 @@ export default function Home() {
           <p className="text-[17px] text-cream/65 leading-relaxed mb-4">
             We are building Sprout &amp; Vine in public, with the operators who will use it. Founding members lock in their pricing, shape the roadmap, and get early access before public launch.
           </p>
-          <p className="text-[14px] text-cream/45 mb-10">
-            We are accepting 50 founding operators. Applications reviewed in the order they are received.
+          <p className="text-[14px] text-cream/60 mb-10">
+            <span className="inline-flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-terracotta" />
+              {FOUNDING_SPOTS_REMAINING} of {FOUNDING_SPOTS_TOTAL} founding spots remaining. Applications reviewed in the order they are received.
+            </span>
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Link

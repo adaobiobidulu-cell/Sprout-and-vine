@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import FadeIn from '@/components/fade-in'
 import FoundingForm from '@/components/founding-form'
+import { FOUNDING_SPOTS_REMAINING, FOUNDING_SPOTS_TOTAL } from '@/lib/config'
 
 export const metadata: Metadata = {
   title: 'Founding Operators Program | Sprout & Vine',
@@ -45,9 +46,13 @@ export default function FoundingPage() {
       {/* Hero */}
       <section className="bg-cream py-20 md:py-24 px-5 md:px-8">
         <div className="max-w-3xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 bg-terracotta/10 text-terracotta text-[12px] font-semibold px-4 py-2 rounded-full mb-8">
+          <div className="inline-flex items-center gap-2 bg-terracotta/10 text-terracotta text-[12px] font-semibold px-4 py-2 rounded-full mb-4">
             <span className="w-1.5 h-1.5 rounded-full bg-terracotta animate-pulse" />
             Applications open now
+          </div>
+          <div className="inline-flex items-center gap-2 text-[13px] font-medium text-dark-text/60 mb-8">
+            <span className="w-2 h-2 rounded-full bg-terracotta/60" />
+            {FOUNDING_SPOTS_REMAINING} of {FOUNDING_SPOTS_TOTAL} founding spots remaining
           </div>
           <h1
             className="font-display font-medium text-forest-green leading-[1.05] mb-6"
