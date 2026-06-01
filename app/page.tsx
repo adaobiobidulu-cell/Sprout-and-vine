@@ -547,13 +547,13 @@ export default function Home() {
               The child profile starts the moment they enroll. It travels with them when they leave.
             </p>
             <p className="text-[16px] text-dark-text/65 leading-relaxed mb-8">
-              From day one, every update, every milestone, every photo, and every document lives in a single profile that belongs to the family — not the centre. Educators contribute to it. Parents treasure it. And when the time comes to move on, it moves with them.
+              From day one, every update, every milestone, every photo, and every document lives in a single profile that belongs to the family, not the centre. Educators contribute to it. Parents treasure it. And when the time comes to move on, it moves with them.
             </p>
             <div className="space-y-3 mb-8">
               {[
                 { icon: '🔒', text: 'Owned by the family, not the centre' },
                 { icon: '📁', text: 'Every photo, report, and milestone in one place' },
-                { icon: '🚀', text: 'Portable — moves with your child, always' },
+                { icon: '🚀', text: 'Portable. Moves with your child, always.' },
               ].map(item => (
                 <div key={item.text} className="flex items-center gap-3">
                   <span className="text-xl flex-shrink-0">{item.icon}</span>

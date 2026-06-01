@@ -425,13 +425,13 @@ export default function FeaturesPage() {
               The record that belongs to the family.
             </h2>
             <p className="text-[16px] text-dark-text/65 leading-relaxed mb-7">
-              Every child enrolled in Sprout &amp; Vine has a profile that is theirs — not the centre's. Educators add to it daily. Parents see it in real time. And when a child moves on, the complete record moves with them: every update, every milestone, every photo, every document. Nothing is lost. Nothing is locked away.
+              Every child enrolled in Sprout &amp; Vine has a profile that is theirs, not the centre's. Educators add to it daily. Parents see it in real time. And when a child moves on, the complete record moves with them: every update, every milestone, every photo, every document. Nothing is lost. Nothing is locked away.
             </p>
             <ul className="space-y-3">
               {[
                 'Created at enrollment, owned by the family permanently',
                 'Every daily report, photo, and milestone attached automatically',
-                'Fully portable — exportable and transferable on school change',
+                'Fully portable: exportable and transferable on school change',
                 'Role-based access: educators contribute, parents own',
               ].map(b => (
                 <Bullet key={b} text={b} />
@@ -476,6 +476,36 @@ export default function FeaturesPage() {
                 ))}
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── CHILD PROFILE: WHAT'S INSIDE ── */}
+      <section className="bg-white py-16 px-5 md:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-10">
+            <p className="text-[11px] uppercase tracking-[0.16em] text-sage-green font-semibold mb-3">What is in the profile</p>
+            <h3 className="font-display font-medium text-forest-green" style={{ fontSize: 'clamp(26px, 3vw, 36px)' }}>
+              Everything, in one place.
+            </h3>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              { icon: '📋', title: 'Daily reports', desc: 'Meals, nap, mood, and activities logged by educators and shared with families in real time.' },
+              { icon: '🌱', title: 'Milestones', desc: 'A complete developmental timeline organized by domain: language, motor, social, creative, cognitive.' },
+              { icon: '📁', title: 'Documents', desc: 'Immunization records, consent forms, and enrollment agreements. Signed and stored in one place.' },
+              { icon: '🚨', title: 'Health and emergency', desc: 'Allergies, medications, and emergency contacts. One tap to the emergency summary card.' },
+              { icon: '🚗', title: 'Pickup', desc: 'Photo-verified authorized pickup list. A tamper-proof log of every pickup, every time.' },
+              { icon: '💳', title: 'Billing', desc: 'Invoices, CWELCC subsidy applied, parent portion, and downloadable receipts for tax time.' },
+              { icon: '📅', title: 'Attendance', desc: 'Every check-in and check-out with timestamps. Monthly summaries and exportable records.' },
+              { icon: '💬', title: 'Messaging', desc: 'All messages between family and centre attached to the profile. Never lost when educators change.' },
+            ].map(item => (
+              <div key={item.title} className="bg-cream rounded-xl p-5">
+                <span className="text-2xl mb-3 block">{item.icon}</span>
+                <p className="text-[14px] font-semibold text-dark-text mb-1.5">{item.title}</p>
+                <p className="text-[12px] text-dark-text/55 leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
