@@ -126,6 +126,15 @@ export default function Footer() {
 
   return (
     <footer className="bg-forest-green text-cream">
+      {/* Development disclaimer */}
+      <div className="border-b border-cream/10">
+        <div className="max-w-7xl mx-auto px-5 md:px-8 py-3 text-center">
+          <p className="text-[11px] text-cream/35 leading-relaxed">
+            Sprout &amp; Vine is currently in development. Founding operators are helping shape the platform before launch through feedback, research, and early-access participation.
+          </p>
+        </div>
+      </div>
+
       {/* Main footer content */}
       <div className="max-w-7xl mx-auto px-5 md:px-8 py-16 md:py-20">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">

@@ -5,6 +5,7 @@ import DashboardPreview from '@/components/dashboard-preview'
 import ScrollVine from '@/components/scroll-vine'
 import EmailCapture from '@/components/email-capture'
 import { FOUNDING_SPOTS_REMAINING, FOUNDING_SPOTS_TOTAL } from '@/lib/config'
+import { testimonial } from '@/lib/testimonial'
 
 const features = [
   {
@@ -158,6 +159,19 @@ export default function Home() {
               </Link>
             </div>
           </div>
+
+          {/* Trust bar */}
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mt-8">
+            {['Built for Canada', 'Designed with Childcare Operators', 'AI-Powered Future Roadmap', 'CWELCC-Aware'].map(item => (
+              <div key={item} className="flex items-center gap-1.5 text-[12px] text-dark-text/45 font-medium">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                  <circle cx="7" cy="7" r="6.5" stroke="#6EB76F" />
+                  <path d="M4 7l2 2 4-4" stroke="#6EB76F" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                {item}
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -172,6 +186,9 @@ export default function Home() {
           </p>
           <p className="text-[16px] text-dark-text/60 mb-6">
             That is why we built Sprout &amp; Vine for Canada.
+          </p>
+          <p className="text-[15px] font-semibold text-forest-green mb-6">
+            Sprout &amp; Vine is built with operators, not for them.
           </p>
           <Link href="/about" className="text-[14px] font-medium text-forest-green hover:underline">
             Read our story →
@@ -465,7 +482,7 @@ export default function Home() {
               Parents are not just notified.<br />They are connected.
             </h2>
             <p className="text-[16px] text-dark-text/65 leading-relaxed mb-8">
-              Most apps give parents a push notification. Vine gives them a window into their child's world. That trust is your most powerful enrollment tool.
+              Families stay connected through daily updates, milestone photos, billing, pickup history, messages, and important centre communications, all in one app. Every update attached to their child's profile. Nothing lost.
             </p>
 
             <div className="space-y-5">
@@ -536,7 +553,7 @@ export default function Home() {
       <section className="bg-cream py-20 md:py-24 px-5 md:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <SectionLabel>The Child Profile</SectionLabel>
+            <SectionLabel>Coming at launch</SectionLabel>
             <h2
               className="font-display font-medium text-forest-green leading-[1.05] mb-5"
               style={{ fontSize: 'clamp(34px, 4vw, 52px)' }}
@@ -781,6 +798,40 @@ export default function Home() {
         </div>
       </div>
 
+      {/* ── FOUNDER'S LETTER ── */}
+      <section className="bg-forest-green py-20 md:py-24 px-5 md:px-8">
+        <div className="max-w-3xl mx-auto">
+          <p className="text-[11px] uppercase tracking-[0.16em] text-sage-green font-semibold mb-8">
+            A note from the founder
+          </p>
+          <blockquote className="space-y-5 mb-10">
+            <p className="font-display font-medium text-cream leading-relaxed" style={{ fontSize: 'clamp(20px, 2.5vw, 28px)' }}>
+              &ldquo;Sprout &amp; Vine did not start with a business plan. It started when we had our first baby and I began researching what it would take to open a home daycare in Canada. I hit a wall.
+            </p>
+            <p className="text-[16px] text-cream/70 leading-relaxed">
+              Licensing requirements buried in government PDFs. CWELCC funding nearly impossible to navigate. Every piece of information somewhere different, written for people who already knew what they were doing.
+            </p>
+            <p className="text-[16px] text-cream/70 leading-relaxed">
+              The gap is not passion. The gap is information and infrastructure.
+            </p>
+            <p className="text-[16px] text-cream/70 leading-relaxed">
+              We are fixing that. And we are looking for the operators who feel it too.&rdquo;
+            </p>
+          </blockquote>
+          <div className="flex items-center gap-4">
+            <div>
+              <p className="text-cream font-semibold text-[15px]">Ada</p>
+              <p className="text-cream/50 text-[13px]">Co-Founder, Sprout &amp; Vine</p>
+            </div>
+          </div>
+          <div className="mt-8 pt-8 border-t border-cream/15">
+            <Link href="/about" className="text-[14px] font-medium text-sage-green hover:text-cream transition-colors">
+              Read our full story →
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* ── SECTION 11: INTERACTIVE PRODUCT TOUR */}
       <section className="bg-cream py-20 md:py-24 px-5 md:px-8">
         <div className="max-w-7xl mx-auto">
@@ -836,6 +887,25 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* ── OPERATOR QUOTE ── renders only when testimonial.text is populated in lib/testimonial.ts */}
+      {testimonial.text && (
+        <section className="bg-cream py-16 md:py-20 px-5 md:px-8">
+          <div className="max-w-2xl mx-auto text-center">
+            <blockquote>
+              <p className="font-display font-medium text-forest-green leading-relaxed mb-6" style={{ fontSize: 'clamp(20px, 2.5vw, 28px)' }}>
+                &ldquo;{testimonial.text}&rdquo;
+              </p>
+              <footer className="text-[13px] text-dark-text/50">
+                <span className="font-semibold text-dark-text">{testimonial.firstName}</span>
+                {testimonial.role && <span>, {testimonial.role}</span>}
+                {testimonial.province && <span> &middot; {testimonial.province}</span>}
+                {testimonial.centreType && <span> &middot; {testimonial.centreType}</span>}
+              </footer>
+            </blockquote>
+          </div>
+        </section>
+      )}
 
       {/* ── SECTION 12: FOUNDING PROGRAM CTA */}
       <section className="bg-forest-green py-24 md:py-32 px-5 md:px-8 text-center">
