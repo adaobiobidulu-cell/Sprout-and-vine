@@ -305,7 +305,7 @@ export default function SmartPickupPage() {
               Apply to the Founding Operators Program
             </Link>
           </div>
-          <div className="bg-white/10 rounded-2xl p-7">
+          <div className="bg-white rounded-2xl p-7">
             <EmailCapture
               heading="Get updates on Smart Pickup"
               subheading="We will notify you when Smart Pickup Authorization is available in your region."

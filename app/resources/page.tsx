@@ -215,7 +215,7 @@ export default function ResourcesPage() {
               Apply to the Founding Program
             </Link>
           </div>
-          <div className="bg-white/10 rounded-2xl p-7">
+          <div className="bg-white rounded-2xl p-7">
             <EmailCapture
               heading="New resources, delivered."
               subheading="We publish guides on CWELCC, licensing, and running a Canadian childcare program. Get them as they come out."

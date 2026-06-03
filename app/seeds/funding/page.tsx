@@ -333,7 +333,7 @@ export default function FundingGuidePage() {
               Apply to the Founding Operators Program
             </Link>
           </div>
-          <div className="bg-white/10 rounded-2xl p-7">
+          <div className="bg-white rounded-2xl p-7">
             <EmailCapture
               heading="Get notified when funding programs open"
               subheading="We track CWELCC grants, provincial programs, and new federal childcare funding. Free updates."

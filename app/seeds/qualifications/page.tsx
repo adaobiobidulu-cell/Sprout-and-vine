@@ -315,7 +315,7 @@ export default function QualificationsPage() {
               Apply to the Founding Operators Program
             </Link>
           </div>
-          <div className="bg-white/10 rounded-2xl p-7">
+          <div className="bg-white rounded-2xl p-7">
             <EmailCapture
               heading="Get updates on ECE qualifications"
               subheading="We track changes to provincial qualification requirements and send updates when things change."

@@ -19,7 +19,7 @@ export async function POST(request: Request) {
       payload.firstName = firstName.trim()
     }
     if (source && typeof source === 'string') {
-      payload.source = source
+      payload.userGroup = source
     }
 
     const res = await fetch('https://app.loops.so/api/v1/contacts/upsert', {

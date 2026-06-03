@@ -339,7 +339,7 @@ export default function CwelccGuidePage() {
               When agreements change, fee caps update, or new provincial guidance comes out, we send a plain-language summary to operators who have signed up.
             </p>
           </div>
-          <div className="bg-white/10 rounded-2xl p-7">
+          <div className="bg-white rounded-2xl p-7">
             <EmailCapture
               heading="Get CWELCC updates by email"
               subheading="Plain-language summaries whenever something changes. No spam."

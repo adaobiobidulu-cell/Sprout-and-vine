@@ -440,7 +440,7 @@ export default function LicensingChecklistPage() {
               We will send you a printable PDF version of the checklist for your province, plus updates when requirements change.
             </p>
           </div>
-          <div className="bg-white/10 rounded-2xl p-7">
+          <div className="bg-white rounded-2xl p-7">
             <EmailCapture
               heading="Get your province's checklist as a PDF"
               subheading="Printable PDF plus email updates when requirements change."

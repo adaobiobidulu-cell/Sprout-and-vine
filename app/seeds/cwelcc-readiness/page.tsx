@@ -330,7 +330,7 @@ export default function CwelccReadinessPage() {
               Apply to the Founding Operators Program
             </Link>
           </div>
-          <div className="bg-white/10 rounded-2xl p-7">
+          <div className="bg-white rounded-2xl p-7">
             <EmailCapture
               heading="Get the CWELCC readiness guide by email"
               subheading="A printable checklist, fee cap reference, and contact directory. Free."

@@ -868,7 +868,7 @@ export default function FeaturesPage() {
               </Link>
             </div>
           </div>
-          <div className="bg-white/10 rounded-2xl p-7">
+          <div className="bg-white rounded-2xl p-7">
             <EmailCapture
               heading="Get notified when we launch."
               subheading="We will let you know when Sprout and Vine is ready, and share what we are building along the way."

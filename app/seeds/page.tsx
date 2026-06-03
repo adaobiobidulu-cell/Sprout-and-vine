@@ -259,7 +259,7 @@ export default function SeedsPage() {
               </Link>
             </div>
           </div>
-          <div className="bg-white/10 rounded-2xl p-7">
+          <div className="bg-white rounded-2xl p-7">
             <EmailCapture
               heading="Get the Seeds starter kit"
               subheading="A PDF with licensing checklist, funding guide, and business plan template. Free."
