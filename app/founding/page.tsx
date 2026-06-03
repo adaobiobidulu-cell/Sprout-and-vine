@@ -153,8 +153,8 @@ export default function FoundingPage() {
             </div>
             <p className="text-[13px] text-dark-text/40 mt-8">
               Prefer email? Reach us at{' '}
-              <a href="mailto:hello@sproutandvine.ca" className="text-forest-green underline underline-offset-2">
-                hello@sproutandvine.ca
+              <a href="mailto:hello@sproutandvinecare.ca" className="text-forest-green underline underline-offset-2">
+                hello@sproutandvinecare.ca
               </a>
             </p>
           </FadeIn>

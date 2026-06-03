@@ -79,7 +79,7 @@ export default function TermsPage() {
       <h3>Account security</h3>
       <p>
         You are responsible for maintaining the confidentiality of your login credentials. You must notify us
-        immediately at <a href="mailto:hello@sproutandvine.ca">hello@sproutandvine.ca</a> if you
+        immediately at <a href="mailto:hello@sproutandvinecare.ca">hello@sproutandvinecare.ca</a> if you
         suspect unauthorized access to your account. We are not liable for losses resulting from unauthorized
         use of your credentials where you have not exercised reasonable care.
       </p>

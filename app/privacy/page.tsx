@@ -123,7 +123,7 @@ export default function PrivacyPage() {
       <p>
         No method of transmission over the internet is 100% secure. While we use commercially reasonable
         safeguards, we cannot guarantee absolute security. If you become aware of any security issue, please
-        contact us immediately at <a href="mailto:hello@sproutandvine.ca">hello@sproutandvine.ca</a>.
+        contact us immediately at <a href="mailto:hello@sproutandvinecare.ca">hello@sproutandvinecare.ca</a>.
       </p>
 
       <h2 id="retention">7. Retention</h2>

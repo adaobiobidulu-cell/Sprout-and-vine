@@ -74,7 +74,7 @@ export default function FrTermsPage() {
       <p>
         Vous êtes responsable de la confidentialité de vos identifiants de connexion. Vous devez nous aviser
         immédiatement à{' '}
-        <a href="mailto:hello@sproutandvine.ca">hello@sproutandvine.ca</a> si vous soupçonnez un accès non
+        <a href="mailto:hello@sproutandvinecare.ca">hello@sproutandvinecare.ca</a> si vous soupçonnez un accès non
         autorisé à votre compte.
       </p>
 

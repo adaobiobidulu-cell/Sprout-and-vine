@@ -23,7 +23,7 @@ export async function POST(request: Request) {
 
     await transporter.sendMail({
       from: `"Sprout & Vine" <${process.env.EMAIL_USER}>`,
-      to: 'hello@sproutandvine.ca',
+      to: 'hello@sproutandvinecare.ca',
       replyTo: email,
       subject: `Resource request: ${label}`,
       text: `Resource: ${label} (${resource})\nEmail: ${email}\n\nAdd to notify list when resource is published.`,

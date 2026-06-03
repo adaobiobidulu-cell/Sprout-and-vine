@@ -73,7 +73,7 @@ export default function FoundingForm() {
       }).catch(() => {})
       setSubmitted(true)
     } catch {
-      setError('Something went wrong submitting your application. Please email us directly at hello@sproutandvine.ca.')
+      setError('Something went wrong submitting your application. Please email us directly at hello@sproutandvinecare.ca.')
     } finally {
       setLoading(false)
     }
@@ -91,8 +91,8 @@ export default function FoundingForm() {
         </p>
         <p className="text-[14px] text-dark-text/45">
           Questions? Email us at{' '}
-          <a href="mailto:hello@sproutandvine.ca" className="text-forest-green underline underline-offset-2">
-            hello@sproutandvine.ca
+          <a href="mailto:hello@sproutandvinecare.ca" className="text-forest-green underline underline-offset-2">
+            hello@sproutandvinecare.ca
           </a>
         </p>
       </div>

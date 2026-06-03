@@ -59,8 +59,8 @@ export default function ContactPage() {
 
           <div className="border-t border-[rgba(47,74,58,0.08)] pt-6">
             <p className="text-[12px] text-dark-text/40 mb-1">Questions?</p>
-            <a href="mailto:hello@sproutandvine.ca" className="text-[13px] text-forest-green font-medium hover:underline">
-              hello@sproutandvine.ca
+            <a href="mailto:hello@sproutandvinecare.ca" className="text-[13px] text-forest-green font-medium hover:underline">
+              hello@sproutandvinecare.ca
             </a>
           </div>
         </div>

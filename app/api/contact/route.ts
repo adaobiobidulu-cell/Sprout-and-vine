@@ -84,7 +84,7 @@ export async function POST(request: Request) {
 
     await transporter.sendMail({
       from: `"Sprout & Vine" <${process.env.EMAIL_USER}>`,
-      to: 'hello@sproutandvine.ca',
+      to: 'hello@sproutandvinecare.ca',
       replyTo: data.email,
       subject: `New demo request: ${data.centerName} (${data.province})`,
       html: buildHtml(data),

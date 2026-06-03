@@ -35,7 +35,7 @@ const faqs = [
   },
   {
     q: 'Do you offer discounts for non-profits or Indigenous-operated centres?',
-    a: 'Yes. Contact us at hello@sproutandvine.ca for non-profit, co-operative, and Indigenous-operated centre pricing.',
+    a: 'Yes. Contact us at hello@sproutandvinecare.ca for non-profit, co-operative, and Indigenous-operated centre pricing.',
   },
   {
     q: 'What is the Founding Operators Program?',

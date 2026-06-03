@@ -46,7 +46,7 @@ export default function EmailCapture({
       if (!res.ok) throw new Error('send_failed')
       setSubmitted(true)
     } catch {
-      setError('Something went wrong. Email us directly at hello@sproutandvine.ca.')
+      setError('Something went wrong. Email us directly at hello@sproutandvinecare.ca.')
     } finally {
       setLoading(false)
     }

@@ -35,7 +35,7 @@ const faqsFr = [
   },
   {
     q: 'Offrez-vous des rabais pour les organismes sans but lucratif ou les centres autochtones?',
-    a: 'Oui. Contactez-nous à hello@sproutandvine.ca pour la tarification dédiée aux organismes sans but lucratif, coopératives et centres gérés par des communautés autochtones.',
+    a: 'Oui. Contactez-nous à hello@sproutandvinecare.ca pour la tarification dédiée aux organismes sans but lucratif, coopératives et centres gérés par des communautés autochtones.',
   },
   {
     q: "Qu'est-ce que le Programme des opérateurs fondateurs?",
