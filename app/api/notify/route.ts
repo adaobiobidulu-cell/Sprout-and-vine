@@ -10,17 +10,19 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Invalid email' }, { status: 400 })
     }
 
-    if (!process.env.GMAIL_USER || !process.env.GMAIL_APP_PASSWORD) {
+    if (!process.env.EMAIL_USER || !process.env.EMAIL_PASSWORD) {
       return NextResponse.json({ error: 'Email service not configured' }, { status: 500 })
     }
 
     const transporter = nodemailer.createTransport({
-      service: 'gmail',
-      auth: { user: process.env.GMAIL_USER, pass: process.env.GMAIL_APP_PASSWORD },
+      host: 'smtp.hostinger.com',
+      port: 465,
+      secure: true,
+      auth: { user: process.env.EMAIL_USER, pass: process.env.EMAIL_PASSWORD },
     })
 
     await transporter.sendMail({
-      from: `"Sprout & Vine" <${process.env.GMAIL_USER}>`,
+      from: `"Sprout & Vine" <${process.env.EMAIL_USER}>`,
       to: 'hello@sproutandvine.ca',
       replyTo: email,
       subject: `Resource request: ${label}`,

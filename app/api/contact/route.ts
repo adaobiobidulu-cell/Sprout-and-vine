@@ -57,16 +57,18 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Invalid email address' }, { status: 400 })
     }
 
-    if (!process.env.GMAIL_USER || !process.env.GMAIL_APP_PASSWORD) {
-      console.error('Missing GMAIL_USER or GMAIL_APP_PASSWORD env vars')
+    if (!process.env.EMAIL_USER || !process.env.EMAIL_PASSWORD) {
+      console.error('Missing EMAIL_USER or EMAIL_PASSWORD env vars')
       return NextResponse.json({ error: 'Email service not configured' }, { status: 500 })
     }
 
     const transporter = nodemailer.createTransport({
-      service: 'gmail',
+      host: 'smtp.hostinger.com',
+      port: 465,
+      secure: true,
       auth: {
-        user: process.env.GMAIL_USER,
-        pass: process.env.GMAIL_APP_PASSWORD,
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASSWORD,
       },
     })
 
@@ -81,7 +83,7 @@ export async function POST(request: Request) {
     }
 
     await transporter.sendMail({
-      from: `"Sprout & Vine" <${process.env.GMAIL_USER}>`,
+      from: `"Sprout & Vine" <${process.env.EMAIL_USER}>`,
       to: 'hello@sproutandvine.ca',
       replyTo: data.email,
       subject: `New demo request: ${data.centerName} (${data.province})`,
