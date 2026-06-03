@@ -36,7 +36,7 @@ export async function POST(request: Request) {
         payload.userGroup = source
       }
 
-      const res = await fetch('https://app.loops.so/api/v1/contacts/upsert', {
+      const res = await fetch('https://app.loops.so/api/v1/contacts/create', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

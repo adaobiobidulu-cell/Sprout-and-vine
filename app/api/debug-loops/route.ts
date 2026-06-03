@@ -8,13 +8,13 @@ export async function GET() {
   }
 
   try {
-    const res = await fetch('https://app.loops.so/api/v1/contacts/upsert', {
+    const res = await fetch('https://app.loops.so/api/v1/contacts/create', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${key}`,
       },
-      body: JSON.stringify({ email: 'test-diagnostic@sproutandvinecare.ca' }),
+      body: JSON.stringify({ email: 'test-diagnostic@sproutandvinecare.ca', userGroup: 'diagnostic' }),
     })
 
     const text = await res.text()
