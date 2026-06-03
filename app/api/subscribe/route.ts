@@ -1,4 +1,21 @@
 import { NextResponse } from 'next/server'
+import nodemailer from 'nodemailer'
+
+async function sendFallbackEmail(email: string, firstName: string, source: string) {
+  if (!process.env.EMAIL_USER || !process.env.EMAIL_PASSWORD) return
+  const transporter = nodemailer.createTransport({
+    host: 'smtp.hostinger.com',
+    port: 465,
+    secure: true,
+    auth: { user: process.env.EMAIL_USER, pass: process.env.EMAIL_PASSWORD },
+  })
+  await transporter.sendMail({
+    from: `"Sprout & Vine" <${process.env.EMAIL_USER}>`,
+    to: 'hello@sproutandvinecare.ca',
+    subject: `New email signup: ${email}`,
+    text: `New subscriber\nEmail: ${email}\nFirst name: ${firstName || 'not provided'}\nSource: ${source || 'unknown'}\n\nAdd to Loops manually if needed.`,
+  })
+}
 
 export async function POST(request: Request) {
   try {
@@ -9,34 +26,38 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Invalid email' }, { status: 400 })
     }
 
-    if (!process.env.LOOPS_API_KEY) {
-      console.error('Missing LOOPS_API_KEY env var')
-      return NextResponse.json({ error: 'Subscription service not configured' }, { status: 500 })
-    }
+    // Try Loops first
+    if (process.env.LOOPS_API_KEY) {
+      const payload: Record<string, string> = { email }
+      if (firstName && typeof firstName === 'string' && firstName.trim()) {
+        payload.firstName = firstName.trim()
+      }
+      if (source && typeof source === 'string') {
+        payload.userGroup = source
+      }
 
-    const payload: Record<string, string> = { email }
-    if (firstName && typeof firstName === 'string' && firstName.trim()) {
-      payload.firstName = firstName.trim()
-    }
-    if (source && typeof source === 'string') {
-      payload.userGroup = source
-    }
+      const res = await fetch('https://app.loops.so/api/v1/contacts/upsert', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${process.env.LOOPS_API_KEY}`,
+        },
+        body: JSON.stringify(payload),
+      })
 
-    const res = await fetch('https://app.loops.so/api/v1/contacts/upsert', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${process.env.LOOPS_API_KEY}`,
-      },
-      body: JSON.stringify(payload),
-    })
+      if (res.ok) {
+        return NextResponse.json({ ok: true })
+      }
 
-    if (!res.ok) {
+      // Loops failed — log it and fall through to email fallback
       const text = await res.text()
       console.error('Loops error:', res.status, text)
-      return NextResponse.json({ error: 'Failed to subscribe' }, { status: 500 })
+    } else {
+      console.error('LOOPS_API_KEY not set — using email fallback')
     }
 
+    // Fallback: email the contact to hello@sproutandvinecare.ca
+    await sendFallbackEmail(email, firstName || '', source || '')
     return NextResponse.json({ ok: true })
   } catch (err) {
     console.error('Subscribe route error:', err)
