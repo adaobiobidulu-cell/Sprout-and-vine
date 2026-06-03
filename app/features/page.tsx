@@ -510,6 +510,74 @@ export default function FeaturesPage() {
         </div>
       </section>
 
+      {/* ── EDUCATOR PROFILE SECTION ── */}
+      <section className="bg-cream py-20 px-5 md:px-8">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+          <div>
+            <SectionLabel>Educator Profiles</SectionLabel>
+            <h2
+              className="font-display font-medium text-forest-green leading-[1.08] mb-5"
+              style={{ fontSize: 'clamp(30px, 3.5vw, 44px)' }}
+            >
+              The professional profile educators are proud to have.
+            </h2>
+            <p className="text-[16px] text-dark-text/65 leading-relaxed mb-7">
+              Every educator on Sprout &amp; Vine has a profile card that parents see alongside their child's daily updates. Verified credentials shown as badges. A personal bio the educator writes themselves. A note on how long they have been caring for that child.
+            </p>
+            <ul className="space-y-3">
+              {[
+                'Verified credential badges: First Aid, CPR, ECE designation, Police Check',
+                'Educator-controlled: they choose what bio and details to share',
+                'Personalised per family: caring for your child since [date]',
+                'Directors see a full compliance dashboard with expiry alerts across all staff',
+              ].map(b => (
+                <Bullet key={b} text={b} />
+              ))}
+            </ul>
+          </div>
+
+          {/* Educator card mockup */}
+          <div className="space-y-3">
+            <p className="text-[11px] font-semibold text-dark-text/40 uppercase tracking-[0.1em]">What parents see</p>
+            <div className="bg-white rounded-xl border border-[rgba(47,74,58,0.1)] overflow-hidden" style={{ boxShadow: '0 4px 20px rgba(47,74,58,0.08)' }}>
+              <div className="bg-forest-green px-5 py-4 flex items-center gap-3">
+                <div className="w-11 h-11 rounded-full bg-light-sage flex items-center justify-center text-forest-green text-[14px] font-bold flex-shrink-0">OT</div>
+                <div>
+                  <p className="text-cream font-semibold text-[15px] leading-tight">Olivia</p>
+                  <p className="text-cream/60 text-[12px]">Butterflies Room</p>
+                </div>
+              </div>
+              <div className="px-5 py-3.5 border-b border-[rgba(47,74,58,0.07)]">
+                <p className="text-[10px] text-dark-text/40 uppercase tracking-[0.08em] mb-2.5">Verified credentials</p>
+                <div className="flex flex-wrap gap-1.5">
+                  {['First Aid ✓', 'CPR ✓', 'ECE ✓', 'Police Check ✓'].map(badge => (
+                    <span key={badge} className="text-[11px] font-semibold text-sage-green bg-sage-green/12 px-2.5 py-1 rounded-full">{badge}</span>
+                  ))}
+                </div>
+              </div>
+              <div className="px-5 py-3.5 border-b border-[rgba(47,74,58,0.07)]">
+                <p className="text-[12px] text-dark-text/55 leading-relaxed italic">
+                  &ldquo;Passionate about outdoor learning and creative arts. I have been working with toddlers and preschoolers for 6 years.&rdquo;
+                </p>
+              </div>
+              <div className="px-5 py-3.5">
+                <p className="text-[12px] font-medium text-forest-green">Caring for Emma since September 2024</p>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl border border-[rgba(47,74,58,0.08)] p-4" style={{ boxShadow: '0 2px 12px rgba(47,74,58,0.05)' }}>
+              <div className="flex items-start gap-3">
+                <span className="text-lg flex-shrink-0">🛡️</span>
+                <div>
+                  <p className="text-[13px] font-semibold text-dark-text mb-0.5">Director compliance view</p>
+                  <p className="text-[12px] text-dark-text/50 leading-snug">Full certification dashboard with expiry dates, renewal alerts, and a one-click compliance report for licensing inspections.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── FEATURE SECTIONS ──────────────────────────────────── */}
       {sections.map((section, i) => {
         const isOdd = i % 2 === 0

@@ -61,6 +61,16 @@ export default function FoundingForm() {
         }),
       })
       if (!res.ok) throw new Error('send_failed')
+      // Add to Loops CRM — non-fatal if it fails
+      fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email,
+          firstName: name.split(' ')[0],
+          source: 'founding-application',
+        }),
+      }).catch(() => {})
       setSubmitted(true)
     } catch {
       setError('Something went wrong submitting your application. Please email us directly at hello@sproutandvine.ca.')
