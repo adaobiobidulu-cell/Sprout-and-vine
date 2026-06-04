@@ -9,6 +9,11 @@ interface Props {
   buttonText?: string
   source?: string
   showFirstName?: boolean
+  consentLabel?: string
+  successTitle?: string
+  successSubtitle?: string
+  emailPlaceholder?: string
+  firstNamePlaceholder?: string
 }
 
 export default function EmailCapture({
@@ -17,6 +22,11 @@ export default function EmailCapture({
   buttonText = 'Get updates',
   source = 'general',
   showFirstName = false,
+  consentLabel,
+  successTitle,
+  successSubtitle,
+  emailPlaceholder = 'your@centre.ca',
+  firstNamePlaceholder = 'First name',
 }: Props) {
   const [firstName, setFirstName] = useState('')
   const [email, setEmail] = useState('')
@@ -55,8 +65,8 @@ export default function EmailCapture({
   if (submitted) {
     return (
       <div className="text-center py-4">
-        <p className="text-[15px] font-semibold text-forest-green mb-1">You are on the list.</p>
-        <p className="text-[13px] text-dark-text/55">We will be in touch as we build.</p>
+        <p className="text-[15px] font-semibold text-forest-green mb-1">{successTitle ?? 'You are on the list.'}</p>
+        <p className="text-[13px] text-dark-text/55">{successSubtitle ?? 'We will be in touch as we build.'}</p>
       </div>
     )
   }
@@ -76,7 +86,7 @@ export default function EmailCapture({
           required
           value={firstName}
           onChange={e => setFirstName(e.target.value)}
-          placeholder="First name"
+          placeholder={firstNamePlaceholder}
           className="w-full border border-[rgba(47,74,58,0.2)] rounded-lg px-4 py-2.5 text-[14px] text-dark-text bg-white focus:outline-none focus:border-forest-green transition-colors mb-2"
         />
       )}
@@ -87,7 +97,7 @@ export default function EmailCapture({
           required
           value={email}
           onChange={e => setEmail(e.target.value)}
-          placeholder="your@centre.ca"
+          placeholder={emailPlaceholder}
           className="flex-1 border border-[rgba(47,74,58,0.2)] rounded-lg px-4 py-2.5 text-[14px] text-dark-text bg-white focus:outline-none focus:border-forest-green transition-colors"
         />
         <button
@@ -109,10 +119,14 @@ export default function EmailCapture({
           className="mt-0.5 w-3.5 h-3.5 flex-shrink-0"
         />
         <label htmlFor={`consent-${source}`} className="text-[11px] text-dark-text/50 leading-relaxed cursor-pointer">
-          I agree to receive updates from Sprout &amp; Vine. I can unsubscribe at any time.{' '}
-          <Link href="/privacy" className="underline underline-offset-2 hover:text-forest-green transition-colors">
-            Privacy Policy
-          </Link>
+          {consentLabel ?? (
+            <>
+              I agree to receive updates from Sprout &amp; Vine. I can unsubscribe at any time.{' '}
+              <Link href="/privacy" className="underline underline-offset-2 hover:text-forest-green transition-colors">
+                Privacy Policy
+              </Link>
+            </>
+          )}
         </label>
       </div>
 

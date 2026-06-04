@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import FadeIn from '@/components/fade-in'
+import EmailCapture from '@/components/email-capture'
 
 export const metadata: Metadata = {
   title: 'Feuille de route | Sprout & Vine',
@@ -71,6 +72,8 @@ const phases: {
       { name: "Accès à l'API pour les intégrations personnalisées" },
       { name: 'Album photo annuel généré automatiquement' },
       { name: 'Application Vine pour les familles (Android)' },
+      { name: 'Profil enfant: Couche mémoire', note: 'Chronologie longitudinale complète de la garderie à l\'école primaire. Appartient à la famille, portable.' },
+      { name: 'Application parent Vine: Mode souvenir', note: 'Récapitulatif annuel, exportation album photo et faits saillants des jalons.' },
     ],
   },
 ]
@@ -136,19 +139,81 @@ export default function FrRoadmapPage() {
       </section>
 
       <section className="bg-cream py-16 md:py-20 px-5 md:px-8">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl mx-auto space-y-6">
           <div className="bg-forest-green rounded-2xl p-8 md:p-10">
             <p className="text-[11px] uppercase tracking-[0.16em] text-sage-green font-semibold mb-4">Opérateurs fondateurs</p>
             <h2 className="font-display font-medium text-cream leading-[1.08] mb-4" style={{ fontSize: 'clamp(26px, 3.5vw, 36px)' }}>
               Aidez-nous à décider ce qui est construit en premier.
             </h2>
             <p className="text-[15px] text-cream/65 leading-relaxed mb-7">
-              Les opérateurs fondateurs ont une contribution directe à notre feuille de route. Appels mensuels avec notre équipe, priorité sur les demandes de fonctionnalités, et accès anticipé à chaque phase.
+              Les opérateurs fondateurs ont une contribution directe à notre feuille de route. Appels mensuels avec notre équipe, priorité sur les demandes de fonctionnalités, et accès anticipé à chaque phase. La feuille de route ci-dessus reflète ce que nous avons entendu jusqu'à présent.
             </p>
-            <Link href="/founding" className="inline-block bg-terracotta text-white text-[14px] font-medium px-7 py-3.5 rounded-lg hover:bg-[#d4724e] transition-colors">
+            <Link href="/fr/founding" className="inline-block bg-terracotta text-white text-[14px] font-medium px-7 py-3.5 rounded-lg hover:bg-[#d4724e] transition-colors">
               Rejoindre le Programme fondateur
             </Link>
           </div>
+
+          <div className="bg-white rounded-2xl p-8 border border-[rgba(47,74,58,0.08)]" style={{ boxShadow: '0 2px 16px rgba(47,74,58,0.06)' }}>
+            <EmailCapture
+              heading="Pas encore prêt? Restez informé."
+              subheading="Nous partageons ce que nous construisons, ce que nous livrons, et quand nous sommes prêts pour de nouveaux opérateurs."
+              source="fr-roadmap-page"
+              buttonText="Recevoir les mises à jour"
+              emailPlaceholder="votre@centre.ca"
+              consentLabel="J'accepte de recevoir des mises à jour de Sprout & Vine. Je peux me désabonner à tout moment."
+              successTitle="Vous êtes sur la liste."
+              successSubtitle="Nous vous contacterons au fil de notre progression."
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Horizon vision */}
+      <section className="bg-cream py-16 md:py-20 px-5 md:px-8">
+        <div className="max-w-3xl mx-auto">
+          <p className="text-[11px] uppercase tracking-[0.16em] text-sage-green font-semibold mb-4">
+            À l'horizon
+          </p>
+          <h2 className="font-display font-medium text-forest-green leading-[1.08] mb-4" style={{ fontSize: 'clamp(28px, 3.5vw, 40px)' }}>
+            La vision à long terme.
+          </h2>
+          <p className="text-[15px] text-dark-text/55 leading-relaxed mb-10">
+            Sprout &amp; Vine est conçu pour accompagner un enfant bien au-delà de la garderie. Voici où nous allons, non pas comme un engagement, mais comme un signal de ce que nous croyons que cette plateforme deviendra.
+          </p>
+          <div className="space-y-4">
+            {[
+              { icon: '🧒', title: 'Profil enfant: Couche mémoire', desc: 'Chaque jalon, photo et document depuis la garderie, appartenant à la famille, portable pour toujours.' },
+              { icon: '🏫', title: 'Extension à l\'école primaire', desc: 'Le dossier suit l\'enfant jusqu\'à l\'école. Les familles déjà sur la plateforme. Les écoles les rejoignent.' },
+              { icon: '🤝', title: 'Communauté familiale vérifiée', desc: 'Des activités locales et de vraies connections entre familles des mêmes écoles et centres.' },
+              { icon: '🛡️', title: 'Sprout Space', desc: 'Un espace sécurisé, supervisé par les parents, où les enfants peuvent se connecter avec leurs vrais amis d\'école.' },
+              { icon: '🧠', title: 'Couche intelligence IA', desc: 'Des tendances, des célébrations et des opportunités mis en évidence à travers l\'historique éducatif complet d\'un enfant.' },
+            ].map(item => (
+              <div key={item.title} className="flex items-start gap-4 bg-white rounded-xl p-5 border border-[rgba(47,74,58,0.08)]" style={{ boxShadow: '0 2px 12px rgba(47,74,58,0.05)' }}>
+                <span className="text-2xl flex-shrink-0">{item.icon}</span>
+                <div>
+                  <p className="text-[14px] font-semibold text-dark-text mb-1">{item.title}</p>
+                  <p className="text-[13px] text-dark-text/55 leading-relaxed">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Changelog note */}
+      <section className="bg-white py-12 px-5 md:px-8 text-center">
+        <div className="max-w-2xl mx-auto">
+          <p className="text-[15px] text-dark-text/55 leading-relaxed">
+            Au fil de la livraison des fonctionnalités, elles sont consignées dans notre{' '}
+            <Link href="/changelog" className="text-forest-green font-medium underline underline-offset-2 hover:text-dark-text transition-colors">
+              journal des modifications
+            </Link>
+            . Suivez notre construction en public sur le{' '}
+            <Link href="/blog" className="text-forest-green font-medium underline underline-offset-2 hover:text-dark-text transition-colors">
+              blogue
+            </Link>
+            .
+          </p>
         </div>
       </section>
     </>

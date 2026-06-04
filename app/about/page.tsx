@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { FOUNDING_SPOTS_TOTAL } from '@/lib/config'
 
 export const metadata: Metadata = {
   title: 'Our Story | Ada and Chuck, Co-Founders of Sprout and Vine',
@@ -107,7 +108,7 @@ export default function AboutPage() {
             </p>
 
             <p>
-              We are building this now. We are not launched yet, and we will not launch until it is right. While we build, we have put everything we know about Canadian childcare compliance in one place, free, for anyone who needs it. And we are looking for fifty founding operators to help us build something worth building.
+              We are building this now. We are not launched yet, and we will not launch until it is right. While we build, we have put everything we know about Canadian childcare compliance in one place, free, for anyone who needs it. And we are looking for twenty-five founding operators to help us build something worth building.
             </p>
 
             <p>
@@ -234,7 +235,7 @@ export default function AboutPage() {
             Want to help us build this right?
           </h2>
           <p className="text-[16px] text-cream/60 mb-10 leading-relaxed">
-            We are looking for 50 founding operators across Canada.
+            We are looking for {FOUNDING_SPOTS_TOTAL} founding operators across Canada.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Link
