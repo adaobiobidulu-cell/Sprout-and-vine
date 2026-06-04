@@ -17,6 +17,14 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
 }
 
 type Status = 'building' | 'next' | 'planned'
+type DevStatus = 'discovery' | 'design' | 'development' | 'beta'
+
+const devStatusStyles: Record<DevStatus, { label: string; color: string; bg: string }> = {
+  discovery: { label: 'Discovery', color: '#6EB76F', bg: 'rgba(110,183,111,0.12)' },
+  design: { label: 'Design', color: '#E2845F', bg: 'rgba(226,132,95,0.12)' },
+  development: { label: 'Development', color: '#2F4A3A', bg: 'rgba(47,74,58,0.1)' },
+  beta: { label: 'Beta', color: '#6B7FD7', bg: 'rgba(107,127,215,0.12)' },
+}
 
 const phases: {
   phase: string
@@ -24,7 +32,7 @@ const phases: {
   status: Status
   eta: string
   description: string
-  items: { name: string; note?: string }[]
+  items: { name: string; note?: string; devStatus?: DevStatus }[]
 }[] = [
   {
     phase: 'Phase 1',
@@ -33,14 +41,17 @@ const phases: {
     eta: 'Founding cohort access: Q3 2026',
     description: 'The foundation. We are building the core platform with our founding operator cohort, iterating weekly based on their direct feedback.',
     items: [
-      { name: 'Attendance tracking and sign-in/sign-out' },
-      { name: 'CWELCC subsidy tracking and reporting' },
-      { name: 'Daily reports and parent messaging' },
-      { name: 'Billing and invoicing' },
-      { name: 'Child profile and enrollment management' },
-      { name: 'Staff accounts and role management' },
-      { name: 'Bilingual platform (EN/FR)' },
-      { name: 'Canadian data residency', note: 'All data stored in Canada' },
+      { name: 'Attendance tracking and sign-in/sign-out', devStatus: 'development' },
+      { name: 'CWELCC subsidy tracking and reporting', devStatus: 'development' },
+      { name: 'Daily reports and parent messaging', devStatus: 'development' },
+      { name: 'Billing and invoicing', devStatus: 'development' },
+      { name: 'Child profile and enrollment management', devStatus: 'design' },
+      { name: 'Staff accounts and role management', devStatus: 'design' },
+      { name: 'Smart Pickup Authorization', note: 'Photo-verified, instant parent alert', devStatus: 'design' },
+      { name: 'Parent App (iOS)', note: 'Android to follow', devStatus: 'discovery' },
+      { name: 'AI Documentation Assistant', note: 'Documentation and communication drafting', devStatus: 'discovery' },
+      { name: 'Bilingual platform (EN/FR)', devStatus: 'development' },
+      { name: 'Canadian data residency', note: 'All data stored in Canada', devStatus: 'development' },
     ],
   },
   {
@@ -156,10 +167,21 @@ export default function RoadmapPage() {
                           <path d="M1.5 4l2 2 3-3" stroke="#2F4A3A" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                       </div>
-                      <div>
+                      <div className="flex flex-wrap items-center gap-2">
                         <span className="text-[14px] text-dark-text/80 font-medium">{item.name}</span>
                         {item.note && (
-                          <span className="text-[12px] text-dark-text/40 ml-2">{item.note}</span>
+                          <span className="text-[12px] text-dark-text/40">{item.note}</span>
+                        )}
+                        {item.devStatus && (
+                          <span
+                            className="text-[10px] font-semibold px-2 py-0.5 rounded-full"
+                            style={{
+                              color: devStatusStyles[item.devStatus].color,
+                              background: devStatusStyles[item.devStatus].bg,
+                            }}
+                          >
+                            {devStatusStyles[item.devStatus].label}
+                          </span>
                         )}
                       </div>
                     </li>

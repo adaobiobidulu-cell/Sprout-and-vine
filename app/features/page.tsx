@@ -510,70 +510,142 @@ export default function FeaturesPage() {
         </div>
       </section>
 
-      {/* ── EDUCATOR PROFILE SECTION ── */}
+      {/* ── STAFF PROFILES SECTION ── */}
       <section className="bg-cream py-20 px-5 md:px-8">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-          <div>
-            <SectionLabel>Educator Profiles</SectionLabel>
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-12">
+            <SectionLabel>Staff Profiles</SectionLabel>
             <h2
               className="font-display font-medium text-forest-green leading-[1.08] mb-5"
               style={{ fontSize: 'clamp(30px, 3.5vw, 44px)' }}
             >
-              The professional profile educators are proud to have.
+              Professional profiles for the people who show up every day.
             </h2>
-            <p className="text-[16px] text-dark-text/65 leading-relaxed mb-7">
-              Every educator on Sprout &amp; Vine has a profile card that parents see alongside their child's daily updates. Verified credentials shown as badges. A personal bio the educator writes themselves. A note on how long they have been caring for that child.
+            <p className="text-[16px] text-dark-text/65 leading-relaxed mb-7 max-w-3xl">
+              Every educator deserves to feel like a professional, not just a name on a rota. Sprout &amp; Vine gives each staff member a profile they control: a parent-facing presence with their photo, bio, and verified credentials. Directors get the full picture: certifications, expiry dates, compliance status across the entire team, and every document they need for a licensing inspection. All in one place.
             </p>
-            <ul className="space-y-3">
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 max-w-3xl">
               {[
-                'Verified credential badges: First Aid, CPR, ECE designation, Police Check',
-                'Educator-controlled: they choose what bio and details to share',
-                'Personalised per family: caring for your child since [date]',
-                'Directors see a full compliance dashboard with expiry alerts across all staff',
+                'Educators control their own parent-facing profile and bio',
+                'Credential badges verified by the director before appearing to parents',
+                'First Aid, CPR, ECE designation, and police check — tracked with expiry alerts',
+                'Certification compliance dashboard: green / amber / red across all staff',
+                'One-click exportable compliance report for licensing inspections',
+                'Full HR and employment record in the director view',
               ].map(b => (
                 <Bullet key={b} text={b} />
               ))}
             </ul>
           </div>
 
-          {/* Educator card mockup */}
-          <div className="space-y-3">
-            <p className="text-[11px] font-semibold text-dark-text/40 uppercase tracking-[0.1em]">What parents see</p>
-            <div className="bg-white rounded-xl border border-[rgba(47,74,58,0.1)] overflow-hidden" style={{ boxShadow: '0 4px 20px rgba(47,74,58,0.08)' }}>
-              <div className="bg-forest-green px-5 py-4 flex items-center gap-3">
-                <div className="w-11 h-11 rounded-full bg-light-sage flex items-center justify-center text-forest-green text-[14px] font-bold flex-shrink-0">OT</div>
-                <div>
-                  <p className="text-cream font-semibold text-[15px] leading-tight">Olivia</p>
-                  <p className="text-cream/60 text-[12px]">Butterflies Room</p>
+          {/* Three-panel mockup */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {/* Panel 1: Parent view */}
+            <div className="space-y-2">
+              <p className="text-[11px] font-semibold text-dark-text/40 uppercase tracking-[0.1em] mb-3">What parents see</p>
+              <div className="bg-white rounded-xl border border-[rgba(47,74,58,0.1)] overflow-hidden" style={{ boxShadow: '0 4px 20px rgba(47,74,58,0.08)' }}>
+                <div className="bg-forest-green px-5 py-3.5 flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-light-sage flex items-center justify-center text-forest-green text-[13px] font-bold flex-shrink-0">ST</div>
+                  <div>
+                    <p className="text-cream font-semibold text-[14px] leading-tight">Sarah</p>
+                    <p className="text-cream/60 text-[11px]">Butterflies Room</p>
+                  </div>
                 </div>
-              </div>
-              <div className="px-5 py-3.5 border-b border-[rgba(47,74,58,0.07)]">
-                <p className="text-[10px] text-dark-text/40 uppercase tracking-[0.08em] mb-2.5">Verified credentials</p>
-                <div className="flex flex-wrap gap-1.5">
-                  {['First Aid ✓', 'CPR ✓', 'ECE ✓', 'Police Check ✓'].map(badge => (
-                    <span key={badge} className="text-[11px] font-semibold text-sage-green bg-sage-green/12 px-2.5 py-1 rounded-full">{badge}</span>
-                  ))}
+                <div className="px-4 py-3 border-b border-[rgba(47,74,58,0.07)]">
+                  <div className="flex flex-wrap gap-1.5">
+                    {['First Aid ✓', 'ECE ✓', 'Police Check ✓'].map(badge => (
+                      <span key={badge} className="text-[10px] font-semibold text-sage-green bg-sage-green/10 px-2 py-0.5 rounded-full">{badge}</span>
+                    ))}
+                  </div>
                 </div>
-              </div>
-              <div className="px-5 py-3.5 border-b border-[rgba(47,74,58,0.07)]">
-                <p className="text-[12px] text-dark-text/55 leading-relaxed italic">
-                  &ldquo;Passionate about outdoor learning and creative arts. I have been working with toddlers and preschoolers for 6 years.&rdquo;
-                </p>
-              </div>
-              <div className="px-5 py-3.5">
-                <p className="text-[12px] font-medium text-forest-green">Caring for Emma since September 2024</p>
+                <div className="px-4 py-3 border-b border-[rgba(47,74,58,0.07)]">
+                  <p className="text-[11px] text-dark-text/55 italic leading-relaxed">
+                    &ldquo;Loves outdoor learning. Fluent in EN and FR.&rdquo;
+                  </p>
+                </div>
+                <div className="px-4 py-3">
+                  <p className="text-[11px] font-medium text-forest-green">Caring for Emma since Oct 2024</p>
+                </div>
               </div>
             </div>
 
-            <div className="bg-white rounded-xl border border-[rgba(47,74,58,0.08)] p-4" style={{ boxShadow: '0 2px 12px rgba(47,74,58,0.05)' }}>
-              <div className="flex items-start gap-3">
-                <span className="text-lg flex-shrink-0">🛡️</span>
-                <div>
-                  <p className="text-[13px] font-semibold text-dark-text mb-0.5">Director compliance view</p>
-                  <p className="text-[12px] text-dark-text/50 leading-snug">Full certification dashboard with expiry dates, renewal alerts, and a one-click compliance report for licensing inspections.</p>
+            {/* Panel 2: Educator self-view */}
+            <div className="space-y-2">
+              <p className="text-[11px] font-semibold text-dark-text/40 uppercase tracking-[0.1em] mb-3">What Sarah sees (her profile)</p>
+              <div className="bg-white rounded-xl border border-[rgba(47,74,58,0.08)] overflow-hidden" style={{ boxShadow: '0 4px 20px rgba(47,74,58,0.06)' }}>
+                <div className="px-4 py-3.5 border-b border-[rgba(47,74,58,0.07)]">
+                  <p className="text-[11px] text-dark-text/40 uppercase tracking-[0.08em] mb-2">My certifications</p>
+                  <div className="space-y-2">
+                    {[
+                      { name: 'First Aid & CPR', expiry: 'Mar 2026', ok: true },
+                      { name: 'ECE Designation', expiry: 'No expiry', ok: true },
+                      { name: 'Police Check', expiry: 'Jun 2025', ok: false },
+                    ].map(cert => (
+                      <div key={cert.name} className="flex items-center justify-between">
+                        <p className="text-[11px] text-dark-text/70">{cert.name}</p>
+                        <span className={`text-[10px] font-semibold px-2 py-0.5 rounded-full ${cert.ok ? 'bg-sage-green/10 text-sage-green' : 'bg-terracotta/10 text-terracotta'}`}>
+                          {cert.expiry}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div className="px-4 py-3.5 border-b border-[rgba(47,74,58,0.07)]">
+                  <p className="text-[11px] text-dark-text/40 uppercase tracking-[0.08em] mb-2">Today</p>
+                  <div className="space-y-1.5">
+                    {['2 daily reports to send', '1 milestone to confirm', '3 messages to read'].map(t => (
+                      <div key={t} className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-sage-green flex-shrink-0" />
+                        <p className="text-[11px] text-dark-text/65">{t}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div className="px-4 py-3">
+                  <button className="text-[11px] font-medium text-forest-green hover:underline">Edit my profile →</button>
                 </div>
               </div>
             </div>
+
+            {/* Panel 3: Director compliance */}
+            <div className="space-y-2">
+              <p className="text-[11px] font-semibold text-dark-text/40 uppercase tracking-[0.1em] mb-3">Director compliance view</p>
+              <div className="bg-white rounded-xl border border-[rgba(47,74,58,0.08)] overflow-hidden" style={{ boxShadow: '0 4px 20px rgba(47,74,58,0.06)' }}>
+                <div className="px-4 py-3 border-b border-[rgba(47,74,58,0.07)]">
+                  <p className="text-[11px] font-semibold text-dark-text mb-2">All staff · Certification status</p>
+                  <div className="space-y-2">
+                    {[
+                      { name: 'Sarah T.', status: 'green', label: 'All current' },
+                      { name: 'Marcus L.', status: 'amber', label: 'First Aid in 42 days' },
+                      { name: 'Priya R.', status: 'green', label: 'All current' },
+                      { name: 'Daniel O.', status: 'red', label: 'Police Check expired' },
+                    ].map(staff => (
+                      <div key={staff.name} className="flex items-center justify-between gap-2">
+                        <div className="flex items-center gap-2">
+                          <div className={`w-2 h-2 rounded-full flex-shrink-0 ${staff.status === 'green' ? 'bg-sage-green' : staff.status === 'amber' ? 'bg-terracotta' : 'bg-red-500'}`} />
+                          <p className="text-[11px] font-medium text-dark-text">{staff.name}</p>
+                        </div>
+                        <p className="text-[10px] text-dark-text/45">{staff.label}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div className="px-4 py-3">
+                  <button className="w-full text-[11px] font-semibold text-forest-green border border-forest-green/30 rounded-lg py-2 hover:bg-forest-green/5 transition-colors">
+                    Download compliance report
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-8">
+            <Link
+              href="/features#child-profile"
+              className="inline-flex items-center gap-2 text-[14px] font-medium text-forest-green hover:underline"
+            >
+              See how the child profile connects →
+            </Link>
           </div>
         </div>
       </section>

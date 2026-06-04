@@ -4,6 +4,7 @@ import ProductTour from '@/components/product-tour'
 import DashboardPreview from '@/components/dashboard-preview'
 import ScrollVine from '@/components/scroll-vine'
 import EmailCapture from '@/components/email-capture'
+import CanadaMap from '@/components/canada-map'
 import { FOUNDING_SPOTS_REMAINING, FOUNDING_SPOTS_TOTAL } from '@/lib/config'
 import { testimonial } from '@/lib/testimonial'
 
@@ -119,15 +120,15 @@ export default function Home() {
 
           <h1
             className="font-display font-medium text-forest-green leading-[1.05] mb-6"
-            style={{ fontSize: 'clamp(42px, 5.5vw, 72px)' }}
+            style={{ fontSize: 'clamp(38px, 5vw, 66px)' }}
           >
-            Every child rooted.<br />
-            Every centre{' '}
-            <em className="text-terracotta not-italic">growing.</em>
+            The Childcare Platform<br />
+            We Are Building With<br className="hidden sm:block" />{' '}
+            <em className="text-terracotta not-italic">Canadian Operators.</em>
           </h1>
 
           <p className="text-[18px] text-dark-text/65 mb-10 max-w-xl mx-auto leading-relaxed">
-            The only childcare platform built around CWELCC from the ground up. Attendance, billing, photo-verified Smart Pickup, and parent communication, all designed for how Canadian centres actually operate.
+            Sprout &amp; Vine Care is a modern childcare management platform designed for Canadian centres. We are partnering with a limited group of founding operators to help shape the future of enrollment, compliance, communication, and centre management.
           </p>
 
           <div className="flex flex-col items-center gap-4">
@@ -658,6 +659,89 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── STAFF PROFILE SECTION ── */}
+      <section className="bg-white py-20 md:py-24 px-5 md:px-8">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          {/* Staff card mockup */}
+          <div className="flex justify-center order-2 lg:order-1">
+            <div
+              className="bg-white rounded-2xl overflow-hidden border border-[rgba(47,74,58,0.1)] w-full max-w-sm"
+              style={{ boxShadow: '0 8px 40px rgba(47,74,58,0.12)' }}
+            >
+              <div className="bg-forest-green px-6 py-4 flex items-center gap-3">
+                <div className="w-11 h-11 rounded-full bg-light-sage flex items-center justify-center text-forest-green text-[14px] font-bold flex-shrink-0">
+                  ST
+                </div>
+                <div>
+                  <p className="text-cream font-semibold text-[15px] leading-tight">Sarah</p>
+                  <p className="text-cream/60 text-[12px]">Butterflies Room</p>
+                </div>
+              </div>
+
+              <div className="px-6 py-3.5 border-b border-[rgba(47,74,58,0.07)]">
+                <p className="text-[12px] text-dark-text/50">With this room since September 2024</p>
+              </div>
+
+              <div className="px-6 py-3.5 border-b border-[rgba(47,74,58,0.07)]">
+                <p className="text-[10px] text-dark-text/40 uppercase tracking-[0.08em] mb-2.5">Verified credentials</p>
+                <div className="flex flex-wrap gap-1.5">
+                  {['First Aid ✓', 'ECE ✓', 'Police Check ✓'].map(badge => (
+                    <span key={badge} className="text-[11px] font-semibold text-sage-green bg-sage-green/10 px-2.5 py-1 rounded-full">
+                      {badge}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="px-6 py-3.5 border-b border-[rgba(47,74,58,0.07)]">
+                <p className="text-[12px] text-dark-text/60 italic leading-relaxed">
+                  &ldquo;Loves outdoor learning and creative arts. Fluent in English and French.&rdquo;
+                </p>
+              </div>
+
+              <div className="px-6 py-3.5">
+                <p className="text-[12px] font-medium text-forest-green">Caring for Emma since October 2024</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Text */}
+          <div className="order-1 lg:order-2">
+            <SectionLabel>Coming at launch</SectionLabel>
+            <h2
+              className="font-display font-medium text-forest-green leading-[1.05] mb-5"
+              style={{ fontSize: 'clamp(34px, 4vw, 52px)' }}
+            >
+              Know the people<br />caring for your child.
+            </h2>
+            <p className="text-[16px] text-dark-text/65 leading-relaxed mb-4">
+              Every educator. Verified credentials. A face and name, not just a role.
+            </p>
+            <p className="text-[16px] text-dark-text/65 leading-relaxed mb-8">
+              Every staff member on Sprout &amp; Vine has a profile that belongs to them. Parents see what matters: a name, a photo, how long they have been with their child&#39;s room, and verified credential badges for First Aid, ECE designation, and police check status. Directors see everything they need for compliance, scheduling, and licensing. All in one place.
+            </p>
+            <div className="space-y-3 mb-8">
+              {[
+                { icon: '✓', text: 'Educators control their own parent-facing profile' },
+                { icon: '🔒', text: 'Credentials verified by the director before display' },
+                { icon: '📋', text: 'Full compliance dashboard for directors. One screen, all staff, all certifications.' },
+              ].map(item => (
+                <div key={item.text} className="flex items-start gap-3">
+                  <span className="text-lg flex-shrink-0 mt-0.5 leading-none">{item.icon}</span>
+                  <span className="text-[15px] text-dark-text/75 leading-relaxed">{item.text}</span>
+                </div>
+              ))}
+            </div>
+            <Link
+              href="/features"
+              className="inline-flex items-center gap-2 text-[14px] font-medium text-forest-green hover:underline"
+            >
+              See how staff profiles work →
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* ── SECTION 8: EDUCATOR SECTION */}
       <section className="py-20 md:py-24 px-5 md:px-8" style={{ background: 'rgba(174,193,176,0.15)' }}>
         <div className="max-w-4xl mx-auto text-center">
@@ -706,6 +790,51 @@ export default function Home() {
           </Link>
         </div>
       </div>
+
+      {/* ── AI SECTION ── */}
+      <section className="bg-white py-20 md:py-24 px-5 md:px-8">
+        <div className="max-w-4xl mx-auto">
+          <SectionLabel>Artificial Intelligence</SectionLabel>
+          <h2
+            className="font-display font-medium text-forest-green leading-[1.08] mb-6"
+            style={{ fontSize: 'clamp(34px, 4vw, 50px)' }}
+          >
+            AI assistance throughout the platform.
+          </h2>
+          <p className="text-[16px] text-dark-text/65 leading-relaxed mb-6 max-w-2xl">
+            AI should help reduce administrative work, not replace educator judgment.
+          </p>
+
+          <p className="text-[14px] text-dark-text/50 font-medium mb-4">Future capabilities may include:</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+            {[
+              { icon: '📝', title: 'Documentation assistance', desc: 'Help drafting incident reports, daily summaries, and development notes.' },
+              { icon: '💬', title: 'Parent communication drafting', desc: 'Suggested responses and updates ready to review before sending.' },
+              { icon: '🌱', title: 'Developmental observation support', desc: 'Pattern recognition across milestones to surface meaningful insights.' },
+              { icon: '📬', title: 'Enrollment follow-up assistance', desc: 'Timely nudges and draft messages for waitlist families.' },
+              { icon: '📊', title: 'Operational insights', desc: 'Surface patterns in attendance, billing, and daily centre data.' },
+            ].map(item => (
+              <div key={item.title} className="flex items-start gap-3 bg-cream rounded-xl p-4">
+                <span className="text-xl flex-shrink-0 mt-0.5">{item.icon}</span>
+                <div>
+                  <p className="text-[13px] font-semibold text-dark-text mb-0.5">{item.title}</p>
+                  <p className="text-[12px] text-dark-text/55 leading-relaxed">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <p className="text-[15px] font-semibold text-forest-green mb-7">
+            Every suggestion is a starting point. Educators always decide.
+          </p>
+          <Link
+            href="/pricing"
+            className="inline-flex items-center gap-2 text-[14px] font-medium text-forest-green hover:underline"
+          >
+            See Pricing Philosophy →
+          </Link>
+        </div>
+      </section>
 
       {/* ── SECTION 9: DASHBOARD PREVIEW */}
       <section className="bg-cream py-20 md:py-24 px-5 md:px-8">
@@ -780,6 +909,13 @@ export default function Home() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ── CANADA MAP ── */}
+      <section className="bg-white py-16 md:py-20 px-5 md:px-8">
+        <div className="max-w-3xl mx-auto flex flex-col items-center">
+          <CanadaMap />
         </div>
       </section>
 
