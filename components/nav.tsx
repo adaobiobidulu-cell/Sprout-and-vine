@@ -146,7 +146,7 @@ export default function Nav() {
             {isFr ? 'Connexion' : 'Log in'}
           </Link>
           <Link
-            href="/founding"
+            href={p('/founding')}
             className="bg-forest-green text-white text-[13px] font-medium px-5 py-[10px] rounded-lg hover:bg-[#243d2f] transition-colors"
           >
             {isFr ? 'Programme fondateur' : 'Founding Program'}
@@ -213,7 +213,7 @@ export default function Nav() {
                 {isFr ? 'Connexion' : 'Log in'}
               </Link>
               <Link
-                href="/founding"
+                href={p('/founding')}
                 className="bg-forest-green text-white text-[14px] font-medium px-5 py-3 rounded-lg text-center hover:bg-[#243d2f] transition-colors"
                 onClick={() => setMobileOpen(false)}
               >

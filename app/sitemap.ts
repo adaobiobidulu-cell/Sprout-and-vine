@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = 'https://sproutandvine.ca'
+  const base = 'https://sproutandvinecare.ca'
   const now = new Date()
 
   return [
@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/resources`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${base}/about`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${base}/contact`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${base}/roadmap`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
 
     // Comparison pages — EN
     { url: `${base}/vs-brightwheel`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
@@ -43,7 +44,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Content / community — EN
     { url: `${base}/blog`, lastModified: now, changeFrequency: 'weekly', priority: 0.6 },
     { url: `${base}/changelog`, lastModified: now, changeFrequency: 'weekly', priority: 0.5 },
-    { url: `${base}/roadmap`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
     { url: `${base}/careers`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
     { url: `${base}/help`, lastModified: now, changeFrequency: 'weekly', priority: 0.6 },
 
@@ -54,8 +54,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // Core marketing — FR
     { url: `${base}/fr`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${base}/fr/founding`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${base}/fr/features`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${base}/fr/pricing`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${base}/fr/roadmap`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${base}/fr/resources`, lastModified: now, changeFrequency: 'weekly', priority: 0.7 },
     { url: `${base}/fr/about`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${base}/fr/contact`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
@@ -82,7 +84,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Content / community — FR
     { url: `${base}/fr/blog`, lastModified: now, changeFrequency: 'weekly', priority: 0.5 },
     { url: `${base}/fr/changelog`, lastModified: now, changeFrequency: 'weekly', priority: 0.4 },
-    { url: `${base}/fr/roadmap`, lastModified: now, changeFrequency: 'monthly', priority: 0.4 },
     { url: `${base}/fr/careers`, lastModified: now, changeFrequency: 'monthly', priority: 0.4 },
     { url: `${base}/fr/help`, lastModified: now, changeFrequency: 'weekly', priority: 0.5 },
 
