@@ -5,6 +5,7 @@ import PricingCards from '@/components/pricing-cards'
 import ROICalculator from '@/components/roi-calculator'
 import EmailCapture from '@/components/email-capture'
 import FadeIn from '@/components/fade-in'
+import CanadaMap from '@/components/canada-map'
 import { FOUNDING_SPOTS_REMAINING, FOUNDING_SPOTS_TOTAL } from '@/lib/config'
 import { testimonial } from '@/lib/testimonial'
 import type { Metadata } from 'next'
@@ -71,15 +72,15 @@ export default function FrenchHomePage() {
 
           <h1
             className="font-display font-medium text-forest-green leading-[1.05] mb-6"
-            style={{ fontSize: 'clamp(42px, 5.5vw, 72px)' }}
+            style={{ fontSize: 'clamp(38px, 5vw, 66px)' }}
           >
-            Chaque enfant enraciné.<br />
-            Chaque centre{' '}
-            <em className="text-terracotta not-italic">en croissance.</em>
+            La plateforme de gestion<br />
+            que nous construisons avec<br className="hidden sm:block" />{' '}
+            <em className="text-terracotta not-italic">les opérateurs canadiens.</em>
           </h1>
 
           <p className="text-[18px] text-dark-text/65 mb-10 max-w-xl mx-auto leading-relaxed">
-            Présences, facturation, autorisation de collecte sécurisée par photo et communication avec les familles, tout conçu pour la façon dont les centres canadiens fonctionnent vraiment.
+            Sprout &amp; Vine Care est une plateforme moderne de gestion des garderies conçue pour les centres canadiens. Nous nous associons à un groupe limité d&apos;opérateurs fondateurs pour façonner l&apos;avenir de l&apos;inscription, de la conformité, de la communication et de la gestion de centre.
           </p>
 
           <div className="flex flex-col items-center gap-4">
@@ -400,6 +401,124 @@ export default function FrenchHomePage() {
         </div>
       </section>
 
+      {/* ── PROFIL DU PERSONNEL ── */}
+      <section className="bg-white py-20 md:py-24 px-5 md:px-8">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          {/* Carte du personnel */}
+          <div className="flex justify-center order-2 lg:order-1">
+            <div
+              className="bg-white rounded-2xl overflow-hidden border border-[rgba(47,74,58,0.1)] w-full max-w-sm"
+              style={{ boxShadow: '0 8px 40px rgba(47,74,58,0.12)' }}
+            >
+              <div className="bg-forest-green px-6 py-4 flex items-center gap-3">
+                <div className="w-11 h-11 rounded-full bg-light-sage flex items-center justify-center text-forest-green text-[14px] font-bold flex-shrink-0">ST</div>
+                <div>
+                  <p className="text-cream font-semibold text-[15px] leading-tight">Sarah</p>
+                  <p className="text-cream/60 text-[12px]">Salle des Papillons</p>
+                </div>
+              </div>
+              <div className="px-6 py-3.5 border-b border-[rgba(47,74,58,0.07)]">
+                <p className="text-[12px] text-dark-text/50">Avec cette salle depuis septembre 2024</p>
+              </div>
+              <div className="px-6 py-3.5 border-b border-[rgba(47,74,58,0.07)]">
+                <p className="text-[10px] text-dark-text/40 uppercase tracking-[0.08em] mb-2.5">Accréditations vérifiées</p>
+                <div className="flex flex-wrap gap-1.5">
+                  {['Premiers soins ✓', 'ÉPE ✓', 'Vérification police ✓'].map(badge => (
+                    <span key={badge} className="text-[11px] font-semibold text-sage-green bg-sage-green/10 px-2.5 py-1 rounded-full">
+                      {badge}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <div className="px-6 py-3.5 border-b border-[rgba(47,74,58,0.07)]">
+                <p className="text-[12px] text-dark-text/60 italic leading-relaxed">
+                  &ldquo;Passionnée par l&apos;apprentissage en plein air et les arts créatifs. Bilingue FR/EN.&rdquo;
+                </p>
+              </div>
+              <div className="px-6 py-3.5">
+                <p className="text-[12px] font-medium text-forest-green">S&apos;occupe d&apos;Emma depuis octobre 2024</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="order-1 lg:order-2">
+            <SectionLabel>Disponible au lancement</SectionLabel>
+            <h2
+              className="font-display font-medium text-forest-green leading-[1.05] mb-5"
+              style={{ fontSize: 'clamp(34px, 4vw, 52px)' }}
+            >
+              Connaître les personnes<br />qui prennent soin de votre enfant.
+            </h2>
+            <p className="text-[16px] text-dark-text/65 leading-relaxed mb-4">
+              Chaque éducateur. Des accréditations vérifiées. Un visage et un nom, pas juste un rôle.
+            </p>
+            <p className="text-[16px] text-dark-text/65 leading-relaxed mb-8">
+              Chaque membre du personnel sur Sprout &amp; Vine a un profil qui lui appartient. Les parents voient ce qui compte: un nom, une photo, depuis combien de temps cette personne s&apos;occupe de leur enfant, et des badges d&apos;accréditation vérifiés. Les directeurs voient tout ce dont ils ont besoin pour la conformité, la planification et les licences. En un seul endroit.
+            </p>
+            <div className="space-y-3 mb-8">
+              {[
+                { icon: '✓', text: 'Les éducateurs contrôlent leur propre profil visible aux familles' },
+                { icon: '🔒', text: 'Les accréditations sont vérifiées par le directeur avant affichage' },
+                { icon: '📋', text: 'Tableau de bord de conformité complet pour les directeurs. Un seul écran, tout le personnel, toutes les certifications.' },
+              ].map(item => (
+                <div key={item.text} className="flex items-start gap-3">
+                  <span className="text-lg flex-shrink-0 mt-0.5 leading-none">{item.icon}</span>
+                  <span className="text-[15px] text-dark-text/75 leading-relaxed">{item.text}</span>
+                </div>
+              ))}
+            </div>
+            <Link href="/fr/features" className="inline-flex items-center gap-2 text-[14px] font-medium text-forest-green hover:underline">
+              Voir comment les profils du personnel fonctionnent →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── INTELLIGENCE ARTIFICIELLE ── */}
+      <section className="bg-white py-20 md:py-24 px-5 md:px-8">
+        <div className="max-w-4xl mx-auto">
+          <SectionLabel>Intelligence Artificielle</SectionLabel>
+          <h2
+            className="font-display font-medium text-forest-green leading-[1.08] mb-6"
+            style={{ fontSize: 'clamp(34px, 4vw, 50px)' }}
+          >
+            L&apos;intelligence artificielle dans toute la plateforme.
+          </h2>
+          <p className="text-[16px] text-dark-text/65 leading-relaxed mb-6 max-w-2xl">
+            L&apos;IA devrait aider à réduire le travail administratif, pas remplacer le jugement des éducateurs.
+          </p>
+
+          <p className="text-[14px] text-dark-text/50 font-medium mb-4">Capacités futures possibles:</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+            {[
+              { icon: '📝', title: 'Aide à la documentation', desc: 'Aide à la rédaction de rapports d\'incidents, résumés quotidiens et notes de développement.' },
+              { icon: '💬', title: 'Rédaction de communications aux familles', desc: 'Réponses suggérées et mises à jour prêtes à réviser avant l\'envoi.' },
+              { icon: '🌱', title: 'Soutien aux observations du développement', desc: 'Reconnaissance de patterns dans les jalons pour faire ressortir des insights significatifs.' },
+              { icon: '📬', title: 'Aide au suivi des inscriptions', desc: 'Rappels opportuns et brouillons de messages pour les familles sur liste d\'attente.' },
+              { icon: '📊', title: 'Insights opérationnels', desc: 'Mise en évidence de patterns dans les présences, la facturation et les données quotidiennes du centre.' },
+            ].map(item => (
+              <div key={item.title} className="flex items-start gap-3 bg-cream rounded-xl p-4">
+                <span className="text-xl flex-shrink-0 mt-0.5">{item.icon}</span>
+                <div>
+                  <p className="text-[13px] font-semibold text-dark-text mb-0.5">{item.title}</p>
+                  <p className="text-[12px] text-dark-text/55 leading-relaxed">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <p className="text-[15px] font-semibold text-forest-green mb-7">
+            Chaque suggestion est un point de départ. Les éducateurs décident toujours.
+          </p>
+          <Link
+            href="/fr/pricing"
+            className="inline-flex items-center gap-2 text-[14px] font-medium text-forest-green hover:underline"
+          >
+            Voir la philosophie tarifaire →
+          </Link>
+        </div>
+      </section>
+
       {/* ── SECTION 8: FAIT POUR LE CANADA ──────────────────────── */}
       <section className="bg-cream py-20 md:py-24 px-5 md:px-8">
         <div className="max-w-4xl mx-auto">
@@ -425,6 +544,13 @@ export default function FrenchHomePage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── CARTE DU CANADA ── */}
+      <section className="bg-white py-16 md:py-20 px-5 md:px-8">
+        <div className="max-w-3xl mx-auto flex flex-col items-center">
+          <CanadaMap caption="Conçu pour chaque province. Conforme dès le premier jour." />
         </div>
       </section>
 

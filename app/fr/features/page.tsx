@@ -245,78 +245,145 @@ export default function FrFeaturesPage() {
         </div>
       </section>
 
-      {/* ── PROFILS ÉDUCATEURS ──────────────────────────────────── */}
-      <section className="bg-cream py-20 md:py-24 px-5 md:px-8">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <SectionLabel>Profils Éducateurs</SectionLabel>
+      {/* ── PROFILS DU PERSONNEL ──────────────────────────────────── */}
+      <section className="bg-cream py-20 px-5 md:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-12">
+            <SectionLabel>Profils du Personnel</SectionLabel>
             <h2
-              className="font-display font-medium text-forest-green leading-[1.05] mb-5"
-              style={{ fontSize: 'clamp(30px, 3.5vw, 48px)' }}
+              className="font-display font-medium text-forest-green leading-[1.08] mb-5"
+              style={{ fontSize: 'clamp(30px, 3.5vw, 44px)' }}
             >
-              Les éducateurs méritent<br />d'être connus des familles.
+              Des profils professionnels pour les personnes qui se présentent chaque jour.
             </h2>
-            <p className="text-[16px] text-dark-text/65 leading-relaxed mb-8">
-              Chaque éducateur a un profil visible par les familles qu'il sert. Les parents savent qui prend soin de leur enfant, quelles certifications ils détiennent, et ce qui les passionne. La confiance se construit avant même le premier jour.
+            <p className="text-[16px] text-dark-text/65 leading-relaxed mb-7 max-w-3xl">
+              Chaque éducateur mérite de se sentir comme un professionnel, pas juste un nom sur un tableau. Sprout &amp; Vine donne à chaque membre du personnel un profil qu&apos;il contrôle: une présence visible par les familles avec sa photo, sa bio et ses accréditations vérifiées. Les directeurs voient le tableau complet: certifications, dates d&apos;expiration, statut de conformité pour toute l&apos;équipe, et chaque document nécessaire pour une inspection de licence. Le tout en un seul endroit.
             </p>
-            <div className="space-y-4 mb-8">
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 max-w-3xl">
               {[
-                { icon: '🌱', text: 'Photo de profil, bio courte et spécialités de l\'éducateur' },
-                { icon: '✅', text: 'Badges de certification vérifiés: premiers soins, RCP, EPE, vérification policière' },
-                { icon: '👁️', text: 'Visible par les familles dont l\'enfant est dans leur salle' },
-              ].map(item => (
-                <div key={item.text} className="flex items-start gap-3">
-                  <span className="text-xl flex-shrink-0 mt-0.5">{item.icon}</span>
-                  <span className="text-[15px] text-dark-text/75 leading-relaxed">{item.text}</span>
-                </div>
+                'Les éducateurs contrôlent leur propre profil visible par les familles et leur bio',
+                'Badges d\'accréditation vérifiés par le directeur avant d\'apparaître aux parents',
+                'Premiers soins, RCP, désignation ÉPE et vérification policière, suivis avec alertes d\'expiration',
+                'Tableau de bord de conformité des certifications: vert / ambre / rouge pour tout le personnel',
+                'Rapport de conformité exportable en un clic pour les inspections de licence',
+                'Dossier RH et emploi complet dans la vue du directeur',
+              ].map(b => (
+                <li key={b} className="flex items-start gap-2.5 text-[15px] text-dark-text/75">
+                  <span className="text-sage-green font-bold flex-shrink-0 mt-0.5">&#10003;</span>
+                  <span>{b}</span>
+                </li>
               ))}
-            </div>
-            <div className="bg-white rounded-xl p-5 border border-[rgba(47,74,58,0.08)]" style={{ boxShadow: '0 2px 12px rgba(47,74,58,0.05)' }}>
-              <div className="flex items-start gap-3">
-                <span className="text-lg flex-shrink-0">🛡️</span>
-                <div>
-                  <p className="text-[14px] font-semibold text-dark-text mb-1">Vue de conformité pour le directeur</p>
-                  <p className="text-[13px] text-dark-text/55 leading-relaxed">Tableau de bord complet avec dates d'expiration, alertes de renouvellement et rapport de conformité en un clic pour les inspections de licence.</p>
-                </div>
-              </div>
-            </div>
-            <p className="text-[13px] text-dark-text/40 mt-5 leading-relaxed">
-              Aucun détail d'emploi ni dossier RH n'est jamais visible pour les parents. Seulement ce qui renforce la confiance.
-            </p>
+            </ul>
           </div>
 
-          {/* Educator card mockup */}
-          <div className="flex flex-col gap-4">
-            <div
-              className="bg-white rounded-2xl overflow-hidden border border-[rgba(47,74,58,0.1)]"
-              style={{ boxShadow: '0 8px 32px rgba(47,74,58,0.1)' }}
-            >
-              <div className="px-5 py-4 flex items-center gap-3 border-b border-[rgba(47,74,58,0.07)]">
-                <div className="w-12 h-12 rounded-full bg-terracotta/15 flex items-center justify-center text-[18px] font-bold text-terracotta flex-shrink-0">
-                  OT
+          {/* Tableau à trois panneaux */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {/* Panneau 1: Vue des parents */}
+            <div className="space-y-2">
+              <p className="text-[11px] font-semibold text-dark-text/40 uppercase tracking-[0.1em] mb-3">Ce que voient les parents</p>
+              <div className="bg-white rounded-xl border border-[rgba(47,74,58,0.1)] overflow-hidden" style={{ boxShadow: '0 4px 20px rgba(47,74,58,0.08)' }}>
+                <div className="bg-forest-green px-5 py-3.5 flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-light-sage flex items-center justify-center text-forest-green text-[13px] font-bold flex-shrink-0">ST</div>
+                  <div>
+                    <p className="text-cream font-semibold text-[14px] leading-tight">Sarah</p>
+                    <p className="text-cream/60 text-[11px]">Salle des Papillons</p>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-[14px] font-semibold text-dark-text">Olivia Thomas</p>
-                  <p className="text-[12px] text-dark-text/50">Éducatrice principale, Salle des Papillons</p>
+                <div className="px-4 py-3 border-b border-[rgba(47,74,58,0.07)]">
+                  <div className="flex flex-wrap gap-1.5">
+                    {['Premiers soins ✓', 'ÉPE ✓', 'Vérif. policière ✓'].map(badge => (
+                      <span key={badge} className="text-[10px] font-semibold text-sage-green bg-sage-green/10 px-2 py-0.5 rounded-full">{badge}</span>
+                    ))}
+                  </div>
                 </div>
-              </div>
-              <div className="px-5 py-3.5 border-b border-[rgba(47,74,58,0.07)]">
-                <p className="text-[10px] text-dark-text/40 uppercase tracking-[0.08em] mb-2.5">Certifications vérifiées</p>
-                <div className="flex flex-wrap gap-1.5">
-                  {['Premiers soins ✓', 'RCP ✓', 'EPE ✓', 'Vérif. policière ✓'].map(badge => (
-                    <span key={badge} className="text-[11px] font-semibold text-sage-green bg-sage-green/12 px-2.5 py-1 rounded-full">{badge}</span>
-                  ))}
+                <div className="px-4 py-3 border-b border-[rgba(47,74,58,0.07)]">
+                  <p className="text-[11px] text-dark-text/55 italic leading-relaxed">
+                    &ldquo;Passionnée par l&apos;apprentissage en plein air. Bilingue FR/EN.&rdquo;
+                  </p>
                 </div>
-              </div>
-              <div className="px-5 py-3.5 border-b border-[rgba(47,74,58,0.07)]">
-                <p className="text-[12px] text-dark-text/55 leading-relaxed italic">
-                  &ldquo;Passionnée par l'apprentissage en plein air et les arts créatifs. Je travaille avec les tout-petits depuis 6 ans.&rdquo;
-                </p>
-              </div>
-              <div className="px-5 py-3.5">
-                <p className="text-[12px] font-medium text-forest-green">S'occupe d'Emma depuis septembre 2024</p>
+                <div className="px-4 py-3">
+                  <p className="text-[11px] font-medium text-forest-green">S&apos;occupe d&apos;Emma depuis oct. 2024</p>
+                </div>
               </div>
             </div>
+
+            {/* Panneau 2: Vue personnelle de Sarah */}
+            <div className="space-y-2">
+              <p className="text-[11px] font-semibold text-dark-text/40 uppercase tracking-[0.1em] mb-3">Ce que Sarah voit (son profil)</p>
+              <div className="bg-white rounded-xl border border-[rgba(47,74,58,0.08)] overflow-hidden" style={{ boxShadow: '0 4px 20px rgba(47,74,58,0.06)' }}>
+                <div className="px-4 py-3.5 border-b border-[rgba(47,74,58,0.07)]">
+                  <p className="text-[11px] text-dark-text/40 uppercase tracking-[0.08em] mb-2">Mes certifications</p>
+                  <div className="space-y-2">
+                    {[
+                      { name: 'Premiers soins et RCP', expiry: 'mars 2026', ok: true },
+                      { name: 'Désignation ÉPE', expiry: 'Sans expiration', ok: true },
+                      { name: 'Vérification policière', expiry: 'juin 2025', ok: false },
+                    ].map(cert => (
+                      <div key={cert.name} className="flex items-center justify-between">
+                        <p className="text-[11px] text-dark-text/70">{cert.name}</p>
+                        <span className={`text-[10px] font-semibold px-2 py-0.5 rounded-full ${cert.ok ? 'bg-sage-green/10 text-sage-green' : 'bg-terracotta/10 text-terracotta'}`}>
+                          {cert.expiry}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div className="px-4 py-3.5 border-b border-[rgba(47,74,58,0.07)]">
+                  <p className="text-[11px] text-dark-text/40 uppercase tracking-[0.08em] mb-2">Aujourd&apos;hui</p>
+                  <div className="space-y-1.5">
+                    {['2 rapports quotidiens à envoyer', '1 jalon à confirmer', '3 messages à lire'].map(t => (
+                      <div key={t} className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-sage-green flex-shrink-0" />
+                        <p className="text-[11px] text-dark-text/65">{t}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div className="px-4 py-3">
+                  <button className="text-[11px] font-medium text-forest-green hover:underline">Modifier mon profil →</button>
+                </div>
+              </div>
+            </div>
+
+            {/* Panneau 3: Vue de conformité du directeur */}
+            <div className="space-y-2">
+              <p className="text-[11px] font-semibold text-dark-text/40 uppercase tracking-[0.1em] mb-3">Vue de conformité du directeur</p>
+              <div className="bg-white rounded-xl border border-[rgba(47,74,58,0.08)] overflow-hidden" style={{ boxShadow: '0 4px 20px rgba(47,74,58,0.06)' }}>
+                <div className="px-4 py-3 border-b border-[rgba(47,74,58,0.07)]">
+                  <p className="text-[11px] font-semibold text-dark-text mb-2">Tout le personnel · Statut des certifications</p>
+                  <div className="space-y-2">
+                    {[
+                      { name: 'Sarah T.', status: 'green', label: 'Tout à jour' },
+                      { name: 'Marcus L.', status: 'amber', label: 'Premiers soins dans 42 jours' },
+                      { name: 'Priya R.', status: 'green', label: 'Tout à jour' },
+                      { name: 'Daniel O.', status: 'red', label: 'Vérif. policière expirée' },
+                    ].map(staff => (
+                      <div key={staff.name} className="flex items-center justify-between gap-2">
+                        <div className="flex items-center gap-2">
+                          <div className={`w-2 h-2 rounded-full flex-shrink-0 ${staff.status === 'green' ? 'bg-sage-green' : staff.status === 'amber' ? 'bg-terracotta' : 'bg-red-500'}`} />
+                          <p className="text-[11px] font-medium text-dark-text">{staff.name}</p>
+                        </div>
+                        <p className="text-[10px] text-dark-text/45">{staff.label}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div className="px-4 py-3">
+                  <button className="w-full text-[11px] font-semibold text-forest-green border border-forest-green/30 rounded-lg py-2 hover:bg-forest-green/5 transition-colors">
+                    Télécharger le rapport de conformité
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-8">
+            <Link
+              href="/fr/features#child-profile"
+              className="inline-flex items-center gap-2 text-[14px] font-medium text-forest-green hover:underline"
+            >
+              Voir comment le profil enfant est connecté →
+            </Link>
           </div>
         </div>
       </section>

@@ -17,6 +17,14 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
 }
 
 type Status = 'building' | 'next' | 'planned'
+type DevStatus = 'discovery' | 'design' | 'development' | 'beta'
+
+const devStatusStyles: Record<DevStatus, { label: string; color: string; bg: string }> = {
+  discovery: { label: 'Exploration', color: '#6EB76F', bg: 'rgba(110,183,111,0.12)' },
+  design: { label: 'Conception', color: '#E2845F', bg: 'rgba(226,132,95,0.12)' },
+  development: { label: 'Développement', color: '#2F4A3A', bg: 'rgba(47,74,58,0.1)' },
+  beta: { label: 'Bêta', color: '#6B7FD7', bg: 'rgba(107,127,215,0.12)' },
+}
 
 const phases: {
   phase: string
@@ -24,7 +32,7 @@ const phases: {
   status: Status
   eta: string
   description: string
-  items: { name: string; note?: string }[]
+  items: { name: string; note?: string; devStatus?: DevStatus }[]
 }[] = [
   {
     phase: 'Phase 1',
@@ -33,14 +41,17 @@ const phases: {
     eta: 'Accès fondateur: T3 2026',
     description: "La fondation. Nous construisons la plateforme de base avec notre cohorte d'opérateurs fondateurs, en itérant chaque semaine selon leurs retours directs.",
     items: [
-      { name: 'Suivi des présences et entrées/sorties' },
-      { name: 'Suivi des subventions PÉLCN et rapports' },
-      { name: 'Rapports quotidiens et messagerie aux familles' },
-      { name: 'Facturation et paiements' },
-      { name: 'Profils des enfants et gestion des inscriptions' },
-      { name: 'Comptes du personnel et gestion des rôles' },
-      { name: 'Plateforme bilingue (FR/EN)' },
-      { name: 'Données au Canada', note: 'Toutes les données sont stockées au Canada' },
+      { name: 'Suivi des présences et entrées/sorties', devStatus: 'development' },
+      { name: 'Suivi des subventions PÉLCN et rapports', devStatus: 'development' },
+      { name: 'Rapports quotidiens et messagerie aux familles', devStatus: 'development' },
+      { name: 'Facturation et paiements', devStatus: 'development' },
+      { name: 'Profils des enfants et gestion des inscriptions', devStatus: 'design' },
+      { name: 'Comptes du personnel et gestion des rôles', devStatus: 'design' },
+      { name: 'Autorisation de collecte sécurisée', note: 'Vérification photo, alerte instantanée aux parents', devStatus: 'design' },
+      { name: 'Application Vine pour les familles (iOS)', note: 'Android à suivre', devStatus: 'discovery' },
+      { name: 'Assistant IA de documentation', note: 'Aide à la rédaction de documentation et de communications', devStatus: 'discovery' },
+      { name: 'Plateforme bilingue (FR/EN)', devStatus: 'development' },
+      { name: 'Données au Canada', note: 'Toutes les données sont stockées au Canada', devStatus: 'development' },
     ],
   },
   {
@@ -50,8 +61,6 @@ const phases: {
     eta: 'T4 2026',
     description: 'La couche famille. Tout ce qui fait que les parents se sentent vraiment connectés à la journée de leur enfant, pas seulement notifiés.',
     items: [
-      { name: 'Autorisation de collecte sécurisée', note: 'Vérification photo, alerte instantanée aux parents' },
-      { name: 'Application Vine pour les familles (iOS)', note: 'Android à suivre' },
       { name: 'Cercle familial', note: 'Accès basé sur les rôles pour coparents, grands-parents, nounous' },
       { name: 'Jalons et chronologie du développement' },
       { name: "Gestion des inscriptions et de la liste d'attente" },
@@ -124,9 +133,22 @@ export default function FrRoadmapPage() {
                       <div className="w-4 h-4 rounded-full bg-forest-green/10 flex items-center justify-center flex-shrink-0 mt-0.5">
                         <svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1.5 4l2 2 3-3" stroke="#2F4A3A" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" /></svg>
                       </div>
-                      <div>
+                      <div className="flex flex-wrap items-center gap-2">
                         <span className="text-[14px] text-dark-text/80 font-medium">{item.name}</span>
-                        {item.note && <span className="text-[12px] text-dark-text/40 ml-2">{item.note}</span>}
+                        {item.note && (
+                          <span className="text-[12px] text-dark-text/40">{item.note}</span>
+                        )}
+                        {item.devStatus && (
+                          <span
+                            className="text-[10px] font-semibold px-2 py-0.5 rounded-full"
+                            style={{
+                              color: devStatusStyles[item.devStatus].color,
+                              background: devStatusStyles[item.devStatus].bg,
+                            }}
+                          >
+                            {devStatusStyles[item.devStatus].label}
+                          </span>
+                        )}
                       </div>
                     </li>
                   ))}

@@ -1,4 +1,4 @@
-export default function CanadaMap() {
+export default function CanadaMap({ caption = 'Built for every province. Compliant from day one.' }: { caption?: string }) {
   const prov = '#2F4A3A'
   const terr = '#AEC1B0'
   const div = '#F7F2E8'
@@ -71,7 +71,7 @@ export default function CanadaMap() {
         <ellipse cx="778" cy="445" rx="15" ry="12" fill={prov} stroke={div} strokeWidth="1" />
       </svg>
       <p className="text-center text-[13px] text-dark-text/45 font-medium mt-3">
-        Built for every province. Compliant from day one.
+        {caption}
       </p>
     </figure>
   )
