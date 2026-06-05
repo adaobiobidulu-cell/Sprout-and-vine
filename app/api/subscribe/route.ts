@@ -20,7 +20,7 @@ async function sendFallbackEmail(email: string, firstName: string, source: strin
 export async function POST(request: Request) {
   try {
     const body = await request.json()
-    const { email, firstName, source } = body
+    const { email, firstName, source, centreName, operatorType, province } = body
 
     if (!email || typeof email !== 'string' || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return NextResponse.json({ error: 'Invalid email' }, { status: 400 })
@@ -28,12 +28,24 @@ export async function POST(request: Request) {
 
     // Try Loops first
     if (process.env.LOOPS_API_KEY) {
-      const payload: Record<string, string> = { email }
+      const payload: Record<string, string | boolean> = { email }
       if (firstName && typeof firstName === 'string' && firstName.trim()) {
         payload.firstName = firstName.trim()
       }
       if (source && typeof source === 'string') {
         payload.userGroup = source
+      }
+      if (centreName && typeof centreName === 'string') {
+        payload.centreName = centreName
+      }
+      if (operatorType && typeof operatorType === 'string') {
+        payload.operatorType = operatorType
+      }
+      if (province && typeof province === 'string') {
+        payload.province = province
+      }
+      if (source && typeof source === 'string' && source.startsWith('founding-application')) {
+        payload.founding_applicant = true
       }
 
       const res = await fetch('https://app.loops.so/api/v1/contacts/create', {

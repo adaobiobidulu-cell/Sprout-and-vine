@@ -69,6 +69,9 @@ export default function FoundingForm() {
           email,
           firstName: name.split(' ')[0],
           source: 'founding-application',
+          centreName: centerName || 'Aspiring operator',
+          operatorType: centerType || 'Not specified',
+          province,
         }),
       }).catch(() => {})
       setSubmitted(true)

@@ -68,6 +68,9 @@ export default function FrFoundingForm() {
           email,
           firstName: name.split(' ')[0],
           source: 'founding-application-fr',
+          centreName: centerName || 'Opérateur aspirant',
+          operatorType: centerType || 'Non spécifié',
+          province,
         }),
       }).catch(() => {})
       setSubmitted(true)
