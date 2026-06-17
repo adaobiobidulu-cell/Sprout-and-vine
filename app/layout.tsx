@@ -25,7 +25,7 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://sproutandvinecare.ca'),
+  metadataBase: new URL('https://www.sproutandvinecare.ca'),
   title: 'Sprout & Vine | Childcare Management Built for Canada',
   description:
     'The only childcare platform built around CWELCC from day one. Attendance, billing, photo-verified Smart Pickup Authorization, and bilingual parent communication, designed for Canadian operators.',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     title: 'Sprout & Vine | Childcare Management Built for Canada',
     description:
       'The only childcare platform built around CWELCC from day one. Attendance, billing, photo-verified Smart Pickup Authorization, and bilingual parent communication, designed for Canadian operators.',
-    url: 'https://sproutandvinecare.ca',
+    url: 'https://www.sproutandvinecare.ca',
   },
   twitter: {
     card: 'summary_large_image',

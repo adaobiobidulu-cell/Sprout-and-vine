@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = 'https://sproutandvinecare.ca'
+  const base = 'https://www.sproutandvinecare.ca'
   const now = new Date()
 
   return [
