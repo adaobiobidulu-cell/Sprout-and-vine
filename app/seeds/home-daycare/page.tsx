@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { altEn } from '@/lib/seo'
 import Link from 'next/link'
 import EmailCapture from '@/components/email-capture'
 
@@ -6,6 +7,7 @@ export const metadata: Metadata = {
   title: 'How to Open a Licensed Home Daycare in Canada (2026) | Sprout & Vine Care',
   description:
     'Everything you need to know about opening a licensed home daycare in Ontario, BC, and across Canada. Real steps, real costs, real government links.',
+  alternates: altEn('/seeds/home-daycare', '/fr/seeds/garderie-milieu-familial'),
 }
 
 function SectionLabel({ children }: { children: React.ReactNode }) {

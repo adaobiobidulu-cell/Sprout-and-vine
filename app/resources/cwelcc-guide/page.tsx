@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { altEn } from '@/lib/seo'
 import Link from 'next/link'
 import EmailCapture from '@/components/email-capture'
 
@@ -6,6 +7,7 @@ export const metadata: Metadata = {
   title: 'CWELCC Guide for Canadian Childcare Operators (2026) | Sprout & Vine Care',
   description:
     'Everything Canadian childcare operators need to know about CWELCC: fee caps, subsidy tracking, provincial compliance, and what changes in 2026. Updated May 2026.',
+  alternates: altEn('/resources/cwelcc-guide', '/fr/resources/guide-pelcpn'),
 }
 
 function SectionLabel({ children }: { children: React.ReactNode }) {

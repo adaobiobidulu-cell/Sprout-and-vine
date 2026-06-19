@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { altFr } from '@/lib/seo'
 import Link from 'next/link'
 import FadeIn from '@/components/fade-in'
 import ResourceDownload from '@/components/resource-download'
@@ -6,6 +7,7 @@ import ResourceDownload from '@/components/resource-download'
 export const metadata: Metadata = {
   title: 'Ressources | Sprout & Vine Care',
   description: 'Guides et outils gratuits pour les exploitants canadiens de services de garde: guide des subventions PÉLCN, listes de contrôle des permis provinciaux et plus encore.',
+  alternates: altFr('/fr/resources'),
 }
 
 function SectionLabel({ children }: { children: React.ReactNode }) {

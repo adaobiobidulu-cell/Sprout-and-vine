@@ -16,10 +16,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/contact`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${base}/roadmap`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
 
-    // Comparison pages — EN
-    { url: `${base}/vs-brightwheel`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${base}/vs-lillio`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${base}/vs-procare`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
 
     // Resources — EN
     { url: `${base}/resources/cwelcc-guide`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
@@ -40,6 +36,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Comparison pages — deep
     { url: `${base}/compare`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${base}/compare/lillio`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${base}/compare/brightwheel`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${base}/compare/procare`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
 
     // Content / community — EN
     { url: `${base}/blog`, lastModified: now, changeFrequency: 'weekly', priority: 0.6 },

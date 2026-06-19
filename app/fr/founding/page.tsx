@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { altFr } from '@/lib/seo'
 import Link from 'next/link'
 import FadeIn from '@/components/fade-in'
 import FrFoundingForm from '@/components/fr-founding-form'
@@ -7,6 +8,7 @@ import { FOUNDING_SPOTS_REMAINING, FOUNDING_SPOTS_TOTAL } from '@/lib/config'
 export const metadata: Metadata = {
   title: 'Programme des opérateurs fondateurs | Sprout & Vine Care',
   description: 'Rejoignez le Programme des opérateurs fondateurs. Accès anticipé, tarif fondateur verrouillé à vie, et une voix directe dans ce que nous construisons. Inscriptions ouvertes.',
+  alternates: altFr('/fr/founding'),
 }
 
 const benefits = [

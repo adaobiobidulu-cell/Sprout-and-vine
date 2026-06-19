@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { altEn } from '@/lib/seo'
 import Link from 'next/link'
 import EmailCapture from '@/components/email-capture'
 
@@ -6,6 +7,7 @@ export const metadata: Metadata = {
   title: 'How to Open a Licensed Childcare Centre in Canada (2026) | Sprout & Vine Care',
   description:
     'A complete step-by-step guide to opening a licensed childcare centre in Canada. Covers space requirements, licensing, staffing, CWELCC funding, and startup costs.',
+  alternates: altEn('/seeds/childcare-centre', '/fr/seeds/centre-de-la-petite-enfance'),
 }
 
 function SectionLabel({ children }: { children: React.ReactNode }) {

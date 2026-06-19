@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { altFr } from '@/lib/seo'
 import Link from 'next/link'
 import EmailCapture from '@/components/email-capture'
 
@@ -6,6 +7,7 @@ export const metadata: Metadata = {
   title: 'Financement de démarrage pour les services de garde au Canada (2026) | Sprout & Vine Care',
   description:
     "Toutes les subventions, aides provinciales et sources de financement disponibles pour les nouveaux opérateurs de services de garde au Canada. PÉLCPN, CCFRI, et plus encore.",
+  alternates: altFr('/fr/seeds/financement', '/seeds/funding'),
 }
 
 export default function FrFundingPage() {

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { altEn } from '@/lib/seo'
 import Link from 'next/link'
 import FadeIn from '@/components/fade-in'
 import FoundingForm from '@/components/founding-form'
@@ -7,6 +8,7 @@ import { FOUNDING_SPOTS_REMAINING, FOUNDING_SPOTS_TOTAL } from '@/lib/config'
 export const metadata: Metadata = {
   title: 'Founding Operators Program | Sprout & Vine Care',
   description: 'Join the Founding Operators Program. Early access, founding pricing locked for life, and a direct voice in what we build. Applications open now.',
+  alternates: altEn('/founding'),
 }
 
 const benefits = [

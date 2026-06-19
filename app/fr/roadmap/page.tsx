@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { altFr } from '@/lib/seo'
 import Link from 'next/link'
 import FadeIn from '@/components/fade-in'
 import EmailCapture from '@/components/email-capture'
@@ -6,6 +7,7 @@ import EmailCapture from '@/components/email-capture'
 export const metadata: Metadata = {
   title: 'Feuille de route | Sprout & Vine Care',
   description: "Nous construisons en public. Voici ce que nous construisons, dans quel ordre, et pourquoi.",
+  alternates: altFr('/fr/roadmap'),
 }
 
 function SectionLabel({ children }: { children: React.ReactNode }) {

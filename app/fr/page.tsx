@@ -9,10 +9,12 @@ import CanadaMap from '@/components/canada-map'
 import { FOUNDING_SPOTS_REMAINING, FOUNDING_SPOTS_TOTAL } from '@/lib/config'
 import { testimonial } from '@/lib/testimonial'
 import type { Metadata } from 'next'
+import { altFr } from '@/lib/seo'
 
 export const metadata: Metadata = {
   title: 'Sprout & Vine Care | Gestion de garderie au Canada',
   description: 'Présences, facturation, communication avec les familles et autorisation de collecte sécurisée. La plateforme de gestion construite pour les garderies canadiennes.',
+  alternates: altFr('/fr'),
 }
 
 function SectionLabel({ children }: { children: React.ReactNode }) {

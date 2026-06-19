@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { altEn } from '@/lib/seo'
 import Link from 'next/link'
 import EmailCapture from '@/components/email-capture'
 
@@ -6,6 +7,7 @@ export const metadata: Metadata = {
   title: 'Starting a Childcare in Canada? Begin Here. | Sprout & Vine Care',
   description:
     'The Seeds program gives aspiring childcare operators the tools, checklists, and guides to go from idea to open doors. Free, no credit card required.',
+  alternates: altEn('/seeds'),
 }
 
 function SectionLabel({ children }: { children: React.ReactNode }) {

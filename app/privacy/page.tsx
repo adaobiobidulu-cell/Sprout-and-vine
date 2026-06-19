@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
+import { altEn } from '@/lib/seo'
 import LegalLayout from '@/components/legal-layout'
 
 export const metadata: Metadata = {
   title: 'Privacy Policy | Sprout & Vine Care',
   description: 'How Sprout & Vine collects, uses, and protects your personal information.',
+  alternates: altEn('/privacy'),
 }
 
 const toc = [

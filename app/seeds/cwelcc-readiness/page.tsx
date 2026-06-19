@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { altEn } from '@/lib/seo'
 import Link from 'next/link'
 import EmailCapture from '@/components/email-capture'
 
@@ -6,6 +7,7 @@ export const metadata: Metadata = {
   title: 'CWELCC Readiness Checklist for New Operators (2026) | Sprout & Vine Care',
   description:
     'Get CWELCC-ready before you open. A step-by-step checklist covering everything new childcare operators need to enroll in Canada-Wide Early Learning funding from day one.',
+  alternates: altEn('/seeds/cwelcc-readiness', '/fr/seeds/preparation-pelcpn'),
 }
 
 function SectionLabel({ children }: { children: React.ReactNode }) {

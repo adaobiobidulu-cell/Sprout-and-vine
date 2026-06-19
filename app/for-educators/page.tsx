@@ -1,10 +1,12 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import { canonicalOnly } from '@/lib/seo'
 import EmailCapture from '@/components/email-capture'
 
 export const metadata: Metadata = {
   title: 'For Educators | Sprout & Vine Care',
   description: 'Sprout & Vine is built around your day, not just your director\'s. Reports in 2 minutes, milestone tagging on your phone, and parent messaging without your personal number.',
+  alternates: canonicalOnly('/for-educators'),
 }
 
 function SectionLabel({ children }: { children: React.ReactNode }) {

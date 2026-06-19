@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { altEn } from '@/lib/seo'
 import Link from 'next/link'
 import FadeIn from '@/components/fade-in'
 import EmailCapture from '@/components/email-capture'
@@ -6,6 +7,7 @@ import EmailCapture from '@/components/email-capture'
 export const metadata: Metadata = {
   title: 'Roadmap | Sprout & Vine Care',
   description: "We share our roadmap publicly so you know exactly what we're building and when. No surprises.",
+  alternates: altEn('/roadmap'),
 }
 
 function SectionLabel({ children }: { children: React.ReactNode }) {

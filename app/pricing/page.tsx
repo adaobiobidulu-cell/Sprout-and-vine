@@ -1,11 +1,13 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import { altEn } from '@/lib/seo'
 import PricingTiersClient from '@/components/pricing-tiers-client'
 
 export const metadata: Metadata = {
   title: 'How Pricing Works | Sprout & Vine Care',
   description:
     'Simple, enrollment-based pricing for Canadian childcare operators. From home daycares at CAD $49/mo to multi-location networks. No hidden fees. No per-child charges. All prices in CAD.',
+  alternates: altEn('/pricing'),
 }
 
 function SectionLabel({ children }: { children: React.ReactNode }) {

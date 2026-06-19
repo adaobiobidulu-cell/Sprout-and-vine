@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { altEn } from '@/lib/seo'
 import Link from 'next/link'
 import ProductTour from '@/components/product-tour'
 import EmailCapture from '@/components/email-capture'
@@ -6,6 +7,7 @@ import EmailCapture from '@/components/email-capture'
 export const metadata: Metadata = {
   title: 'Features | Sprout & Vine Care',
   description: 'Attendance tracking, CWELCC grant management, Smart Pickup Authorization, daily reports, family messaging, and billing, all in one Canadian childcare platform.',
+  alternates: altEn('/features'),
 }
 
 /* ─── Section label ───────────────────────────────────────────────── */

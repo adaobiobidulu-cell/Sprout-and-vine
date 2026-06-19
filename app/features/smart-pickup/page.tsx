@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { altEn } from '@/lib/seo'
 import Link from 'next/link'
 import EmailCapture from '@/components/email-capture'
 
@@ -6,6 +7,7 @@ export const metadata: Metadata = {
   title: 'Smart Pickup Authorization | Sprout & Vine Care',
   description:
     'Photo-verified pickup lists, instant parent notifications, and a complete audit log for every child release. Smart Pickup Authorization by Sprout & Vine, built for Canadian childcare centres.',
+  alternates: altEn('/features/smart-pickup', '/fr/features/autorisation-ramassage'),
 }
 
 function SectionLabel({ children }: { children: React.ReactNode }) {

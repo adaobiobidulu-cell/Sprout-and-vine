@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
+import { altEn } from '@/lib/seo'
 import ComingSoon from '@/components/coming-soon'
 
 export const metadata: Metadata = {
   title: 'Help Centre | Sprout & Vine Care',
   description: 'Get help with Sprout & Vine. Guides, tutorials, and answers to common questions.',
+  alternates: altEn('/help'),
 }
 
 export default function HelpPage() {

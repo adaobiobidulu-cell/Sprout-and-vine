@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { altFr } from '@/lib/seo'
 import Link from 'next/link'
 import EmailCapture from '@/components/email-capture'
 
@@ -6,6 +7,7 @@ export const metadata: Metadata = {
   title: 'Comment ouvrir un centre de la petite enfance au Canada (2026) | Sprout & Vine Care',
   description:
     "Les étapes, les coûts, le financement PÉLCPN et l'obtention du permis pour ouvrir un centre de garde agréé au Canada. Guide mis à jour en 2026.",
+  alternates: altFr('/fr/seeds/centre-de-la-petite-enfance', '/seeds/childcare-centre'),
 }
 
 export default function FrChildcareCentrePage() {

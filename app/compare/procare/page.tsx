@@ -1,9 +1,11 @@
 import ComparisonPage from '@/components/comparison-page'
 import type { Metadata } from 'next'
+import { canonicalOnly } from '@/lib/seo'
 
 export const metadata: Metadata = {
   title: 'Sprout & Vine Care vs Procare | Canadian Alternative to Procare',
   description: 'Procare is enterprise software designed for large US operations. Sprout & Vine is calm, affordable, Canadian childcare management built for how you actually work.',
+  alternates: canonicalOnly('/compare/procare'),
 }
 
 const rows = [

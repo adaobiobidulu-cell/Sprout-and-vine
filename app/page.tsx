@@ -7,6 +7,12 @@ import EmailCapture from '@/components/email-capture'
 import CanadaMap from '@/components/canada-map'
 import { FOUNDING_SPOTS_REMAINING, FOUNDING_SPOTS_TOTAL } from '@/lib/config'
 import { testimonial } from '@/lib/testimonial'
+import type { Metadata } from 'next'
+import { altEn } from '@/lib/seo'
+
+export const metadata: Metadata = {
+  alternates: altEn('/'),
+}
 
 const features = [
   {

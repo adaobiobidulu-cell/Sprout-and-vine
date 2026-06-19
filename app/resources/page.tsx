@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { altEn } from '@/lib/seo'
 import Link from 'next/link'
 import FadeIn from '@/components/fade-in'
 import EmailCapture from '@/components/email-capture'
@@ -6,6 +7,7 @@ import EmailCapture from '@/components/email-capture'
 export const metadata: Metadata = {
   title: 'Resources | Sprout & Vine Care',
   description: 'Free guides and tools for Canadian childcare operators: CWELCC subsidy guide, provincial licensing checklists, and more.',
+  alternates: altEn('/resources'),
 }
 
 function SectionLabel({ children }: { children: React.ReactNode }) {

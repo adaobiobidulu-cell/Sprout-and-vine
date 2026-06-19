@@ -1,9 +1,11 @@
 import ContactForm from '@/components/contact-form'
 import type { Metadata } from 'next'
+import { altEn } from '@/lib/seo'
 
 export const metadata: Metadata = {
   title: 'Contact | Sprout & Vine Care',
   description: 'Book a demo or get in touch with the Sprout & Vine team. We respond within 1 business day.',
+  alternates: altEn('/contact'),
 }
 
 function SectionLabel({ children }: { children: React.ReactNode }) {

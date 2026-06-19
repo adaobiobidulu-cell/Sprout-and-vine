@@ -1,10 +1,12 @@
 import type { Metadata } from 'next'
+import { altFr } from '@/lib/seo'
 import Link from 'next/link'
 import EmailCapture from '@/components/email-capture'
 
 export const metadata: Metadata = {
   title: 'Fonctionnalités | Sprout & Vine Care',
   description: 'Présences, subventions PÉLCN, autorisation de collecte sécurisée, rapports quotidiens, messagerie familiale et facturation, tout en un pour les garderies canadiennes.',
+  alternates: altFr('/fr/features'),
 }
 
 function SectionLabel({ children }: { children: React.ReactNode }) {

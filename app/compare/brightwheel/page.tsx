@@ -1,9 +1,11 @@
 import ComparisonPage from '@/components/comparison-page'
 import type { Metadata } from 'next'
+import { canonicalOnly } from '@/lib/seo'
 
 export const metadata: Metadata = {
   title: 'Sprout & Vine Care vs Brightwheel | Canadian Alternative to Brightwheel',
   description: 'Brightwheel is built for the US. Sprout & Vine is built for Canada. CWELCC tracking, bilingual EN/FR, Canadian data residency, and per-centre pricing. Compare now.',
+  alternates: canonicalOnly('/compare/brightwheel'),
 }
 
 const rows = [

@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
+import { altFr } from '@/lib/seo'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'À propos | Sprout & Vine Care',
   description: 'Sprout & Vine a été fondé par Ada et Chuck après l\'arrivée de leur premier enfant et une recherche difficile sur le fonctionnement réel du système de garde d\'enfants au Canada. Lisez leur histoire.',
+  alternates: altFr('/fr/about'),
 }
 
 function SectionLabel({ children }: { children: React.ReactNode }) {

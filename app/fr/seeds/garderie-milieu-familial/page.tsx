@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { altFr } from '@/lib/seo'
 import Link from 'next/link'
 import EmailCapture from '@/components/email-capture'
 
@@ -6,6 +7,7 @@ export const metadata: Metadata = {
   title: 'Comment ouvrir une garderie en milieu familial agréée au Canada (2026) | Sprout & Vine Care',
   description:
     "Tout ce que vous devez savoir pour ouvrir une garderie en milieu familial agréée en Ontario, en Colombie-Britannique et partout au Canada. Guide complet mis à jour en 2026.",
+  alternates: altFr('/fr/seeds/garderie-milieu-familial', '/seeds/home-daycare'),
 }
 
 export default function FrHomeDaycarePage() {

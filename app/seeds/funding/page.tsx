@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { altEn } from '@/lib/seo'
 import Link from 'next/link'
 import EmailCapture from '@/components/email-capture'
 
@@ -6,6 +7,7 @@ export const metadata: Metadata = {
   title: 'Startup Funding for Canadian Childcare Operators (2026) | Sprout & Vine Care',
   description:
     'Every grant, subsidy, and financing source available to new childcare operators in Canada. CWELCC capital grants, provincial programs, BDC loans, and more.',
+  alternates: altEn('/seeds/funding', '/fr/seeds/financement'),
 }
 
 function SectionLabel({ children }: { children: React.ReactNode }) {

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { altEn } from '@/lib/seo'
 import Link from 'next/link'
 import EmailCapture from '@/components/email-capture'
 
@@ -6,6 +7,7 @@ export const metadata: Metadata = {
   title: 'Canadian Childcare Licensing Checklist by Province (2026) | Sprout & Vine Care',
   description:
     'Province-by-province licensing checklists for Canadian childcare operators. Ontario CCEYA staff ratios, BC CCALA requirements, and more.',
+  alternates: altEn('/resources/licensing-checklist', '/fr/resources/liste-verification-licences'),
 }
 
 function SectionLabel({ children }: { children: React.ReactNode }) {

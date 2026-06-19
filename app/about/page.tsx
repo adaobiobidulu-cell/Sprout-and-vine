@@ -1,10 +1,12 @@
 import type { Metadata } from 'next'
+import { altEn } from '@/lib/seo'
 import Link from 'next/link'
 import { FOUNDING_SPOTS_TOTAL } from '@/lib/config'
 
 export const metadata: Metadata = {
   title: 'About | Sprout & Vine Care',
   description: 'Sprout and Vine was built by Ada and Chuck after the arrival of their first child and a frustrating search for how Canada\'s childcare system actually works. Read their story.',
+  alternates: altEn('/about'),
 }
 
 function SectionLabel({ children }: { children: React.ReactNode }) {

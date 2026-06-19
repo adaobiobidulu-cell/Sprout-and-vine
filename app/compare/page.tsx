@@ -1,10 +1,12 @@
 import type { Metadata } from 'next'
+import { canonicalOnly } from '@/lib/seo'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Compare Childcare Software | Sprout & Vine Care',
   description:
     'See how Sprout & Vine compares to other childcare management platforms. Honest, feature-by-feature comparisons built for Canadian operators.',
+  alternates: canonicalOnly('/compare'),
 }
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
@@ -28,6 +30,32 @@ const comparisons = [
       'Full bilingual EN/FR across the entire platform',
     ],
     hq: 'Toronto, ON',
+  },
+  {
+    competitor: 'Brightwheel',
+    slug: 'brightwheel',
+    description:
+      'A well-made US childcare platform. See how Sprout & Vine compares on Canadian compliance, CWELCC tracking, bilingual support, and data residency.',
+    highlights: [
+      'Canadian data residency vs. US-based storage',
+      'Built-in CWELCC subsidy tracking',
+      'Full bilingual EN/FR across the entire platform',
+      'Per-centre flat pricing — not per-child',
+    ],
+    hq: 'San Francisco, CA',
+  },
+  {
+    competitor: 'Procare',
+    slug: 'procare',
+    description:
+      'Enterprise childcare software built for large US chains. See how Sprout & Vine compares on setup time, pricing simplicity, and Canadian compliance.',
+    highlights: [
+      'Same-day setup vs. weeks of implementation',
+      'Simple flat-rate pricing vs. complex enterprise licensing',
+      'Built-in CWELCC and Canadian subsidy support',
+      'Mobile-first design built for busy operators',
+    ],
+    hq: 'Portland, OR',
   },
 ]
 

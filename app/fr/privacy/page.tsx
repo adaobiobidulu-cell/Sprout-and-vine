@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
+import { altFr } from '@/lib/seo'
 import LegalLayout from '@/components/legal-layout'
 
 export const metadata: Metadata = {
   title: 'Politique de confidentialité | Sprout & Vine Care',
   description: 'Comment Sprout & Vine collecte, utilise et protège vos renseignements personnels.',
+  alternates: altFr('/fr/privacy'),
 }
 
 const toc = [

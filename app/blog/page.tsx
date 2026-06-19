@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
+import { altEn } from '@/lib/seo'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Blog | Sprout & Vine Care',
   description: "We build Sprout & Vine Care in public. Follow our progress, what we're learning from Canadian childcare operators, and why we're building the way we are.",
+  alternates: altEn('/blog'),
 }
 
 const posts = [

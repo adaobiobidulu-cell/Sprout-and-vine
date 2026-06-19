@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
+import { altEn } from '@/lib/seo'
 import LegalLayout from '@/components/legal-layout'
 
 export const metadata: Metadata = {
   title: 'Terms of Service | Sprout & Vine Care',
   description: 'The terms governing your use of the Sprout & Vine platform and services.',
+  alternates: altEn('/terms'),
 }
 
 const toc = [

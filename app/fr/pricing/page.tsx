@@ -1,11 +1,13 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import { altFr } from '@/lib/seo'
 import PricingTiersClient from '@/components/pricing-tiers-client'
 
 export const metadata: Metadata = {
   title: 'Tarification | Sprout & Vine Care',
   description:
     'Tarification basée sur les inscriptions pour les opérateurs de garde au Canada. Sept niveaux, du gratuit au sur mesure. Tarif fixe par tranche d\'inscription, sans frais par enfant. Tous les prix en dollars canadiens.',
+  alternates: altFr('/fr/pricing'),
 }
 
 function SectionLabel({ children }: { children: React.ReactNode }) {

@@ -2,9 +2,11 @@ import LoginRedirect from '@/components/login-redirect'
 import FadeIn from '@/components/fade-in'
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import { canonicalOnly } from '@/lib/seo'
 
 export const metadata: Metadata = {
   title: 'Log in | Sprout & Vine Care',
+  alternates: canonicalOnly('/login'),
 }
 
 function LogoMark() {

@@ -15,6 +15,9 @@ const nextConfig: NextConfig = {
         destination: 'https://sproutandvinecare.ca/:path*',
         permanent: true,
       },
+      { source: '/vs-lillio', destination: '/compare/lillio', permanent: true },
+      { source: '/vs-brightwheel', destination: '/compare/brightwheel', permanent: true },
+      { source: '/vs-procare', destination: '/compare/procare', permanent: true },
     ]
   },
 };

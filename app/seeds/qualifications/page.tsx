@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { altEn } from '@/lib/seo'
 import Link from 'next/link'
 import EmailCapture from '@/components/email-capture'
 
@@ -6,6 +7,7 @@ export const metadata: Metadata = {
   title: 'ECE Qualifications for Canadian Childcare Operators (2026) | Sprout & Vine Care',
   description:
     'What qualifications do you need to work in or operate a licensed childcare program in Canada? A province-by-province guide to ECE requirements, RECE registration, and equivalency pathways.',
+  alternates: altEn('/seeds/qualifications'),
 }
 
 function SectionLabel({ children }: { children: React.ReactNode }) {

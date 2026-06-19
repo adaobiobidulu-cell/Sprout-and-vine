@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { altFr } from '@/lib/seo'
 import Link from 'next/link'
 import EmailCapture from '@/components/email-capture'
 
@@ -6,6 +7,7 @@ export const metadata: Metadata = {
   title: 'Liste de vérification de préparation au PÉLCPN (2026) | Sprout & Vine Care',
   description:
     "Préparez-vous au PÉLCPN avant d'ouvrir pour accéder au financement dès le premier jour. Liste de vérification pour les opérateurs de services de garde en Ontario et partout au Canada.",
+  alternates: altFr('/fr/seeds/preparation-pelcpn', '/seeds/cwelcc-readiness'),
 }
 
 export default function FrCwelccReadinessPage() {

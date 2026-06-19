@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
+import { altFr } from '@/lib/seo'
 import ComingSoon from '@/components/coming-soon'
 
 export const metadata: Metadata = {
   title: 'Sécurité | Sprout & Vine Care',
   description: 'Comment Sprout & Vine protège les données de votre centre de garde.',
+  alternates: altFr('/fr/security'),
 }
 
 export default function FrSecurityPage() {

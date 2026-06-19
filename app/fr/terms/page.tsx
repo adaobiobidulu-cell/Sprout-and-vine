@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
+import { altFr } from '@/lib/seo'
 import LegalLayout from '@/components/legal-layout'
 
 export const metadata: Metadata = {
   title: "Conditions d'utilisation | Sprout & Vine Care",
   description: "Les conditions régissant votre utilisation de la plateforme et des services Sprout & Vine.",
+  alternates: altFr('/fr/terms'),
 }
 
 const toc = [

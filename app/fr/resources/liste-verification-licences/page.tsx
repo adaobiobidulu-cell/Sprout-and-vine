@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { altFr } from '@/lib/seo'
 import Link from 'next/link'
 import EmailCapture from '@/components/email-capture'
 
@@ -6,6 +7,7 @@ export const metadata: Metadata = {
   title: 'Liste de vérification pour les licences de services de garde par province (2026) | Sprout & Vine Care',
   description:
     "Listes de vérification pour l'agrément des services de garde canadiens par province. Exigences de l'Ontario (MSJE), de la C.-B. (CCALA), ratios du personnel et plus encore.",
+  alternates: altFr('/fr/resources/liste-verification-licences', '/resources/licensing-checklist'),
 }
 
 export default function FrLicensingChecklistPage() {
