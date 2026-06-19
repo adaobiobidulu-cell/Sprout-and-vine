@@ -3,7 +3,7 @@ import Link from 'next/link'
 import EmailCapture from '@/components/email-capture'
 
 export const metadata: Metadata = {
-  title: 'How to Open a Licensed Childcare Centre in Canada (2026) | Sprout & Vine',
+  title: 'How to Open a Licensed Childcare Centre in Canada (2026) | Sprout & Vine Care',
   description:
     'A complete step-by-step guide to opening a licensed childcare centre in Canada. Covers space requirements, licensing, staffing, CWELCC funding, and startup costs.',
 }

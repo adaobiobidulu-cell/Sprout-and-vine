@@ -4,7 +4,7 @@ import ProductTour from '@/components/product-tour'
 import EmailCapture from '@/components/email-capture'
 
 export const metadata: Metadata = {
-  title: 'Features | Sprout & Vine',
+  title: 'Features | Sprout & Vine Care',
   description: 'Attendance tracking, CWELCC grant management, Smart Pickup Authorization, daily reports, family messaging, and billing, all in one Canadian childcare platform.',
 }
 
@@ -358,7 +358,7 @@ const sections = [
   },
   {
     label: 'THE VINE APP',
-    h2: 'Parents are not just notified. They are connected.',
+    h2: "Parents aren't just notified. They're connected.",
     body: "Give families a window into their child's day. Activity feed, milestone tags, daily reports, pickup alerts, and messaging. All in one beautiful app.",
     bullets: [
       'Real-time activity feed with photos',
@@ -528,7 +528,7 @@ export default function FeaturesPage() {
               {[
                 'Educators control their own parent-facing profile and bio',
                 'Credential badges verified by the director before appearing to parents',
-                'First Aid, CPR, ECE designation, and police check — tracked with expiry alerts',
+                'First Aid, CPR, ECE designation, and police check, tracked with expiry alerts',
                 'Certification compliance dashboard: green / amber / red across all staff',
                 'One-click exportable compliance report for licensing inspections',
                 'Full HR and employment record in the director view',

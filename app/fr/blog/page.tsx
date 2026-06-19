@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Blogue | Sprout & Vine',
+  title: 'Blogue | Sprout & Vine Care',
   description: "Nous construisons Sprout & Vine en public. Suivez notre progression, ce que nous apprenons des opérateurs canadiens de services de garde, et pourquoi nous construisons de cette façon.",
 }
 

@@ -3,7 +3,7 @@ import Link from 'next/link'
 import EmailCapture from '@/components/email-capture'
 
 export const metadata: Metadata = {
-  title: 'How to Open a Licensed Home Daycare in Canada (2026) | Sprout & Vine',
+  title: 'How to Open a Licensed Home Daycare in Canada (2026) | Sprout & Vine Care',
   description:
     'Everything you need to know about opening a licensed home daycare in Ontario, BC, and across Canada. Real steps, real costs, real government links.',
 }

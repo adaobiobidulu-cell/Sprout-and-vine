@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { FOUNDING_SPOTS_TOTAL } from '@/lib/config'
 
 export const metadata: Metadata = {
-  title: 'Our Story | Ada and Chuck, Co-Founders of Sprout and Vine',
+  title: 'About | Sprout & Vine Care',
   description: 'Sprout and Vine was built by Ada and Chuck after the arrival of their first child and a frustrating search for how Canada\'s childcare system actually works. Read their story.',
 }
 
@@ -29,7 +29,7 @@ export default function AboutPage() {
             We had our first baby and fell completely in love.
           </h1>
           <p className="text-[18px] text-dark-text/65 leading-relaxed">
-            That is how Sprout and Vine started. Not with a business plan. With a feeling.
+            That's how Sprout &amp; Vine Care started. Not with a business plan. With a feeling.
           </p>
         </div>
       </section>
@@ -39,7 +39,7 @@ export default function AboutPage() {
         <div className="max-w-3xl mx-auto">
           <div className="bg-cream rounded-2xl px-8 py-7 border border-[rgba(47,74,58,0.1)]">
             <p className="text-[15px] text-dark-text/70 leading-relaxed">
-              Built by Ada and Chuck — parents, operators, and software builders creating childcare tools for Canada.
+              Built by Ada and Chuck, parents, operators, and software builders creating childcare tools for Canada.
             </p>
           </div>
         </div>
@@ -81,7 +81,7 @@ export default function AboutPage() {
             The gap is not passion.<br />The gap is information and infrastructure.
           </p>
           <p className="text-[16px] text-cream/65 mt-6 leading-relaxed">
-            This is why Sprout and Vine exists.
+            This is why Sprout &amp; Vine exists.
           </p>
         </div>
       </section>
@@ -96,11 +96,11 @@ export default function AboutPage() {
             </p>
 
             <p>
-              When I brought this idea to Chuck, he did not hesitate. That is Chuck. He started his career as a chemist, which gave him a way of looking at problems that I think only makes sense once you have watched him work. He found his way into software, spent years deep in the Salesforce world, and became the kind of developer who genuinely loves what he does. He is not building Sprout and Vine because it is a good opportunity. He is building it because he believes in it. That matters to me more than anything else on his resume.
+              When I brought this idea to Chuck, he didn't hesitate. That's Chuck. He started his career as a chemist, which gave him a way of looking at problems that I think only makes sense once you have watched him work. He found his way into software, spent years deep in the Salesforce world, and became the kind of developer who genuinely loves what he does. He isn't building Sprout &amp; Vine because it's a good opportunity. He's building it because he believes in it. That matters to me more than anything else on his resume.
             </p>
 
             <p>
-              Together we are building the platform I wished existed when I started researching childcare: a consolidated, step-by-step guide that walks aspiring operators from idea to open doors. A compliance system that does the heavy lifting so operators can focus on the children. A tool built specifically for Canada, for CWELCC, for our provinces, for our regulations, and not adapted from an American product that does not understand how our system works.
+              Together we're building the platform I wished existed when I started researching childcare: a consolidated, step-by-step guide that walks aspiring operators from idea to open doors. A compliance system that does the heavy lifting so operators can focus on the children. A tool built specifically for Canada, for CWELCC, for our provinces, for our regulations, and not adapted from an American product that doesn't understand how our system works.
             </p>
 
             <p>
@@ -108,7 +108,7 @@ export default function AboutPage() {
             </p>
 
             <p>
-              We are building this now. We are not launched yet, and we will not launch until it is right. While we build, we have put everything we know about Canadian childcare compliance in one place, free, for anyone who needs it. And we are looking for twenty-five founding operators to help us build something worth building.
+              We're building this now. We're not launched yet, and we won't launch until it's right. While we build, we've put everything we know about Canadian childcare compliance in one place, free, for anyone who needs it. And we're looking for twenty-five founding operators to help us build something worth building.
             </p>
 
             <p>
@@ -122,7 +122,7 @@ export default function AboutPage() {
           </div>
 
           <p className="mt-10 text-[15px] font-medium text-dark-text/60">
-            Ada, Co-Founder, Sprout and Vine
+            Ada, Co-Founder, Sprout &amp; Vine
           </p>
         </div>
       </section>
@@ -135,7 +135,7 @@ export default function AboutPage() {
             className="font-display font-medium text-forest-green leading-[1.1] mb-12"
             style={{ fontSize: 'clamp(32px, 4vw, 46px)' }}
           >
-            We are a small team doing serious work.
+            We're a small team doing serious work.
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -151,7 +151,7 @@ export default function AboutPage() {
               <p className="text-[18px] font-semibold text-dark-text mb-1">Chuck</p>
               <p className="text-[13px] text-dark-text/45 mb-4 uppercase tracking-[0.08em] font-medium">Co-Founder</p>
               <p className="text-[14px] text-dark-text/65 leading-relaxed">
-                Started out as a chemist, which turns out to be excellent training for solving problems nobody has solved before. Found his way into software, spent years building in the Salesforce world, and somewhere along the way fell completely in love with what good technology can do for people. Sprout and Vine is the most important thing he has built yet.
+                Started out as a chemist, which turns out to be excellent training for solving problems nobody has solved before. Found his way into software, spent years building in the Salesforce world, and somewhere along the way fell completely in love with what good technology can do for people. Sprout &amp; Vine is the most important thing he's built yet.
               </p>
             </div>
           </div>
@@ -177,11 +177,11 @@ export default function AboutPage() {
               },
               {
                 title: 'Families deserve to be informed',
-                desc: 'Parents who trust you are more than enrolled families. They are your strongest advocates. The right tools make that trust easy to build and easy to keep.',
+                desc: "Parents who trust you are more than enrolled families. They're your strongest advocates. The right tools make that trust easy to build and easy to keep.",
               },
               {
                 title: 'Canada deserves a Canadian solution',
-                desc: 'CWELCC, provincial licensing, bilingual requirements, data residency. These are not edge cases. They are the foundation. We build from that foundation, not on top of something that ignores it.',
+                desc: "CWELCC, provincial licensing, bilingual requirements, data residency. These aren't edge cases. They're the foundation. We build from that foundation, not on top of something that ignores it.",
               },
             ].map(item => (
               <div key={item.title} className="bg-cream rounded-2xl p-7 border border-[rgba(47,74,58,0.08)]" style={{ boxShadow: '0 2px 16px rgba(47,74,58,0.06)' }}>
@@ -206,7 +206,7 @@ export default function AboutPage() {
             Proudly built in Canada.
           </h2>
           <p className="text-[16px] text-dark-text/60 leading-relaxed mb-10 max-w-xl mx-auto">
-            We are a proudly Canadian company. Our data stays in Canada. Our focus stays on Canada. Our team understands the unique regulatory landscape every Canadian operator navigates every day.
+            We're a proudly Canadian company. Our data stays in Canada. Our focus stays on Canada. Our team understands the unique regulatory landscape every Canadian operator navigates every day.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
             {[
@@ -235,7 +235,7 @@ export default function AboutPage() {
             Want to help us build this right?
           </h2>
           <p className="text-[16px] text-cream/60 mb-10 leading-relaxed">
-            We are looking for {FOUNDING_SPOTS_TOTAL} founding operators across Canada.
+            We're looking for {FOUNDING_SPOTS_TOTAL} founding operators across Canada.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Link

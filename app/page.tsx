@@ -128,7 +128,7 @@ export default function Home() {
           </h1>
 
           <p className="text-[18px] text-dark-text/65 mb-10 max-w-xl mx-auto leading-relaxed">
-            Sprout &amp; Vine Care is a modern childcare management platform designed for Canadian centres. We are partnering with a limited group of founding operators to help shape the future of enrollment, compliance, communication, and centre management.
+            Sprout &amp; Vine Care is a modern childcare management platform designed for Canadian centres. We're partnering with a limited group of founding operators to help shape the future of enrollment, compliance, communication, and centre management.
           </p>
 
           <div className="flex flex-col items-center gap-4">
@@ -186,10 +186,10 @@ export default function Home() {
             The gap is not passion. The gap is information and infrastructure.
           </p>
           <p className="text-[16px] text-dark-text/60 mb-6">
-            That is why we built Sprout &amp; Vine for Canada.
+            That's why we built Sprout &amp; Vine for Canada.
           </p>
           <p className="text-[15px] font-semibold text-forest-green mb-6">
-            Sprout &amp; Vine is built with operators, not for them.
+            Sprout &amp; Vine Care is built with operators, not for them.
           </p>
           <Link href="/about" className="text-[14px] font-medium text-forest-green hover:underline">
             Read our story →
@@ -206,7 +206,7 @@ export default function Home() {
               One platform. Three stages of growth.
             </h2>
             <p className="text-[16px] text-dark-text/55 mt-4 max-w-xl mx-auto">
-              Whether you are planning to open, running a single centre, or managing multiple locations, Sprout &amp; Vine scales with you.
+              Whether you're planning to open, running a single centre, or managing multiple locations, Sprout &amp; Vine scales with you.
             </p>
           </FadeIn>
 
@@ -230,9 +230,9 @@ export default function Home() {
             >
               <div className="text-2xl mb-4">🌿</div>
               <h3 className="font-display text-[26px] font-medium text-forest-green mb-1">Sprout</h3>
-              <p className="text-[13px] font-medium text-dark-text/50 mb-4">For growing centers and home providers</p>
+              <p className="text-[13px] font-medium text-dark-text/50 mb-4">For growing centres and home providers</p>
               <p className="text-[14px] text-dark-text/65 leading-relaxed mb-6">
-                You are open. Now run daily operations beautifully: attendance, billing, parent communication, and Smart Pickup, all in one place.
+                You're open. Now run daily operations beautifully: attendance, billing, parent communication, and Smart Pickup, all in one place.
               </p>
               <Link href="/founding" className="text-[14px] font-medium text-forest-green hover:underline">Join the founding program →</Link>
             </div>
@@ -480,7 +480,7 @@ export default function Home() {
           <div className="order-1 lg:order-2">
             <SectionLabel>The Vine Parent App</SectionLabel>
             <h2 className="font-display font-medium text-forest-green leading-[1.08] mb-5" style={{ fontSize: 'clamp(34px, 4vw, 50px)' }}>
-              Parents are not just notified.<br />They are connected.
+              Parents aren't just notified.<br />They're connected.
             </h2>
             <p className="text-[16px] text-dark-text/65 leading-relaxed mb-8">
               Families stay connected through daily updates, milestone photos, billing, pickup history, messages, and important centre communications, all in one app. Every update attached to their child's profile. Nothing lost.
@@ -750,7 +750,7 @@ export default function Home() {
             Built for the people<br />who show up every day.
           </h2>
           <p className="text-[16px] text-dark-text/65 leading-relaxed mb-10 max-w-2xl mx-auto">
-            Directors choose Sprout &amp; Vine. Educators love it. That is not a coincidence. We designed every daily workflow around the people actually using it.
+            Directors choose Sprout &amp; Vine. Educators love it. That's not a coincidence. We designed every daily workflow around the people actually using it.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10 text-left">
@@ -865,7 +865,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto">
           <SectionLabel>Built for Canada</SectionLabel>
           <h2 className="font-display font-medium text-forest-green leading-[1.08] mb-6" style={{ fontSize: 'clamp(34px, 4vw, 50px)' }}>
-            The only platform built around<br />CWELCC from the ground up.
+            A platform built around<br />CWELCC from the ground up.
           </h2>
           <p className="text-[16px] text-dark-text/65 leading-relaxed mb-12 max-w-2xl">
             Canada's childcare landscape is unlike any other. Sprout &amp; Vine is built specifically for Canadian operators, with CWELCC subsidy tracking, bilingual support (English &amp; French), and provincial compliance built in from day one. No US competitor comes close.
@@ -1053,7 +1053,7 @@ export default function Home() {
             Be among the first<br />to build with us.
           </h2>
           <p className="text-[17px] text-cream/65 leading-relaxed mb-4">
-            We are building Sprout &amp; Vine in public, with the operators who will use it. Founding members lock in their pricing, shape the roadmap, and get early access before public launch.
+            We're building Sprout &amp; Vine in public, with the operators who will use it. Founding members lock in their pricing, shape the roadmap, and get early access before public launch.
           </p>
           <p className="text-[14px] text-cream/60 mb-10">
             <span className="inline-flex items-center gap-1.5">
@@ -1091,7 +1091,7 @@ export default function Home() {
             Not ready yet? Get updates as we build.
           </h2>
           <p className="text-[15px] text-dark-text/55 mb-8 leading-relaxed">
-            No commitment. We share what we are building, what we are learning, and when we are ready for you.
+            No commitment. We share what we're building, what we're learning, and when we're ready for you.
           </p>
           <div className="max-w-md mx-auto">
             <EmailCapture

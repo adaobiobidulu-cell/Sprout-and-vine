@@ -11,7 +11,7 @@ import { testimonial } from '@/lib/testimonial'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Sprout & Vine | Gestion de garderie au Canada',
+  title: 'Sprout & Vine Care | Gestion de garderie au Canada',
   description: 'Présences, facturation, communication avec les familles et autorisation de collecte sécurisée. La plateforme de gestion construite pour les garderies canadiennes.',
 }
 

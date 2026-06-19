@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import EmailCapture from '@/components/email-capture'
 
 export const metadata: Metadata = {
-  title: 'For Educators | Sprout & Vine',
+  title: 'For Educators | Sprout & Vine Care',
   description: 'Sprout & Vine is built around your day, not just your director\'s. Reports in 2 minutes, milestone tagging on your phone, and parent messaging without your personal number.',
 }
 

@@ -5,7 +5,7 @@ import FrFoundingForm from '@/components/fr-founding-form'
 import { FOUNDING_SPOTS_REMAINING, FOUNDING_SPOTS_TOTAL } from '@/lib/config'
 
 export const metadata: Metadata = {
-  title: 'Programme des opérateurs fondateurs | Sprout & Vine',
+  title: 'Programme des opérateurs fondateurs | Sprout & Vine Care',
   description: 'Rejoignez le Programme des opérateurs fondateurs. Accès anticipé, tarif fondateur verrouillé à vie, et une voix directe dans ce que nous construisons. Inscriptions ouvertes.',
 }
 

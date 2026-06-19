@@ -4,8 +4,8 @@ import FadeIn from '@/components/fade-in'
 import EmailCapture from '@/components/email-capture'
 
 export const metadata: Metadata = {
-  title: 'Roadmap | Sprout & Vine',
-  description: "We share our roadmap publicly so you know exactly what we are building and when. No surprises.",
+  title: 'Roadmap | Sprout & Vine Care',
+  description: "We share our roadmap publicly so you know exactly what we're building and when. No surprises.",
 }
 
 function SectionLabel({ children }: { children: React.ReactNode }) {

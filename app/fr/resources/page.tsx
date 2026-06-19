@@ -4,7 +4,7 @@ import FadeIn from '@/components/fade-in'
 import ResourceDownload from '@/components/resource-download'
 
 export const metadata: Metadata = {
-  title: 'Ressources | Sprout & Vine',
+  title: 'Ressources | Sprout & Vine Care',
   description: 'Guides et outils gratuits pour les exploitants canadiens de services de garde: guide des subventions PÉLCN, listes de contrôle des permis provinciaux et plus encore.',
 }
 

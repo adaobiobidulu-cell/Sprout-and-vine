@@ -3,7 +3,7 @@ import Link from 'next/link'
 import EmailCapture from '@/components/email-capture'
 
 export const metadata: Metadata = {
-  title: 'Guide PÉLCPN pour les opérateurs de services de garde au Canada (2026) | Sprout & Vine',
+  title: 'Guide PÉLCPN pour les opérateurs de services de garde au Canada (2026) | Sprout & Vine Care',
   description:
     "Tout ce que les opérateurs canadiens de services de garde doivent savoir sur le Programme pancanadien d'apprentissage et de garde des jeunes enfants: plafonds de frais, suivi des subventions, conformité provinciale et changements en 2026.",
 }

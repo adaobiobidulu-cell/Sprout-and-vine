@@ -3,7 +3,7 @@ import Link from 'next/link'
 import BusinessPlanBuilder from '@/components/seeds/business-plan-builder'
 
 export const metadata: Metadata = {
-  title: 'Childcare Business Plan Builder (2026) | Sprout & Vine',
+  title: 'Childcare Business Plan Builder (2026) | Sprout & Vine Care',
   description:
     'A free interactive tool to build your childcare business plan step by step. Program type, location, qualifications, finances, and staffing. Your progress saves automatically.',
 }

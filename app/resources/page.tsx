@@ -4,7 +4,7 @@ import FadeIn from '@/components/fade-in'
 import EmailCapture from '@/components/email-capture'
 
 export const metadata: Metadata = {
-  title: 'Resources | Sprout & Vine',
+  title: 'Resources | Sprout & Vine Care',
   description: 'Free guides and tools for Canadian childcare operators: CWELCC subsidy guide, provincial licensing checklists, and more.',
 }
 

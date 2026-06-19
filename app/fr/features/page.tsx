@@ -3,7 +3,7 @@ import Link from 'next/link'
 import EmailCapture from '@/components/email-capture'
 
 export const metadata: Metadata = {
-  title: 'Fonctionnalités | Sprout & Vine',
+  title: 'Fonctionnalités | Sprout & Vine Care',
   description: 'Présences, subventions PÉLCN, autorisation de collecte sécurisée, rapports quotidiens, messagerie familiale et facturation, tout en un pour les garderies canadiennes.',
 }
 

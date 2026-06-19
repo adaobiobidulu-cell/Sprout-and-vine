@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: "Outil de plan d'affaires pour services de garde | Sprout & Vine",
+  title: "Outil de plan d'affaires pour services de garde | Sprout & Vine Care",
   description:
     "Outil interactif gratuit pour bâtir votre plan d'affaires de service de garde étape par étape. Votre progression est sauvegardée automatiquement.",
 }

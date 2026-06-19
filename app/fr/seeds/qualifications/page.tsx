@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Qualifications pour travailler dans les services de garde au Canada (2026) | Sprout & Vine',
+  title: 'Qualifications pour travailler dans les services de garde au Canada (2026) | Sprout & Vine Care',
   description:
     "Ce dont vous avez besoin pour travailler et opérer des services de garde au Canada, par province. ÉEJE en Ontario, certificat ÉJE en Colombie-Britannique, DEC au Québec.",
 }

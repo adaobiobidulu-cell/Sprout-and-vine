@@ -3,7 +3,7 @@ import Link from 'next/link'
 import EmailCapture from '@/components/email-capture'
 
 export const metadata: Metadata = {
-  title: 'Ouvrir une garderie au Canada? Commencez ici. | Sprout & Vine',
+  title: 'Ouvrir une garderie au Canada? Commencez ici. | Sprout & Vine Care',
   description:
     "Le programme Seeds donne aux futurs opérateurs les outils, les listes de vérification et les guides pour passer de l'idée à l'ouverture. Gratuit, sans carte de crédit.",
 }

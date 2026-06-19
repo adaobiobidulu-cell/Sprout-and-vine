@@ -3,7 +3,7 @@ import Link from 'next/link'
 import EmailCapture from '@/components/email-capture'
 
 export const metadata: Metadata = {
-  title: 'Smart Pickup Authorization | Sprout & Vine',
+  title: 'Smart Pickup Authorization | Sprout & Vine Care',
   description:
     'Photo-verified pickup lists, instant parent notifications, and a complete audit log for every child release. Smart Pickup Authorization by Sprout & Vine, built for Canadian childcare centres.',
 }

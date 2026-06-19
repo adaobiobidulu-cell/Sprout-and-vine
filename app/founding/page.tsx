@@ -5,7 +5,7 @@ import FoundingForm from '@/components/founding-form'
 import { FOUNDING_SPOTS_REMAINING, FOUNDING_SPOTS_TOTAL } from '@/lib/config'
 
 export const metadata: Metadata = {
-  title: 'Founding Operators Program | Sprout & Vine',
+  title: 'Founding Operators Program | Sprout & Vine Care',
   description: 'Join the Founding Operators Program. Early access, founding pricing locked for life, and a direct voice in what we build. Applications open now.',
 }
 
@@ -61,7 +61,7 @@ export default function FoundingPage() {
             The Founding Operators Program
           </h1>
           <p className="text-[17px] text-dark-text/65 leading-relaxed max-w-xl mx-auto">
-            We are building Sprout &amp; Vine in public, with the Canadian childcare operators who will use it every day. Founding members get early access, founding pricing, and a real voice in what we build.
+            We're building Sprout &amp; Vine in public, with the Canadian childcare operators who will use it every day. Founding members get early access, founding pricing, and a real voice in what we build.
           </p>
         </div>
       </section>
@@ -138,7 +138,7 @@ export default function FoundingPage() {
                 { step: '1', label: 'Submit your application', desc: 'Takes less than 2 minutes.' },
                 { step: '2', label: 'We review and respond', desc: 'Within 2 to 3 business days. Every applicant hears back.' },
                 { step: '3', label: 'Founding call with our team', desc: 'A short call to learn about your centre and share where we are in the build.' },
-                { step: '4', label: 'Early access granted', desc: 'You are in. Founding pricing locked. Platform access when ready.' },
+                { step: '4', label: 'Early access granted', desc: "You're in. Founding pricing locked. Platform access when ready." },
               ].map(item => (
                 <div key={item.step} className="flex items-start gap-4">
                   <div className="w-8 h-8 rounded-full bg-forest-green/10 flex items-center justify-center flex-shrink-0 text-[13px] font-semibold text-forest-green">
@@ -179,7 +179,7 @@ export default function FoundingPage() {
             {[
               {
                 q: 'Is the platform built yet?',
-                a: 'We are building it now. The Founding Operators Program exists so that the people who understand this work every day can shape what gets built. We will share our progress openly, and founding members get access as features become ready.',
+                a: "We're building it now. The Founding Operators Program exists so that the people who understand this work every day can shape what gets built. We'll share our progress openly, and founding members get access as features become ready.",
               },
               {
                 q: 'What does founding pricing mean exactly?',
@@ -187,7 +187,7 @@ export default function FoundingPage() {
               },
               {
                 q: 'How many founding spots are available?',
-                a: 'We are keeping the founding cohort small intentionally. We want to be genuinely responsive to every founding member, and that requires a manageable group to start.',
+                a: "We're keeping the founding cohort small intentionally. We want to be genuinely responsive to every founding member, and that requires a manageable group to start.",
               },
               {
                 q: 'I am not yet open. Can I still apply?',

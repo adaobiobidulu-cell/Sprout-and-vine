@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: "Autorisation de ramassage intelligent | Sprout & Vine",
+  title: "Autorisation de ramassage intelligent | Sprout & Vine Care",
   description:
     "Listes de ramassage vérifiées par photo, notifications instantanées aux parents et journal complet pour chaque départ d'enfant. Disponible sur Sprout & Vine.",
 }

@@ -2,7 +2,7 @@ import ComparisonPage from '@/components/comparison-page'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Sprout & Vine vs Procare | Canadian Alternative to Procare',
+  title: 'Sprout & Vine Care vs Procare | Canadian Alternative to Procare',
   description: 'Procare is enterprise software designed for large US operations. Sprout & Vine is calm, affordable, Canadian childcare management built for how you actually work.',
 }
 

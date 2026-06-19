@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Why we are building Sprout & Vine | Blog',
-  description: "We are not building another app. We are building infrastructure. Here is what we found when we looked closely at Canadian childcare operations, and why it changed everything.",
+  title: 'Why we are building Sprout & Vine Care | Blog',
+  description: "We're not building another app. We're building infrastructure. Here's what we found when we looked closely at Canadian childcare operations, and why it changed everything.",
 }
 
 export default function PostPage() {

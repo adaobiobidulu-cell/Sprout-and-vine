@@ -2,7 +2,7 @@ import ComparisonPage from '@/components/comparison-page'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Sprout & Vine vs Lillio (HiMama) | Canadian Alternative to Lillio',
+  title: 'Sprout & Vine Care vs Lillio (HiMama) | Canadian Alternative to Lillio',
   description: 'Lillio covers the basics. Sprout & Vine goes further with CWELCC tracking, enrollment management, Smart Pickup Authorization, and bilingual support built for Canada.',
 }
 

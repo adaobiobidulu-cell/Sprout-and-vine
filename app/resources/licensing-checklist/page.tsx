@@ -3,7 +3,7 @@ import Link from 'next/link'
 import EmailCapture from '@/components/email-capture'
 
 export const metadata: Metadata = {
-  title: 'Canadian Childcare Licensing Checklist by Province (2026) | Sprout & Vine',
+  title: 'Canadian Childcare Licensing Checklist by Province (2026) | Sprout & Vine Care',
   description:
     'Province-by-province licensing checklists for Canadian childcare operators. Ontario CCEYA staff ratios, BC CCALA requirements, and more.',
 }

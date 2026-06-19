@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import PricingTiersClient from '@/components/pricing-tiers-client'
 
 export const metadata: Metadata = {
-  title: 'Pricing | Sprout & Vine | Transparent, Enrollment-Based Childcare Software Pricing',
+  title: 'How Pricing Works | Sprout & Vine Care',
   description:
     'Simple, enrollment-based pricing for Canadian childcare operators. From home daycares at CAD $49/mo to multi-location networks. No hidden fees. No per-child charges. All prices in CAD.',
 }
@@ -19,7 +19,7 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
 const faqs = [
   {
     q: 'What happens if my enrollment grows into the next tier?',
-    a: "We will notify you when you consistently exceed your tier's enrollment limit and make the transition simple. You will never be charged mid-month. Changes take effect on your next billing date.",
+    a: "We'll notify you when you consistently exceed your tier's enrollment limit and make the transition simple. You'll never be charged mid-month. Changes take effect on your next billing date.",
   },
   {
     q: 'Do you charge per child or per staff member?',
@@ -73,7 +73,7 @@ export default function PricingPage() {
             Enrollment-based pricing.<br />No hidden fees. No per-child charges.
           </h1>
           <p className="text-[16px] text-dark-text/60 leading-relaxed mb-8 max-w-xl mx-auto">
-            Pricing that scales with your centre. Whether you are a home daycare with 6 children or a large centre with 80, you pay a flat rate based on your enrollment range. All prices in CAD.
+            Pricing that scales with your centre. Whether you're a home daycare with 6 children or a large centre with 80, you pay a flat rate based on your enrollment range. All prices in CAD.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
             <Link

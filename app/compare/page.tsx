@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Compare Childcare Software | Sprout & Vine',
+  title: 'Compare Childcare Software | Sprout & Vine Care',
   description:
     'See how Sprout & Vine compares to other childcare management platforms. Honest, feature-by-feature comparisons built for Canadian operators.',
 }

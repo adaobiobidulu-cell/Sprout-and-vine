@@ -96,7 +96,7 @@ export default function Nav() {
       <div className="max-w-7xl mx-auto px-5 md:px-8 h-full flex items-center justify-between">
 
         {/* Logo */}
-        <Link href={isFr ? '/fr' : '/'} className="flex items-center gap-1.5" aria-label="Sprout & Vine home">
+        <Link href={isFr ? '/fr' : '/'} className="flex items-center gap-1.5" aria-label="Sprout & Vine Care">
           <span className="font-display text-[26px] font-medium text-forest-green leading-none tracking-tight">sprout</span>
           <LogoMark />
           <span className="font-display text-[26px] font-medium text-forest-green leading-none tracking-tight">vine</span>

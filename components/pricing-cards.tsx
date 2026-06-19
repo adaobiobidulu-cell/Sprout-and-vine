@@ -148,7 +148,7 @@ export default function PricingCards() {
               <div className="w-1.5 h-1.5 rounded-full bg-sage-green" />
               <p className="text-[12px] text-sage-green font-medium">14-day free trial, no credit card required</p>
             </div>
-            <p className="text-[13px] text-dark-text/50 mt-1">For licensed centers & home providers</p>
+            <p className="text-[13px] text-dark-text/50 mt-1">For licensed centres & home providers</p>
           </div>
 
           <ul className="space-y-3 mb-7">

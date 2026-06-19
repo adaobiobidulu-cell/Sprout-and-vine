@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Notre histoire | Ada et Chuck, cofondateurs de Sprout & Vine',
+  title: 'À propos | Sprout & Vine Care',
   description: 'Sprout & Vine a été fondé par Ada et Chuck après l\'arrivée de leur premier enfant et une recherche difficile sur le fonctionnement réel du système de garde d\'enfants au Canada. Lisez leur histoire.',
 }
 

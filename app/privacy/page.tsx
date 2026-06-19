@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import LegalLayout from '@/components/legal-layout'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | Sprout & Vine',
+  title: 'Privacy Policy | Sprout & Vine Care',
   description: 'How Sprout & Vine collects, uses, and protects your personal information.',
 }
 

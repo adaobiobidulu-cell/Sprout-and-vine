@@ -2,7 +2,7 @@ import ContactForm from '@/components/contact-form'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Contact | Sprout & Vine',
+  title: 'Contact | Sprout & Vine Care',
   description: 'Book a demo or get in touch with the Sprout & Vine team. We respond within 1 business day.',
 }
 

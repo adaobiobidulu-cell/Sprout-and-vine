@@ -4,7 +4,7 @@ import FadeIn from '@/components/fade-in'
 import EmailCapture from '@/components/email-capture'
 
 export const metadata: Metadata = {
-  title: 'Feuille de route | Sprout & Vine',
+  title: 'Feuille de route | Sprout & Vine Care',
   description: "Nous construisons en public. Voici ce que nous construisons, dans quel ordre, et pourquoi.",
 }
 

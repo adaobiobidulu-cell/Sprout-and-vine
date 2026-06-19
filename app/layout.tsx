@@ -26,22 +26,22 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.sproutandvinecare.ca'),
-  title: 'Sprout & Vine | Childcare Management Built for Canada',
+  title: 'Sprout & Vine Care | Childcare Management Built for Canada',
   description:
-    'The only childcare platform built around CWELCC from day one. Attendance, billing, photo-verified Smart Pickup Authorization, and bilingual parent communication, designed for Canadian operators.',
+    'A childcare management platform built around CWELCC from day one. Attendance, billing, photo-verified Smart Pickup Authorization, and bilingual parent communication, designed for Canadian operators.',
   openGraph: {
     type: 'website',
-    siteName: 'Sprout & Vine',
-    title: 'Sprout & Vine | Childcare Management Built for Canada',
+    siteName: 'Sprout & Vine Care',
+    title: 'Sprout & Vine Care | Childcare Management Built for Canada',
     description:
-      'The only childcare platform built around CWELCC from day one. Attendance, billing, photo-verified Smart Pickup Authorization, and bilingual parent communication, designed for Canadian operators.',
+      'A childcare management platform built around CWELCC from day one. Attendance, billing, photo-verified Smart Pickup Authorization, and bilingual parent communication, designed for Canadian operators.',
     url: 'https://www.sproutandvinecare.ca',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Sprout & Vine | Childcare Management Built for Canada',
+    title: 'Sprout & Vine Care | Childcare Management Built for Canada',
     description:
-      'The only childcare platform built around CWELCC from day one. Attendance, billing, photo-verified Smart Pickup Authorization, and bilingual parent communication.',
+      'A childcare management platform built around CWELCC from day one. Attendance, billing, photo-verified Smart Pickup Authorization, and bilingual parent communication.',
   },
 }
 

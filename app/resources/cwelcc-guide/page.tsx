@@ -3,7 +3,7 @@ import Link from 'next/link'
 import EmailCapture from '@/components/email-capture'
 
 export const metadata: Metadata = {
-  title: 'CWELCC Guide for Canadian Childcare Operators (2026) | Sprout & Vine',
+  title: 'CWELCC Guide for Canadian Childcare Operators (2026) | Sprout & Vine Care',
   description:
     'Everything Canadian childcare operators need to know about CWELCC: fee caps, subsidy tracking, provincial compliance, and what changes in 2026. Updated May 2026.',
 }

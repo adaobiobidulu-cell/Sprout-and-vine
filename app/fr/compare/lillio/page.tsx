@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Sprout & Vine vs. Lillio (HiMama) : Comparaison honnête | Sprout & Vine',
+  title: 'Sprout & Vine Care vs. Lillio (HiMama) : Comparaison honnête | Sprout & Vine Care',
   description:
     "Comment Sprout & Vine se compare à Lillio (anciennement HiMama) sur le soutien au PÉLCPN, la transparence des prix, le soutien aux garderies en milieu familial et le support bilingue EN/FR.",
 }

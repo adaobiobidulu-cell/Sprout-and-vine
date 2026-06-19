@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import ComingSoon from '@/components/coming-soon'
 
 export const metadata: Metadata = {
-  title: 'Help Centre | Sprout & Vine',
+  title: 'Help Centre | Sprout & Vine Care',
   description: 'Get help with Sprout & Vine. Guides, tutorials, and answers to common questions.',
 }
 
