@@ -11,7 +11,7 @@ export default function LoginRedirect() {
     }, 500)
 
     const redirectTimer = setTimeout(() => {
-      window.location.href = 'https://app.sproutandvine.ca'
+      window.location.href = 'https://app.sproutandvinecare.ca'
     }, 1500)
 
     return () => {
