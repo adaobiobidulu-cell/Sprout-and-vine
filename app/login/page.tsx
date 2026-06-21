@@ -46,7 +46,7 @@ export default function LoginPage() {
         <p className="text-[13px] text-dark-text/40 mt-6">
           Not redirecting?{' '}
           <a
-            href="https://app.sproutandvine.ca"
+            href="https://app.sproutandvinecare.ca"
             target="_blank"
             rel="noopener noreferrer"
             className="text-forest-green underline underline-offset-2 hover:text-dark-text transition-colors"
