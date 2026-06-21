@@ -17,7 +17,6 @@ const rows = [
   { feature: 'Per-centre flat pricing',       us: true,      them: false },
   { feature: 'Smart Pickup Authorization',    us: 'Photo-verified', them: 'Basic' },
   { feature: 'Enrollment & waitlist',         us: 'Full flow', them: 'Partial' },
-  { feature: 'Parent app',                    us: 'Vine app', them: 'Strong' },
   { feature: 'Attendance tracking',           us: true,      them: true },
   { feature: 'Daily reports',                 us: true,      them: true },
   { feature: 'Billing & invoicing',           us: true,      them: true },
