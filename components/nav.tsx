@@ -151,6 +151,14 @@ export default function Nav() {
           >
             {isFr ? 'Programme fondateur' : 'Founding Program'}
           </Link>
+
+          <a
+             href="https://app.sproutandvinecare.ca/find-care"
+             className="text-[14px] font-medium text-dark-text/80 hover:text-forest-green transition-colors"
+          >
+              {isFr ? 'Trouver une garderie' : 'Find childcare'}
+         </a>
+          
         </div>
 
         {/* Mobile hamburger */}
@@ -205,6 +213,13 @@ export default function Nav() {
               <div className="py-1">
                 <LangToggle />
               </div>
+
+              <a
+                href="https://app.sproutandvinecare.ca/find-care"
+                className="text-[14px] font-medium text-dark-text/80 hover:text-forest-green transition-colors"
+               >
+                {isFr ? 'Trouver une garderie' : 'Find childcare'}
+              </a>
               <Link
                 href="/login"
                 className="text-[15px] font-medium text-dark-text/70 hover:text-forest-green transition-colors"
