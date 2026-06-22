@@ -30,6 +30,7 @@ const footerColumnsEn = [
     links: [
       { label: 'Features', href: '/features' },
       { label: 'Pricing', href: '/pricing' },
+      { label: 'Compare', href: '/compare' },
       { label: 'Changelog', href: '/changelog' },
       { label: 'Roadmap', href: '/roadmap' },
     ],
@@ -68,6 +69,7 @@ const footerColumnsFr = [
     links: [
       { label: 'Fonctionnalités', href: '/fr/features' },
       { label: 'Tarifs', href: '/fr/pricing' },
+      { label: 'Comparer', href: '/compare' },
       { label: 'Journal', href: '/fr/changelog' },
       { label: 'Feuille de route', href: '/fr/roadmap' },
     ],

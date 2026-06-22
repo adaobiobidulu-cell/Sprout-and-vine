@@ -117,6 +117,12 @@ export default function Nav() {
             {isFr ? 'Tarifs' : 'How Pricing Works'}
           </Link>
           <Link
+            href="/compare"
+            className="text-[14px] font-medium text-dark-text/80 hover:text-forest-green transition-colors"
+          >
+            {isFr ? 'Comparer' : 'Compare'}
+          </Link>
+          <Link
             href={p('/resources')}
             className="flex items-center gap-1 text-[14px] font-medium text-dark-text/80 hover:text-forest-green transition-colors"
           >
@@ -196,6 +202,7 @@ export default function Nav() {
             {[
               { label: isFr ? 'Fonctionnalités' : 'Features', href: p('/features') },
               { label: isFr ? 'Tarifs' : 'How Pricing Works', href: p('/pricing') },
+              { label: isFr ? 'Comparer' : 'Compare', href: '/compare' },
               { label: isFr ? 'Ressources' : 'Resources', href: p('/resources') },
               { label: isFr ? 'Feuille de route' : 'Roadmap', href: p('/roadmap') },
               { label: isFr ? 'À propos' : 'About', href: p('/about') },
