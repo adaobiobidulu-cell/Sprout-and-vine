@@ -3,7 +3,7 @@ import { altEn } from '@/lib/seo'
 import Link from 'next/link'
 import FadeIn from '@/components/fade-in'
 import FoundingForm from '@/components/founding-form'
-import { FOUNDING_SPOTS_REMAINING, FOUNDING_SPOTS_TOTAL } from '@/lib/config'
+import { FOUNDING_SPOTS_TOTAL } from '@/lib/config'
 
 export const metadata: Metadata = {
   title: 'Founding Operators Program | Sprout & Vine Care',
@@ -54,7 +54,7 @@ export default function FoundingPage() {
           </div>
           <div className="inline-flex items-center gap-2 text-[13px] font-medium text-dark-text/60 mb-8">
             <span className="w-2 h-2 rounded-full bg-terracotta/60" />
-            {FOUNDING_SPOTS_REMAINING} of {FOUNDING_SPOTS_TOTAL} founding spots remaining
+            {FOUNDING_SPOTS_TOTAL} founding spots available
           </div>
           <h1
             className="font-display font-medium text-forest-green leading-[1.05] mb-6"

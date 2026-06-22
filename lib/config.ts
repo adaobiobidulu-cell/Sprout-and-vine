@@ -1,2 +1,1 @@
-export const FOUNDING_SPOTS_REMAINING = 12
 export const FOUNDING_SPOTS_TOTAL = 25
