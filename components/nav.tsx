@@ -76,10 +76,11 @@ export default function Nav() {
       <div className="max-w-7xl mx-auto px-5 md:px-8 h-full flex items-center justify-between">
 
         {/* Logo */}
-        <Link href={isFr ? '/fr' : '/'} className="flex items-center gap-1" aria-label="Sprout & Vine Care">
-          <span className="font-display text-[29px] font-semibold text-forest-green leading-none tracking-tight">sprout</span>
-          <LogoMark height={38} stroke={40} />
-          <span className="font-display text-[29px] font-semibold text-forest-green leading-none tracking-tight">vine</span>
+        <Link href={isFr ? '/fr' : '/'} className="flex items-center gap-2.5" aria-label="Sprout & Vine Care">
+          <LogoMark height={40} stroke={40} />
+          <span className="font-display text-[27px] font-semibold text-forest-green leading-none tracking-tight">
+            sprout <span className="text-terracotta">&amp;</span> vine
+          </span>
         </Link>
 
         {/* Desktop nav links */}
