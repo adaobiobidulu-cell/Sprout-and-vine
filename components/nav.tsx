@@ -6,15 +6,15 @@ import { usePathname } from 'next/navigation'
 
 function LogoMark() {
   return (
-    <svg viewBox="0 0 90 126" width="20" height="28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <svg viewBox="0 0 90 126" width="25" height="35" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       {/* Leaf stem */}
-      <path d="M 26 32 C 20 22 14 12 10 8" stroke="#2F4A3A" strokeWidth="2" strokeLinecap="round" fill="none" />
+      <path d="M 26 32 C 20 22 14 12 10 8" stroke="#2F4A3A" strokeWidth="3" strokeLinecap="round" fill="none" />
       {/* Top leaf */}
       <path d="M 10 8 C 2 2 0 10 4 16 C 8 22 20 22 26 16 C 22 10 14 6 10 8 Z" fill="#AEC1B0" />
       {/* Upper vine: crossing up through loop to spiral curl */}
-      <path d="M 40 64 C 32 56 22 46 20 36 C 18 24 26 14 38 14 C 50 14 64 18 70 30 C 76 40 70 50 62 48 C 56 48 54 42 58 38 C 62 34 66 40 62 44" stroke="#2F4A3A" strokeWidth="3" strokeLinecap="round" fill="none" />
+      <path d="M 40 64 C 32 56 22 46 20 36 C 18 24 26 14 38 14 C 50 14 64 18 70 30 C 76 40 70 50 62 48 C 56 48 54 42 58 38 C 62 34 66 40 62 44" stroke="#2F4A3A" strokeWidth="4.5" strokeLinecap="round" fill="none" />
       {/* Lower vine: crossing down through large circle */}
-      <path d="M 40 64 C 48 70 58 74 64 84 C 70 96 68 112 56 118 C 44 124 26 120 16 110 C 6 98 8 82 18 74 C 24 70 32 66 38 68" stroke="#2F4A3A" strokeWidth="3" strokeLinecap="round" fill="none" />
+      <path d="M 40 64 C 48 70 58 74 64 84 C 70 96 68 112 56 118 C 44 124 26 120 16 110 C 6 98 8 82 18 74 C 24 70 32 66 38 68" stroke="#2F4A3A" strokeWidth="4.5" strokeLinecap="round" fill="none" />
       {/* Heart */}
       <path d="M 52 58 C 52 54 50 50 46 52 C 42 50 40 54 40 58 C 40 64 46 70 46 70 C 46 70 52 64 52 58 Z" fill="#E2845F" />
       {/* Bottom leaf — upper */}
@@ -97,9 +97,9 @@ export default function Nav() {
 
         {/* Logo */}
         <Link href={isFr ? '/fr' : '/'} className="flex items-center gap-1.5" aria-label="Sprout & Vine Care">
-          <span className="font-display text-[26px] font-medium text-forest-green leading-none tracking-tight">sprout</span>
+          <span className="font-display text-[29px] font-medium text-forest-green leading-none tracking-tight">sprout</span>
           <LogoMark />
-          <span className="font-display text-[26px] font-medium text-forest-green leading-none tracking-tight">vine</span>
+          <span className="font-display text-[29px] font-medium text-forest-green leading-none tracking-tight">vine</span>
         </Link>
 
         {/* Desktop nav links */}
