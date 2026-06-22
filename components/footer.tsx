@@ -123,10 +123,11 @@ export default function Footer() {
 
           {/* Left: brand block */}
           <div className="flex-shrink-0 lg:max-w-[260px]">
-            <Link href={isFr ? '/fr' : '/'} className="flex items-center gap-2.5 mb-5" aria-label="Sprout & Vine home">
-              <LogoMark tone="cream" height={36} stroke={40} />
-              <span className="font-display text-[24px] font-semibold text-cream leading-none tracking-tight">
-                sprout <span className="text-terracotta">&amp;</span> vine
+            <Link href={isFr ? '/fr' : '/'} className="flex items-center mb-5" aria-label="Sprout & Vine home">
+              <span className="font-display text-[24px] font-semibold text-cream leading-none tracking-tight flex items-center">
+                sprout
+                <LogoMark tone="cream" height={24} stroke={52} className="mx-[5px] flex-shrink-0" />
+                vine
               </span>
             </Link>
             <p className="text-[11px] text-cream/60 uppercase tracking-[0.12em] mb-5 font-medium">
