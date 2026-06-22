@@ -17,14 +17,14 @@ export default function Icon() {
           justifyContent: 'center',
         }}
       >
-        <svg viewBox="0 0 90 126" width="22" height="30" style={{ display: 'flex' }}>
-          <path d="M 26 32 C 20 22 14 12 10 8" stroke="#F7F2E8" strokeWidth="2" strokeLinecap="round" fill="none" />
-          <path d="M 10 8 C 2 2 0 10 4 16 C 8 22 20 22 26 16 C 22 10 14 6 10 8 Z" fill="rgba(247,242,232,0.7)" />
-          <path d="M 40 64 C 32 56 22 46 20 36 C 18 24 26 14 38 14 C 50 14 64 18 70 30 C 76 40 70 50 62 48 C 56 48 54 42 58 38 C 62 34 66 40 62 44" stroke="#F7F2E8" strokeWidth="4" strokeLinecap="round" fill="none" />
-          <path d="M 40 64 C 48 70 58 74 64 84 C 70 96 68 112 56 118 C 44 124 26 120 16 110 C 6 98 8 82 18 74 C 24 70 32 66 38 68" stroke="#F7F2E8" strokeWidth="4" strokeLinecap="round" fill="none" />
-          <path d="M 52 58 C 52 54 50 50 46 52 C 42 50 40 54 40 58 C 40 64 46 70 46 70 C 46 70 52 64 52 58 Z" fill="#E2845F" />
-          <path d="M 64 84 C 76 72 88 76 84 88 C 80 96 70 94 64 84 Z" fill="rgba(247,242,232,0.6)" />
-          <path d="M 62 94 C 74 86 86 92 82 104 C 78 112 66 108 62 94 Z" fill="rgba(247,242,232,0.6)" />
+        <svg viewBox="0 0 800 1200" width="18.7" height="28" style={{ display: 'flex' }}>
+          <path d="M405 150 C330 235,315 355,395 455 C465 540,555 615,555 790 C555 975,445 1080,310 1080 C180 1080,115 970,115 845 C115 700,205 610,330 575" stroke="#F7F2E8" strokeWidth="52" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+          <path d="M405 150 C455 105,555 100,630 150 C705 200,710 315,615 340" stroke="#F7F2E8" strokeWidth="52" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+          <path d="M615 340 C585 340,580 305,612 300" stroke="#F7F2E8" strokeWidth="52" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+          <path d="M420 92 C470 28,565 22,615 82 C600 165,500 205,420 92Z" fill="rgba(247,242,232,0.85)" />
+          <path d="M585 720 C640 680,720 695,740 760 C705 820,635 825,585 720Z" fill="rgba(247,242,232,0.85)" />
+          <path d="M600 800 C650 770,710 785,720 840 C675 885,620 875,600 800Z" fill="rgba(247,242,232,0.85)" />
+          <path d="M455 500 C425 445,350 445,350 515 C350 585,420 625,455 690 C490 625,560 585,560 515 C560 445,485 445,455 500Z" fill="#E2845F" />
         </svg>
       </div>
     ),

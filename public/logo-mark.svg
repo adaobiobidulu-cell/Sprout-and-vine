@@ -1,15 +1,47 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62 86" width="62" height="86" fill="none">
-  <!-- Top leaf — elongated, points upper-left -->
-  <path d="M 27 13 C 25 6 15 5 16 12 C 17 19 25 16 27 13 Z" fill="#AEC1B0"/>
-  <!-- Vine S-curve body -->
-  <path d="M 28 14 C 40 8 56 20 51 34 C 46 48 24 46 20 56 C 14 66 20 78 34 76 C 48 74 56 62 47 56"
-        stroke="#2F4A3A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <!-- Diagonal cross stroke — converts S into & -->
-  <path d="M 8 55 L 52 32" stroke="#2F4A3A" stroke-width="2.5" stroke-linecap="round"/>
-  <!-- Terracotta heart — inside upper loop -->
-  <path d="M 44 27 C 38 22 36 15 40 14 C 42 13 44 17 44 17 C 44 17 46 13 48 14 C 52 15 50 22 44 27 Z" fill="#E2845F"/>
-  <!-- Bottom-left leaf -->
-  <path d="M 24 78 C 18 71 10 72 12 78 C 14 84 22 81 24 78 Z" fill="#AEC1B0"/>
-  <!-- Bottom-right leaf -->
-  <path d="M 36 77 C 42 70 50 71 48 77 C 46 83 38 80 36 77 Z" fill="#AEC1B0"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1200">
+  <defs>
+    <style>
+      .vine{fill:none;stroke:#1f4f34;stroke-width:18;stroke-linecap:round;stroke-linejoin:round;}
+    </style>
+  </defs>
+
+  <path class="vine"
+    d="M405 150
+       C330 235,315 355,395 455
+       C465 540,555 615,555 790
+       C555 975,445 1080,310 1080
+       C180 1080,115 970,115 845
+       C115 700,205 610,330 575" />
+
+  <path class="vine"
+    d="M405 150
+       C455 105,555 100,630 150
+       C705 200,710 315,615 340" />
+
+  <path class="vine"
+    d="M615 340
+       C585 340,580 305,612 300" />
+
+  <path d="M420 92
+           C470 28,565 22,615 82
+           C600 165,500 205,420 92Z"
+        fill="#AEC1B0"/>
+
+  <path d="M585 720
+           C640 680,720 695,740 760
+           C705 820,635 825,585 720Z"
+        fill="#AEC1B0"/>
+
+  <path d="M600 800
+           C650 770,710 785,720 840
+           C675 885,620 875,600 800Z"
+        fill="#AEC1B0"/>
+
+  <path d="M455 500
+           C425 445,350 445,350 515
+           C350 585,420 625,455 690
+           C490 625,560 585,560 515
+           C560 445,485 445,455 500Z"
+        fill="#E2845F"/>
 </svg>
