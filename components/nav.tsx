@@ -103,7 +103,7 @@ export default function Nav() {
         </Link>
 
         {/* Desktop nav links */}
-        <nav className="hidden md:flex items-center gap-7" aria-label="Primary navigation">
+        <nav className="hidden md:flex items-center gap-5" aria-label="Primary navigation">
           <Link
             href={p('/features')}
             className="flex items-center gap-1 text-[14px] font-medium text-dark-text/80 hover:text-forest-green transition-colors"
@@ -114,7 +114,7 @@ export default function Nav() {
             href={p('/pricing')}
             className="text-[14px] font-medium text-dark-text/80 hover:text-forest-green transition-colors"
           >
-            {isFr ? 'Tarifs' : 'How Pricing Works'}
+            {isFr ? 'Tarifs' : 'Pricing'}
           </Link>
           <Link
             href="/compare"
