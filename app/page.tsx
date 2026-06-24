@@ -2,7 +2,6 @@ import Link from 'next/link'
 import FadeIn from '@/components/fade-in'
 import ProductTour from '@/components/product-tour'
 import DashboardPreview from '@/components/dashboard-preview'
-import ScrollVine from '@/components/scroll-vine'
 import EmailCapture from '@/components/email-capture'
 import CanadaMap from '@/components/canada-map'
 import { FOUNDING_SPOTS_TOTAL } from '@/lib/config'
@@ -114,8 +113,6 @@ function PhoneShell({ children }: { children: React.ReactNode }) {
 export default function Home() {
   return (
     <>
-      <ScrollVine />
-
       {/* ── SECTION 1: HERO */}
       <section className="py-24 md:py-32 px-5 md:px-8 bg-cream">
         <div className="max-w-3xl mx-auto text-center">
