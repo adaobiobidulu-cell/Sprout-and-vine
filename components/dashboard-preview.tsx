@@ -1,13 +1,10 @@
 /* Dashboard Preview: fully coded, static, server component */
 
 function LogoMarkSmall() {
+  // The real vine-shaped S mark (raster), height-constrained so it stays crisp.
   return (
-    <svg viewBox="0 0 62 86" width="14" height="19" fill="none">
-      <path d="M 27 13 C 25 6 15 5 16 12 C 17 19 25 16 27 13 Z" fill="#AEC1B0" />
-      <path d="M 28 14 C 40 8 56 20 51 34 C 46 48 24 46 20 56 C 14 66 20 78 34 76 C 48 74 56 62 47 56" stroke="#2F4A3A" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M 8 55 L 52 32" stroke="#2F4A3A" strokeWidth="2.5" strokeLinecap="round" />
-      <path d="M 44 27 C 38 22 36 15 40 14 C 42 13 44 17 44 17 C 44 17 46 13 48 14 C 52 15 50 22 44 27 Z" fill="#E2845F" />
-    </svg>
+    // eslint-disable-next-line @next/next/no-img-element
+    <img src="/logo-s.png" alt="" width={12} height={22} style={{ height: 22, width: 'auto' }} />
   )
 }
 
@@ -93,7 +90,7 @@ export default function DashboardPreview() {
       <div className="flex items-center justify-between px-4 py-2.5 border-b border-[rgba(47,74,58,0.08)] bg-white">
         <div className="flex items-center gap-2">
           <LogoMarkSmall />
-          <span className="text-[11px] font-semibold text-forest-green tracking-tight">sprout and vine</span>
+          <span className="font-display text-[13px] font-bold text-forest-green tracking-tight">Sprout &amp; Vine</span>
         </div>
         <div className="flex items-center gap-3">
           <span className="text-[10px] text-dark-text/50 hidden sm:block">Good morning, Emma 👋</span>

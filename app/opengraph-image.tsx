@@ -1,4 +1,5 @@
 import { ImageResponse } from 'next/og'
+import { vineSCreamDataUri } from '@/lib/logo-mark-data'
 
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
@@ -44,38 +45,27 @@ export default function Image() {
           }}
         />
 
-        {/* Top: wordmark */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-          <span
-            style={{
-              fontSize: 36,
-              color: '#F7F2E8',
-              fontWeight: 500,
-              letterSpacing: '-0.02em',
-            }}
-          >
-            sprout
-          </span>
-          <div
-            style={{
-              width: 8,
-              height: 8,
-              borderRadius: '50%',
-              background: '#E2845F',
-              display: 'flex',
-              marginTop: 2,
-            }}
-          />
-          <span
-            style={{
-              fontSize: 36,
-              color: '#F7F2E8',
-              fontWeight: 500,
-              letterSpacing: '-0.02em',
-            }}
-          >
-            vine
-          </span>
+        {/* Top: logo lockup */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: 18 }}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={vineSCreamDataUri} alt="" width={56} height={104} style={{ width: 56, height: 104 }} />
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <span style={{ fontSize: 52, color: '#F7F2E8', fontWeight: 700, letterSpacing: '-0.01em', lineHeight: 1 }}>
+              Sprout &amp; Vine
+            </span>
+            <span
+              style={{
+                fontSize: 18,
+                color: 'rgba(247,242,232,0.7)',
+                fontWeight: 600,
+                letterSpacing: '0.24em',
+                fontFamily: 'system-ui, sans-serif',
+                marginTop: 6,
+              }}
+            >
+              CARE
+            </span>
+          </div>
         </div>
 
         {/* Middle: headline */}
