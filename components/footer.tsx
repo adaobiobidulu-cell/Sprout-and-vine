@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import LogoMark from '@/components/logo-mark'
+import BrandLogo from '@/components/brand-logo'
 
 const footerColumnsEn = [
   {
@@ -123,12 +123,8 @@ export default function Footer() {
 
           {/* Left: brand block */}
           <div className="flex-shrink-0 lg:max-w-[260px]">
-            <Link href={isFr ? '/fr' : '/'} className="flex items-center mb-5" aria-label="Sprout & Vine home">
-              <span className="font-display text-[24px] font-semibold text-cream leading-none tracking-tight flex items-center">
-                sprout
-                <LogoMark tone="cream" height={24} stroke={52} className="mx-[5px] flex-shrink-0" />
-                vine
-              </span>
+            <Link href={isFr ? '/fr' : '/'} className="inline-flex mb-5" aria-label="Sprout & Vine home">
+              <BrandLogo tone="cream" height={64} />
             </Link>
             <p className="text-[11px] text-cream/60 uppercase tracking-[0.12em] mb-5 font-medium">
               {isFr ? 'Créer des liens. Nourrir les avenirs.' : 'Growing connections. Nurturing futures.'}

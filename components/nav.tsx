@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import LogoMark from '@/components/logo-mark'
+import BrandLogo from '@/components/brand-logo'
 
 function ChevronDown() {
   return (
@@ -70,18 +70,14 @@ export default function Nav() {
         background: 'rgba(247,242,232,0.92)',
         backdropFilter: 'blur(12px)',
         WebkitBackdropFilter: 'blur(12px)',
-        height: '68px',
+        height: '80px',
       }}
     >
       <div className="max-w-7xl mx-auto px-5 md:px-8 h-full flex items-center justify-between">
 
         {/* Logo */}
         <Link href={isFr ? '/fr' : '/'} className="flex items-center" aria-label="Sprout & Vine Care">
-          <span className="font-display text-[28px] font-semibold text-forest-green leading-none tracking-tight flex items-center">
-            sprout
-            <LogoMark height={28} stroke={52} className="mx-[5px] flex-shrink-0" />
-            vine
-          </span>
+          <BrandLogo height={58} className="flex-shrink-0" />
         </Link>
 
         {/* Desktop nav links */}
@@ -177,7 +173,7 @@ export default function Nav() {
       {/* Mobile dropdown menu */}
       {mobileOpen && (
         <div
-          className="absolute top-[68px] left-0 right-0 md:hidden border-b border-[rgba(47,74,58,0.12)] shadow-lg"
+          className="absolute top-[80px] left-0 right-0 md:hidden border-b border-[rgba(47,74,58,0.12)] shadow-lg"
           style={{ background: 'rgba(247,242,232,0.97)', backdropFilter: 'blur(12px)' }}
         >
           <nav className="px-5 py-5 flex flex-col gap-1" aria-label="Mobile navigation">
