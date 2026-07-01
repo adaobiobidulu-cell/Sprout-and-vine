@@ -1,10 +1,8 @@
 import Link from 'next/link'
-import DashboardPreview from '@/components/dashboard-preview'
-import ProductTour from '@/components/product-tour'
-import PricingCards from '@/components/pricing-cards'
-import ROICalculator from '@/components/roi-calculator'
-import EmailCapture from '@/components/email-capture'
 import FadeIn from '@/components/fade-in'
+import ProductTour from '@/components/product-tour'
+import DashboardPreview from '@/components/dashboard-preview'
+import EmailCapture from '@/components/email-capture'
 import CanadaMap from '@/components/canada-map'
 import { testimonial } from '@/lib/testimonial'
 import type { Metadata } from 'next'
@@ -16,6 +14,80 @@ export const metadata: Metadata = {
   alternates: altFr('/fr'),
 }
 
+const features = [
+  {
+    name: 'Connexion Familiale',
+    desc: 'Gardez les parents informés et engagés grâce à des mises à jour en temps réel.',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="#2F4A3A" strokeWidth="1.5" strokeLinecap="round">
+        <circle cx="9" cy="7" r="4" />
+        <path d="M3 21v-2a4 4 0 014-4h4a4 4 0 014 4v2" />
+        <path d="M16 3.13a4 4 0 010 7.75" />
+        <path d="M21 21v-2a4 4 0 00-3-3.87" />
+      </svg>
+    ),
+  },
+  {
+    name: 'Suivi des Présences',
+    desc: 'Présences précises à portée de main. Économisez du temps chaque jour.',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="#2F4A3A" strokeWidth="1.5" strokeLinecap="round">
+        <rect x="3" y="4" width="18" height="18" rx="2" />
+        <path d="M16 2v4M8 2v4M3 10h18M9 16l2 2 4-4" />
+      </svg>
+    ),
+  },
+  {
+    name: 'Rapports Quotidiens',
+    desc: 'De magnifiques rapports quotidiens en quelques minutes, pas des heures.',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="#2F4A3A" strokeWidth="1.5" strokeLinecap="round">
+        <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+        <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" />
+      </svg>
+    ),
+  },
+  {
+    name: "Développement de l'Enfant",
+    desc: 'Suivez les jalons et observations facilement.',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="#2F4A3A" strokeWidth="1.5" strokeLinecap="round">
+        <path d="M12 20V10M18 20V4M6 20v-4" />
+      </svg>
+    ),
+  },
+  {
+    name: 'Facturation et Paiements',
+    desc: 'Simplifiez la gestion des frais de scolarité et soyez payé à temps.',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="#2F4A3A" strokeWidth="1.5" strokeLinecap="round">
+        <circle cx="12" cy="12" r="9" />
+        <path d="M12 7v10M9.5 9.5A2.5 2.5 0 0112 8a2.5 2.5 0 010 5 2.5 2.5 0 010 5 2.5 2.5 0 01-2.5-1.5" />
+      </svg>
+    ),
+  },
+  {
+    name: 'Autorisation de Ramassage',
+    desc: 'Listes de ramassage vérifiées par photo. Alertes instantanées aux parents.',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="#2F4A3A" strokeWidth="1.5" strokeLinecap="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+        <path d="M9 12l2 2 4-4" />
+      </svg>
+    ),
+  },
+  {
+    name: "Inscription et Liste d'Attente",
+    desc: 'De la première demande au premier jour, géré numériquement.',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="#2F4A3A" strokeWidth="1.5" strokeLinecap="round">
+        <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+        <path d="M12 12h.01M12 16h.01M8 12h.01M8 16h.01" />
+      </svg>
+    ),
+  },
+]
+
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
     <p className="text-[11px] uppercase tracking-[0.16em] text-sage-green font-semibold mb-5">
@@ -26,12 +98,14 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
 
 function PhoneShell({ children }: { children: React.ReactNode }) {
   return (
-    <div className="relative w-[220px] flex-shrink-0">
-      <div className="w-full bg-white rounded-[36px] shadow-2xl border-4 border-[#1C2B22] overflow-hidden" style={{ paddingTop: '12px' }}>
-        <div className="flex justify-center mb-2">
-          <div className="w-16 h-1.5 rounded-full bg-[#1a1a1a]/10" />
+    <div className="relative mx-auto" style={{ width: '220px' }}>
+      <div className="rounded-[36px] p-2.5" style={{ background: '#1a1a1a', boxShadow: '0 32px 80px rgba(0,0,0,0.35)' }}>
+        <div className="rounded-[28px] overflow-hidden bg-white" style={{ minHeight: '420px' }}>
+          <div className="flex justify-center pt-2 pb-1">
+            <div className="w-16 h-1.5 rounded-full bg-[#1a1a1a]/10" />
+          </div>
+          {children}
         </div>
-        {children}
       </div>
     </div>
   )
@@ -49,28 +123,16 @@ function PartLabel({ number, title, bg = 'bg-cream', dark = false }: { number: s
   )
 }
 
-const faqFr = [
-  {
-    q: "Y a-t-il un essai gratuit?",
-    a: "Oui, 14 jours sur Sprout, sans carte de crédit. Annulez à tout moment.",
-  },
-  {
-    q: "Puis-je changer de forfait?",
-    a: "Oui. Passez à un forfait supérieur ou inférieur à tout moment. Les changements prennent effet au prochain cycle de facturation.",
-  },
-  {
-    q: "Supportez-vous les fournisseurs en milieu familial?",
-    a: "Oui. Les services de garde en milieu familial agréés bénéficient de Sprout à 39 $ CA/mois.",
-  },
-  {
-    q: "Mes données sont-elles stockées au Canada?",
-    a: "Oui. Résidence des données canadiennes sur tous les forfaits, toujours.",
-  },
-  {
-    q: "Qu'est-ce que le PÉLCN?",
-    a: "Programme d'apprentissage et de garde des jeunes enfants à l'échelle du Canada. Notre plateforme suit et gère automatiquement votre admissibilité aux subventions.",
-  },
-]
+/* Marque un sous-groupe de flux de travail au sein de la Partie 3. */
+function GroupLabel({ children, bg = 'bg-cream' }: { children: React.ReactNode; bg?: string }) {
+  return (
+    <div className={`${bg} pt-10 pb-2 px-5 md:px-8 text-center`}>
+      <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-dark-text/40">
+        {children}
+      </p>
+    </div>
+  )
+}
 
 export default function FrenchHomePage() {
   return (
@@ -78,7 +140,7 @@ export default function FrenchHomePage() {
       {/* ══════════════ PARTIE 1: CE QU'EST SPROUT & VINE CARE ══════════════ */}
       <PartLabel number="01 /" title="Ce qu'est Sprout & Vine Care" bg="bg-cream" />
 
-      {/* ── HÉRO ─────────────────────────────────────── */}
+      {/* ── HÉRO */}
       <section className="pb-24 md:pb-32 px-5 md:px-8 bg-cream">
         <div className="max-w-3xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-terracotta/10 text-terracotta text-[12px] font-semibold px-4 py-2 rounded-full mb-8">
@@ -101,6 +163,7 @@ export default function FrenchHomePage() {
 
           <div className="flex flex-col items-center gap-4">
             <Link
+              id="hero-primary-cta"
               href="/fr/founding"
               className="w-full sm:w-auto bg-forest-green text-white text-[14px] font-medium px-8 py-3.5 rounded-lg hover:bg-[#243d2f] transition-colors text-center"
             >
@@ -128,7 +191,7 @@ export default function FrenchHomePage() {
             </div>
           </div>
 
-          {/* Trust bar */}
+          {/* Bandeau de confiance */}
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mt-8">
             {['Conçu pour le Canada', 'Bâti avec les opérateurs de garderies', 'Feuille de route IA', 'Conforme au PÉLCN'].map(item => (
               <div key={item} className="flex items-center gap-1.5 text-[12px] text-dark-text/45 font-medium">
@@ -143,17 +206,17 @@ export default function FrenchHomePage() {
         </div>
       </section>
 
-      {/* ── HEART LINE ──────────────────────────────────────────── */}
+      {/* ── L'OBSTACLE */}
       <section className="bg-white py-16 md:py-20 px-5 md:px-8 text-center">
         <div className="max-w-2xl mx-auto">
           <p
             className="font-display font-medium leading-snug mb-4"
             style={{ fontSize: 'clamp(22px, 2.8vw, 32px)', color: '#0F6E56' }}
           >
-            L'obstacle n'est pas la passion. L'obstacle est l'information et l'infrastructure.
+            L&apos;obstacle n&apos;est pas la passion. L&apos;obstacle est l&apos;information et l&apos;infrastructure.
           </p>
           <p className="text-[16px] text-dark-text/60 mb-6">
-            C'est pourquoi nous avons construit Sprout &amp; Vine pour le Canada.
+            C&apos;est pourquoi nous avons construit Sprout &amp; Vine pour le Canada.
           </p>
           <p className="text-[15px] font-semibold text-forest-green mb-6">
             Sprout &amp; Vine est bâti avec les opérateurs, pas pour eux.
@@ -164,36 +227,70 @@ export default function FrenchHomePage() {
         </div>
       </section>
 
-      {/* ── LE PROBLÈME ──────────────────────────────── */}
-      <section className="py-20 md:py-24 px-5 md:px-8 bg-cream">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-14">
-            <SectionLabel>Le Problème</SectionLabel>
-            <h2 className="font-display font-medium text-forest-green leading-[1.08]" style={{ fontSize: 'clamp(36px, 4.5vw, 56px)' }}>
-              Gérer une garderie ne devrait pas<br />ressembler à jongler.
+      {/* ── TROIS PARCOURS */}
+      <section className="bg-cream py-20 md:py-24 px-5 md:px-8">
+        <div className="max-w-7xl mx-auto">
+          <FadeIn className="text-center mb-14">
+            <SectionLabel>La Plateforme</SectionLabel>
+            <h2 className="font-display font-medium text-forest-green leading-[1.1]" style={{ fontSize: 'clamp(36px, 4.5vw, 52px)' }}>
+              Une seule plateforme. Trois étapes de croissance.
             </h2>
-          </div>
+            <p className="text-[16px] text-dark-text/55 mt-4 max-w-xl mx-auto">
+              Que vous prévoyiez ouvrir, gériez un seul centre ou plusieurs emplacements, Sprout &amp; Vine évolue avec vous.
+            </p>
+          </FadeIn>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              { icon: '📋', title: "Trop d'outils", desc: "Feuilles de calcul pour les présences, un autre outil pour la facturation, des messages perdus dans des applications disparates." },
-              { icon: '⏰', title: 'Trop de temps administratif', desc: 'Les directeurs passent en moyenne 14 heures par semaine sur des tâches qui pourraient être automatisées.' },
-              { icon: '😔', title: 'Des familles moins bien informées', desc: 'Les parents méritent de savoir ce qui se passe dans la journée de leur enfant. Pas juste un rapport à la fin de la journée.' },
-            ].map(item => (
-              <div key={item.title} className="bg-white rounded-2xl p-7" style={{ boxShadow: '0 4px 20px rgba(47,74,58,0.07)' }}>
-                <div className="text-3xl mb-4">{item.icon}</div>
-                <h3 className="font-display text-[22px] font-medium text-forest-green mb-2">{item.title}</h3>
-                <p className="text-[14px] text-dark-text/60 leading-relaxed">{item.desc}</p>
+            <FadeIn delay={0.05}>
+            <div className="bg-white rounded-2xl p-7 border border-[rgba(47,74,58,0.08)] hover:-translate-y-1 transition-transform duration-200" style={{ boxShadow: '0 4px 20px rgba(47,74,58,0.06)' }}>
+              <div className="text-2xl mb-4">🌱</div>
+              <h3 className="font-display text-[26px] font-medium text-forest-green mb-1">Seeds</h3>
+              <p className="text-[13px] font-medium text-dark-text/50 mb-4">Pour les opérateurs de garderies en devenir</p>
+              <p className="text-[14px] text-dark-text/65 leading-relaxed mb-6">
+                Vous planifiez votre centre? Élaborez votre plan d&apos;affaires, complétez votre liste de vérification de permis provincial, et préparez tout avant le jour un.
+              </p>
+              <Link href="/fr/features" className="text-[14px] font-medium text-forest-green hover:underline">Commencer à planifier →</Link>
+            </div>
+            </FadeIn>
+
+            <FadeIn delay={0.1}>
+            <div
+              className="bg-white rounded-2xl p-7 relative hover:-translate-y-1 transition-transform duration-200"
+              style={{ border: '2px solid #2F4A3A', boxShadow: '0 12px 40px rgba(47,74,58,0.14)' }}
+            >
+              <div className="text-2xl mb-4">🌿</div>
+              <h3 className="font-display text-[26px] font-medium text-forest-green mb-1">Sprout</h3>
+              <p className="text-[13px] font-medium text-dark-text/50 mb-4">Pour les centres en croissance et les fournisseurs en milieu familial</p>
+              <p className="text-[14px] text-dark-text/65 leading-relaxed mb-6">
+                Vous êtes ouvert. Gérez maintenant vos opérations quotidiennes avec élégance: présences, facturation, communication avec les familles et Ramassage Sécurisé, le tout en un seul endroit.
+              </p>
+              <Link href="/fr/founding" className="text-[14px] font-medium text-forest-green hover:underline">Rejoindre le programme fondateur →</Link>
+            </div>
+            </FadeIn>
+
+            <FadeIn delay={0.15}>
+            <div className="bg-white rounded-2xl p-7 border border-[rgba(47,74,58,0.08)] hover:-translate-y-1 transition-transform duration-200" style={{ boxShadow: '0 4px 20px rgba(47,74,58,0.06)' }}>
+              <div className="text-2xl mb-4">🍃</div>
+              <div className="flex items-center gap-2 mb-1">
+                <h3 className="font-display text-[26px] font-medium text-forest-green">Vine</h3>
+                <span className="text-[10px] font-semibold text-dark-text/40 border border-[rgba(47,74,58,0.15)] px-2 py-0.5 rounded-full">Multi-emplacements</span>
               </div>
-            ))}
+              <p className="text-[13px] font-medium text-dark-text/50 mb-4">Pour les organisations multi-emplacements en expansion</p>
+              <p className="text-[14px] text-dark-text/65 leading-relaxed mb-6">
+                Plusieurs emplacements, un seul tableau de bord serein. Supervisez tout, produisez des rapports entre centres, et croissez sans le chaos.
+              </p>
+              <Link href="/fr/founding" className="text-[14px] font-medium text-forest-green hover:underline">Rejoindre le programme fondateur →</Link>
+            </div>
+            </FadeIn>
           </div>
         </div>
       </section>
 
       {/* ══════════════ PARTIE 2: CONÇU POUR LES SERVICES DE GARDE CANADIENS ══════════════ */}
-      <PartLabel number="02 /" title="Conçu pour les services de garde canadiens" bg="bg-cream" />
+      <PartLabel number="02 /" title="Conçu pour les services de garde canadiens" bg="bg-white" />
 
-      {/* ── SECTION: FAIT POUR LE CANADA ──────────────────────── */}
-      <section className="bg-cream pb-20 md:pb-24 px-5 md:px-8">
+      {/* ── PÉLCN / CANADA */}
+      <section className="bg-white pb-20 md:pb-24 px-5 md:px-8">
         <div className="max-w-4xl mx-auto">
           <SectionLabel>Fait Pour le Canada</SectionLabel>
           <h2 className="font-display font-medium text-forest-green leading-[1.08] mb-6" style={{ fontSize: 'clamp(34px, 4vw, 50px)' }}>
@@ -202,20 +299,44 @@ export default function FrenchHomePage() {
           <p className="text-[16px] text-dark-text/65 leading-relaxed mb-12 max-w-2xl">
             Le paysage des services de garde au Canada est unique. Sprout &amp; Vine est conçu spécifiquement pour les opérateurs canadiens, avec le suivi des subventions PÉLCN, le support bilingue (FR/EN) et la conformité provinciale intégrés dès le premier jour.
           </p>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { icon: '🍁', title: 'Suivi des subventions PÉLCN', desc: 'Calculez, réconciliez et soumettez vos subventions automatiquement. Fini les feuilles de calcul.' },
-              { icon: '🌐', title: 'Entièrement bilingue FR/EN', desc: "La plateforme et l'application Vine sont entièrement disponibles en français et en anglais." },
-              { icon: '🔒', title: 'Données au Canada', desc: 'Vos données demeurent au Canada, toujours. Conformité SOC 2 incluse.' },
+              {
+                icon: '🍁',
+                title: 'Suivi des subventions PÉLCN',
+                desc: "Calculez et suivez automatiquement les subventions du Programme d'apprentissage et de garde des jeunes enfants. Fini les feuilles de calcul.",
+              },
+              {
+                icon: '🇫🇷',
+                title: 'Entièrement bilingue',
+                desc: "Anglais et français dans toute la plateforme et l'application Vine. Un avantage concurrentiel qu'aucun compétiteur américain ne peut égaler.",
+              },
+              {
+                icon: '📋',
+                title: 'Conformité Provinciale',
+                desc: 'Listes de vérification de permis et suivi des ratios pour chaque province, préchargés et mis à jour automatiquement.',
+              },
             ].map(item => (
-              <div key={item.title} className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0" style={{ background: 'rgba(47,74,58,0.06)' }}>{item.icon}</div>
-                <div>
-                  <h3 className="font-display text-[20px] font-medium text-forest-green mb-1">{item.title}</h3>
-                  <p className="text-[14px] text-dark-text/60 leading-relaxed">{item.desc}</p>
-                </div>
+              <div key={item.title}>
+                <span className="text-3xl block mb-4">{item.icon}</span>
+                <h3 className="text-[16px] font-semibold text-dark-text mb-2">{item.title}</h3>
+                <p className="text-[14px] text-dark-text/60 leading-relaxed">{item.desc}</p>
               </div>
             ))}
+          </div>
+
+          <div className="mt-12 pt-8 border-t border-[rgba(47,74,58,0.1)]">
+            <p className="text-[12px] font-medium text-dark-text/40 uppercase tracking-[0.12em] mb-3">
+              Nous accueillons maintenant des opérateurs fondateurs en
+            </p>
+            <div className="flex flex-wrap gap-x-4 gap-y-2">
+              {['Ontario', 'Colombie-Britannique', 'Alberta', 'Manitoba', 'Québec'].map((province, i, arr) => (
+                <span key={province} className="text-[14px] font-medium text-dark-text/55">
+                  {province}{i < arr.length - 1 ? <span className="text-dark-text/25 ml-4">·</span> : null}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -223,35 +344,223 @@ export default function FrenchHomePage() {
       {/* ── CARTE DU CANADA ── */}
       <section className="bg-white py-16 md:py-20 px-5 md:px-8">
         <div className="max-w-3xl mx-auto flex flex-col items-center">
-          <CanadaMap caption="Conçu pour chaque province. Conforme dès le premier jour." />
+          <CanadaMap caption="Bâti province par province pour les services de garde canadiens." />
         </div>
       </section>
 
       {/* ══════════════ PARTIE 3: CONÇU AUTOUR DES FLUX DE TRAVAIL QUOTIDIENS ══════════════ */}
       <PartLabel number="03 /" title="Conçu autour des flux de travail quotidiens des services de garde" bg="bg-white" />
 
-      {/* ── SECTION: TABLEAU DE BORD ──────────────────────── */}
+      {/* ── GRILLE DE FONCTIONNALITÉS */}
       <section className="bg-white pb-20 md:pb-24 px-5 md:px-8">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
-          <div className="order-2 lg:order-1">
-            <div className="rounded-2xl overflow-hidden">
-              <DashboardPreview />
-            </div>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="font-display font-medium text-forest-green text-center leading-[1.1] mb-16" style={{ fontSize: 'clamp(36px, 4.5vw, 52px)' }}>
+            Tout ce dont vous avez besoin, en un seul endroit. 🌿
+          </h2>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
+            {features.slice(0, 4).map(f => (
+              <div key={f.name} className="flex flex-col items-center text-center">
+                <div
+                  className="w-14 h-14 rounded-full bg-white flex items-center justify-center mb-4 p-3.5"
+                  style={{ border: '1.5px solid rgba(47,74,58,0.15)', boxShadow: '0 4px 16px rgba(47,74,58,0.08)' }}
+                >
+                  {f.icon}
+                </div>
+                <h3 className="text-[14px] font-semibold text-dark-text mb-1.5">{f.name}</h3>
+                <p className="text-[13px] text-dark-text/55 leading-relaxed">{f.desc}</p>
+              </div>
+            ))}
           </div>
-          <div className="order-1 lg:order-2">
-            <SectionLabel>Votre Tableau de Bord</SectionLabel>
-            <h2 className="font-display font-medium text-forest-green leading-[1.08] mb-5" style={{ fontSize: 'clamp(34px, 4vw, 52px)' }}>
-              Tout ce dont vous avez besoin, d'un seul coup d'oeil.
+
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-10 mt-10 md:max-w-3xl md:mx-auto">
+            {features.slice(4).map(f => (
+              <div key={f.name} className="flex flex-col items-center text-center">
+                <div
+                  className="w-14 h-14 rounded-full bg-white flex items-center justify-center mb-4 p-3.5"
+                  style={{ border: '1.5px solid rgba(47,74,58,0.15)', boxShadow: '0 4px 16px rgba(47,74,58,0.08)' }}
+                >
+                  {f.icon}
+                </div>
+                <h3 className="text-[14px] font-semibold text-dark-text mb-1.5">{f.name}</h3>
+                <p className="text-[13px] text-dark-text/55 leading-relaxed">{f.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── TABLEAU DE BORD */}
+      <section className="bg-cream py-20 md:py-24 px-5 md:px-8">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[35%_1fr] gap-12 items-center">
+          <div>
+            <h2 className="font-display font-medium text-forest-green leading-[1.08] mb-5" style={{ fontSize: 'clamp(32px, 3.5vw, 48px)' }}>
+              Conçu pour les centres occupés.<br />Bâti pour ce qui compte le plus. 🌿
             </h2>
-            <p className="text-[16px] text-dark-text/65 leading-relaxed mb-8">
-              Un seul endroit pour voir les présences, les messages, les paiements et les événements. Pas de jonglage entre différentes applications.
+            <p className="text-[16px] text-dark-text/65 leading-relaxed mb-7">
+              De l&apos;inscription aux opérations quotidiennes, Sprout &amp; Vine vous aide à économiser du temps, réduire le stress et vous concentrer sur les enfants dont vous avez la charge.
+            </p>
+            <Link
+              href="/fr/features"
+              className="inline-block bg-forest-green text-white text-[14px] font-medium px-6 py-3.5 rounded-lg hover:bg-[#243d2f] transition-colors"
+            >
+              Explorer toutes les fonctionnalités
+            </Link>
+          </div>
+
+          <div className="min-w-0">
+            <DashboardPreview />
+          </div>
+        </div>
+      </section>
+
+      {/* ── Pour un ramassage plus sécuritaire ── */}
+      <GroupLabel bg="bg-forest-green">
+        <span className="text-sage-green">Pour un ramassage plus sécuritaire</span>
+      </GroupLabel>
+
+      {/* ── RAMASSAGE SÉCURISÉ */}
+      <section className="bg-forest-green pb-20 md:pb-24 px-5 md:px-8">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <p className="text-[11px] uppercase tracking-[0.16em] text-sage-green font-semibold mb-5">Sécurité des Parents</p>
+            <h2 className="font-display font-medium text-cream leading-[1.08] mb-6" style={{ fontSize: 'clamp(36px, 4vw, 52px)' }}>
+              Tranquillité d&apos;esprit,<br />à chaque ramassage.
+            </h2>
+            <p className="text-[16px] text-cream/65 leading-relaxed mb-8 max-w-lg">
+              La plupart des applications informent les parents que leur enfant a été récupéré. Sprout &amp; Vine leur indique <em>qui</em> a récupéré leur enfant, montre une photo, et envoie une notification instantanée avant même qu&apos;ils n&apos;aient quitté le stationnement.
             </p>
             <ul className="space-y-4">
               {[
-                { icon: '✅', text: 'Présences et ratios en temps réel' },
-                { icon: '💬', text: 'Messages et rapports en un seul endroit' },
-                { icon: '💳', text: 'Suivi des paiements et des subventions PÉLCN' },
-                { icon: '📅', text: 'Calendrier des événements et des rendez-vous' },
+                { icon: '🔒', text: 'Liste de ramassage autorisée vérifiée par photo' },
+                { icon: '📱', text: 'Notification instantanée: nom, photo et heure' },
+                { icon: '🚗', text: "Heure d'arrivée estimée en temps réel des parents et tuteurs" },
+              ].map(item => (
+                <li key={item.text} className="flex items-start gap-3 text-[15px] text-cream/80">
+                  <span className="text-lg flex-shrink-0 leading-none mt-0.5">{item.icon}</span>
+                  {item.text}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="flex justify-center">
+            <PhoneShell>
+              <div className="px-3 pb-3 space-y-2.5">
+                <div className="text-[10px] text-dark-text/40 text-center py-1">Application Vine</div>
+
+                <div className="rounded-2xl p-3.5 bg-forest-green">
+                  <div className="flex items-center gap-2 mb-2.5">
+                    <div className="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center text-white text-sm">✓</div>
+                    <div>
+                      <p className="text-white text-[11px] font-semibold">Alerte de Ramassage Sécurisé</p>
+                      <p className="text-white/55 text-[9px]">À l&apos;instant</p>
+                    </div>
+                  </div>
+                  <p className="text-cream font-semibold text-[13px] mb-0.5">Sophie a été récupérée</p>
+                  <p className="text-cream/65 text-[11px]">Par Grand-maman Rose · 15h14</p>
+                </div>
+
+                <div className="rounded-xl border border-[rgba(47,74,58,0.1)] p-3 flex items-center gap-3">
+                  <div className="w-11 h-11 rounded-full bg-light-sage/30 flex items-center justify-center text-2xl">👵</div>
+                  <div>
+                    <p className="text-[12px] font-semibold text-dark-text">Rose Mitchell</p>
+                    <p className="text-[10px] text-dark-text/45">Grand-mère · Autorisée</p>
+                    <div className="flex items-center gap-1 mt-0.5">
+                      <div className="w-1.5 h-1.5 rounded-full bg-sage-green" />
+                      <span className="text-[9px] text-sage-green font-medium">Photo vérifiée</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="rounded-xl bg-sage-green/10 py-2.5 flex items-center justify-center gap-2">
+                  <span className="text-sage-green text-sm">✓</span>
+                  <span className="text-[11px] font-semibold text-sage-green">Ramassage confirmé</span>
+                </div>
+
+                <div className="text-center pt-1">
+                  <p className="text-[10px] text-dark-text/35">Notification envoyée aux deux parents</p>
+                </div>
+              </div>
+            </PhoneShell>
+          </div>
+        </div>
+      </section>
+
+      {/* ── CTA CONTEXTUEL: Prendre rendez-vous ── */}
+      <div className="bg-white py-8 px-5 md:px-8 border-y border-[rgba(47,74,58,0.07)]">
+        <div className="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-[15px] text-dark-text/65 font-medium text-center sm:text-left">
+            Vous voulez voir Ramassage Sécurisé et la plateforme complète en action?
+          </p>
+          <Link
+            href="/fr/contact"
+            className="flex-shrink-0 bg-forest-green text-white text-[13px] font-medium px-6 py-2.5 rounded-lg hover:bg-[#243d2f] transition-colors whitespace-nowrap"
+          >
+            Prendre rendez-vous
+          </Link>
+        </div>
+      </div>
+
+      {/* ── Pour l'inscription et la communication avec les familles ── */}
+      <GroupLabel bg="bg-cream">Pour l&apos;inscription et la communication avec les familles</GroupLabel>
+
+      {/* ── INSCRIPTION ET LISTE D'ATTENTE */}
+      <section className="bg-cream pb-20 md:pb-24 px-5 md:px-8">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <div className="space-y-3">
+              {[
+                { num: '1', label: 'Demande', desc: "Formulaire en ligne · Liste d'attente automatique", icon: '📬' },
+                { num: '2', label: "Liste d'attente", desc: 'Position suivie · Parent notifié', icon: '📋' },
+                { num: '3', label: 'Offre envoyée', desc: 'Dossier numérique · Signature électronique', icon: '📄' },
+                { num: '4', label: 'Inscrit ✓', desc: 'PÉLCN pré-rempli · Prêt dès le jour 1', icon: '💚', active: true },
+              ].map((stage, i) => (
+                <div key={stage.label} className="relative">
+                  <div
+                    className="flex items-center gap-4 rounded-xl p-4 bg-white border transition-colors"
+                    style={{
+                      border: stage.active ? '1.5px solid #6EB76F' : '1px solid rgba(47,74,58,0.1)',
+                      boxShadow: stage.active ? '0 4px 20px rgba(110,183,111,0.12)' : '0 2px 10px rgba(47,74,58,0.05)',
+                    }}
+                  >
+                    <div
+                      className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 text-lg"
+                      style={{ background: stage.active ? 'rgba(110,183,111,0.15)' : 'rgba(47,74,58,0.06)' }}
+                    >
+                      {stage.icon}
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-[14px] font-semibold text-dark-text">{stage.label}</p>
+                      <p className="text-[12px] text-dark-text/45">{stage.desc}</p>
+                    </div>
+                    <span className="text-[11px] font-semibold text-dark-text/25">{stage.num}</span>
+                  </div>
+                  {i < 3 && (
+                    <div className="flex justify-center py-0.5">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M 8 2 C 10 6 6 10 8 14" stroke="#AEC1B0" strokeWidth="1.5" strokeLinecap="round" />
+                      </svg>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <SectionLabel>L&apos;Inscription Simplifiée</SectionLabel>
+            <h2 className="font-display font-medium text-forest-green leading-[1.08] mb-6" style={{ fontSize: 'clamp(34px, 4vw, 50px)' }}>
+              De la première demande au<br />premier jour, géré avec élégance.
+            </h2>
+            <p className="text-[16px] text-dark-text/65 leading-relaxed mb-8">
+              Les centres canadiens ont des listes d&apos;attente de 2 à 3 ans. Sprout &amp; Vine gère tout le parcours: formulaires de demande, positions sur liste d&apos;attente, dossiers d&apos;inscription, signature électronique, et documents de subvention pré-remplis à partir de vos données PÉLCN. Aucune feuille de calcul. Aucun papier. Aucun stress.
+            </p>
+            <ul className="space-y-4">
+              {[
+                { icon: '📬', text: "Formulaires de demande en ligne avec placement automatique sur liste d'attente" },
+                { icon: '📄', text: "Dossiers d'inscription numériques avec signature électronique" },
+                { icon: '💳', text: 'Documents de subvention pré-remplis à partir de vos données PÉLCN' },
               ].map(item => (
                 <li key={item.text} className="flex items-start gap-3 text-[15px] text-dark-text/75">
                   <span className="text-lg flex-shrink-0 leading-none mt-0.5">{item.icon}</span>
@@ -263,68 +572,28 @@ export default function FrenchHomePage() {
         </div>
       </section>
 
-      {/* ── SECTION: COMMENT ÇA FONCTIONNE ───────────────────── */}
-      <section className="bg-cream py-20 md:py-24 px-5 md:px-8">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-14">
-            <SectionLabel>Comment Ça Fonctionne</SectionLabel>
-            <h2 className="font-display font-medium text-forest-green leading-[1.08]" style={{ fontSize: 'clamp(34px, 4vw, 52px)' }}>
-              Opérationnel en une journée.
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            {[
-              { step: '01', title: 'Configurez votre centre', desc: 'Ajoutez vos groupes, votre personnel et vos familles. Importez vos données existantes.' },
-              { step: '02', title: 'Invitez les familles', desc: "Chaque famille reçoit un accès à l'application Vine. Configuration en 2 minutes." },
-              { step: '03', title: 'Commencez à utiliser', desc: 'Présences, rapports quotidiens, facturation. Tout fonctionne dès le premier jour.' },
-              { step: '04', title: 'Regardez votre centre grandir', desc: 'Des données claires, des familles informées, et du temps libéré pour ce qui compte.' },
-            ].map(item => (
-              <div key={item.step} className="text-center">
-                <div className="font-display text-[52px] font-medium text-sage-green/20 leading-none mb-3">{item.step}</div>
-                <h3 className="font-display text-[20px] font-medium text-forest-green mb-2">{item.title}</h3>
-                <p className="text-[13px] text-dark-text/55 leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── SECTION: POUR LES ÉDUCATEURS ─────────────────────── */}
-      <section className="bg-cream py-20 px-5 md:px-8">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
-          <div>
-            <SectionLabel>Pour les Éducateurs</SectionLabel>
-            <h2 className="font-display font-medium text-forest-green leading-[1.08] mb-5" style={{ fontSize: 'clamp(34px, 4vw, 50px)' }}>
-              Conçu pour ceux qui se présentent chaque jour.
-            </h2>
-            <p className="text-[16px] text-dark-text/65 leading-relaxed mb-10">
-              Les directeurs choisissent Sprout &amp; Vine. Les éducateurs l'adorent. Ce n'est pas un hasard. Nous avons conçu chaque flux de travail autour des personnes qui l'utilisent vraiment.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-              {[
-                { icon: '📋', title: 'Rapports en moins de 2 minutes', desc: "Modèles à compléter d'un tapotement. Ajoutez une photo. Envoyez. Avant la sieste." },
-                { icon: '🌱', title: 'Jalons en déplacement', desc: 'Remarquez quelque chose de beau? Taguez-le en 10 secondes. La chronologie se construit automatiquement.' },
-                { icon: '💬', title: 'Messages sans votre numéro personnel', desc: "Toute communication passe par l'application. Les parents ne peuvent pas vous écrire à 23h." },
-              ].map(item => (
-                <div key={item.title} className="bg-white rounded-xl p-5" style={{ boxShadow: '0 2px 12px rgba(47,74,58,0.06)' }}>
-                  <span className="text-2xl block mb-3">{item.icon}</span>
-                  <p className="text-[14px] font-semibold text-dark-text mb-1.5">{item.title}</p>
-                  <p className="text-[13px] text-dark-text/55 leading-relaxed">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="flex justify-center">
+      {/* ── APPLICATION VINE POUR LES PARENTS */}
+      <section className="bg-white py-20 md:py-24 px-5 md:px-8">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="flex justify-center order-2 lg:order-1">
             <PhoneShell>
               <div className="px-3 pb-3 space-y-2">
-                <div className="text-[10px] font-semibold text-forest-green text-center py-1 border-b border-[rgba(47,74,58,0.08)]">Fil d'activité</div>
+                <div className="text-[10px] font-semibold text-forest-green text-center py-1 border-b border-[rgba(47,74,58,0.08)]">
+                  Fil d&apos;activité
+                </div>
                 {[
                   { icon: '📷', title: 'Emma travaillant sur son projet artistique', sub: 'Salle des Papillons · 10h24', color: '#AEC1B0' },
                   { icon: '🌱', title: 'Jalon: Première utilisation des ciseaux!', sub: 'Développement · 10h31', color: '#6EB76F' },
                   { icon: '📋', title: "Rapport quotidien d'Olivia est prêt", sub: 'Appuyez pour lire · 12h03', color: '#2F4A3A' },
+                  { icon: '💬', title: 'Message de Little Learners', sub: 'Photos du printemps vendredi!', color: '#E2845F' },
                 ].map(item => (
                   <div key={item.title} className="flex items-start gap-2.5 p-2.5 rounded-xl" style={{ background: 'rgba(247,242,232,0.7)' }}>
-                    <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 text-base" style={{ background: `${item.color}20` }}>{item.icon}</div>
+                    <div
+                      className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 text-base"
+                      style={{ background: `${item.color}20` }}
+                    >
+                      {item.icon}
+                    </div>
                     <div>
                       <p className="text-[11px] font-semibold text-dark-text leading-snug">{item.title}</p>
                       <p className="text-[9px] text-dark-text/40 mt-0.5">{item.sub}</p>
@@ -334,11 +603,85 @@ export default function FrenchHomePage() {
               </div>
             </PhoneShell>
           </div>
+
+          <div className="order-1 lg:order-2">
+            <SectionLabel>L&apos;Application Vine pour les Parents</SectionLabel>
+            <h2 className="font-display font-medium text-forest-green leading-[1.08] mb-5" style={{ fontSize: 'clamp(34px, 4vw, 50px)' }}>
+              Les parents ne sont pas seulement notifiés.<br />Ils sont connectés.
+            </h2>
+            <p className="text-[16px] text-dark-text/65 leading-relaxed mb-8">
+              Les familles restent connectées grâce aux mises à jour quotidiennes, photos de jalons, facturation, historique de ramassage, messages et communications importantes du centre, le tout dans une seule application. Chaque mise à jour est rattachée au profil de leur enfant. Rien ne se perd.
+            </p>
+
+            <div className="space-y-5">
+              {[
+                {
+                  icon: '👨‍👩‍👧',
+                  title: 'Cercle Familial',
+                  badge: 'Fonctionnalité vedette',
+                  desc: 'Maman, papa, grands-parents, beaux-parents et nounous, chacun avec un accès basé sur son rôle. Les coparents dans des foyers séparés restent tous deux pleinement informés.',
+                },
+                {
+                  icon: '🔒',
+                  title: 'Autorisation de Ramassage Sécurisé',
+                  desc: "Liste de ramassage autorisée vérifiée par photo. Les parents sont notifiés dès que leur enfant est signé, et par qui.",
+                },
+                {
+                  icon: '🌱',
+                  title: 'Jalons et Chronologie de Développement',
+                  desc: 'Les éducatrices identifient les moments du quotidien: premiers ciseaux, premier ami, première phrase complète. Elles construisent automatiquement un précieux récit de développement que les parents chériront.',
+                },
+              ].map(item => (
+                <div key={item.title} className="flex items-start gap-4">
+                  <div
+                    className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 text-xl"
+                    style={{ background: 'rgba(47,74,58,0.07)' }}
+                  >
+                    {item.icon}
+                  </div>
+                  <div>
+                    <div className="flex items-center gap-2 mb-0.5">
+                      <p className="text-[14px] font-semibold text-dark-text">{item.title}</p>
+                      {item.badge && (
+                        <span
+                          className="text-[10px] font-semibold px-2 py-0.5 rounded-full"
+                          style={{ background: 'rgba(110,183,111,0.12)', color: '#6EB76F' }}
+                        >
+                          {item.badge}
+                        </span>
+                      )}
+                    </div>
+                    <p className="text-[13px] text-dark-text/60 leading-relaxed">{item.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-7 pt-6 border-t border-[rgba(47,74,58,0.1)]">
+              <div className="flex flex-wrap gap-3">
+                <span className="inline-flex items-center gap-2 bg-forest-green/8 text-forest-green text-[12px] font-medium px-4 py-2 rounded-lg">
+                  <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 flex-shrink-0" aria-hidden="true">
+                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                  </svg>
+                  Application iOS à venir au T4 2026
+                </span>
+                <span className="inline-flex items-center gap-2 bg-forest-green/8 text-forest-green text-[12px] font-medium px-4 py-2 rounded-lg">
+                  <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 flex-shrink-0" aria-hidden="true">
+                    <path d="M3.18 23.76c.3.17.64.22.99.16l12.87-7.43-2.82-2.82-11.04 10.09zm-1.65-20.4A1.99 1.99 0 001 4.96v14.08c0 .65.28 1.24.72 1.64l.09.08 7.89-7.89v-.19L1.53 4.8l-.01-.01v-.01zm19.65 7.47l-2.76-1.6-3.14 3.14 3.14 3.13 2.79-1.61c.79-.46.79-1.21-.03-1.66zM4.17.24L17.04 7.68l-2.82 2.82L1.35.41c.35-.06.71 0 1.01.17l1.81 1.07V.24z"/>
+                  </svg>
+                  Application Android prévue pour 2027
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
+      {/* ── Pour les dossiers des enfants et du personnel ── */}
+      <GroupLabel bg="bg-cream">Pour les dossiers des enfants et du personnel</GroupLabel>
+
       {/* ── PROFIL ENFANT ─────────────────────────────────────── */}
-      <section className="bg-white py-20 md:py-24 px-5 md:px-8">
+      <section className="bg-cream pb-20 md:pb-24 px-5 md:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <SectionLabel>Disponible au lancement</SectionLabel>
@@ -349,7 +692,7 @@ export default function FrenchHomePage() {
               Chaque enfant. Un profil.<br />Un dossier qui grandit avec eux.
             </h2>
             <p className="text-[16px] text-dark-text/65 leading-relaxed mb-4">
-              Le profil de l'enfant commence dès l'inscription. Il les accompagne quand ils partent.
+              Le profil de l&apos;enfant commence dès l&apos;inscription. Il les accompagne quand ils partent.
             </p>
             <p className="text-[16px] text-dark-text/65 leading-relaxed mb-8">
               Dès le premier jour, chaque mise à jour, chaque jalon, chaque photo et chaque document vit dans un profil unique qui appartient à la famille, pas au centre. Les éducateurs y contribuent. Les parents le chérissent. Et quand le moment vient de partir, il les suit.
@@ -374,7 +717,7 @@ export default function FrenchHomePage() {
             </Link>
           </div>
 
-          {/* Profile card mockup */}
+          {/* Maquette de la carte de profil */}
           <div>
             <div
               className="bg-white rounded-2xl overflow-hidden border border-[rgba(47,74,58,0.1)]"
@@ -434,7 +777,7 @@ export default function FrenchHomePage() {
                   <span className="text-[11px] font-medium text-dark-text/30 whitespace-nowrap">…</span>
                 </div>
                 <div className="flex justify-center mt-1">
-                  <span className="text-[10px] text-dark-text/35">Aujourd'hui</span>
+                  <span className="text-[10px] text-dark-text/35">Aujourd&apos;hui</span>
                 </div>
               </div>
             </div>
@@ -445,7 +788,6 @@ export default function FrenchHomePage() {
       {/* ── PROFIL DU PERSONNEL ── */}
       <section className="bg-white py-20 md:py-24 px-5 md:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          {/* Carte du personnel */}
           <div className="flex justify-center order-2 lg:order-1">
             <div
               className="bg-white rounded-2xl overflow-hidden border border-[rgba(47,74,58,0.1)] w-full max-w-sm"
@@ -515,6 +857,58 @@ export default function FrenchHomePage() {
         </div>
       </section>
 
+      {/* ── Pour les éducateurs et les opérateurs ── */}
+      <GroupLabel bg="rgba(174,193,176,0.15)">Pour les éducateurs et les opérateurs</GroupLabel>
+
+      {/* ── SECTION ÉDUCATEURS */}
+      <section className="pb-20 md:pb-24 px-5 md:px-8" style={{ background: 'rgba(174,193,176,0.15)' }}>
+        <div className="max-w-4xl mx-auto text-center">
+          <SectionLabel>Pour les Éducateurs</SectionLabel>
+          <h2 className="font-display font-medium text-forest-green leading-[1.08] mb-5" style={{ fontSize: 'clamp(34px, 4vw, 50px)' }}>
+            Bâti pour les gens<br />qui se présentent chaque jour.
+          </h2>
+          <p className="text-[16px] text-dark-text/65 leading-relaxed mb-10 max-w-2xl mx-auto">
+            Les directeurs choisissent Sprout &amp; Vine. Les éducateurs l&apos;adorent. Ce n&apos;est pas un hasard. Nous avons conçu chaque flux de travail autour des personnes qui l&apos;utilisent vraiment.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10 text-left">
+            {[
+              { icon: '📋', title: 'Rapports quotidiens en moins de 2 minutes', desc: "Modèles à compléter d'un tapotement. Ajoutez une photo. Terminé avant la sieste." },
+              { icon: '🌱', title: 'Identifiez les jalons depuis votre téléphone', desc: 'Vous remarquez quelque chose de beau? Identifiez-le en 10 secondes. Cela construit automatiquement leur chronologie de développement.' },
+              { icon: '💬', title: 'Envoyez des messages aux parents sans votre numéro personnel', desc: "Toute communication passe par l'application. Les limites professionnelles sont respectées. Les parents ne peuvent pas vous texter à 23h." },
+            ].map(item => (
+              <div key={item.title} className="bg-white rounded-xl p-5 border border-[rgba(47,74,58,0.08)]" style={{ boxShadow: '0 2px 12px rgba(47,74,58,0.06)' }}>
+                <span className="text-2xl block mb-3">{item.icon}</span>
+                <p className="text-[14px] font-semibold text-dark-text mb-1.5">{item.title}</p>
+                <p className="text-[13px] text-dark-text/55 leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <Link
+            href="/for-educators"
+            className="inline-flex items-center gap-2 text-[14px] font-medium text-forest-green border-2 border-forest-green px-7 py-3.5 rounded-lg hover:bg-forest-green hover:text-white transition-colors"
+          >
+            Voir l&apos;expérience éducatrice →
+          </Link>
+        </div>
+      </section>
+
+      {/* ── CTA CONTEXTUEL: Explorer les fonctionnalités ── */}
+      <div className="bg-cream py-8 px-5 md:px-8 border-y border-[rgba(47,74,58,0.07)]">
+        <div className="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-[15px] text-dark-text/65 font-medium text-center sm:text-left">
+            Curieux de tout ce que la plateforme peut faire?
+          </p>
+          <Link
+            href="/fr/features"
+            className="flex-shrink-0 border-2 border-forest-green text-forest-green text-[13px] font-medium px-6 py-2.5 rounded-lg hover:bg-forest-green hover:text-white transition-colors whitespace-nowrap"
+          >
+            Explorer les fonctionnalités
+          </Link>
+        </div>
+      </div>
+
       {/* ── INTELLIGENCE ARTIFICIELLE ── */}
       <section className="bg-white py-20 md:py-24 px-5 md:px-8">
         <div className="max-w-4xl mx-auto">
@@ -563,45 +957,36 @@ export default function FrenchHomePage() {
       {/* ══════════════ PARTIE 4: CE QUE NOUS CONSTRUISONS EN PREMIER ══════════════ */}
       <PartLabel number="04 /" title="Ce que nous construisons en premier" bg="bg-cream" />
 
-      {/* ── SECTION: VISITE INTERACTIVE ───────────────────────── */}
+      {/* ── VISITE INTERACTIVE */}
       <section className="bg-cream pb-20 md:pb-24 px-5 md:px-8">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <SectionLabel>Visite Interactive</SectionLabel>
-            <h2 className="font-display font-medium text-forest-green leading-[1.08] mb-4" style={{ fontSize: 'clamp(34px, 4vw, 52px)' }}>
-              Voyez comment ça fonctionne
+            <SectionLabel>Voyez-le en Action</SectionLabel>
+            <h2 className="font-display font-medium text-forest-green leading-[1.08] mb-4" style={{ fontSize: 'clamp(34px, 4vw, 50px)' }}>
+              30 secondes pour inscrire un enfant.<br />2 minutes pour envoyer un rapport quotidien.
             </h2>
-            <p className="text-[16px] text-dark-text/55 max-w-xl mx-auto">
-              Explorez les flux de travail quotidiens: enregistrement du matin, rapport quotidien et autorisation de collecte.
+            <p className="text-[16px] text-dark-text/55">
+              Découvrez la plateforme avant de prendre rendez-vous.
             </p>
           </div>
           <ProductTour />
         </div>
       </section>
 
-      {/* ── SECTION: TARIFICATION ─────────────────────────────── */}
-      <section className="bg-white py-20 md:py-24 px-5 md:px-8">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-14">
-            <SectionLabel>Tarification Simple</SectionLabel>
-            <h2 className="font-display font-medium text-forest-green leading-[1.08] mb-4" style={{ fontSize: 'clamp(36px, 4.5vw, 56px)' }}>
-              Pas de frais cachés.<br />Pas de frais par enfant.
-            </h2>
-            <p className="text-[16px] text-dark-text/50">Tous les prix en dollars canadiens.</p>
-          </div>
-          <PricingCards />
-          <div className="text-center mt-8">
-            <Link href="/fr/pricing" className="text-[14px] font-medium text-forest-green hover:underline">
-              Voir tous les détails de tarification →
-            </Link>
-          </div>
+      {/* ── CTA CONTEXTUEL: Tarification ── */}
+      <div className="bg-white py-8 px-5 md:px-8 border-y border-[rgba(47,74,58,0.07)]">
+        <div className="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-[15px] text-dark-text/65 font-medium text-center sm:text-left">
+            Conçu pour le Canada, ça veut aussi dire conçu pour votre budget.
+          </p>
+          <Link
+            href="/fr/pricing"
+            className="flex-shrink-0 border-2 border-forest-green text-forest-green text-[13px] font-medium px-6 py-2.5 rounded-lg hover:bg-forest-green hover:text-white transition-colors whitespace-nowrap"
+          >
+            Comment fonctionne la tarification
+          </Link>
         </div>
-      </section>
-
-      {/* ── SECTION: CALCULATEUR DE ROI ──────────────────────── */}
-      <section className="py-20 px-5 md:px-8" style={{ background: '#2F4A3A' }}>
-        <ROICalculator />
-      </section>
+      </div>
 
       {/* ══════════════ PARTIE 5: AIDEZ À FAÇONNER SPROUT & VINE CARE ══════════════ */}
       <PartLabel number="05 /" title="Aidez à façonner Sprout & Vine Care" bg="bg-forest-green" dark />
@@ -640,8 +1025,23 @@ export default function FrenchHomePage() {
         </div>
       </section>
 
+      {/* ── L'HISTOIRE DE LA FONDATRICE (RÉSUMÉ) */}
+      <section className="bg-cream py-16 md:py-20 px-5 md:px-8 text-center">
+        <div className="max-w-xl mx-auto">
+          <p
+            className="font-display font-medium text-forest-green leading-snug mb-6"
+            style={{ fontSize: 'clamp(22px, 2.8vw, 30px)' }}
+          >
+            Bâti par une équipe passionnée par le soutien aux opérateurs, éducateurs et familles des services de garde canadiens.
+          </p>
+          <Link href="/fr/about" className="inline-flex items-center gap-2 text-[14px] font-medium text-forest-green border-2 border-forest-green px-6 py-3 rounded-lg hover:bg-forest-green hover:text-white transition-colors">
+            Découvrir notre histoire →
+          </Link>
+        </div>
+      </section>
+
       {/* ── PREUVE SOCIALE AVEC COMPTEUR ────────────────────────── */}
-      <section className="bg-cream py-16 md:py-20 px-5 md:px-8">
+      <section className="bg-white py-16 md:py-20 px-5 md:px-8">
         <div className="max-w-3xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-sage-green" />
@@ -667,7 +1067,7 @@ export default function FrenchHomePage() {
 
       {/* ── TÉMOIGNAGE (conditionnel) ─────────────────────────── */}
       {testimonial.text && (
-        <section className="bg-white py-16 md:py-20 px-5 md:px-8">
+        <section className="bg-cream py-16 md:py-20 px-5 md:px-8">
           <div className="max-w-2xl mx-auto text-center">
             <blockquote>
               <p className="font-display font-medium text-forest-green leading-relaxed mb-6" style={{ fontSize: 'clamp(20px, 2.5vw, 28px)' }}>
@@ -683,23 +1083,6 @@ export default function FrenchHomePage() {
           </div>
         </section>
       )}
-
-      {/* ── FAQ ─────────────────────────────────────────────────── */}
-      <section className="bg-white py-20 px-5 md:px-8">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="font-display font-medium text-forest-green text-center mb-12" style={{ fontSize: 'clamp(32px, 4vw, 48px)' }}>
-            Questions fréquentes
-          </h2>
-          <div className="divide-y divide-[rgba(47,74,58,0.08)]">
-            {faqFr.map(item => (
-              <div key={item.q} className="py-6">
-                <p className="text-[16px] font-semibold text-dark-text mb-2">{item.q}</p>
-                <p className="text-[15px] text-dark-text/60 leading-relaxed">{item.a}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ── BANDE CTA PROGRAMME FONDATEUR ───────────────────────── */}
       <section className="bg-forest-green py-24 md:py-32 px-5 md:px-8 text-center">
