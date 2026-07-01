@@ -420,7 +420,7 @@ export default function FrenchHomePage() {
               height={200}
               rotate={2}
               tone="sage"
-              className="mt-8 hidden lg:block"
+              className="mt-8"
             />
           </FadeIn>
 
@@ -464,7 +464,7 @@ export default function FrenchHomePage() {
               width={168}
               height={224}
               rotate={-2}
-              className="mt-8 hidden sm:block"
+              className="mt-8"
             />
           </FadeIn>
 
@@ -739,7 +739,7 @@ export default function FrenchHomePage() {
               width={200}
               height={134}
               rotate={-1.5}
-              className="mb-8 hidden sm:block"
+              className="mb-8"
             />
             <Link
               href="/fr/features"
@@ -919,7 +919,7 @@ export default function FrenchHomePage() {
             ))}
           </div>
 
-          <FadeIn delay={0.2} className="hidden sm:flex items-end justify-center gap-4 mb-10">
+          <FadeIn delay={0.2} className="flex items-end justify-center gap-4 mb-10">
             <PhotoAccent
               src="/pexels-yankrukov-8613054.jpg"
               alt="Une éducatrice guidant des enfants dans une activité de peinture à l'aquarelle"
@@ -1085,7 +1085,6 @@ export default function FrenchHomePage() {
               width={160}
               height={102}
               rotate={-1.5}
-              className="hidden sm:block"
             />
           </div>
         </FadeIn>

@@ -44,6 +44,20 @@ body {
   transform: translateY(0);
 }
 
+/* PhotoAccent: smaller size on phones, full size from `sm` up.
+   Sizes come in as CSS custom properties since they're per-instance
+   runtime numbers, not values Tailwind can see at build time. */
+.photo-accent-frame {
+  width: var(--photo-w-mobile);
+  height: var(--photo-h-mobile);
+}
+@media (min-width: 640px) {
+  .photo-accent-frame {
+    width: var(--photo-w);
+    height: var(--photo-h);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
