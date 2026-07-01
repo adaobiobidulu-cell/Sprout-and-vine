@@ -22,6 +22,37 @@ body {
   color: #1C2B22;
 }
 
+/* Site-wide motion tokens — "calm arrival" easing shared by every reveal */
+:root {
+  --ease-sprout: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-fast: 220ms;
+  --duration-base: 420ms;
+  --duration-slow: 700ms;
+  --reveal-distance: 16px;
+}
+
+/* Default reveal animation for any element not driven by framer-motion */
+.reveal {
+  opacity: 0;
+  transform: translateY(var(--reveal-distance));
+  transition:
+    opacity var(--duration-slow) var(--ease-sprout),
+    transform var(--duration-slow) var(--ease-sprout);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 /* Smooth scroll */
 html {
   scroll-behavior: smooth;

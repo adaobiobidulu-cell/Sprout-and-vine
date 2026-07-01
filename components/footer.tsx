@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import BrandLogo from '@/components/brand-logo'
+import FadeIn from '@/components/fade-in'
 
 const footerColumnsEn = [
   {
@@ -122,7 +123,7 @@ export default function Footer() {
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
 
           {/* Left: brand block */}
-          <div className="flex-shrink-0 lg:max-w-[260px]">
+          <FadeIn margin="-20px" className="flex-shrink-0 lg:max-w-[260px]">
             <Link href={isFr ? '/fr' : '/'} className="inline-flex mb-5" aria-label="Sprout & Vine home">
               <BrandLogo tone="cream" height={64} />
             </Link>
@@ -136,12 +137,12 @@ export default function Footer() {
               <p className="text-[11px] text-cream/40">iOS app coming Q4 2026</p>
               <p className="text-[11px] text-cream/40">Android app planned for 2027</p>
             </div>
-          </div>
+          </FadeIn>
 
           {/* Right: link columns */}
           <div className="flex-1 grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-6">
-            {footerColumns.map(({ title, links }) => (
-              <div key={title}>
+            {footerColumns.map(({ title, links }, i) => (
+              <FadeIn key={title} margin="-20px" delay={i * 0.08}>
                 <h3 className="text-[11px] uppercase tracking-[0.12em] font-semibold text-cream/45 mb-4">
                   {title}
                 </h3>
@@ -157,7 +158,7 @@ export default function Footer() {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </FadeIn>
             ))}
           </div>
         </div>

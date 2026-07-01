@@ -5,6 +5,7 @@ import DashboardPreview from '@/components/dashboard-preview'
 import EmailCapture from '@/components/email-capture'
 import CanadaMap from '@/components/canada-map'
 import PhotoAccent from '@/components/photo-accent'
+import { PartLabel, GroupLabel } from '@/components/part-label'
 import { testimonial } from '@/lib/testimonial'
 import type { Metadata } from 'next'
 import { altEn } from '@/lib/seo'
@@ -110,119 +111,112 @@ function PhoneShell({ children }: { children: React.ReactNode }) {
   )
 }
 
-/* Marks the start of one of the 5 guided parts of the homepage. */
-function PartLabel({ number, title, bg = 'bg-cream', dark = false }: { number: string; title: string; bg?: string; dark?: boolean }) {
-  return (
-    <div className={`${bg} pt-14 pb-6 px-5 md:px-8 text-center`}>
-      <p className="inline-flex items-center gap-2 text-[12px] font-bold uppercase tracking-[0.2em] text-terracotta">
-        <span className={dark ? 'text-cream/40' : 'text-dark-text/30'}>{number}</span>
-        {title}
-      </p>
-    </div>
-  )
-}
-
-/* Marks a workflow sub-group within Part 3. */
-function GroupLabel({ children, bg = 'bg-cream' }: { children: React.ReactNode; bg?: string }) {
-  return (
-    <div className={`${bg} pt-10 pb-2 px-5 md:px-8 text-center`}>
-      <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-dark-text/40">
-        {children}
-      </p>
-    </div>
-  )
-}
-
 export default function Home() {
   return (
     <>
       {/* ══════════════ PART 1: WHAT SPROUT & VINE CARE IS ══════════════ */}
       <PartLabel number="01 /" title="What Sprout & Vine Care is" bg="bg-cream" />
 
-      {/* ── HERO */}
+      {/* ── HERO: a calm, sequenced arrival — whisper, not shout */}
       <section className="pb-24 md:pb-32 px-5 md:px-8 bg-cream">
         <div className="max-w-3xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 bg-terracotta/10 text-terracotta text-[12px] font-semibold px-4 py-2 rounded-full mb-8">
-            <span className="w-1.5 h-1.5 rounded-full bg-terracotta animate-pulse" />
-            Founding Operators Program · Now Open
-          </div>
-
-          <h1
-            className="font-display font-medium text-forest-green leading-[1.05] mb-6"
-            style={{ fontSize: 'clamp(38px, 5vw, 66px)' }}
-          >
-            The Childcare Platform<br />
-            We Are Building With<br className="hidden sm:block" />{' '}
-            <em className="text-terracotta not-italic">Canadian Operators.</em>
-          </h1>
-
-          <p className="text-[18px] text-dark-text/65 mb-10 max-w-xl mx-auto leading-relaxed">
-            Sprout &amp; Vine Care is a modern childcare management platform designed for Canadian centres. We're partnering with a limited group of founding operators to help shape the future of enrollment, compliance, communication, and centre management.
-          </p>
-
-          <div className="flex flex-col items-center gap-4">
-            <Link
-              id="hero-primary-cta"
-              href="/founding"
-              className="w-full sm:w-auto bg-forest-green text-white text-[14px] font-medium px-8 py-3.5 rounded-lg hover:bg-[#243d2f] transition-colors text-center"
-            >
-              Join the Founding Operators Program
-            </Link>
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 w-full sm:w-auto">
-              <Link
-                href="/features"
-                className="text-[13px] font-medium text-dark-text/70 border border-[rgba(47,74,58,0.22)] px-5 py-2.5 rounded-lg hover:border-[rgba(47,74,58,0.45)] hover:text-dark-text transition-colors text-center"
-              >
-                Explore Features
-              </Link>
-              <Link
-                href="/contact"
-                className="text-[13px] font-medium text-dark-text/70 border border-[rgba(47,74,58,0.22)] px-5 py-2.5 rounded-lg hover:border-[rgba(47,74,58,0.45)] hover:text-dark-text transition-colors text-center"
-              >
-                Book a Discovery Call
-              </Link>
-              <Link
-                href="/roadmap"
-                className="text-[13px] font-medium text-dark-text/70 border border-[rgba(47,74,58,0.22)] px-5 py-2.5 rounded-lg hover:border-[rgba(47,74,58,0.45)] hover:text-dark-text transition-colors text-center"
-              >
-                View Roadmap
-              </Link>
+          <FadeIn margin="0px">
+            <div className="inline-flex items-center gap-2 bg-terracotta/10 text-terracotta text-[12px] font-semibold px-4 py-2 rounded-full mb-8">
+              <span className="w-1.5 h-1.5 rounded-full bg-terracotta animate-pulse" />
+              Founding Operators Program · Now Open
             </div>
-          </div>
+          </FadeIn>
+
+          <FadeIn margin="0px" delay={0.12}>
+            <h1
+              className="font-display font-medium text-forest-green leading-[1.05] mb-6"
+              style={{ fontSize: 'clamp(38px, 5vw, 66px)' }}
+            >
+              The Childcare Platform<br />
+              We Are Building With<br className="hidden sm:block" />{' '}
+              <em className="text-terracotta not-italic">Canadian Operators.</em>
+            </h1>
+          </FadeIn>
+
+          <FadeIn margin="0px" delay={0.24}>
+            <p className="text-[18px] text-dark-text/65 mb-10 max-w-xl mx-auto leading-relaxed">
+              Sprout &amp; Vine Care is a modern childcare management platform designed for Canadian centres. We're partnering with a limited group of founding operators to help shape the future of enrollment, compliance, communication, and centre management.
+            </p>
+          </FadeIn>
+
+          <FadeIn margin="0px" delay={0.36}>
+            <div className="flex flex-col items-center gap-4">
+              <Link
+                id="hero-primary-cta"
+                href="/founding"
+                className="w-full sm:w-auto bg-forest-green text-white text-[14px] font-medium px-8 py-3.5 rounded-lg hover:bg-[#243d2f] transition-colors text-center"
+              >
+                Join the Founding Operators Program
+              </Link>
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 w-full sm:w-auto">
+                <Link
+                  href="/features"
+                  className="text-[13px] font-medium text-dark-text/70 border border-[rgba(47,74,58,0.22)] px-5 py-2.5 rounded-lg hover:border-[rgba(47,74,58,0.45)] hover:text-dark-text transition-colors text-center"
+                >
+                  Explore Features
+                </Link>
+                <Link
+                  href="/contact"
+                  className="text-[13px] font-medium text-dark-text/70 border border-[rgba(47,74,58,0.22)] px-5 py-2.5 rounded-lg hover:border-[rgba(47,74,58,0.45)] hover:text-dark-text transition-colors text-center"
+                >
+                  Book a Discovery Call
+                </Link>
+                <Link
+                  href="/roadmap"
+                  className="text-[13px] font-medium text-dark-text/70 border border-[rgba(47,74,58,0.22)] px-5 py-2.5 rounded-lg hover:border-[rgba(47,74,58,0.45)] hover:text-dark-text transition-colors text-center"
+                >
+                  View Roadmap
+                </Link>
+              </div>
+            </div>
+          </FadeIn>
 
           {/* Trust bar */}
-          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mt-8">
-            {['Built for Canada', 'Designed with Childcare Operators', 'AI-Powered Future Roadmap', 'CWELCC-Aware'].map(item => (
-              <div key={item} className="flex items-center gap-1.5 text-[12px] text-dark-text/45 font-medium">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                  <circle cx="7" cy="7" r="6.5" stroke="#6EB76F" />
-                  <path d="M4 7l2 2 4-4" stroke="#6EB76F" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-                {item}
-              </div>
-            ))}
-          </div>
+          <FadeIn margin="0px" delay={0.48}>
+            <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mt-8">
+              {['Built for Canada', 'Designed with Childcare Operators', 'AI-Powered Future Roadmap', 'CWELCC-Aware'].map(item => (
+                <div key={item} className="flex items-center gap-1.5 text-[12px] text-dark-text/45 font-medium">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                    <circle cx="7" cy="7" r="6.5" stroke="#6EB76F" />
+                    <path d="M4 7l2 2 4-4" stroke="#6EB76F" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                  {item}
+                </div>
+              ))}
+            </div>
+          </FadeIn>
         </div>
       </section>
 
-      {/* ── MISSION BLURB */}
+      {/* ── MISSION BLURB — almost still; let the words carry the weight */}
       <section className="bg-white py-16 md:py-20 px-5 md:px-8 text-center">
         <div className="max-w-2xl mx-auto">
-          <p
-            className="font-display font-medium leading-snug mb-4"
-            style={{ fontSize: 'clamp(22px, 2.8vw, 32px)', color: '#0F6E56' }}
-          >
-            The gap is not passion. The gap is information and infrastructure.
-          </p>
-          <p className="text-[16px] text-dark-text/60 mb-6">
-            That's why we built Sprout &amp; Vine for Canada.
-          </p>
-          <p className="text-[15px] font-semibold text-forest-green mb-6">
-            Sprout &amp; Vine Care is built with operators, not for them.
-          </p>
-          <Link href="/about" className="text-[14px] font-medium text-forest-green hover:underline">
-            Read our story →
-          </Link>
+          <FadeIn>
+            <p
+              className="font-display font-medium leading-snug mb-4"
+              style={{ fontSize: 'clamp(22px, 2.8vw, 32px)', color: '#0F6E56' }}
+            >
+              The gap is not passion. The gap is information and infrastructure.
+            </p>
+          </FadeIn>
+          <FadeIn delay={0.15}>
+            <p className="text-[16px] text-dark-text/60 mb-6">
+              That's why we built Sprout &amp; Vine for Canada.
+            </p>
+          </FadeIn>
+          <FadeIn delay={0.3}>
+            <p className="text-[15px] font-semibold text-forest-green mb-6">
+              Sprout &amp; Vine Care is built with operators, not for them.
+            </p>
+            <Link href="/about" className="text-[14px] font-medium text-forest-green hover:underline">
+              Read our story →
+            </Link>
+          </FadeIn>
         </div>
       </section>
 
@@ -241,18 +235,20 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <FadeIn delay={0.05}>
-            <div className="bg-white rounded-2xl p-7 border border-[rgba(47,74,58,0.08)] hover:-translate-y-1 transition-transform duration-200" style={{ boxShadow: '0 4px 20px rgba(47,74,58,0.06)' }}>
+            <div className="bg-white rounded-2xl p-7 border border-[rgba(47,74,58,0.08)] hover:border-[rgba(47,74,58,0.22)] hover:-translate-y-1 transition-all duration-200" style={{ boxShadow: '0 4px 20px rgba(47,74,58,0.06)' }}>
               <div className="text-2xl mb-4">🌱</div>
               <h3 className="font-display text-[26px] font-medium text-forest-green mb-1">Seeds</h3>
               <p className="text-[13px] font-medium text-dark-text/50 mb-4">For aspiring childcare operators</p>
               <p className="text-[14px] text-dark-text/65 leading-relaxed mb-6">
                 Planning your centre? Build your business plan, complete your provincial licensing checklist, and get everything ready before day one.
               </p>
-              <Link href="/features" className="text-[14px] font-medium text-forest-green hover:underline">Start planning →</Link>
+              <Link href="/features" className="group inline-flex items-center gap-1 text-[14px] font-medium text-forest-green hover:underline">
+                Start planning <span className="inline-block transition-transform duration-200 group-hover:translate-x-[3px]">→</span>
+              </Link>
             </div>
             </FadeIn>
 
-            <FadeIn delay={0.1}>
+            <FadeIn delay={0.12}>
             <div
               className="bg-white rounded-2xl p-7 relative hover:-translate-y-1 transition-transform duration-200"
               style={{ border: '2px solid #2F4A3A', boxShadow: '0 12px 40px rgba(47,74,58,0.14)' }}
@@ -263,12 +259,14 @@ export default function Home() {
               <p className="text-[14px] text-dark-text/65 leading-relaxed mb-6">
                 You're open. Now run daily operations beautifully: attendance, billing, parent communication, and Smart Pickup, all in one place.
               </p>
-              <Link href="/founding" className="text-[14px] font-medium text-forest-green hover:underline">Join the founding program →</Link>
+              <Link href="/founding" className="group inline-flex items-center gap-1 text-[14px] font-medium text-forest-green hover:underline">
+                Join the founding program <span className="inline-block transition-transform duration-200 group-hover:translate-x-[3px]">→</span>
+              </Link>
             </div>
             </FadeIn>
 
-            <FadeIn delay={0.15}>
-            <div className="bg-white rounded-2xl p-7 border border-[rgba(47,74,58,0.08)] hover:-translate-y-1 transition-transform duration-200" style={{ boxShadow: '0 4px 20px rgba(47,74,58,0.06)' }}>
+            <FadeIn delay={0.24}>
+            <div className="bg-white rounded-2xl p-7 border border-[rgba(47,74,58,0.08)] hover:border-[rgba(47,74,58,0.22)] hover:-translate-y-1 transition-all duration-200" style={{ boxShadow: '0 4px 20px rgba(47,74,58,0.06)' }}>
               <div className="text-2xl mb-4">🍃</div>
               <div className="flex items-center gap-2 mb-1">
                 <h3 className="font-display text-[26px] font-medium text-forest-green">Vine</h3>
@@ -278,7 +276,9 @@ export default function Home() {
               <p className="text-[14px] text-dark-text/65 leading-relaxed mb-6">
                 Multiple locations, one calm dashboard. Oversee everything, report across centres, and scale without the chaos.
               </p>
-              <Link href="/founding" className="text-[14px] font-medium text-forest-green hover:underline">Join the founding program →</Link>
+              <Link href="/founding" className="group inline-flex items-center gap-1 text-[14px] font-medium text-forest-green hover:underline">
+                Join the founding program <span className="inline-block transition-transform duration-200 group-hover:translate-x-[3px]">→</span>
+              </Link>
             </div>
             </FadeIn>
           </div>
@@ -288,16 +288,18 @@ export default function Home() {
       {/* ══════════════ PART 2: BUILT FOR CANADIAN CHILDCARE ══════════════ */}
       <PartLabel number="02 /" title="Built for Canadian childcare" bg="bg-white" />
 
-      {/* ── CWELCC / CANADA */}
+      {/* ── CWELCC / CANADA — credibility reveal: structured, confident, moves less */}
       <section className="bg-white pb-20 md:pb-24 px-5 md:px-8">
         <div className="max-w-4xl mx-auto">
-          <SectionLabel>Built for Canada</SectionLabel>
-          <h2 className="font-display font-medium text-forest-green leading-[1.08] mb-6" style={{ fontSize: 'clamp(34px, 4vw, 50px)' }}>
-            A platform built around<br />CWELCC from the ground up.
-          </h2>
-          <p className="text-[16px] text-dark-text/65 leading-relaxed mb-12 max-w-2xl">
-            Canada's childcare landscape is unlike any other. Sprout &amp; Vine is designed around Canadian childcare from day one — including CWELCC, bilingual support, and provincial workflows.
-          </p>
+          <FadeIn>
+            <SectionLabel>Built for Canada</SectionLabel>
+            <h2 className="font-display font-medium text-forest-green leading-[1.08] mb-6" style={{ fontSize: 'clamp(34px, 4vw, 50px)' }}>
+              A platform built around<br />CWELCC from the ground up.
+            </h2>
+            <p className="text-[16px] text-dark-text/65 leading-relaxed mb-12 max-w-2xl">
+              Canada's childcare landscape is unlike any other. Sprout &amp; Vine is designed around Canadian childcare from day one — including CWELCC, bilingual support, and provincial workflows.
+            </p>
+          </FadeIn>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
@@ -316,27 +318,29 @@ export default function Home() {
                 title: 'Provincial Compliance',
                 desc: 'Planned licensing checklists and ratio tracking designed around provincial requirements.',
               },
-            ].map(item => (
-              <div key={item.title}>
+            ].map((item, i) => (
+              <FadeIn key={item.title} delay={i * 0.12}>
                 <span className="text-3xl block mb-4">{item.icon}</span>
                 <h3 className="text-[16px] font-semibold text-dark-text mb-2">{item.title}</h3>
                 <p className="text-[14px] text-dark-text/60 leading-relaxed">{item.desc}</p>
-              </div>
+              </FadeIn>
             ))}
           </div>
 
-          <div className="mt-12 pt-8 border-t border-[rgba(47,74,58,0.1)]">
-            <p className="text-[12px] font-medium text-dark-text/40 uppercase tracking-[0.12em] mb-3">
-              Now welcoming founding operators in
-            </p>
-            <div className="flex flex-wrap gap-x-4 gap-y-2">
-              {['Ontario', 'British Columbia', 'Alberta', 'Manitoba', 'Québec'].map((province, i, arr) => (
-                <span key={province} className="text-[14px] font-medium text-dark-text/55">
-                  {province}{i < arr.length - 1 ? <span className="text-dark-text/25 ml-4">·</span> : null}
-                </span>
-              ))}
+          <FadeIn delay={0.15}>
+            <div className="mt-12 pt-8 border-t border-[rgba(47,74,58,0.1)]">
+              <p className="text-[12px] font-medium text-dark-text/40 uppercase tracking-[0.12em] mb-3">
+                Now welcoming founding operators in
+              </p>
+              <div className="flex flex-wrap gap-x-4 gap-y-2">
+                {['Ontario', 'British Columbia', 'Alberta', 'Manitoba', 'Québec'].map((province, i, arr) => (
+                  <span key={province} className="text-[14px] font-medium text-dark-text/55">
+                    {province}{i < arr.length - 1 ? <span className="text-dark-text/25 ml-4">·</span> : null}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -350,49 +354,51 @@ export default function Home() {
       {/* ══════════════ PART 3: BUILT AROUND DAILY CHILDCARE WORKFLOWS ══════════════ */}
       <PartLabel number="03 /" title="Built around daily childcare workflows" bg="bg-white" />
 
-      {/* ── FEATURES GRID */}
+      {/* ── FEATURES GRID — organized, not overwhelming: stagger caps at card 6 */}
       <section className="bg-white pb-20 md:pb-24 px-5 md:px-8">
         <div className="max-w-7xl mx-auto">
-          <h2 className="font-display font-medium text-forest-green text-center leading-[1.1] mb-16" style={{ fontSize: 'clamp(36px, 4.5vw, 52px)' }}>
-            Everything you need, all in one place. 🌿
-          </h2>
+          <FadeIn>
+            <h2 className="font-display font-medium text-forest-green text-center leading-[1.1] mb-16" style={{ fontSize: 'clamp(36px, 4.5vw, 52px)' }}>
+              Everything you need, all in one place. 🌿
+            </h2>
+          </FadeIn>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
-            {features.slice(0, 4).map(f => (
-              <div key={f.name} className="flex flex-col items-center text-center">
+            {features.slice(0, 4).map((f, i) => (
+              <FadeIn key={f.name} delay={Math.min(i, 5) * 0.09} className="group flex flex-col items-center text-center">
                 <div
-                  className="w-14 h-14 rounded-full bg-white flex items-center justify-center mb-4 p-3.5"
+                  className="w-14 h-14 rounded-full bg-white flex items-center justify-center mb-4 p-3.5 transition-colors duration-200 group-hover:bg-cream"
                   style={{ border: '1.5px solid rgba(47,74,58,0.15)', boxShadow: '0 4px 16px rgba(47,74,58,0.08)' }}
                 >
                   {f.icon}
                 </div>
                 <h3 className="text-[14px] font-semibold text-dark-text mb-1.5">{f.name}</h3>
                 <p className="text-[13px] text-dark-text/55 leading-relaxed">{f.desc}</p>
-              </div>
+              </FadeIn>
             ))}
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-10 mt-10 md:max-w-3xl md:mx-auto">
-            {features.slice(4).map(f => (
-              <div key={f.name} className="flex flex-col items-center text-center">
+            {features.slice(4).map((f, i) => (
+              <FadeIn key={f.name} delay={Math.min(i + 4, 5) * 0.09} className="group flex flex-col items-center text-center">
                 <div
-                  className="w-14 h-14 rounded-full bg-white flex items-center justify-center mb-4 p-3.5"
+                  className="w-14 h-14 rounded-full bg-white flex items-center justify-center mb-4 p-3.5 transition-colors duration-200 group-hover:bg-cream"
                   style={{ border: '1.5px solid rgba(47,74,58,0.15)', boxShadow: '0 4px 16px rgba(47,74,58,0.08)' }}
                 >
                   {f.icon}
                 </div>
                 <h3 className="text-[14px] font-semibold text-dark-text mb-1.5">{f.name}</h3>
                 <p className="text-[13px] text-dark-text/55 leading-relaxed">{f.desc}</p>
-              </div>
+              </FadeIn>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── DASHBOARD PREVIEW */}
+      {/* ── DASHBOARD PREVIEW — the product becomes real */}
       <section className="bg-cream py-20 md:py-24 px-5 md:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[35%_1fr] gap-12 items-center">
-          <div>
+          <FadeIn>
             <h2 className="font-display font-medium text-forest-green leading-[1.08] mb-5" style={{ fontSize: 'clamp(32px, 3.5vw, 48px)' }}>
               Designed for busy centres.<br />Built for what matters most. 🌿
             </h2>
@@ -414,11 +420,11 @@ export default function Home() {
               tone="sage"
               className="mt-8 hidden lg:block"
             />
-          </div>
+          </FadeIn>
 
-          <div className="min-w-0">
+          <FadeIn delay={0.15} className="min-w-0">
             <DashboardPreview />
-          </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -427,10 +433,10 @@ export default function Home() {
         <span className="text-sage-green">For safer pickup</span>
       </GroupLabel>
 
-      {/* ── SMART PICKUP SPOTLIGHT */}
+      {/* ── SMART PICKUP SPOTLIGHT — safety without drama: calm confidence, no alarms */}
       <section className="bg-forest-green pb-20 md:pb-24 px-5 md:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div>
+          <FadeIn>
             <p className="text-[11px] uppercase tracking-[0.16em] text-sage-green font-semibold mb-5">Parent Safety</p>
             <h2 className="font-display font-medium text-cream leading-[1.08] mb-6" style={{ fontSize: 'clamp(36px, 4vw, 52px)' }}>
               Peace of mind,<br />every single pickup.
@@ -458,9 +464,9 @@ export default function Home() {
               rotate={-2}
               className="mt-8 hidden sm:block"
             />
-          </div>
+          </FadeIn>
 
-          <div className="flex justify-center">
+          <FadeIn delay={0.15} x={24} className="flex justify-center">
             <PhoneShell>
               <div className="px-3 pb-3 space-y-2.5">
                 <div className="text-[10px] text-dark-text/40 text-center py-1">Vine Parent App</div>
@@ -499,13 +505,13 @@ export default function Home() {
                 </div>
               </div>
             </PhoneShell>
-          </div>
+          </FadeIn>
         </div>
       </section>
 
       {/* ── CONTEXTUAL CTA: Book a Discovery Call ── */}
       <div className="bg-white py-8 px-5 md:px-8 border-y border-[rgba(47,74,58,0.07)]">
-        <div className="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+        <FadeIn className="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-[15px] text-dark-text/65 font-medium text-center sm:text-left">
             Want to see Smart Pickup and the full platform in action?
           </p>
@@ -515,13 +521,13 @@ export default function Home() {
           >
             Book a Discovery Call
           </Link>
-        </div>
+        </FadeIn>
       </div>
 
       {/* ── For enrollment and family communication ── */}
       <GroupLabel bg="bg-cream">For enrollment and family communication</GroupLabel>
 
-      {/* ── ENROLLMENT & WAITLIST */}
+      {/* ── ENROLLMENT & WAITLIST — each step lights up as it's reached */}
       <section className="bg-cream pb-20 md:pb-24 px-5 md:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
@@ -532,7 +538,7 @@ export default function Home() {
                 { num: '3', label: 'Offer Sent', desc: 'Digital package · E-signature', icon: '📄' },
                 { num: '4', label: 'Enrolled ✓', desc: 'CWELCC pre-filled · Ready day 1', icon: '💚', active: true },
               ].map((stage, i) => (
-                <div key={stage.label} className="relative">
+                <FadeIn key={stage.label} delay={i * 0.12} className="relative">
                   <div
                     className="flex items-center gap-4 rounded-xl p-4 bg-white border transition-colors"
                     style={{
@@ -559,12 +565,12 @@ export default function Home() {
                       </svg>
                     </div>
                   )}
-                </div>
+                </FadeIn>
               ))}
             </div>
           </div>
 
-          <div>
+          <FadeIn delay={0.15}>
             <SectionLabel>Enrollment Made Simple</SectionLabel>
             <h2 className="font-display font-medium text-forest-green leading-[1.08] mb-6" style={{ fontSize: 'clamp(34px, 4vw, 50px)' }}>
               From first inquiry to<br />first day, beautifully managed.
@@ -584,14 +590,14 @@ export default function Home() {
                 </li>
               ))}
             </ul>
-          </div>
+          </FadeIn>
         </div>
       </section>
 
-      {/* ── VINE PARENT APP */}
+      {/* ── VINE PARENT APP — gentle phone reveal */}
       <section className="bg-white py-20 md:py-24 px-5 md:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="flex justify-center order-2 lg:order-1">
+          <FadeIn x={-24} className="flex justify-center order-2 lg:order-1">
             <PhoneShell>
               <div className="px-3 pb-3 space-y-2">
                 <div className="text-[10px] font-semibold text-forest-green text-center py-1 border-b border-[rgba(47,74,58,0.08)]">
@@ -618,9 +624,9 @@ export default function Home() {
                 ))}
               </div>
             </PhoneShell>
-          </div>
+          </FadeIn>
 
-          <div className="order-1 lg:order-2">
+          <FadeIn delay={0.15} className="order-1 lg:order-2">
             <SectionLabel>The Vine Parent App</SectionLabel>
             <h2 className="font-display font-medium text-forest-green leading-[1.08] mb-5" style={{ fontSize: 'clamp(34px, 4vw, 50px)' }}>
               Parents aren't just notified.<br />They're connected.
@@ -689,17 +695,17 @@ export default function Home() {
                 </span>
               </div>
             </div>
-          </div>
+          </FadeIn>
         </div>
       </section>
 
       {/* ── For child and staff records ── */}
       <GroupLabel bg="bg-cream">For child and staff records</GroupLabel>
 
-      {/* ── CHILD PROFILE SECTION ── */}
+      {/* ── CHILD PROFILE SECTION — organized, safe, professional ── */}
       <section className="bg-cream pb-20 md:pb-24 px-5 md:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div>
+          <FadeIn>
             <SectionLabel>Coming at launch</SectionLabel>
             <h2
               className="font-display font-medium text-forest-green leading-[1.05] mb-5"
@@ -739,10 +745,10 @@ export default function Home() {
             >
               See how the profile builds over time →
             </Link>
-          </div>
+          </FadeIn>
 
           {/* Profile card mockup */}
-          <div>
+          <FadeIn delay={0.15}>
             <div
               className="bg-white rounded-2xl overflow-hidden border border-[rgba(47,74,58,0.1)]"
               style={{ boxShadow: '0 8px 40px rgba(47,74,58,0.12)' }}
@@ -809,7 +815,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -817,7 +823,7 @@ export default function Home() {
       <section className="bg-white py-20 md:py-24 px-5 md:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Staff card mockup */}
-          <div className="flex justify-center order-2 lg:order-1">
+          <FadeIn className="flex justify-center order-2 lg:order-1">
             <div
               className="bg-white rounded-2xl overflow-hidden border border-[rgba(47,74,58,0.1)] w-full max-w-sm"
               style={{ boxShadow: '0 8px 40px rgba(47,74,58,0.12)' }}
@@ -857,10 +863,10 @@ export default function Home() {
                 <p className="text-[12px] font-medium text-forest-green">Caring for Emma since October 2024</p>
               </div>
             </div>
-          </div>
+          </FadeIn>
 
           {/* Text */}
-          <div className="order-1 lg:order-2">
+          <FadeIn delay={0.15} className="order-1 lg:order-2">
             <SectionLabel>Coming at launch</SectionLabel>
             <h2
               className="font-display font-medium text-forest-green leading-[1.05] mb-5"
@@ -892,39 +898,41 @@ export default function Home() {
             >
               See how staff profiles work →
             </Link>
-          </div>
+          </FadeIn>
         </div>
       </section>
 
       {/* ── For educators and operators ── */}
       <GroupLabel bg="rgba(174,193,176,0.15)">For educators and operators</GroupLabel>
 
-      {/* ── EDUCATOR SECTION */}
+      {/* ── EDUCATOR SECTION — human warmth: slow, calm motion on the photos */}
       <section className="pb-20 md:pb-24 px-5 md:px-8" style={{ background: 'rgba(174,193,176,0.15)' }}>
         <div className="max-w-4xl mx-auto text-center">
-          <SectionLabel>For Educators</SectionLabel>
-          <h2 className="font-display font-medium text-forest-green leading-[1.08] mb-5" style={{ fontSize: 'clamp(34px, 4vw, 50px)' }}>
-            Built for the people<br />who show up every day.
-          </h2>
-          <p className="text-[16px] text-dark-text/65 leading-relaxed mb-10 max-w-2xl mx-auto">
-            Directors choose Sprout &amp; Vine. Educators love it. That's not a coincidence. We designed every daily workflow around the people actually using it.
-          </p>
+          <FadeIn>
+            <SectionLabel>For Educators</SectionLabel>
+            <h2 className="font-display font-medium text-forest-green leading-[1.08] mb-5" style={{ fontSize: 'clamp(34px, 4vw, 50px)' }}>
+              Built for the people<br />who show up every day.
+            </h2>
+            <p className="text-[16px] text-dark-text/65 leading-relaxed mb-10 max-w-2xl mx-auto">
+              Directors choose Sprout &amp; Vine. Educators love it. That's not a coincidence. We designed every daily workflow around the people actually using it.
+            </p>
+          </FadeIn>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10 text-left">
             {[
               { icon: '📋', title: 'Daily reports done in under 2 minutes', desc: 'Tap-to-complete templates. Add a photo. Done before nap time.' },
               { icon: '🌱', title: 'Tag milestones from your phone', desc: 'See something beautiful? Tag it in 10 seconds. It builds their development timeline automatically.' },
               { icon: '💬', title: 'Message parents without your personal number', desc: "All communication through the app. Professional boundaries kept. Parents cannot text you at 11pm." },
-            ].map(item => (
-              <div key={item.title} className="bg-white rounded-xl p-5 border border-[rgba(47,74,58,0.08)]" style={{ boxShadow: '0 2px 12px rgba(47,74,58,0.06)' }}>
+            ].map((item, i) => (
+              <FadeIn key={item.title} delay={i * 0.12} className="bg-white rounded-xl p-5 border border-[rgba(47,74,58,0.08)]" style={{ boxShadow: '0 2px 12px rgba(47,74,58,0.06)' }}>
                 <span className="text-2xl block mb-3">{item.icon}</span>
                 <p className="text-[14px] font-semibold text-dark-text mb-1.5">{item.title}</p>
                 <p className="text-[13px] text-dark-text/55 leading-relaxed">{item.desc}</p>
-              </div>
+              </FadeIn>
             ))}
           </div>
 
-          <div className="hidden sm:flex items-center justify-center gap-5 mb-10">
+          <FadeIn delay={0.2} className="hidden sm:flex items-center justify-center gap-5 mb-10">
             <PhotoAccent
               src="/Child Painting.jpg"
               alt="A child's hands using watercolours during a daily activity"
@@ -940,7 +948,7 @@ export default function Home() {
               rotate={2}
               tone="sage"
             />
-          </div>
+          </FadeIn>
 
           <Link
             href="/for-educators"
@@ -953,7 +961,7 @@ export default function Home() {
 
       {/* ── CONTEXTUAL CTA: Explore Features ── */}
       <div className="bg-cream py-8 px-5 md:px-8 border-y border-[rgba(47,74,58,0.07)]">
-        <div className="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+        <FadeIn className="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-[15px] text-dark-text/65 font-medium text-center sm:text-left">
             Curious about everything else the platform can do?
           </p>
@@ -963,24 +971,26 @@ export default function Home() {
           >
             Explore Features
           </Link>
-        </div>
+        </FadeIn>
       </div>
 
-      {/* ── AI SECTION ── */}
+      {/* ── AI SECTION — subtle intelligence: data → pattern → helpful suggestion */}
       <section className="bg-white py-20 md:py-24 px-5 md:px-8">
         <div className="max-w-4xl mx-auto">
-          <SectionLabel>Artificial Intelligence</SectionLabel>
-          <h2
-            className="font-display font-medium text-forest-green leading-[1.08] mb-6"
-            style={{ fontSize: 'clamp(34px, 4vw, 50px)' }}
-          >
-            AI assistance throughout the platform.
-          </h2>
-          <p className="text-[16px] text-dark-text/65 leading-relaxed mb-6 max-w-2xl">
-            AI should help reduce administrative work, not replace educator judgment.
-          </p>
+          <FadeIn>
+            <SectionLabel>Artificial Intelligence</SectionLabel>
+            <h2
+              className="font-display font-medium text-forest-green leading-[1.08] mb-6"
+              style={{ fontSize: 'clamp(34px, 4vw, 50px)' }}
+            >
+              AI assistance throughout the platform.
+            </h2>
+            <p className="text-[16px] text-dark-text/65 leading-relaxed mb-6 max-w-2xl">
+              AI should help reduce administrative work, not replace educator judgment.
+            </p>
 
-          <p className="text-[14px] text-dark-text/50 font-medium mb-4">Future capabilities may include:</p>
+            <p className="text-[14px] text-dark-text/50 font-medium mb-4">Future capabilities may include:</p>
+          </FadeIn>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
             {[
               { icon: '📝', title: 'Documentation assistance', desc: 'Help drafting incident reports, daily summaries, and development notes.' },
@@ -988,36 +998,38 @@ export default function Home() {
               { icon: '🌱', title: 'Developmental observation support', desc: 'Pattern recognition across milestones to surface meaningful insights.' },
               { icon: '📬', title: 'Enrollment follow-up assistance', desc: 'Timely nudges and draft messages for waitlist families.' },
               { icon: '📊', title: 'Operational insights', desc: 'Surface patterns in attendance, billing, and daily centre data.' },
-            ].map(item => (
-              <div key={item.title} className="flex items-start gap-3 bg-cream rounded-xl p-4">
+            ].map((item, i) => (
+              <FadeIn key={item.title} delay={i * 0.1} className="flex items-start gap-3 bg-cream rounded-xl p-4">
                 <span className="text-xl flex-shrink-0 mt-0.5">{item.icon}</span>
                 <div>
                   <p className="text-[13px] font-semibold text-dark-text mb-0.5">{item.title}</p>
                   <p className="text-[12px] text-dark-text/55 leading-relaxed">{item.desc}</p>
                 </div>
-              </div>
+              </FadeIn>
             ))}
           </div>
 
-          <p className="text-[15px] font-semibold text-forest-green mb-7">
-            Every suggestion is a starting point. Educators always decide.
-          </p>
-          <Link
-            href="/pricing"
-            className="inline-flex items-center gap-2 text-[14px] font-medium text-forest-green hover:underline"
-          >
-            See Pricing Philosophy →
-          </Link>
+          <FadeIn delay={0.15}>
+            <p className="text-[15px] font-semibold text-forest-green mb-7">
+              Every suggestion is a starting point. Educators always decide.
+            </p>
+            <Link
+              href="/pricing"
+              className="inline-flex items-center gap-2 text-[14px] font-medium text-forest-green hover:underline"
+            >
+              See Pricing Philosophy →
+            </Link>
+          </FadeIn>
         </div>
       </section>
 
       {/* ══════════════ PART 4: WHAT WE ARE BUILDING FIRST ══════════════ */}
       <PartLabel number="04 /" title="What we are building first" bg="bg-cream" />
 
-      {/* ── INTERACTIVE PRODUCT TOUR */}
+      {/* ── INTERACTIVE PRODUCT TOUR — guided preview */}
       <section className="bg-cream pb-20 md:pb-24 px-5 md:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
+          <FadeIn className="text-center mb-12">
             <SectionLabel>See It in Action</SectionLabel>
             <h2 className="font-display font-medium text-forest-green leading-[1.08] mb-4" style={{ fontSize: 'clamp(34px, 4vw, 50px)' }}>
               30 seconds to check in a child.<br />2 minutes to send a daily report.
@@ -1025,14 +1037,16 @@ export default function Home() {
             <p className="text-[16px] text-dark-text/55">
               Experience the platform before booking a call.
             </p>
-          </div>
-          <ProductTour />
+          </FadeIn>
+          <FadeIn delay={0.15}>
+            <ProductTour />
+          </FadeIn>
         </div>
       </section>
 
-      {/* ── CONTEXTUAL CTA: How Pricing Works ── */}
+      {/* ── CONTEXTUAL CTA: How Pricing Works — steady and grounded ── */}
       <div className="bg-white py-8 px-5 md:px-8 border-y border-[rgba(47,74,58,0.07)]">
-        <div className="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+        <FadeIn className="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-[15px] text-dark-text/65 font-medium text-center sm:text-left">
             Built for Canada means built for your budget, too.
           </p>
@@ -1042,15 +1056,15 @@ export default function Home() {
           >
             How Pricing Works
           </Link>
-        </div>
+        </FadeIn>
       </div>
 
       {/* ══════════════ PART 5: HELP SHAPE SPROUT & VINE CARE ══════════════ */}
       <PartLabel number="05 /" title="Help shape Sprout & Vine Care" bg="bg-forest-green" dark />
 
-      {/* ── FOUNDER'S LETTER ── */}
+      {/* ── FOUNDER'S LETTER — personal and still: one slow fade, no stagger */}
       <section className="bg-forest-green pb-20 md:pb-24 px-5 md:px-8">
-        <div className="max-w-3xl mx-auto">
+        <FadeIn className="max-w-3xl mx-auto">
           <p className="text-[11px] uppercase tracking-[0.16em] text-sage-green font-semibold mb-8">
             A note from the founder
           </p>
@@ -1087,12 +1101,12 @@ export default function Home() {
               className="hidden sm:block"
             />
           </div>
-        </div>
+        </FadeIn>
       </section>
 
       {/* ── FOUNDER STORY CALLOUT */}
       <section className="bg-cream py-16 md:py-20 px-5 md:px-8 text-center">
-        <div className="max-w-xl mx-auto">
+        <FadeIn className="max-w-xl mx-auto">
           <p
             className="font-display font-medium text-forest-green leading-snug mb-6"
             style={{ fontSize: 'clamp(22px, 2.8vw, 30px)' }}
@@ -1102,12 +1116,12 @@ export default function Home() {
           <Link href="/about" className="inline-flex items-center gap-2 text-[14px] font-medium text-forest-green border-2 border-forest-green px-6 py-3 rounded-lg hover:bg-forest-green hover:text-white transition-colors">
             Meet our story →
           </Link>
-        </div>
+        </FadeIn>
       </section>
 
-      {/* ── SOCIAL PROOF ── */}
+      {/* ── SOCIAL PROOF — truthful trust: no hype in the motion, either */}
       <section className="bg-white py-16 md:py-20 px-5 md:px-8">
-        <div className="max-w-3xl mx-auto text-center">
+        <FadeIn className="max-w-3xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-sage-green" />
             <p className="text-[11px] uppercase tracking-[0.16em] text-sage-green font-semibold">
@@ -1127,13 +1141,13 @@ export default function Home() {
             <span className="w-2 h-2 rounded-full bg-terracotta animate-pulse" />
             Now open for a limited early cohort
           </div>
-        </div>
+        </FadeIn>
       </section>
 
       {/* ── OPERATOR QUOTE ── renders only when testimonial.text is populated in lib/testimonial.ts */}
       {testimonial.text && (
         <section className="bg-cream py-16 md:py-20 px-5 md:px-8">
-          <div className="max-w-2xl mx-auto text-center">
+          <FadeIn className="max-w-2xl mx-auto text-center">
             <blockquote>
               <p className="font-display font-medium text-forest-green leading-relaxed mb-6" style={{ fontSize: 'clamp(20px, 2.5vw, 28px)' }}>
                 &ldquo;{testimonial.text}&rdquo;
@@ -1145,13 +1159,13 @@ export default function Home() {
                 {testimonial.centreType && <span> &middot; {testimonial.centreType}</span>}
               </footer>
             </blockquote>
-          </div>
+          </FadeIn>
         </section>
       )}
 
-      {/* ── FOUNDING PROGRAM CTA */}
+      {/* ── FOUNDING PROGRAM CTA — strong but calm: the conversion moment */}
       <section className="bg-forest-green py-24 md:py-32 px-5 md:px-8 text-center">
-        <div className="max-w-2xl mx-auto">
+        <FadeIn className="max-w-2xl mx-auto">
           <p className="text-[11px] uppercase tracking-[0.16em] text-sage-green font-semibold mb-5">
             Founding Operators Program
           </p>
@@ -1170,7 +1184,7 @@ export default function Home() {
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Link
               href="/founding"
-              className="bg-terracotta text-white text-[14px] font-medium px-8 py-4 rounded-lg hover:bg-[#d4724e] transition-colors"
+              className="bg-terracotta text-white text-[14px] font-medium px-8 py-4 rounded-lg transition-all duration-200 hover:bg-[#d4724e] hover:shadow-[0_0_0_6px_rgba(226,132,95,0.18)]"
             >
               Apply to the Founding Program
             </Link>
@@ -1181,12 +1195,12 @@ export default function Home() {
               Our story
             </Link>
           </div>
-        </div>
+        </FadeIn>
       </section>
 
       {/* ── EMAIL CAPTURE STRIP ── */}
       <section className="bg-white py-16 md:py-20 px-5 md:px-8 border-t border-[rgba(47,74,58,0.08)]">
-        <div className="max-w-xl mx-auto text-center">
+        <FadeIn className="max-w-xl mx-auto text-center">
           <p className="text-[11px] uppercase tracking-[0.14em] text-sage-green font-semibold mb-3">
             Stay in the loop
           </p>
@@ -1208,7 +1222,7 @@ export default function Home() {
               source="homepage-strip"
             />
           </div>
-        </div>
+        </FadeIn>
       </section>
     </>
   )

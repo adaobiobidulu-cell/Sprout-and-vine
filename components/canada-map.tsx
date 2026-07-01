@@ -27,10 +27,12 @@ export default function CanadaMap({ caption = 'Built province by province for Ca
             .marker-leaf { fill: #E2845F; }
             .coast-detail { fill: none; stroke: #2F4A3A; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; opacity: .42; }
             @media (prefers-reduced-motion: no-preference) {
-              .focus, .operator-marker { opacity: 0; animation: svcFadeUp .8s cubic-bezier(.22,1,.36,1) forwards; }
+              .focus { opacity: 0; animation: svcFadeUp .8s cubic-bezier(.22,1,.36,1) forwards; }
+              .operator-marker { opacity: 0; transform-origin: center; transform-box: fill-box; animation: svcMarkerPop .6s cubic-bezier(.22,1,.36,1) forwards; }
               .bc { animation-delay: .05s; } .ab { animation-delay: .16s; } .mb { animation-delay: .27s; } .on { animation-delay: .38s; } .qc { animation-delay: .49s; }
               .operator-marker.bc { animation-delay: .38s; } .operator-marker.ab { animation-delay: .48s; } .operator-marker.mb { animation-delay: .58s; } .operator-marker.on { animation-delay: .68s; } .operator-marker.qc { animation-delay: .78s; }
               @keyframes svcFadeUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+              @keyframes svcMarkerPop { from { opacity: 0; transform: scale(.9); } to { opacity: 1; transform: scale(1); } }
             }
           `}</style>
         </defs>

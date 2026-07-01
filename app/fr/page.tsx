@@ -5,6 +5,7 @@ import DashboardPreview from '@/components/dashboard-preview'
 import EmailCapture from '@/components/email-capture'
 import CanadaMap from '@/components/canada-map'
 import PhotoAccent from '@/components/photo-accent'
+import { PartLabel, GroupLabel } from '@/components/part-label'
 import { testimonial } from '@/lib/testimonial'
 import type { Metadata } from 'next'
 import { altFr } from '@/lib/seo'
@@ -112,119 +113,112 @@ function PhoneShell({ children }: { children: React.ReactNode }) {
   )
 }
 
-/* Marque le début de l'une des 5 parties guidées de la page d'accueil. */
-function PartLabel({ number, title, bg = 'bg-cream', dark = false }: { number: string; title: string; bg?: string; dark?: boolean }) {
-  return (
-    <div className={`${bg} pt-14 pb-6 px-5 md:px-8 text-center`}>
-      <p className="inline-flex items-center gap-2 text-[12px] font-bold uppercase tracking-[0.2em] text-terracotta">
-        <span className={dark ? 'text-cream/40' : 'text-dark-text/30'}>{number}</span>
-        {title}
-      </p>
-    </div>
-  )
-}
-
-/* Marque un sous-groupe de flux de travail au sein de la Partie 3. */
-function GroupLabel({ children, bg = 'bg-cream' }: { children: React.ReactNode; bg?: string }) {
-  return (
-    <div className={`${bg} pt-10 pb-2 px-5 md:px-8 text-center`}>
-      <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-dark-text/40">
-        {children}
-      </p>
-    </div>
-  )
-}
-
 export default function FrenchHomePage() {
   return (
     <>
       {/* ══════════════ PARTIE 1: CE QU'EST SPROUT & VINE CARE ══════════════ */}
       <PartLabel number="01 /" title="Ce qu'est Sprout & Vine Care" bg="bg-cream" />
 
-      {/* ── HÉRO */}
+      {/* ── HÉRO: une arrivée calme et séquencée */}
       <section className="pb-24 md:pb-32 px-5 md:px-8 bg-cream">
         <div className="max-w-3xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 bg-terracotta/10 text-terracotta text-[12px] font-semibold px-4 py-2 rounded-full mb-8">
-            <span className="w-1.5 h-1.5 rounded-full bg-terracotta animate-pulse" />
-            Programme des opérateurs fondateurs · Inscriptions ouvertes
-          </div>
-
-          <h1
-            className="font-display font-medium text-forest-green leading-[1.05] mb-6"
-            style={{ fontSize: 'clamp(38px, 5vw, 66px)' }}
-          >
-            La plateforme de gestion<br />
-            que nous construisons avec<br className="hidden sm:block" />{' '}
-            <em className="text-terracotta not-italic">les opérateurs canadiens.</em>
-          </h1>
-
-          <p className="text-[18px] text-dark-text/65 mb-10 max-w-xl mx-auto leading-relaxed">
-            Sprout &amp; Vine Care est une plateforme moderne de gestion des garderies conçue pour les centres canadiens. Nous nous associons à un groupe limité d&apos;opérateurs fondateurs pour façonner l&apos;avenir de l&apos;inscription, de la conformité, de la communication et de la gestion de centre.
-          </p>
-
-          <div className="flex flex-col items-center gap-4">
-            <Link
-              id="hero-primary-cta"
-              href="/fr/founding"
-              className="w-full sm:w-auto bg-forest-green text-white text-[14px] font-medium px-8 py-3.5 rounded-lg hover:bg-[#243d2f] transition-colors text-center"
-            >
-              Rejoindre le Programme des opérateurs fondateurs
-            </Link>
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 w-full sm:w-auto">
-              <Link
-                href="/fr/features"
-                className="text-[13px] font-medium text-dark-text/70 border border-[rgba(47,74,58,0.22)] px-5 py-2.5 rounded-lg hover:border-[rgba(47,74,58,0.45)] hover:text-dark-text transition-colors text-center"
-              >
-                Explorer les fonctionnalités
-              </Link>
-              <Link
-                href="/fr/contact"
-                className="text-[13px] font-medium text-dark-text/70 border border-[rgba(47,74,58,0.22)] px-5 py-2.5 rounded-lg hover:border-[rgba(47,74,58,0.45)] hover:text-dark-text transition-colors text-center"
-              >
-                Prendre rendez-vous
-              </Link>
-              <Link
-                href="/fr/roadmap"
-                className="text-[13px] font-medium text-dark-text/70 border border-[rgba(47,74,58,0.22)] px-5 py-2.5 rounded-lg hover:border-[rgba(47,74,58,0.45)] hover:text-dark-text transition-colors text-center"
-              >
-                Voir la feuille de route
-              </Link>
+          <FadeIn margin="0px">
+            <div className="inline-flex items-center gap-2 bg-terracotta/10 text-terracotta text-[12px] font-semibold px-4 py-2 rounded-full mb-8">
+              <span className="w-1.5 h-1.5 rounded-full bg-terracotta animate-pulse" />
+              Programme des opérateurs fondateurs · Inscriptions ouvertes
             </div>
-          </div>
+          </FadeIn>
+
+          <FadeIn margin="0px" delay={0.12}>
+            <h1
+              className="font-display font-medium text-forest-green leading-[1.05] mb-6"
+              style={{ fontSize: 'clamp(38px, 5vw, 66px)' }}
+            >
+              La plateforme de gestion<br />
+              que nous construisons avec<br className="hidden sm:block" />{' '}
+              <em className="text-terracotta not-italic">les opérateurs canadiens.</em>
+            </h1>
+          </FadeIn>
+
+          <FadeIn margin="0px" delay={0.24}>
+            <p className="text-[18px] text-dark-text/65 mb-10 max-w-xl mx-auto leading-relaxed">
+              Sprout &amp; Vine Care est une plateforme moderne de gestion des garderies conçue pour les centres canadiens. Nous nous associons à un groupe limité d&apos;opérateurs fondateurs pour façonner l&apos;avenir de l&apos;inscription, de la conformité, de la communication et de la gestion de centre.
+            </p>
+          </FadeIn>
+
+          <FadeIn margin="0px" delay={0.36}>
+            <div className="flex flex-col items-center gap-4">
+              <Link
+                id="hero-primary-cta"
+                href="/fr/founding"
+                className="w-full sm:w-auto bg-forest-green text-white text-[14px] font-medium px-8 py-3.5 rounded-lg hover:bg-[#243d2f] transition-colors text-center"
+              >
+                Rejoindre le Programme des opérateurs fondateurs
+              </Link>
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 w-full sm:w-auto">
+                <Link
+                  href="/fr/features"
+                  className="text-[13px] font-medium text-dark-text/70 border border-[rgba(47,74,58,0.22)] px-5 py-2.5 rounded-lg hover:border-[rgba(47,74,58,0.45)] hover:text-dark-text transition-colors text-center"
+                >
+                  Explorer les fonctionnalités
+                </Link>
+                <Link
+                  href="/fr/contact"
+                  className="text-[13px] font-medium text-dark-text/70 border border-[rgba(47,74,58,0.22)] px-5 py-2.5 rounded-lg hover:border-[rgba(47,74,58,0.45)] hover:text-dark-text transition-colors text-center"
+                >
+                  Prendre rendez-vous
+                </Link>
+                <Link
+                  href="/fr/roadmap"
+                  className="text-[13px] font-medium text-dark-text/70 border border-[rgba(47,74,58,0.22)] px-5 py-2.5 rounded-lg hover:border-[rgba(47,74,58,0.45)] hover:text-dark-text transition-colors text-center"
+                >
+                  Voir la feuille de route
+                </Link>
+              </div>
+            </div>
+          </FadeIn>
 
           {/* Bandeau de confiance */}
-          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mt-8">
-            {['Conçu pour le Canada', 'Bâti avec les opérateurs de garderies', 'Feuille de route IA', 'Conforme au PÉLCN'].map(item => (
-              <div key={item} className="flex items-center gap-1.5 text-[12px] text-dark-text/45 font-medium">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                  <circle cx="7" cy="7" r="6.5" stroke="#6EB76F" />
-                  <path d="M4 7l2 2 4-4" stroke="#6EB76F" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-                {item}
-              </div>
-            ))}
-          </div>
+          <FadeIn margin="0px" delay={0.48}>
+            <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mt-8">
+              {['Conçu pour le Canada', 'Bâti avec les opérateurs de garderies', 'Feuille de route IA', 'Conforme au PÉLCN'].map(item => (
+                <div key={item} className="flex items-center gap-1.5 text-[12px] text-dark-text/45 font-medium">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                    <circle cx="7" cy="7" r="6.5" stroke="#6EB76F" />
+                    <path d="M4 7l2 2 4-4" stroke="#6EB76F" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                  {item}
+                </div>
+              ))}
+            </div>
+          </FadeIn>
         </div>
       </section>
 
-      {/* ── L'OBSTACLE */}
+      {/* ── L'OBSTACLE — presque immobile; les mots portent le poids */}
       <section className="bg-white py-16 md:py-20 px-5 md:px-8 text-center">
         <div className="max-w-2xl mx-auto">
-          <p
-            className="font-display font-medium leading-snug mb-4"
-            style={{ fontSize: 'clamp(22px, 2.8vw, 32px)', color: '#0F6E56' }}
-          >
-            L&apos;obstacle n&apos;est pas la passion. L&apos;obstacle est l&apos;information et l&apos;infrastructure.
-          </p>
-          <p className="text-[16px] text-dark-text/60 mb-6">
-            C&apos;est pourquoi nous avons construit Sprout &amp; Vine pour le Canada.
-          </p>
-          <p className="text-[15px] font-semibold text-forest-green mb-6">
-            Sprout &amp; Vine est bâti avec les opérateurs, pas pour eux.
-          </p>
-          <Link href="/fr/about" className="text-[14px] font-medium text-forest-green hover:underline">
-            Lire notre histoire →
-          </Link>
+          <FadeIn>
+            <p
+              className="font-display font-medium leading-snug mb-4"
+              style={{ fontSize: 'clamp(22px, 2.8vw, 32px)', color: '#0F6E56' }}
+            >
+              L&apos;obstacle n&apos;est pas la passion. L&apos;obstacle est l&apos;information et l&apos;infrastructure.
+            </p>
+          </FadeIn>
+          <FadeIn delay={0.15}>
+            <p className="text-[16px] text-dark-text/60 mb-6">
+              C&apos;est pourquoi nous avons construit Sprout &amp; Vine pour le Canada.
+            </p>
+          </FadeIn>
+          <FadeIn delay={0.3}>
+            <p className="text-[15px] font-semibold text-forest-green mb-6">
+              Sprout &amp; Vine est bâti avec les opérateurs, pas pour eux.
+            </p>
+            <Link href="/fr/about" className="text-[14px] font-medium text-forest-green hover:underline">
+              Lire notre histoire →
+            </Link>
+          </FadeIn>
         </div>
       </section>
 
@@ -243,18 +237,20 @@ export default function FrenchHomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <FadeIn delay={0.05}>
-            <div className="bg-white rounded-2xl p-7 border border-[rgba(47,74,58,0.08)] hover:-translate-y-1 transition-transform duration-200" style={{ boxShadow: '0 4px 20px rgba(47,74,58,0.06)' }}>
+            <div className="bg-white rounded-2xl p-7 border border-[rgba(47,74,58,0.08)] hover:border-[rgba(47,74,58,0.22)] hover:-translate-y-1 transition-all duration-200" style={{ boxShadow: '0 4px 20px rgba(47,74,58,0.06)' }}>
               <div className="text-2xl mb-4">🌱</div>
               <h3 className="font-display text-[26px] font-medium text-forest-green mb-1">Seeds</h3>
               <p className="text-[13px] font-medium text-dark-text/50 mb-4">Pour les opérateurs de garderies en devenir</p>
               <p className="text-[14px] text-dark-text/65 leading-relaxed mb-6">
                 Vous planifiez votre centre? Élaborez votre plan d&apos;affaires, complétez votre liste de vérification de permis provincial, et préparez tout avant le jour un.
               </p>
-              <Link href="/fr/features" className="text-[14px] font-medium text-forest-green hover:underline">Commencer à planifier →</Link>
+              <Link href="/fr/features" className="group inline-flex items-center gap-1 text-[14px] font-medium text-forest-green hover:underline">
+                Commencer à planifier <span className="inline-block transition-transform duration-200 group-hover:translate-x-[3px]">→</span>
+              </Link>
             </div>
             </FadeIn>
 
-            <FadeIn delay={0.1}>
+            <FadeIn delay={0.12}>
             <div
               className="bg-white rounded-2xl p-7 relative hover:-translate-y-1 transition-transform duration-200"
               style={{ border: '2px solid #2F4A3A', boxShadow: '0 12px 40px rgba(47,74,58,0.14)' }}
@@ -265,12 +261,14 @@ export default function FrenchHomePage() {
               <p className="text-[14px] text-dark-text/65 leading-relaxed mb-6">
                 Vous êtes ouvert. Gérez maintenant vos opérations quotidiennes avec élégance: présences, facturation, communication avec les familles et Ramassage Sécurisé, le tout en un seul endroit.
               </p>
-              <Link href="/fr/founding" className="text-[14px] font-medium text-forest-green hover:underline">Rejoindre le programme fondateur →</Link>
+              <Link href="/fr/founding" className="group inline-flex items-center gap-1 text-[14px] font-medium text-forest-green hover:underline">
+                Rejoindre le programme fondateur <span className="inline-block transition-transform duration-200 group-hover:translate-x-[3px]">→</span>
+              </Link>
             </div>
             </FadeIn>
 
-            <FadeIn delay={0.15}>
-            <div className="bg-white rounded-2xl p-7 border border-[rgba(47,74,58,0.08)] hover:-translate-y-1 transition-transform duration-200" style={{ boxShadow: '0 4px 20px rgba(47,74,58,0.06)' }}>
+            <FadeIn delay={0.24}>
+            <div className="bg-white rounded-2xl p-7 border border-[rgba(47,74,58,0.08)] hover:border-[rgba(47,74,58,0.22)] hover:-translate-y-1 transition-all duration-200" style={{ boxShadow: '0 4px 20px rgba(47,74,58,0.06)' }}>
               <div className="text-2xl mb-4">🍃</div>
               <div className="flex items-center gap-2 mb-1">
                 <h3 className="font-display text-[26px] font-medium text-forest-green">Vine</h3>
@@ -280,7 +278,9 @@ export default function FrenchHomePage() {
               <p className="text-[14px] text-dark-text/65 leading-relaxed mb-6">
                 Plusieurs emplacements, un seul tableau de bord serein. Supervisez tout, produisez des rapports entre centres, et croissez sans le chaos.
               </p>
-              <Link href="/fr/founding" className="text-[14px] font-medium text-forest-green hover:underline">Rejoindre le programme fondateur →</Link>
+              <Link href="/fr/founding" className="group inline-flex items-center gap-1 text-[14px] font-medium text-forest-green hover:underline">
+                Rejoindre le programme fondateur <span className="inline-block transition-transform duration-200 group-hover:translate-x-[3px]">→</span>
+              </Link>
             </div>
             </FadeIn>
           </div>
@@ -290,16 +290,18 @@ export default function FrenchHomePage() {
       {/* ══════════════ PARTIE 2: CONÇU POUR LES SERVICES DE GARDE CANADIENS ══════════════ */}
       <PartLabel number="02 /" title="Conçu pour les services de garde canadiens" bg="bg-white" />
 
-      {/* ── PÉLCN / CANADA */}
+      {/* ── PÉLCN / CANADA — révélation de crédibilité: structurée, confiante */}
       <section className="bg-white pb-20 md:pb-24 px-5 md:px-8">
         <div className="max-w-4xl mx-auto">
-          <SectionLabel>Fait Pour le Canada</SectionLabel>
-          <h2 className="font-display font-medium text-forest-green leading-[1.08] mb-6" style={{ fontSize: 'clamp(34px, 4vw, 50px)' }}>
-            La seule plateforme construite autour du PÉLCN dès le départ.
-          </h2>
-          <p className="text-[16px] text-dark-text/65 leading-relaxed mb-12 max-w-2xl">
-            Le paysage des services de garde au Canada est unique. Sprout &amp; Vine est conçu spécifiquement pour les opérateurs canadiens, avec le suivi des subventions PÉLCN, le support bilingue (FR/EN) et la conformité provinciale intégrés dès le premier jour.
-          </p>
+          <FadeIn>
+            <SectionLabel>Fait Pour le Canada</SectionLabel>
+            <h2 className="font-display font-medium text-forest-green leading-[1.08] mb-6" style={{ fontSize: 'clamp(34px, 4vw, 50px)' }}>
+              La seule plateforme construite autour du PÉLCN dès le départ.
+            </h2>
+            <p className="text-[16px] text-dark-text/65 leading-relaxed mb-12 max-w-2xl">
+              Le paysage des services de garde au Canada est unique. Sprout &amp; Vine est conçu spécifiquement pour les opérateurs canadiens, avec le suivi des subventions PÉLCN, le support bilingue (FR/EN) et la conformité provinciale intégrés dès le premier jour.
+            </p>
+          </FadeIn>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
@@ -318,27 +320,29 @@ export default function FrenchHomePage() {
                 title: 'Conformité Provinciale',
                 desc: 'Listes de vérification de permis et suivi des ratios prévus, conçus selon les exigences provinciales.',
               },
-            ].map(item => (
-              <div key={item.title}>
+            ].map((item, i) => (
+              <FadeIn key={item.title} delay={i * 0.12}>
                 <span className="text-3xl block mb-4">{item.icon}</span>
                 <h3 className="text-[16px] font-semibold text-dark-text mb-2">{item.title}</h3>
                 <p className="text-[14px] text-dark-text/60 leading-relaxed">{item.desc}</p>
-              </div>
+              </FadeIn>
             ))}
           </div>
 
-          <div className="mt-12 pt-8 border-t border-[rgba(47,74,58,0.1)]">
-            <p className="text-[12px] font-medium text-dark-text/40 uppercase tracking-[0.12em] mb-3">
-              Nous accueillons maintenant des opérateurs fondateurs en
-            </p>
-            <div className="flex flex-wrap gap-x-4 gap-y-2">
-              {['Ontario', 'Colombie-Britannique', 'Alberta', 'Manitoba', 'Québec'].map((province, i, arr) => (
-                <span key={province} className="text-[14px] font-medium text-dark-text/55">
-                  {province}{i < arr.length - 1 ? <span className="text-dark-text/25 ml-4">·</span> : null}
-                </span>
-              ))}
+          <FadeIn delay={0.15}>
+            <div className="mt-12 pt-8 border-t border-[rgba(47,74,58,0.1)]">
+              <p className="text-[12px] font-medium text-dark-text/40 uppercase tracking-[0.12em] mb-3">
+                Nous accueillons maintenant des opérateurs fondateurs en
+              </p>
+              <div className="flex flex-wrap gap-x-4 gap-y-2">
+                {['Ontario', 'Colombie-Britannique', 'Alberta', 'Manitoba', 'Québec'].map((province, i, arr) => (
+                  <span key={province} className="text-[14px] font-medium text-dark-text/55">
+                    {province}{i < arr.length - 1 ? <span className="text-dark-text/25 ml-4">·</span> : null}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -352,49 +356,51 @@ export default function FrenchHomePage() {
       {/* ══════════════ PARTIE 3: CONÇU AUTOUR DES FLUX DE TRAVAIL QUOTIDIENS ══════════════ */}
       <PartLabel number="03 /" title="Conçu autour des flux de travail quotidiens des services de garde" bg="bg-white" />
 
-      {/* ── GRILLE DE FONCTIONNALITÉS */}
+      {/* ── GRILLE DE FONCTIONNALITÉS — organisée, pas accablante */}
       <section className="bg-white pb-20 md:pb-24 px-5 md:px-8">
         <div className="max-w-7xl mx-auto">
-          <h2 className="font-display font-medium text-forest-green text-center leading-[1.1] mb-16" style={{ fontSize: 'clamp(36px, 4.5vw, 52px)' }}>
-            Tout ce dont vous avez besoin, en un seul endroit. 🌿
-          </h2>
+          <FadeIn>
+            <h2 className="font-display font-medium text-forest-green text-center leading-[1.1] mb-16" style={{ fontSize: 'clamp(36px, 4.5vw, 52px)' }}>
+              Tout ce dont vous avez besoin, en un seul endroit. 🌿
+            </h2>
+          </FadeIn>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
-            {features.slice(0, 4).map(f => (
-              <div key={f.name} className="flex flex-col items-center text-center">
+            {features.slice(0, 4).map((f, i) => (
+              <FadeIn key={f.name} delay={Math.min(i, 5) * 0.09} className="group flex flex-col items-center text-center">
                 <div
-                  className="w-14 h-14 rounded-full bg-white flex items-center justify-center mb-4 p-3.5"
+                  className="w-14 h-14 rounded-full bg-white flex items-center justify-center mb-4 p-3.5 transition-colors duration-200 group-hover:bg-cream"
                   style={{ border: '1.5px solid rgba(47,74,58,0.15)', boxShadow: '0 4px 16px rgba(47,74,58,0.08)' }}
                 >
                   {f.icon}
                 </div>
                 <h3 className="text-[14px] font-semibold text-dark-text mb-1.5">{f.name}</h3>
                 <p className="text-[13px] text-dark-text/55 leading-relaxed">{f.desc}</p>
-              </div>
+              </FadeIn>
             ))}
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-10 mt-10 md:max-w-3xl md:mx-auto">
-            {features.slice(4).map(f => (
-              <div key={f.name} className="flex flex-col items-center text-center">
+            {features.slice(4).map((f, i) => (
+              <FadeIn key={f.name} delay={Math.min(i + 4, 5) * 0.09} className="group flex flex-col items-center text-center">
                 <div
-                  className="w-14 h-14 rounded-full bg-white flex items-center justify-center mb-4 p-3.5"
+                  className="w-14 h-14 rounded-full bg-white flex items-center justify-center mb-4 p-3.5 transition-colors duration-200 group-hover:bg-cream"
                   style={{ border: '1.5px solid rgba(47,74,58,0.15)', boxShadow: '0 4px 16px rgba(47,74,58,0.08)' }}
                 >
                   {f.icon}
                 </div>
                 <h3 className="text-[14px] font-semibold text-dark-text mb-1.5">{f.name}</h3>
                 <p className="text-[13px] text-dark-text/55 leading-relaxed">{f.desc}</p>
-              </div>
+              </FadeIn>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── TABLEAU DE BORD */}
+      {/* ── TABLEAU DE BORD — le produit prend vie */}
       <section className="bg-cream py-20 md:py-24 px-5 md:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[35%_1fr] gap-12 items-center">
-          <div>
+          <FadeIn>
             <h2 className="font-display font-medium text-forest-green leading-[1.08] mb-5" style={{ fontSize: 'clamp(32px, 3.5vw, 48px)' }}>
               Conçu pour les centres occupés.<br />Bâti pour ce qui compte le plus. 🌿
             </h2>
@@ -416,11 +422,11 @@ export default function FrenchHomePage() {
               tone="sage"
               className="mt-8 hidden lg:block"
             />
-          </div>
+          </FadeIn>
 
-          <div className="min-w-0">
+          <FadeIn delay={0.15} className="min-w-0">
             <DashboardPreview />
-          </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -429,10 +435,10 @@ export default function FrenchHomePage() {
         <span className="text-sage-green">Pour un ramassage plus sécuritaire</span>
       </GroupLabel>
 
-      {/* ── RAMASSAGE SÉCURISÉ */}
+      {/* ── RAMASSAGE SÉCURISÉ — sécurité sans drame, confiance calme */}
       <section className="bg-forest-green pb-20 md:pb-24 px-5 md:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div>
+          <FadeIn>
             <p className="text-[11px] uppercase tracking-[0.16em] text-sage-green font-semibold mb-5">Sécurité des Parents</p>
             <h2 className="font-display font-medium text-cream leading-[1.08] mb-6" style={{ fontSize: 'clamp(36px, 4vw, 52px)' }}>
               Tranquillité d&apos;esprit,<br />à chaque ramassage.
@@ -460,9 +466,9 @@ export default function FrenchHomePage() {
               rotate={-2}
               className="mt-8 hidden sm:block"
             />
-          </div>
+          </FadeIn>
 
-          <div className="flex justify-center">
+          <FadeIn delay={0.15} x={24} className="flex justify-center">
             <PhoneShell>
               <div className="px-3 pb-3 space-y-2.5">
                 <div className="text-[10px] text-dark-text/40 text-center py-1">Application Vine</div>
@@ -501,13 +507,13 @@ export default function FrenchHomePage() {
                 </div>
               </div>
             </PhoneShell>
-          </div>
+          </FadeIn>
         </div>
       </section>
 
       {/* ── CTA CONTEXTUEL: Prendre rendez-vous ── */}
       <div className="bg-white py-8 px-5 md:px-8 border-y border-[rgba(47,74,58,0.07)]">
-        <div className="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+        <FadeIn className="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-[15px] text-dark-text/65 font-medium text-center sm:text-left">
             Vous voulez voir Ramassage Sécurisé et la plateforme complète en action?
           </p>
@@ -517,13 +523,13 @@ export default function FrenchHomePage() {
           >
             Prendre rendez-vous
           </Link>
-        </div>
+        </FadeIn>
       </div>
 
       {/* ── Pour l'inscription et la communication avec les familles ── */}
       <GroupLabel bg="bg-cream">Pour l&apos;inscription et la communication avec les familles</GroupLabel>
 
-      {/* ── INSCRIPTION ET LISTE D'ATTENTE */}
+      {/* ── INSCRIPTION ET LISTE D'ATTENTE — chaque étape s'illumine au défilement */}
       <section className="bg-cream pb-20 md:pb-24 px-5 md:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
@@ -534,7 +540,7 @@ export default function FrenchHomePage() {
                 { num: '3', label: 'Offre envoyée', desc: 'Dossier numérique · Signature électronique', icon: '📄' },
                 { num: '4', label: 'Inscrit ✓', desc: 'PÉLCN pré-rempli · Prêt dès le jour 1', icon: '💚', active: true },
               ].map((stage, i) => (
-                <div key={stage.label} className="relative">
+                <FadeIn key={stage.label} delay={i * 0.12} className="relative">
                   <div
                     className="flex items-center gap-4 rounded-xl p-4 bg-white border transition-colors"
                     style={{
@@ -561,12 +567,12 @@ export default function FrenchHomePage() {
                       </svg>
                     </div>
                   )}
-                </div>
+                </FadeIn>
               ))}
             </div>
           </div>
 
-          <div>
+          <FadeIn delay={0.15}>
             <SectionLabel>L&apos;Inscription Simplifiée</SectionLabel>
             <h2 className="font-display font-medium text-forest-green leading-[1.08] mb-6" style={{ fontSize: 'clamp(34px, 4vw, 50px)' }}>
               De la première demande au<br />premier jour, géré avec élégance.
@@ -586,14 +592,14 @@ export default function FrenchHomePage() {
                 </li>
               ))}
             </ul>
-          </div>
+          </FadeIn>
         </div>
       </section>
 
-      {/* ── APPLICATION VINE POUR LES PARENTS */}
+      {/* ── APPLICATION VINE POUR LES PARENTS — révélation douce du téléphone */}
       <section className="bg-white py-20 md:py-24 px-5 md:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="flex justify-center order-2 lg:order-1">
+          <FadeIn x={-24} className="flex justify-center order-2 lg:order-1">
             <PhoneShell>
               <div className="px-3 pb-3 space-y-2">
                 <div className="text-[10px] font-semibold text-forest-green text-center py-1 border-b border-[rgba(47,74,58,0.08)]">
@@ -620,9 +626,9 @@ export default function FrenchHomePage() {
                 ))}
               </div>
             </PhoneShell>
-          </div>
+          </FadeIn>
 
-          <div className="order-1 lg:order-2">
+          <FadeIn delay={0.15} className="order-1 lg:order-2">
             <SectionLabel>L&apos;Application Vine pour les Parents</SectionLabel>
             <h2 className="font-display font-medium text-forest-green leading-[1.08] mb-5" style={{ fontSize: 'clamp(34px, 4vw, 50px)' }}>
               Les parents ne sont pas seulement notifiés.<br />Ils sont connectés.
@@ -691,17 +697,17 @@ export default function FrenchHomePage() {
                 </span>
               </div>
             </div>
-          </div>
+          </FadeIn>
         </div>
       </section>
 
       {/* ── Pour les dossiers des enfants et du personnel ── */}
       <GroupLabel bg="bg-cream">Pour les dossiers des enfants et du personnel</GroupLabel>
 
-      {/* ── PROFIL ENFANT ─────────────────────────────────────── */}
+      {/* ── PROFIL ENFANT — organisé, sûr, professionnel ─────────── */}
       <section className="bg-cream pb-20 md:pb-24 px-5 md:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div>
+          <FadeIn>
             <SectionLabel>Disponible au lancement</SectionLabel>
             <h2
               className="font-display font-medium text-forest-green leading-[1.05] mb-5"
@@ -741,10 +747,10 @@ export default function FrenchHomePage() {
             >
               Voir comment le profil se construit dans le temps →
             </Link>
-          </div>
+          </FadeIn>
 
           {/* Maquette de la carte de profil */}
-          <div>
+          <FadeIn delay={0.15}>
             <div
               className="bg-white rounded-2xl overflow-hidden border border-[rgba(47,74,58,0.1)]"
               style={{ boxShadow: '0 8px 40px rgba(47,74,58,0.12)' }}
@@ -807,14 +813,14 @@ export default function FrenchHomePage() {
                 </div>
               </div>
             </div>
-          </div>
+          </FadeIn>
         </div>
       </section>
 
       {/* ── PROFIL DU PERSONNEL ── */}
       <section className="bg-white py-20 md:py-24 px-5 md:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="flex justify-center order-2 lg:order-1">
+          <FadeIn className="flex justify-center order-2 lg:order-1">
             <div
               className="bg-white rounded-2xl overflow-hidden border border-[rgba(47,74,58,0.1)] w-full max-w-sm"
               style={{ boxShadow: '0 8px 40px rgba(47,74,58,0.12)' }}
@@ -848,9 +854,9 @@ export default function FrenchHomePage() {
                 <p className="text-[12px] font-medium text-forest-green">S&apos;occupe d&apos;Emma depuis octobre 2024</p>
               </div>
             </div>
-          </div>
+          </FadeIn>
 
-          <div className="order-1 lg:order-2">
+          <FadeIn delay={0.15} className="order-1 lg:order-2">
             <SectionLabel>Disponible au lancement</SectionLabel>
             <h2
               className="font-display font-medium text-forest-green leading-[1.05] mb-5"
@@ -879,39 +885,41 @@ export default function FrenchHomePage() {
             <Link href="/fr/features" className="inline-flex items-center gap-2 text-[14px] font-medium text-forest-green hover:underline">
               Voir comment les profils du personnel fonctionnent →
             </Link>
-          </div>
+          </FadeIn>
         </div>
       </section>
 
       {/* ── Pour les éducateurs et les opérateurs ── */}
       <GroupLabel bg="rgba(174,193,176,0.15)">Pour les éducateurs et les opérateurs</GroupLabel>
 
-      {/* ── SECTION ÉDUCATEURS */}
+      {/* ── SECTION ÉDUCATEURS — chaleur humaine, mouvement lent et calme */}
       <section className="pb-20 md:pb-24 px-5 md:px-8" style={{ background: 'rgba(174,193,176,0.15)' }}>
         <div className="max-w-4xl mx-auto text-center">
-          <SectionLabel>Pour les Éducateurs</SectionLabel>
-          <h2 className="font-display font-medium text-forest-green leading-[1.08] mb-5" style={{ fontSize: 'clamp(34px, 4vw, 50px)' }}>
-            Bâti pour les gens<br />qui se présentent chaque jour.
-          </h2>
-          <p className="text-[16px] text-dark-text/65 leading-relaxed mb-10 max-w-2xl mx-auto">
-            Les directeurs choisissent Sprout &amp; Vine. Les éducateurs l&apos;adorent. Ce n&apos;est pas un hasard. Nous avons conçu chaque flux de travail autour des personnes qui l&apos;utilisent vraiment.
-          </p>
+          <FadeIn>
+            <SectionLabel>Pour les Éducateurs</SectionLabel>
+            <h2 className="font-display font-medium text-forest-green leading-[1.08] mb-5" style={{ fontSize: 'clamp(34px, 4vw, 50px)' }}>
+              Bâti pour les gens<br />qui se présentent chaque jour.
+            </h2>
+            <p className="text-[16px] text-dark-text/65 leading-relaxed mb-10 max-w-2xl mx-auto">
+              Les directeurs choisissent Sprout &amp; Vine. Les éducateurs l&apos;adorent. Ce n&apos;est pas un hasard. Nous avons conçu chaque flux de travail autour des personnes qui l&apos;utilisent vraiment.
+            </p>
+          </FadeIn>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10 text-left">
             {[
               { icon: '📋', title: 'Rapports quotidiens en moins de 2 minutes', desc: "Modèles à compléter d'un tapotement. Ajoutez une photo. Terminé avant la sieste." },
               { icon: '🌱', title: 'Identifiez les jalons depuis votre téléphone', desc: 'Vous remarquez quelque chose de beau? Identifiez-le en 10 secondes. Cela construit automatiquement leur chronologie de développement.' },
               { icon: '💬', title: 'Envoyez des messages aux parents sans votre numéro personnel', desc: "Toute communication passe par l'application. Les limites professionnelles sont respectées. Les parents ne peuvent pas vous texter à 23h." },
-            ].map(item => (
-              <div key={item.title} className="bg-white rounded-xl p-5 border border-[rgba(47,74,58,0.08)]" style={{ boxShadow: '0 2px 12px rgba(47,74,58,0.06)' }}>
+            ].map((item, i) => (
+              <FadeIn key={item.title} delay={i * 0.12} className="bg-white rounded-xl p-5 border border-[rgba(47,74,58,0.08)]" style={{ boxShadow: '0 2px 12px rgba(47,74,58,0.06)' }}>
                 <span className="text-2xl block mb-3">{item.icon}</span>
                 <p className="text-[14px] font-semibold text-dark-text mb-1.5">{item.title}</p>
                 <p className="text-[13px] text-dark-text/55 leading-relaxed">{item.desc}</p>
-              </div>
+              </FadeIn>
             ))}
           </div>
 
-          <div className="hidden sm:flex items-center justify-center gap-5 mb-10">
+          <FadeIn delay={0.2} className="hidden sm:flex items-center justify-center gap-5 mb-10">
             <PhotoAccent
               src="/Child Painting.jpg"
               alt="Les mains d'un enfant utilisant des aquarelles lors d'une activité quotidienne"
@@ -927,7 +935,7 @@ export default function FrenchHomePage() {
               rotate={2}
               tone="sage"
             />
-          </div>
+          </FadeIn>
 
           <Link
             href="/for-educators"
@@ -940,7 +948,7 @@ export default function FrenchHomePage() {
 
       {/* ── CTA CONTEXTUEL: Explorer les fonctionnalités ── */}
       <div className="bg-cream py-8 px-5 md:px-8 border-y border-[rgba(47,74,58,0.07)]">
-        <div className="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+        <FadeIn className="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-[15px] text-dark-text/65 font-medium text-center sm:text-left">
             Curieux de tout ce que la plateforme peut faire?
           </p>
@@ -950,24 +958,26 @@ export default function FrenchHomePage() {
           >
             Explorer les fonctionnalités
           </Link>
-        </div>
+        </FadeIn>
       </div>
 
-      {/* ── INTELLIGENCE ARTIFICIELLE ── */}
+      {/* ── INTELLIGENCE ARTIFICIELLE — subtile: données → tendance → suggestion utile */}
       <section className="bg-white py-20 md:py-24 px-5 md:px-8">
         <div className="max-w-4xl mx-auto">
-          <SectionLabel>Intelligence Artificielle</SectionLabel>
-          <h2
-            className="font-display font-medium text-forest-green leading-[1.08] mb-6"
-            style={{ fontSize: 'clamp(34px, 4vw, 50px)' }}
-          >
-            L&apos;intelligence artificielle dans toute la plateforme.
-          </h2>
-          <p className="text-[16px] text-dark-text/65 leading-relaxed mb-6 max-w-2xl">
-            L&apos;IA devrait aider à réduire le travail administratif, pas remplacer le jugement des éducateurs.
-          </p>
+          <FadeIn>
+            <SectionLabel>Intelligence Artificielle</SectionLabel>
+            <h2
+              className="font-display font-medium text-forest-green leading-[1.08] mb-6"
+              style={{ fontSize: 'clamp(34px, 4vw, 50px)' }}
+            >
+              L&apos;intelligence artificielle dans toute la plateforme.
+            </h2>
+            <p className="text-[16px] text-dark-text/65 leading-relaxed mb-6 max-w-2xl">
+              L&apos;IA devrait aider à réduire le travail administratif, pas remplacer le jugement des éducateurs.
+            </p>
 
-          <p className="text-[14px] text-dark-text/50 font-medium mb-4">Capacités futures possibles:</p>
+            <p className="text-[14px] text-dark-text/50 font-medium mb-4">Capacités futures possibles:</p>
+          </FadeIn>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
             {[
               { icon: '📝', title: 'Aide à la documentation', desc: 'Aide à la rédaction de rapports d\'incidents, résumés quotidiens et notes de développement.' },
@@ -975,36 +985,38 @@ export default function FrenchHomePage() {
               { icon: '🌱', title: 'Soutien aux observations du développement', desc: 'Reconnaissance de patterns dans les jalons pour faire ressortir des insights significatifs.' },
               { icon: '📬', title: 'Aide au suivi des inscriptions', desc: 'Rappels opportuns et brouillons de messages pour les familles sur liste d\'attente.' },
               { icon: '📊', title: 'Insights opérationnels', desc: 'Mise en évidence de patterns dans les présences, la facturation et les données quotidiennes du centre.' },
-            ].map(item => (
-              <div key={item.title} className="flex items-start gap-3 bg-cream rounded-xl p-4">
+            ].map((item, i) => (
+              <FadeIn key={item.title} delay={i * 0.1} className="flex items-start gap-3 bg-cream rounded-xl p-4">
                 <span className="text-xl flex-shrink-0 mt-0.5">{item.icon}</span>
                 <div>
                   <p className="text-[13px] font-semibold text-dark-text mb-0.5">{item.title}</p>
                   <p className="text-[12px] text-dark-text/55 leading-relaxed">{item.desc}</p>
                 </div>
-              </div>
+              </FadeIn>
             ))}
           </div>
 
-          <p className="text-[15px] font-semibold text-forest-green mb-7">
-            Chaque suggestion est un point de départ. Les éducateurs décident toujours.
-          </p>
-          <Link
-            href="/fr/pricing"
-            className="inline-flex items-center gap-2 text-[14px] font-medium text-forest-green hover:underline"
-          >
-            Voir la philosophie tarifaire →
-          </Link>
+          <FadeIn delay={0.15}>
+            <p className="text-[15px] font-semibold text-forest-green mb-7">
+              Chaque suggestion est un point de départ. Les éducateurs décident toujours.
+            </p>
+            <Link
+              href="/fr/pricing"
+              className="inline-flex items-center gap-2 text-[14px] font-medium text-forest-green hover:underline"
+            >
+              Voir la philosophie tarifaire →
+            </Link>
+          </FadeIn>
         </div>
       </section>
 
       {/* ══════════════ PARTIE 4: CE QUE NOUS CONSTRUISONS EN PREMIER ══════════════ */}
       <PartLabel number="04 /" title="Ce que nous construisons en premier" bg="bg-cream" />
 
-      {/* ── VISITE INTERACTIVE */}
+      {/* ── VISITE INTERACTIVE — aperçu guidé */}
       <section className="bg-cream pb-20 md:pb-24 px-5 md:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
+          <FadeIn className="text-center mb-12">
             <SectionLabel>Voyez-le en Action</SectionLabel>
             <h2 className="font-display font-medium text-forest-green leading-[1.08] mb-4" style={{ fontSize: 'clamp(34px, 4vw, 50px)' }}>
               30 secondes pour inscrire un enfant.<br />2 minutes pour envoyer un rapport quotidien.
@@ -1012,14 +1024,16 @@ export default function FrenchHomePage() {
             <p className="text-[16px] text-dark-text/55">
               Découvrez la plateforme avant de prendre rendez-vous.
             </p>
-          </div>
-          <ProductTour />
+          </FadeIn>
+          <FadeIn delay={0.15}>
+            <ProductTour />
+          </FadeIn>
         </div>
       </section>
 
-      {/* ── CTA CONTEXTUEL: Tarification ── */}
+      {/* ── CTA CONTEXTUEL: Tarification — stable et posé ── */}
       <div className="bg-white py-8 px-5 md:px-8 border-y border-[rgba(47,74,58,0.07)]">
-        <div className="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+        <FadeIn className="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-[15px] text-dark-text/65 font-medium text-center sm:text-left">
             Conçu pour le Canada, ça veut aussi dire conçu pour votre budget.
           </p>
@@ -1029,15 +1043,15 @@ export default function FrenchHomePage() {
           >
             Comment fonctionne la tarification
           </Link>
-        </div>
+        </FadeIn>
       </div>
 
       {/* ══════════════ PARTIE 5: AIDEZ À FAÇONNER SPROUT & VINE CARE ══════════════ */}
       <PartLabel number="05 /" title="Aidez à façonner Sprout & Vine Care" bg="bg-forest-green" dark />
 
-      {/* ── LETTRE DE LA FONDATRICE ─────────────────────────────── */}
+      {/* ── LETTRE DE LA FONDATRICE — personnelle et immobile: un seul fondu lent */}
       <section className="bg-forest-green pb-20 md:pb-24 px-5 md:px-8">
-        <div className="max-w-3xl mx-auto">
+        <FadeIn className="max-w-3xl mx-auto">
           <p className="text-[11px] uppercase tracking-[0.16em] text-sage-green font-semibold mb-8">
             Un mot de la fondatrice
           </p>
@@ -1074,12 +1088,12 @@ export default function FrenchHomePage() {
               className="hidden sm:block"
             />
           </div>
-        </div>
+        </FadeIn>
       </section>
 
       {/* ── L'HISTOIRE DE LA FONDATRICE (RÉSUMÉ) */}
       <section className="bg-cream py-16 md:py-20 px-5 md:px-8 text-center">
-        <div className="max-w-xl mx-auto">
+        <FadeIn className="max-w-xl mx-auto">
           <p
             className="font-display font-medium text-forest-green leading-snug mb-6"
             style={{ fontSize: 'clamp(22px, 2.8vw, 30px)' }}
@@ -1089,12 +1103,12 @@ export default function FrenchHomePage() {
           <Link href="/fr/about" className="inline-flex items-center gap-2 text-[14px] font-medium text-forest-green border-2 border-forest-green px-6 py-3 rounded-lg hover:bg-forest-green hover:text-white transition-colors">
             Découvrir notre histoire →
           </Link>
-        </div>
+        </FadeIn>
       </section>
 
-      {/* ── PREUVE SOCIALE AVEC COMPTEUR ────────────────────────── */}
+      {/* ── PREUVE SOCIALE AVEC COMPTEUR — confiance sincère, sans surenchère ── */}
       <section className="bg-white py-16 md:py-20 px-5 md:px-8">
-        <div className="max-w-3xl mx-auto text-center">
+        <FadeIn className="max-w-3xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-sage-green" />
             <p className="text-[11px] uppercase tracking-[0.16em] text-sage-green font-semibold">
@@ -1114,13 +1128,13 @@ export default function FrenchHomePage() {
             <span className="w-2 h-2 rounded-full bg-terracotta animate-pulse" />
             Ouvert pour une première cohorte limitée
           </div>
-        </div>
+        </FadeIn>
       </section>
 
       {/* ── TÉMOIGNAGE (conditionnel) ─────────────────────────── */}
       {testimonial.text && (
         <section className="bg-cream py-16 md:py-20 px-5 md:px-8">
-          <div className="max-w-2xl mx-auto text-center">
+          <FadeIn className="max-w-2xl mx-auto text-center">
             <blockquote>
               <p className="font-display font-medium text-forest-green leading-relaxed mb-6" style={{ fontSize: 'clamp(20px, 2.5vw, 28px)' }}>
                 &ldquo;{testimonial.text}&rdquo;
@@ -1132,13 +1146,13 @@ export default function FrenchHomePage() {
                 {testimonial.centreType && <span> &middot; {testimonial.centreType}</span>}
               </footer>
             </blockquote>
-          </div>
+          </FadeIn>
         </section>
       )}
 
-      {/* ── BANDE CTA PROGRAMME FONDATEUR ───────────────────────── */}
+      {/* ── BANDE CTA PROGRAMME FONDATEUR — fort mais calme: le moment de conversion ── */}
       <section className="bg-forest-green py-24 md:py-32 px-5 md:px-8 text-center">
-        <div className="max-w-2xl mx-auto">
+        <FadeIn className="max-w-2xl mx-auto">
           <p className="text-[11px] uppercase tracking-[0.16em] text-sage-green font-semibold mb-5">
             Programme des opérateurs fondateurs
           </p>
@@ -1157,7 +1171,7 @@ export default function FrenchHomePage() {
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Link
               href="/fr/founding"
-              className="bg-terracotta text-white text-[14px] font-medium px-8 py-4 rounded-lg hover:bg-[#d4724e] transition-colors"
+              className="bg-terracotta text-white text-[14px] font-medium px-8 py-4 rounded-lg transition-all duration-200 hover:bg-[#d4724e] hover:shadow-[0_0_0_6px_rgba(226,132,95,0.18)]"
             >
               Postuler au Programme fondateur
             </Link>
@@ -1168,12 +1182,12 @@ export default function FrenchHomePage() {
               Notre histoire
             </Link>
           </div>
-        </div>
+        </FadeIn>
       </section>
 
       {/* ── CAPTURE EMAIL ─────────────────────────────────────── */}
       <section className="bg-white py-16 md:py-20 px-5 md:px-8 border-t border-[rgba(47,74,58,0.08)]">
-        <div className="max-w-xl mx-auto text-center">
+        <FadeIn className="max-w-xl mx-auto text-center">
           <p className="text-[11px] uppercase tracking-[0.14em] text-sage-green font-semibold mb-3">
             Restez informé
           </p>
@@ -1200,7 +1214,7 @@ export default function FrenchHomePage() {
               successSubtitle="Nous vous contacterons au fil de notre progression."
             />
           </div>
-        </div>
+        </FadeIn>
       </section>
     </>
   )

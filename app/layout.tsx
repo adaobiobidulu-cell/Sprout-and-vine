@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Cormorant_Garamond, DM_Sans } from 'next/font/google'
+import { MotionConfig } from 'framer-motion'
 import './globals.css'
 import Nav from '@/components/nav'
 import Footer from '@/components/footer'
@@ -54,15 +55,17 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${cormorant.variable} ${dmSans.variable}`}>
       <body className="min-h-full flex flex-col antialiased">
-        <AnnouncementBar />
-        <LanguageBanner />
-        <Nav />
-        <ScrollVine />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <MotionConfig reducedMotion="user" transition={{ duration: 0.42, ease: [0.22, 1, 0.36, 1] }}>
+          <AnnouncementBar />
+          <LanguageBanner />
+          <Nav />
+          <ScrollVine />
+          <main className="flex-1">{children}</main>
+          <Footer />
+          <MobileStickyCTA />
+          <ExitIntent />
+        </MotionConfig>
         <Analytics />
-        <MobileStickyCTA />
-        <ExitIntent />
       </body>
     </html>
   )

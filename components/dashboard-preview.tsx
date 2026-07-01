@@ -1,5 +1,7 @@
 /* Dashboard Preview: fully coded, static, server component */
 
+import StatusPulseBadge from '@/components/status-pulse-badge'
+
 function LogoMarkSmall() {
   // The real vine-shaped S mark (raster), height-constrained so it stays crisp.
   return (
@@ -121,7 +123,9 @@ export default function DashboardPreview() {
               <span className="text-[10px] text-dark-text/30">Search children, reports…</span>
             </div>
             <div className="text-dark-text/30 text-sm">🔔</div>
-            <div className="text-[9px] font-semibold text-sage-green bg-sage-green/10 px-2 py-0.5 rounded-full whitespace-nowrap">1:8 Infants ✓</div>
+            <StatusPulseBadge className="inline-block">
+              <div className="text-[9px] font-semibold text-sage-green bg-sage-green/10 px-2 py-0.5 rounded-full whitespace-nowrap">1:8 Infants ✓</div>
+            </StatusPulseBadge>
           </div>
 
           <div className="p-4">
