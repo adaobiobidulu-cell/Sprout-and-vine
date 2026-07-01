@@ -62,7 +62,8 @@ export default function BrandLogo({
       viewBox={`${VIEW.x} ${VIEW.y} ${VIEW.w} ${VIEW.h}`}
       className={className}
     >
-      <title>{title}</title>
+      {/* No <title>: it would duplicate the aria-label as literal text content
+          alongside the "prout"/"& Vine"/"CARE" text nodes below. */}
       {/* vine-shaped S — original raster mark, aspect preserved */}
       <image
         href={c.img}

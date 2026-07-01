@@ -627,7 +627,7 @@ export default function FrenchHomePage() {
             className="font-display font-medium text-forest-green leading-snug mb-4"
             style={{ fontSize: 'clamp(24px, 3vw, 36px)' }}
           >
-            Des opérateurs fondateurs de l'Ontario, de la C.-B., de l'Alberta,<br className="hidden sm:block" /> du Manitoba et du Québec ont déjà rejoint.
+            Nous invitons des opérateurs fondateurs de l'Ontario, de la C.-B., de l'Alberta,<br className="hidden sm:block" /> du Manitoba et du Québec à contribuer à façonner la plateforme.
           </p>
           <p className="text-[15px] text-dark-text/55 mb-8 leading-relaxed">
             Les candidatures sont examinées dans l'ordre de réception.

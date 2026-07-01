@@ -13,6 +13,14 @@ function ChevronDown() {
   )
 }
 
+function SoonBadge({ isFr }: { isFr: boolean }) {
+  return (
+    <span className="text-[9px] uppercase tracking-wide font-semibold text-terracotta bg-terracotta/10 rounded-full px-1.5 py-[1px] whitespace-nowrap">
+      {isFr ? 'Bientôt' : 'Soon'}
+    </span>
+  )
+}
+
 /* Pages that have a /fr equivalent */
 const frenchPages: Record<string, string> = {
   '/': '/fr',
@@ -76,8 +84,7 @@ export default function Nav() {
 
         {/* Logo */}
         <Link href={isFr ? '/fr' : '/'} className="flex items-center" aria-label="Sprout & Vine Care">
-          <BrandLogo height={60} className="flex-shrink-0 md:hidden" />
-          <BrandLogo height={84} className="flex-shrink-0 hidden md:block" />
+          <BrandLogo height={84} className="h-[60px] md:h-[84px] w-auto flex-shrink-0" />
         </Link>
 
         {/* Desktop nav links */}
@@ -125,9 +132,10 @@ export default function Nav() {
           <LangToggle />
           <Link
             href="/login"
-            className="text-[14px] font-medium text-dark-text/80 hover:text-forest-green transition-colors"
+            className="inline-flex items-center gap-1.5 text-[14px] font-medium text-dark-text/80 hover:text-forest-green transition-colors"
           >
             {isFr ? 'Connexion' : 'Log in'}
+            <SoonBadge isFr={isFr} />
           </Link>
           <Link
             href={p('/founding')}
@@ -136,13 +144,13 @@ export default function Nav() {
             {isFr ? 'Programme fondateur' : 'Founding Program'}
           </Link>
 
-          <a
-             href="https://app.sproutandvinecare.ca/find-care"
-             className="text-[14px] font-medium text-dark-text/80 hover:text-forest-green transition-colors"
+          <span
+            className="inline-flex items-center gap-1.5 text-[14px] font-medium text-dark-text/40 cursor-default"
+            title={isFr ? 'Bientôt disponible' : 'Coming soon'}
           >
-              {isFr ? 'Trouver une garderie' : 'Find childcare'}
-         </a>
-          
+            {isFr ? 'Trouver une garderie' : 'Find childcare'}
+            <SoonBadge isFr={isFr} />
+          </span>
         </div>
 
         {/* Mobile hamburger */}
@@ -199,18 +207,20 @@ export default function Nav() {
                 <LangToggle />
               </div>
 
-              <a
-                href="https://app.sproutandvinecare.ca/find-care"
-                className="text-[14px] font-medium text-dark-text/80 hover:text-forest-green transition-colors"
-               >
+              <span
+                className="inline-flex items-center gap-1.5 text-[14px] font-medium text-dark-text/40 cursor-default"
+                title={isFr ? 'Bientôt disponible' : 'Coming soon'}
+              >
                 {isFr ? 'Trouver une garderie' : 'Find childcare'}
-              </a>
+                <SoonBadge isFr={isFr} />
+              </span>
               <Link
                 href="/login"
-                className="text-[15px] font-medium text-dark-text/70 hover:text-forest-green transition-colors"
+                className="inline-flex items-center gap-1.5 text-[15px] font-medium text-dark-text/70 hover:text-forest-green transition-colors"
                 onClick={() => setMobileOpen(false)}
               >
                 {isFr ? 'Connexion' : 'Log in'}
+                <SoonBadge isFr={isFr} />
               </Link>
               <Link
                 href={p('/founding')}

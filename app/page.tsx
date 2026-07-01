@@ -902,7 +902,7 @@ export default function Home() {
 
           <div className="mt-12 pt-8 border-t border-[rgba(47,74,58,0.1)]">
             <p className="text-[12px] font-medium text-dark-text/40 uppercase tracking-[0.12em] mb-3">
-              Centres across
+              Now welcoming founding operators in
             </p>
             <div className="flex flex-wrap gap-x-4 gap-y-2">
               {['Ontario', 'British Columbia', 'Alberta', 'Manitoba', 'Québec'].map((province, i, arr) => (
@@ -1015,7 +1015,7 @@ export default function Home() {
             className="font-display font-medium text-forest-green leading-snug mb-4"
             style={{ fontSize: 'clamp(24px, 3vw, 36px)' }}
           >
-            Founding operators from Ontario, BC, Alberta,<br className="hidden sm:block" /> Manitoba, and Québec have already joined.
+            We&rsquo;re inviting founding operators from Ontario, BC, Alberta,<br className="hidden sm:block" /> Manitoba, and Québec to help shape the platform.
           </p>
           <p className="text-[15px] text-dark-text/55 mb-8 leading-relaxed">
             Applications are reviewed in order received.
