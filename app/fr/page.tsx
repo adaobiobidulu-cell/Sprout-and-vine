@@ -4,6 +4,7 @@ import ProductTour from '@/components/product-tour'
 import DashboardPreview from '@/components/dashboard-preview'
 import EmailCapture from '@/components/email-capture'
 import CanadaMap from '@/components/canada-map'
+import PhotoAccent from '@/components/photo-accent'
 import { testimonial } from '@/lib/testimonial'
 import type { Metadata } from 'next'
 import { altFr } from '@/lib/seo'
@@ -406,6 +407,15 @@ export default function FrenchHomePage() {
             >
               Explorer toutes les fonctionnalités
             </Link>
+            <PhotoAccent
+              src="/pexels-mikhail-nilov-8923952.jpg"
+              alt="Du matériel éducatif lumineux et organisé sur les étagères d'une salle de classe"
+              width={160}
+              height={200}
+              rotate={2}
+              tone="sage"
+              className="mt-8 hidden lg:block"
+            />
           </div>
 
           <div className="min-w-0">
@@ -442,6 +452,14 @@ export default function FrenchHomePage() {
                 </li>
               ))}
             </ul>
+            <PhotoAccent
+              src="/pexels-tiger-lily-8260484.jpg"
+              alt="Un parent aidant son enfant à enfiler son sac à dos avant de partir"
+              width={168}
+              height={224}
+              rotate={-2}
+              className="mt-8 hidden sm:block"
+            />
           </div>
 
           <div className="flex justify-center">
@@ -709,6 +727,14 @@ export default function FrenchHomePage() {
                 </div>
               ))}
             </div>
+            <PhotoAccent
+              src="/pexels-kseniachernaya-8535187.jpg"
+              alt="Une éducatrice jouant avec un enfant à l'aide de blocs de bois colorés"
+              width={200}
+              height={134}
+              rotate={-1.5}
+              className="mb-8 hidden sm:block"
+            />
             <Link
               href="/fr/features"
               className="inline-flex items-center gap-2 text-[14px] font-medium text-forest-green hover:underline"
@@ -885,6 +911,24 @@ export default function FrenchHomePage() {
             ))}
           </div>
 
+          <div className="hidden sm:flex items-center justify-center gap-5 mb-10">
+            <PhotoAccent
+              src="/Child Painting.jpg"
+              alt="Les mains d'un enfant utilisant des aquarelles lors d'une activité quotidienne"
+              width={150}
+              height={190}
+              rotate={-3}
+            />
+            <PhotoAccent
+              src="/pexels-yankrukov-8613054.jpg"
+              alt="Une éducatrice guidant des enfants dans une activité de peinture à l'aquarelle"
+              width={190}
+              height={150}
+              rotate={2}
+              tone="sage"
+            />
+          </div>
+
           <Link
             href="/for-educators"
             className="inline-flex items-center gap-2 text-[14px] font-medium text-forest-green border-2 border-forest-green px-7 py-3.5 rounded-lg hover:bg-forest-green hover:text-white transition-colors"
@@ -1017,10 +1061,18 @@ export default function FrenchHomePage() {
               <p className="text-cream/50 text-[13px]">Co-Fondatrice, Sprout &amp; Vine</p>
             </div>
           </div>
-          <div className="mt-8 pt-8 border-t border-cream/15">
+          <div className="mt-8 pt-8 border-t border-cream/15 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
             <Link href="/fr/about" className="text-[14px] font-medium text-sage-green hover:text-cream transition-colors">
               Lire notre histoire complète →
             </Link>
+            <PhotoAccent
+              src="/pexels-pavel-danilyuk-8422126.jpg"
+              alt="Des éducatrices travaillant avec un groupe diversifié d'enfants d'âge préscolaire"
+              width={220}
+              height={140}
+              rotate={-1.5}
+              className="hidden sm:block"
+            />
           </div>
         </div>
       </section>
