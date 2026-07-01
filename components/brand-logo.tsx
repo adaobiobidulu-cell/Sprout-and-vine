@@ -77,12 +77,14 @@ export default function BrandLogo({
       {/* The leading "S" is drawn as part of the vine-shaped image above for
           visual polish, but that leaves it invisible to plain-text extraction
           (copy/paste, SEO crawlers) — this transparent glyph fills that gap
-          without changing what's visually rendered. */}
-      <text x={100} y={217} style={{ ...wordStyle, fontSize: 154, fill: 'transparent' }} aria-hidden="true">
-        S
-      </text>
-      <text x={195} y={217} style={{ ...wordStyle, fontSize: 154 }}>
-        prout
+          without changing what's visually rendered. It's a <tspan> inside the
+          same <text> as "prout" (not a sibling <text>) so extraction reads
+          "Sprout" with no inserted space — browsers insert a space/break
+          between separate <text> elements on copy, but not between tspans
+          of one <text>. */}
+      <text x={100} y={217} style={{ ...wordStyle, fontSize: 154 }}>
+        <tspan fill="transparent">S</tspan>
+        <tspan x={195}>prout</tspan>
       </text>
       <text x={265} y={315} style={{ ...wordStyle, fontSize: 96 }}>
         &amp; Vine

@@ -337,7 +337,7 @@ export default function FrenchHomePage() {
               <div className="flex flex-wrap gap-x-4 gap-y-2">
                 {['Ontario', 'Colombie-Britannique', 'Alberta', 'Manitoba', 'Québec'].map((province, i, arr) => (
                   <span key={province} className="text-[14px] font-medium text-dark-text/55">
-                    {province}{i < arr.length - 1 ? <span className="text-dark-text/25 ml-4">·</span> : null}
+                    {province}{i < arr.length - 1 ? <span className="text-dark-text/25"> · </span> : null}
                   </span>
                 ))}
               </div>
@@ -919,14 +919,7 @@ export default function FrenchHomePage() {
             ))}
           </div>
 
-          <FadeIn delay={0.2} className="hidden sm:flex items-center justify-center gap-5 mb-10">
-            <PhotoAccent
-              src="/Child Painting.jpg"
-              alt="Les mains d'un enfant utilisant des aquarelles lors d'une activité quotidienne"
-              width={150}
-              height={190}
-              rotate={-3}
-            />
+          <FadeIn delay={0.2} className="hidden sm:flex items-end justify-center gap-4 mb-10">
             <PhotoAccent
               src="/pexels-yankrukov-8613054.jpg"
               alt="Une éducatrice guidant des enfants dans une activité de peinture à l'aquarelle"
@@ -934,6 +927,13 @@ export default function FrenchHomePage() {
               height={150}
               rotate={2}
               tone="sage"
+            />
+            <PhotoAccent
+              src="/Child Painting.jpg"
+              alt="Les mains d'un enfant utilisant des aquarelles lors d'une activité quotidienne"
+              width={92}
+              height={116}
+              rotate={-3}
             />
           </FadeIn>
 
@@ -1082,8 +1082,8 @@ export default function FrenchHomePage() {
             <PhotoAccent
               src="/pexels-pavel-danilyuk-8422126.jpg"
               alt="Des éducatrices travaillant avec un groupe diversifié d'enfants d'âge préscolaire"
-              width={220}
-              height={140}
+              width={160}
+              height={102}
               rotate={-1.5}
               className="hidden sm:block"
             />

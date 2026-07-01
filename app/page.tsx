@@ -335,7 +335,7 @@ export default function Home() {
               <div className="flex flex-wrap gap-x-4 gap-y-2">
                 {['Ontario', 'British Columbia', 'Alberta', 'Manitoba', 'Québec'].map((province, i, arr) => (
                   <span key={province} className="text-[14px] font-medium text-dark-text/55">
-                    {province}{i < arr.length - 1 ? <span className="text-dark-text/25 ml-4">·</span> : null}
+                    {province}{i < arr.length - 1 ? <span className="text-dark-text/25"> · </span> : null}
                   </span>
                 ))}
               </div>
@@ -932,14 +932,7 @@ export default function Home() {
             ))}
           </div>
 
-          <FadeIn delay={0.2} className="hidden sm:flex items-center justify-center gap-5 mb-10">
-            <PhotoAccent
-              src="/Child Painting.jpg"
-              alt="A child's hands using watercolours during a daily activity"
-              width={150}
-              height={190}
-              rotate={-3}
-            />
+          <FadeIn delay={0.2} className="hidden sm:flex items-end justify-center gap-4 mb-10">
             <PhotoAccent
               src="/pexels-yankrukov-8613054.jpg"
               alt="An educator guiding children through a watercolour painting activity"
@@ -947,6 +940,13 @@ export default function Home() {
               height={150}
               rotate={2}
               tone="sage"
+            />
+            <PhotoAccent
+              src="/Child Painting.jpg"
+              alt="A child's hands using watercolours during a daily activity"
+              width={92}
+              height={116}
+              rotate={-3}
             />
           </FadeIn>
 
@@ -1095,8 +1095,8 @@ export default function Home() {
             <PhotoAccent
               src="/pexels-pavel-danilyuk-8422126.jpg"
               alt="Educators working with a diverse group of preschool children"
-              width={220}
-              height={140}
+              width={160}
+              height={102}
               rotate={-1.5}
               className="hidden sm:block"
             />

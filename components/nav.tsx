@@ -13,10 +13,17 @@ function ChevronDown() {
   )
 }
 
-function ComingSoon({ isFr }: { isFr: boolean }) {
+/* `compact` renders a short single-word tag for the tight desktop header row;
+   the full "Coming Soon" / "Bientôt disponible" wording is reserved for the
+   mobile dropdown, where a vertical list has room to spare. Without this,
+   the French wording alone is wide enough to push the nav into the logo and
+   wrap "Feuille de route" / "Programme fondateur" onto multiple lines. */
+function ComingSoon({ isFr, compact = false }: { isFr: boolean; compact?: boolean }) {
   return (
-    <span className="text-dark-text/40 font-normal whitespace-nowrap">
-      {' '}— {isFr ? 'Bientôt disponible' : 'Coming Soon'}
+    <span className={`text-dark-text/40 font-normal whitespace-nowrap ${compact ? 'text-[11px]' : ''}`}>
+      {' '}
+      {compact ? '· ' : '— '}
+      {compact ? (isFr ? 'Bientôt' : 'Soon') : isFr ? 'Bientôt disponible' : 'Coming Soon'}
     </span>
   )
 }
@@ -71,9 +78,14 @@ export default function Nav() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  // French labels ("Fonctionnalités", "Feuille de route", "Bientôt disponible" x2, etc.)
+  // are wide enough that the desktop nav doesn't comfortably fit until the `xl`
+  // breakpoint — below that it stays on the mobile hamburger menu instead of
+  // squeezing into the logo or wrapping onto multiple lines. English fits from `md`.
+
   return (
     <header
-      className={`sticky top-0 z-50 h-[84px] md:h-[112px] transition-all duration-300 ${scrolled ? 'border-b border-[rgba(47,74,58,0.12)]' : ''}`}
+      className={`sticky top-0 z-50 h-[84px] ${isFr ? 'xl:h-[112px]' : 'md:h-[112px]'} transition-all duration-300 ${scrolled ? 'border-b border-[rgba(47,74,58,0.12)]' : ''}`}
       style={{
         background: 'rgba(247,242,232,0.92)',
         backdropFilter: 'blur(12px)',
@@ -84,77 +96,77 @@ export default function Nav() {
 
         {/* Logo */}
         <Link href={isFr ? '/fr' : '/'} className="flex items-center" aria-label="Sprout & Vine Care">
-          <BrandLogo height={84} className="h-[60px] md:h-[84px] w-auto flex-shrink-0" />
+          <BrandLogo height={84} className={`h-[60px] w-auto flex-shrink-0 ${isFr ? 'xl:h-[84px]' : 'md:h-[84px]'}`} />
         </Link>
 
         {/* Desktop nav links */}
-        <nav className="hidden md:flex items-center gap-5" aria-label="Primary navigation">
+        <nav className={`hidden ${isFr ? 'xl:flex' : 'md:flex'} items-center gap-3`} aria-label="Primary navigation">
           <Link
             href={p('/features')}
-            className="flex items-center gap-1 text-[14px] font-medium text-dark-text/80 hover:text-forest-green transition-colors"
+            className="flex items-center gap-1 text-[13px] font-medium text-dark-text/80 hover:text-forest-green transition-colors whitespace-nowrap"
           >
             {isFr ? 'Fonctionnalités' : 'Features'} <ChevronDown />
           </Link>
           <Link
             href={p('/pricing')}
-            className="text-[14px] font-medium text-dark-text/80 hover:text-forest-green transition-colors"
+            className="text-[13px] font-medium text-dark-text/80 hover:text-forest-green transition-colors whitespace-nowrap"
           >
             {isFr ? 'Tarifs' : 'Pricing'}
           </Link>
           <Link
             href="/compare"
-            className="text-[14px] font-medium text-dark-text/80 hover:text-forest-green transition-colors"
+            className="text-[13px] font-medium text-dark-text/80 hover:text-forest-green transition-colors whitespace-nowrap"
           >
             {isFr ? 'Comparer' : 'Compare'}
           </Link>
           <Link
             href={p('/resources')}
-            className="flex items-center gap-1 text-[14px] font-medium text-dark-text/80 hover:text-forest-green transition-colors"
+            className="flex items-center gap-1 text-[13px] font-medium text-dark-text/80 hover:text-forest-green transition-colors whitespace-nowrap"
           >
             {isFr ? 'Ressources' : 'Resources'} <ChevronDown />
           </Link>
           <Link
             href={p('/roadmap')}
-            className="text-[14px] font-medium text-dark-text/80 hover:text-forest-green transition-colors"
+            className="text-[13px] font-medium text-dark-text/80 hover:text-forest-green transition-colors whitespace-nowrap"
           >
             {isFr ? 'Feuille de route' : 'Roadmap'}
           </Link>
           <Link
             href={p('/about')}
-            className="text-[14px] font-medium text-dark-text/80 hover:text-forest-green transition-colors"
+            className="text-[13px] font-medium text-dark-text/80 hover:text-forest-green transition-colors whitespace-nowrap"
           >
             {isFr ? 'À propos' : 'About'}
           </Link>
         </nav>
 
         {/* Desktop CTAs */}
-        <div className="hidden md:flex items-center gap-4">
+        <div className={`hidden ${isFr ? 'xl:flex' : 'md:flex'} items-center gap-2.5`}>
           <LangToggle />
           <Link
             href="/login"
-            className="text-[14px] font-medium text-dark-text/80 hover:text-forest-green transition-colors whitespace-nowrap"
+            className="text-[13px] font-medium text-dark-text/80 hover:text-forest-green transition-colors whitespace-nowrap"
           >
             {isFr ? 'Connexion' : 'Log in'}
-            <ComingSoon isFr={isFr} />
+            <ComingSoon isFr={isFr} compact />
           </Link>
           <Link
             href={p('/founding')}
-            className="bg-forest-green text-white text-[13px] font-medium px-5 py-[10px] rounded-lg hover:bg-[#243d2f] transition-colors"
+            className="bg-forest-green text-white text-[13px] font-medium px-4 py-[10px] rounded-lg hover:bg-[#243d2f] transition-colors whitespace-nowrap"
           >
             {isFr ? 'Programme fondateur' : 'Founding Program'}
           </Link>
 
           <span
-            className="text-[14px] font-medium text-dark-text/80 cursor-default whitespace-nowrap"
+            className="text-[13px] font-medium text-dark-text/80 cursor-default whitespace-nowrap"
           >
             {isFr ? 'Trouver une garderie' : 'Find childcare'}
-            <ComingSoon isFr={isFr} />
+            <ComingSoon isFr={isFr} compact />
           </span>
         </div>
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden flex flex-col gap-[5px] p-2 -mr-2"
+          className={`${isFr ? 'xl:hidden' : 'md:hidden'} flex flex-col gap-[5px] p-2 -mr-2`}
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
           aria-expanded={mobileOpen}
@@ -180,7 +192,7 @@ export default function Nav() {
       {/* Mobile dropdown menu */}
       {mobileOpen && (
         <div
-          className="absolute top-[84px] left-0 right-0 md:hidden border-b border-[rgba(47,74,58,0.12)] shadow-lg"
+          className={`absolute top-[84px] left-0 right-0 ${isFr ? 'xl:hidden' : 'md:hidden'} border-b border-[rgba(47,74,58,0.12)] shadow-lg`}
           style={{ background: 'rgba(247,242,232,0.97)', backdropFilter: 'blur(12px)' }}
         >
           <nav className="px-5 py-5 flex flex-col gap-1" aria-label="Mobile navigation">
