@@ -2,7 +2,6 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { FOUNDING_SPOTS_TOTAL } from '@/lib/config'
 
 export default function AnnouncementBar() {
   const isFr = usePathname().startsWith('/fr')
@@ -13,8 +12,8 @@ export default function AnnouncementBar() {
         <span className="inline-flex items-center gap-2">
           <span className="w-1.5 h-1.5 rounded-full bg-terracotta animate-pulse flex-shrink-0" />
           {isFr
-            ? <>Programme des opérateurs fondateurs maintenant ouvert. {FOUNDING_SPOTS_TOTAL} places disponibles.{' '}<Link href="/founding" className="underline underline-offset-2 hover:text-cream/80 transition-colors">Postuler maintenant</Link></>
-            : <>Founding Operators Program now open. {FOUNDING_SPOTS_TOTAL} spots available.{' '}<Link href="/founding" className="underline underline-offset-2 hover:text-cream/80 transition-colors">Apply now</Link></>
+            ? <>Programme des opérateurs fondateurs maintenant ouvert pour une première cohorte limitée.{' '}<Link href="/founding" className="underline underline-offset-2 hover:text-cream/80 transition-colors">Postuler maintenant</Link></>
+            : <>Founding Operators Program now open for a limited early cohort.{' '}<Link href="/founding" className="underline underline-offset-2 hover:text-cream/80 transition-colors">Apply now</Link></>
           }
         </span>
       </p>

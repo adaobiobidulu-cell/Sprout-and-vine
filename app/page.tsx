@@ -4,7 +4,6 @@ import ProductTour from '@/components/product-tour'
 import DashboardPreview from '@/components/dashboard-preview'
 import EmailCapture from '@/components/email-capture'
 import CanadaMap from '@/components/canada-map'
-import { FOUNDING_SPOTS_TOTAL } from '@/lib/config'
 import { testimonial } from '@/lib/testimonial'
 import type { Metadata } from 'next'
 import { altEn } from '@/lib/seo'
@@ -1074,7 +1073,7 @@ export default function Home() {
           </p>
           <div className="inline-flex items-center gap-2 bg-terracotta/10 text-terracotta text-[14px] font-semibold px-6 py-3 rounded-full">
             <span className="w-2 h-2 rounded-full bg-terracotta animate-pulse" />
-            {FOUNDING_SPOTS_TOTAL} founding spots available
+            Now open for a limited early cohort
           </div>
         </div>
       </section>
@@ -1113,7 +1112,7 @@ export default function Home() {
           <p className="text-[14px] text-cream/60 mb-10">
             <span className="inline-flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-terracotta" />
-              {FOUNDING_SPOTS_TOTAL} founding spots available. Applications reviewed in the order they are received.
+              Now open for a limited early cohort. Applications reviewed in the order they are received.
             </span>
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">

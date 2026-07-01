@@ -98,7 +98,7 @@ export default function FrAboutPage() {
             </p>
 
             <p>
-              Nous construisons cela maintenant. Nous ne sommes pas encore lancés, et nous ne nous lancerons pas avant que ce soit bien fait. Pendant que nous construisons, nous avons mis tout ce que nous savons sur la conformité en matière de garde d&apos;enfants au Canada en un seul endroit, gratuitement, pour quiconque en a besoin. Et nous cherchons cinquante opérateurs fondateurs pour nous aider à construire quelque chose qui vaut la peine d&apos;être construit.
+              Nous construisons cela maintenant. Nous ne sommes pas encore lancés, et nous ne nous lancerons pas avant que ce soit bien fait. Pendant que nous construisons, nous avons mis tout ce que nous savons sur la conformité en matière de garde d&apos;enfants au Canada en un seul endroit, gratuitement, pour quiconque en a besoin. Et nous cherchons un groupe limité d&apos;opérateurs fondateurs pour nous aider à construire quelque chose qui vaut la peine d&apos;être construit.
             </p>
 
             <p>
@@ -226,7 +226,7 @@ export default function FrAboutPage() {
             Vous voulez nous aider à bien construire cela?
           </h2>
           <p className="text-[16px] text-cream/60 mb-10 leading-relaxed">
-            Nous cherchons 50 opérateurs fondateurs partout au Canada.
+            Nous cherchons un groupe limité d&apos;opérateurs fondateurs partout au Canada.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Link

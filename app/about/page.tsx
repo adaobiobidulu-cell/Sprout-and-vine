@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { altEn } from '@/lib/seo'
 import Link from 'next/link'
-import { FOUNDING_SPOTS_TOTAL } from '@/lib/config'
 
 export const metadata: Metadata = {
   title: 'About | Sprout & Vine Care',
@@ -110,7 +109,7 @@ export default function AboutPage() {
             </p>
 
             <p>
-              We're building this now. We're not launched yet, and we won't launch until it's right. While we build, we've put everything we know about Canadian childcare compliance in one place, free, for anyone who needs it. And we're looking for twenty-five founding operators to help us build something worth building.
+              We're building this now. We're not launched yet, and we won't launch until it's right. While we build, we've put everything we know about Canadian childcare compliance in one place, free, for anyone who needs it. And we're looking for a limited group of founding operators to help us build something worth building.
             </p>
 
             <p>
@@ -237,7 +236,7 @@ export default function AboutPage() {
             Want to help us build this right?
           </h2>
           <p className="text-[16px] text-cream/60 mb-10 leading-relaxed">
-            We're looking for {FOUNDING_SPOTS_TOTAL} founding operators across Canada.
+            We're looking for a limited group of founding operators across Canada.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Link
