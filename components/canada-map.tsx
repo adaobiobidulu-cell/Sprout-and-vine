@@ -91,31 +91,46 @@ export default function CanadaMap({ caption = 'Built province by province for Ca
           <text className="label" x="730" y="530">Ontario</text>
           <text className="label" x="914" y="482">Québec</text>
 
-          {/* Leaf operator markers */}
-          <g className="operator-marker bc" transform="translate(160 330)">
-            <path className="marker-stem" d="M0 20 C2 8, 8 2, 17 0" />
-            <path className="marker-leaf" d="M3 7 C-6 -3,-7 -18,5 -24 C16 -14,15 1,3 7Z" />
-            <path className="marker-leaf" d="M13 3 C20 -8,35 -10,40 1 C31 11,19 12,13 3Z" />
+          {/* Leaf operator markers.
+              The animation (opacity/transform fade-up) lives on the inner <g>
+              rather than this outer one: a CSS `transform` on an element
+              fully replaces its SVG `transform` presentation attribute
+              instead of composing with it, which previously collapsed every
+              marker onto the same spot once the fade-up animation settled. */}
+          <g transform="translate(160 330)">
+            <g className="operator-marker bc">
+              <path className="marker-stem" d="M0 20 C2 8, 8 2, 17 0" />
+              <path className="marker-leaf" d="M3 7 C-6 -3,-7 -18,5 -24 C16 -14,15 1,3 7Z" />
+              <path className="marker-leaf" d="M13 3 C20 -8,35 -10,40 1 C31 11,19 12,13 3Z" />
+            </g>
           </g>
-          <g className="operator-marker ab" transform="translate(345 370)">
-            <path className="marker-stem" d="M0 20 C2 8, 8 2, 17 0" />
-            <path className="marker-leaf" d="M3 7 C-6 -3,-7 -18,5 -24 C16 -14,15 1,3 7Z" />
-            <path className="marker-leaf" d="M13 3 C20 -8,35 -10,40 1 C31 11,19 12,13 3Z" />
+          <g transform="translate(345 370)">
+            <g className="operator-marker ab">
+              <path className="marker-stem" d="M0 20 C2 8, 8 2, 17 0" />
+              <path className="marker-leaf" d="M3 7 C-6 -3,-7 -18,5 -24 C16 -14,15 1,3 7Z" />
+              <path className="marker-leaf" d="M13 3 C20 -8,35 -10,40 1 C31 11,19 12,13 3Z" />
+            </g>
           </g>
-          <g className="operator-marker mb" transform="translate(626 402)">
-            <path className="marker-stem" d="M0 20 C2 8, 8 2, 17 0" />
-            <path className="marker-leaf" d="M3 7 C-6 -3,-7 -18,5 -24 C16 -14,15 1,3 7Z" />
-            <path className="marker-leaf" d="M13 3 C20 -8,35 -10,40 1 C31 11,19 12,13 3Z" />
+          <g transform="translate(626 402)">
+            <g className="operator-marker mb">
+              <path className="marker-stem" d="M0 20 C2 8, 8 2, 17 0" />
+              <path className="marker-leaf" d="M3 7 C-6 -3,-7 -18,5 -24 C16 -14,15 1,3 7Z" />
+              <path className="marker-leaf" d="M13 3 C20 -8,35 -10,40 1 C31 11,19 12,13 3Z" />
+            </g>
           </g>
-          <g className="operator-marker on" transform="translate(785 474)">
-            <path className="marker-stem" d="M0 20 C2 8, 8 2, 17 0" />
-            <path className="marker-leaf" d="M3 7 C-6 -3,-7 -18,5 -24 C16 -14,15 1,3 7Z" />
-            <path className="marker-leaf" d="M13 3 C20 -8,35 -10,40 1 C31 11,19 12,13 3Z" />
+          <g transform="translate(785 474)">
+            <g className="operator-marker on">
+              <path className="marker-stem" d="M0 20 C2 8, 8 2, 17 0" />
+              <path className="marker-leaf" d="M3 7 C-6 -3,-7 -18,5 -24 C16 -14,15 1,3 7Z" />
+              <path className="marker-leaf" d="M13 3 C20 -8,35 -10,40 1 C31 11,19 12,13 3Z" />
+            </g>
           </g>
-          <g className="operator-marker qc" transform="translate(950 435)">
-            <path className="marker-stem" d="M0 20 C2 8, 8 2, 17 0" />
-            <path className="marker-leaf" d="M3 7 C-6 -3,-7 -18,5 -24 C16 -14,15 1,3 7Z" />
-            <path className="marker-leaf" d="M13 3 C20 -8,35 -10,40 1 C31 11,19 12,13 3Z" />
+          <g transform="translate(950 435)">
+            <g className="operator-marker qc">
+              <path className="marker-stem" d="M0 20 C2 8, 8 2, 17 0" />
+              <path className="marker-leaf" d="M3 7 C-6 -3,-7 -18,5 -24 C16 -14,15 1,3 7Z" />
+              <path className="marker-leaf" d="M13 3 C20 -8,35 -10,40 1 C31 11,19 12,13 3Z" />
+            </g>
           </g>
         </g>
       </svg>
