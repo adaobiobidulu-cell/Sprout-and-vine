@@ -4,6 +4,7 @@ import ProductTour from '@/components/product-tour'
 import DashboardPreview from '@/components/dashboard-preview'
 import EmailCapture from '@/components/email-capture'
 import CanadaMap from '@/components/canada-map'
+import PhotoAccent from '@/components/photo-accent'
 import { testimonial } from '@/lib/testimonial'
 import type { Metadata } from 'next'
 import { altEn } from '@/lib/seo'
@@ -404,6 +405,15 @@ export default function Home() {
             >
               Explore all features
             </Link>
+            <PhotoAccent
+              src="/pexels-mikhail-nilov-8923952.jpg"
+              alt="Bright, organized educational toys and materials on classroom shelves"
+              width={160}
+              height={200}
+              rotate={2}
+              tone="sage"
+              className="mt-8 hidden lg:block"
+            />
           </div>
 
           <div className="min-w-0">
@@ -440,6 +450,14 @@ export default function Home() {
                 </li>
               ))}
             </ul>
+            <PhotoAccent
+              src="/pexels-tiger-lily-8260484.jpg"
+              alt="A parent helping their child on with a backpack before heading out"
+              width={168}
+              height={224}
+              rotate={-2}
+              className="mt-8 hidden sm:block"
+            />
           </div>
 
           <div className="flex justify-center">
@@ -707,6 +725,14 @@ export default function Home() {
                 </div>
               ))}
             </div>
+            <PhotoAccent
+              src="/pexels-kseniachernaya-8535187.jpg"
+              alt="An educator playing with a child using colourful wooden blocks"
+              width={200}
+              height={134}
+              rotate={-1.5}
+              className="mb-8 hidden sm:block"
+            />
             <Link
               href="/features"
               className="inline-flex items-center gap-2 text-[14px] font-medium text-forest-green hover:underline"
@@ -898,6 +924,24 @@ export default function Home() {
             ))}
           </div>
 
+          <div className="hidden sm:flex items-center justify-center gap-5 mb-10">
+            <PhotoAccent
+              src="/Child Painting.jpg"
+              alt="A child's hands using watercolours during a daily activity"
+              width={150}
+              height={190}
+              rotate={-3}
+            />
+            <PhotoAccent
+              src="/pexels-yankrukov-8613054.jpg"
+              alt="An educator guiding children through a watercolour painting activity"
+              width={190}
+              height={150}
+              rotate={2}
+              tone="sage"
+            />
+          </div>
+
           <Link
             href="/for-educators"
             className="inline-flex items-center gap-2 text-[14px] font-medium text-forest-green border-2 border-forest-green px-7 py-3.5 rounded-lg hover:bg-forest-green hover:text-white transition-colors"
@@ -1030,10 +1074,18 @@ export default function Home() {
               <p className="text-cream/50 text-[13px]">Co-Founder, Sprout &amp; Vine</p>
             </div>
           </div>
-          <div className="mt-8 pt-8 border-t border-cream/15">
+          <div className="mt-8 pt-8 border-t border-cream/15 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
             <Link href="/about" className="text-[14px] font-medium text-sage-green hover:text-cream transition-colors">
               Read our full story →
             </Link>
+            <PhotoAccent
+              src="/pexels-pavel-danilyuk-8422126.jpg"
+              alt="Educators working with a diverse group of preschool children"
+              width={220}
+              height={140}
+              rotate={-1.5}
+              className="hidden sm:block"
+            />
           </div>
         </div>
       </section>
