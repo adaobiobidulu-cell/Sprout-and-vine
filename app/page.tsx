@@ -110,11 +110,37 @@ function PhoneShell({ children }: { children: React.ReactNode }) {
   )
 }
 
+/* Marks the start of one of the 5 guided parts of the homepage. */
+function PartLabel({ number, title, bg = 'bg-cream', dark = false }: { number: string; title: string; bg?: string; dark?: boolean }) {
+  return (
+    <div className={`${bg} pt-14 pb-6 px-5 md:px-8 text-center`}>
+      <p className="inline-flex items-center gap-2 text-[12px] font-bold uppercase tracking-[0.2em] text-terracotta">
+        <span className={dark ? 'text-cream/40' : 'text-dark-text/30'}>{number}</span>
+        {title}
+      </p>
+    </div>
+  )
+}
+
+/* Marks a workflow sub-group within Part 3. */
+function GroupLabel({ children, bg = 'bg-cream' }: { children: React.ReactNode; bg?: string }) {
+  return (
+    <div className={`${bg} pt-10 pb-2 px-5 md:px-8 text-center`}>
+      <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-dark-text/40">
+        {children}
+      </p>
+    </div>
+  )
+}
+
 export default function Home() {
   return (
     <>
-      {/* ── SECTION 1: HERO */}
-      <section className="py-24 md:py-32 px-5 md:px-8 bg-cream">
+      {/* ══════════════ PART 1: WHAT SPROUT & VINE CARE IS ══════════════ */}
+      <PartLabel number="01 /" title="What Sprout & Vine Care is" bg="bg-cream" />
+
+      {/* ── HERO */}
+      <section className="pb-24 md:pb-32 px-5 md:px-8 bg-cream">
         <div className="max-w-3xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-terracotta/10 text-terracotta text-[12px] font-semibold px-4 py-2 rounded-full mb-8">
             <span className="w-1.5 h-1.5 rounded-full bg-terracotta animate-pulse" />
@@ -179,7 +205,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── HEART LINE */}
+      {/* ── MISSION BLURB */}
       <section className="bg-white py-16 md:py-20 px-5 md:px-8 text-center">
         <div className="max-w-2xl mx-auto">
           <p
@@ -200,7 +226,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── SECTION 3: THREE JOURNEYS */}
+      {/* ── THREE JOURNEYS */}
       <section className="bg-cream py-20 md:py-24 px-5 md:px-8">
         <div className="max-w-7xl mx-auto">
           <FadeIn className="text-center mb-14">
@@ -259,8 +285,73 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── SECTION 4: FEATURES GRID */}
-      <section className="bg-white py-20 md:py-24 px-5 md:px-8">
+      {/* ══════════════ PART 2: BUILT FOR CANADIAN CHILDCARE ══════════════ */}
+      <PartLabel number="02 /" title="Built for Canadian childcare" bg="bg-white" />
+
+      {/* ── CWELCC / CANADA */}
+      <section className="bg-white pb-20 md:pb-24 px-5 md:px-8">
+        <div className="max-w-4xl mx-auto">
+          <SectionLabel>Built for Canada</SectionLabel>
+          <h2 className="font-display font-medium text-forest-green leading-[1.08] mb-6" style={{ fontSize: 'clamp(34px, 4vw, 50px)' }}>
+            A platform built around<br />CWELCC from the ground up.
+          </h2>
+          <p className="text-[16px] text-dark-text/65 leading-relaxed mb-12 max-w-2xl">
+            Canada's childcare landscape is unlike any other. Sprout &amp; Vine is built specifically for Canadian operators, with CWELCC subsidy tracking, bilingual support (English &amp; French), and provincial compliance built in from day one. No US competitor comes close.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                icon: '🍁',
+                title: 'CWELCC Subsidy Tracking',
+                desc: 'Automatically calculate and track Canada-Wide Early Learning and Child Care subsidies. No spreadsheets.',
+              },
+              {
+                icon: '🇫🇷',
+                title: 'Fully Bilingual',
+                desc: 'English and French throughout the platform and the Vine parent app. A competitive edge no US competitor can match.',
+              },
+              {
+                icon: '📋',
+                title: 'Provincial Compliance',
+                desc: 'Licensing checklists and ratio tracking for every province, pre-loaded and updated automatically.',
+              },
+            ].map(item => (
+              <div key={item.title}>
+                <span className="text-3xl block mb-4">{item.icon}</span>
+                <h3 className="text-[16px] font-semibold text-dark-text mb-2">{item.title}</h3>
+                <p className="text-[14px] text-dark-text/60 leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12 pt-8 border-t border-[rgba(47,74,58,0.1)]">
+            <p className="text-[12px] font-medium text-dark-text/40 uppercase tracking-[0.12em] mb-3">
+              Now welcoming founding operators in
+            </p>
+            <div className="flex flex-wrap gap-x-4 gap-y-2">
+              {['Ontario', 'British Columbia', 'Alberta', 'Manitoba', 'Québec'].map((province, i, arr) => (
+                <span key={province} className="text-[14px] font-medium text-dark-text/55">
+                  {province}{i < arr.length - 1 ? <span className="text-dark-text/25 ml-4">·</span> : null}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── CANADA MAP ── */}
+      <section className="bg-white py-16 md:py-20 px-5 md:px-8">
+        <div className="max-w-3xl mx-auto flex flex-col items-center">
+          <CanadaMap />
+        </div>
+      </section>
+
+      {/* ══════════════ PART 3: BUILT AROUND DAILY CHILDCARE WORKFLOWS ══════════════ */}
+      <PartLabel number="03 /" title="Built around daily childcare workflows" bg="bg-white" />
+
+      {/* ── FEATURES GRID */}
+      <section className="bg-white pb-20 md:pb-24 px-5 md:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="font-display font-medium text-forest-green text-center leading-[1.1] mb-16" style={{ fontSize: 'clamp(36px, 4.5vw, 52px)' }}>
             Everything you need, all in one place. 🌿
@@ -298,8 +389,37 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── SECTION 5: SMART PICKUP SPOTLIGHT */}
-      <section className="bg-forest-green py-20 md:py-24 px-5 md:px-8">
+      {/* ── DASHBOARD PREVIEW */}
+      <section className="bg-cream py-20 md:py-24 px-5 md:px-8">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[35%_1fr] gap-12 items-center">
+          <div>
+            <h2 className="font-display font-medium text-forest-green leading-[1.08] mb-5" style={{ fontSize: 'clamp(32px, 3.5vw, 48px)' }}>
+              Designed for busy centres.<br />Built for what matters most. 🌿
+            </h2>
+            <p className="text-[16px] text-dark-text/65 leading-relaxed mb-7">
+              From enrollment to everyday operations, Sprout &amp; Vine helps you save time, reduce stress, and focus on the children in your care.
+            </p>
+            <Link
+              href="/features"
+              className="inline-block bg-forest-green text-white text-[14px] font-medium px-6 py-3.5 rounded-lg hover:bg-[#243d2f] transition-colors"
+            >
+              Explore all features
+            </Link>
+          </div>
+
+          <div className="min-w-0">
+            <DashboardPreview />
+          </div>
+        </div>
+      </section>
+
+      {/* ── For safer pickup ── */}
+      <GroupLabel bg="bg-forest-green">
+        <span className="text-sage-green">For safer pickup</span>
+      </GroupLabel>
+
+      {/* ── SMART PICKUP SPOTLIGHT */}
+      <section className="bg-forest-green pb-20 md:pb-24 px-5 md:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <p className="text-[11px] uppercase tracking-[0.16em] text-sage-green font-semibold mb-5">Parent Safety</p>
@@ -381,8 +501,11 @@ export default function Home() {
         </div>
       </div>
 
-      {/* ── SECTION 6: ENROLLMENT & WAITLIST */}
-      <section className="bg-cream py-20 md:py-24 px-5 md:px-8">
+      {/* ── For enrollment and family communication ── */}
+      <GroupLabel bg="bg-cream">For enrollment and family communication</GroupLabel>
+
+      {/* ── ENROLLMENT & WAITLIST */}
+      <section className="bg-cream pb-20 md:pb-24 px-5 md:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <div className="space-y-3">
@@ -448,7 +571,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── SECTION 7: VINE PARENT APP */}
+      {/* ── VINE PARENT APP */}
       <section className="bg-white py-20 md:py-24 px-5 md:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="flex justify-center order-2 lg:order-1">
@@ -553,8 +676,11 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── For child and staff records ── */}
+      <GroupLabel bg="bg-cream">For child and staff records</GroupLabel>
+
       {/* ── CHILD PROFILE SECTION ── */}
-      <section className="bg-cream py-20 md:py-24 px-5 md:px-8">
+      <section className="bg-cream pb-20 md:pb-24 px-5 md:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <SectionLabel>Coming at launch</SectionLabel>
@@ -745,8 +871,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── SECTION 8: EDUCATOR SECTION */}
-      <section className="py-20 md:py-24 px-5 md:px-8" style={{ background: 'rgba(174,193,176,0.15)' }}>
+      {/* ── For educators and operators ── */}
+      <GroupLabel bg="rgba(174,193,176,0.15)">For educators and operators</GroupLabel>
+
+      {/* ── EDUCATOR SECTION */}
+      <section className="pb-20 md:pb-24 px-5 md:px-8" style={{ background: 'rgba(174,193,176,0.15)' }}>
         <div className="max-w-4xl mx-auto text-center">
           <SectionLabel>For Educators</SectionLabel>
           <h2 className="font-display font-medium text-forest-green leading-[1.08] mb-5" style={{ fontSize: 'clamp(34px, 4vw, 50px)' }}>
@@ -839,86 +968,22 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── SECTION 9: DASHBOARD PREVIEW */}
-      <section className="bg-cream py-20 md:py-24 px-5 md:px-8">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[35%_1fr] gap-12 items-center">
-          <div>
-            <h2 className="font-display font-medium text-forest-green leading-[1.08] mb-5" style={{ fontSize: 'clamp(32px, 3.5vw, 48px)' }}>
-              Designed for busy centres.<br />Built for what matters most. 🌿
+      {/* ══════════════ PART 4: WHAT WE ARE BUILDING FIRST ══════════════ */}
+      <PartLabel number="04 /" title="What we are building first" bg="bg-cream" />
+
+      {/* ── INTERACTIVE PRODUCT TOUR */}
+      <section className="bg-cream pb-20 md:pb-24 px-5 md:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <SectionLabel>See It in Action</SectionLabel>
+            <h2 className="font-display font-medium text-forest-green leading-[1.08] mb-4" style={{ fontSize: 'clamp(34px, 4vw, 50px)' }}>
+              30 seconds to check in a child.<br />2 minutes to send a daily report.
             </h2>
-            <p className="text-[16px] text-dark-text/65 leading-relaxed mb-7">
-              From enrollment to everyday operations, Sprout &amp; Vine helps you save time, reduce stress, and focus on the children in your care.
+            <p className="text-[16px] text-dark-text/55">
+              Experience the platform before booking a call.
             </p>
-            <Link
-              href="/features"
-              className="inline-block bg-forest-green text-white text-[14px] font-medium px-6 py-3.5 rounded-lg hover:bg-[#243d2f] transition-colors"
-            >
-              Explore all features
-            </Link>
           </div>
-
-          <div className="min-w-0">
-            <DashboardPreview />
-          </div>
-        </div>
-      </section>
-
-      {/* ── SECTION 10: CWELCC / CANADA */}
-      <section className="bg-white py-20 md:py-24 px-5 md:px-8">
-        <div className="max-w-4xl mx-auto">
-          <SectionLabel>Built for Canada</SectionLabel>
-          <h2 className="font-display font-medium text-forest-green leading-[1.08] mb-6" style={{ fontSize: 'clamp(34px, 4vw, 50px)' }}>
-            A platform built around<br />CWELCC from the ground up.
-          </h2>
-          <p className="text-[16px] text-dark-text/65 leading-relaxed mb-12 max-w-2xl">
-            Canada's childcare landscape is unlike any other. Sprout &amp; Vine is built specifically for Canadian operators, with CWELCC subsidy tracking, bilingual support (English &amp; French), and provincial compliance built in from day one. No US competitor comes close.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                icon: '🍁',
-                title: 'CWELCC Subsidy Tracking',
-                desc: 'Automatically calculate and track Canada-Wide Early Learning and Child Care subsidies. No spreadsheets.',
-              },
-              {
-                icon: '🇫🇷',
-                title: 'Fully Bilingual',
-                desc: 'English and French throughout the platform and the Vine parent app. A competitive edge no US competitor can match.',
-              },
-              {
-                icon: '📋',
-                title: 'Provincial Compliance',
-                desc: 'Licensing checklists and ratio tracking for every province, pre-loaded and updated automatically.',
-              },
-            ].map(item => (
-              <div key={item.title}>
-                <span className="text-3xl block mb-4">{item.icon}</span>
-                <h3 className="text-[16px] font-semibold text-dark-text mb-2">{item.title}</h3>
-                <p className="text-[14px] text-dark-text/60 leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-12 pt-8 border-t border-[rgba(47,74,58,0.1)]">
-            <p className="text-[12px] font-medium text-dark-text/40 uppercase tracking-[0.12em] mb-3">
-              Now welcoming founding operators in
-            </p>
-            <div className="flex flex-wrap gap-x-4 gap-y-2">
-              {['Ontario', 'British Columbia', 'Alberta', 'Manitoba', 'Québec'].map((province, i, arr) => (
-                <span key={province} className="text-[14px] font-medium text-dark-text/55">
-                  {province}{i < arr.length - 1 ? <span className="text-dark-text/25 ml-4">·</span> : null}
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── CANADA MAP ── */}
-      <section className="bg-white py-16 md:py-20 px-5 md:px-8">
-        <div className="max-w-3xl mx-auto flex flex-col items-center">
-          <CanadaMap />
+          <ProductTour />
         </div>
       </section>
 
@@ -937,8 +1002,11 @@ export default function Home() {
         </div>
       </div>
 
+      {/* ══════════════ PART 5: HELP SHAPE SPROUT & VINE CARE ══════════════ */}
+      <PartLabel number="05 /" title="Help shape Sprout & Vine Care" bg="bg-forest-green" dark />
+
       {/* ── FOUNDER'S LETTER ── */}
-      <section className="bg-forest-green py-20 md:py-24 px-5 md:px-8">
+      <section className="bg-forest-green pb-20 md:pb-24 px-5 md:px-8">
         <div className="max-w-3xl mx-auto">
           <p className="text-[11px] uppercase tracking-[0.16em] text-sage-green font-semibold mb-8">
             A note from the founder
@@ -968,22 +1036,6 @@ export default function Home() {
               Read our full story →
             </Link>
           </div>
-        </div>
-      </section>
-
-      {/* ── SECTION 11: INTERACTIVE PRODUCT TOUR */}
-      <section className="bg-cream py-20 md:py-24 px-5 md:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <SectionLabel>See It in Action</SectionLabel>
-            <h2 className="font-display font-medium text-forest-green leading-[1.08] mb-4" style={{ fontSize: 'clamp(34px, 4vw, 50px)' }}>
-              30 seconds to check in a child.<br />2 minutes to send a daily report.
-            </h2>
-            <p className="text-[16px] text-dark-text/55">
-              Experience the platform before booking a call.
-            </p>
-          </div>
-          <ProductTour />
         </div>
       </section>
 
@@ -1046,7 +1098,7 @@ export default function Home() {
         </section>
       )}
 
-      {/* ── SECTION 12: FOUNDING PROGRAM CTA */}
+      {/* ── FOUNDING PROGRAM CTA */}
       <section className="bg-forest-green py-24 md:py-32 px-5 md:px-8 text-center">
         <div className="max-w-2xl mx-auto">
           <p className="text-[11px] uppercase tracking-[0.16em] text-sage-green font-semibold mb-5">

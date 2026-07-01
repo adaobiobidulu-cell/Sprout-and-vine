@@ -38,6 +38,18 @@ function PhoneShell({ children }: { children: React.ReactNode }) {
   )
 }
 
+/* Marque le début de l'une des 5 parties guidées de la page d'accueil. */
+function PartLabel({ number, title, bg = 'bg-cream', dark = false }: { number: string; title: string; bg?: string; dark?: boolean }) {
+  return (
+    <div className={`${bg} pt-14 pb-6 px-5 md:px-8 text-center`}>
+      <p className="inline-flex items-center gap-2 text-[12px] font-bold uppercase tracking-[0.2em] text-terracotta">
+        <span className={dark ? 'text-cream/40' : 'text-dark-text/30'}>{number}</span>
+        {title}
+      </p>
+    </div>
+  )
+}
+
 const faqFr = [
   {
     q: "Y a-t-il un essai gratuit?",
@@ -64,8 +76,11 @@ const faqFr = [
 export default function FrenchHomePage() {
   return (
     <>
-      {/* ── SECTION 1: HÉRO ─────────────────────────────────────── */}
-      <section className="py-24 md:py-32 px-5 md:px-8 bg-cream">
+      {/* ══════════════ PARTIE 1: CE QU'EST SPROUT & VINE CARE ══════════════ */}
+      <PartLabel number="01 /" title="Ce qu'est Sprout & Vine Care" bg="bg-cream" />
+
+      {/* ── HÉRO ─────────────────────────────────────── */}
+      <section className="pb-24 md:pb-32 px-5 md:px-8 bg-cream">
         <div className="max-w-3xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-terracotta/10 text-terracotta text-[12px] font-semibold px-4 py-2 rounded-full mb-8">
             <span className="w-1.5 h-1.5 rounded-full bg-terracotta animate-pulse" />
@@ -150,7 +165,7 @@ export default function FrenchHomePage() {
         </div>
       </section>
 
-      {/* ── SECTION 3: LE PROBLÈME ──────────────────────────────── */}
+      {/* ── LE PROBLÈME ──────────────────────────────── */}
       <section className="py-20 md:py-24 px-5 md:px-8 bg-cream">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-14">
@@ -175,8 +190,49 @@ export default function FrenchHomePage() {
         </div>
       </section>
 
-      {/* ── SECTION 4: TABLEAU DE BORD ──────────────────────────── */}
-      <section className="bg-white py-20 md:py-24 px-5 md:px-8">
+      {/* ══════════════ PARTIE 2: CONÇU POUR LES SERVICES DE GARDE CANADIENS ══════════════ */}
+      <PartLabel number="02 /" title="Conçu pour les services de garde canadiens" bg="bg-cream" />
+
+      {/* ── SECTION: FAIT POUR LE CANADA ──────────────────────── */}
+      <section className="bg-cream pb-20 md:pb-24 px-5 md:px-8">
+        <div className="max-w-4xl mx-auto">
+          <SectionLabel>Fait Pour le Canada</SectionLabel>
+          <h2 className="font-display font-medium text-forest-green leading-[1.08] mb-6" style={{ fontSize: 'clamp(34px, 4vw, 50px)' }}>
+            La seule plateforme construite autour du PÉLCN dès le départ.
+          </h2>
+          <p className="text-[16px] text-dark-text/65 leading-relaxed mb-12 max-w-2xl">
+            Le paysage des services de garde au Canada est unique. Sprout &amp; Vine est conçu spécifiquement pour les opérateurs canadiens, avec le suivi des subventions PÉLCN, le support bilingue (FR/EN) et la conformité provinciale intégrés dès le premier jour.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { icon: '🍁', title: 'Suivi des subventions PÉLCN', desc: 'Calculez, réconciliez et soumettez vos subventions automatiquement. Fini les feuilles de calcul.' },
+              { icon: '🌐', title: 'Entièrement bilingue FR/EN', desc: "La plateforme et l'application Vine sont entièrement disponibles en français et en anglais." },
+              { icon: '🔒', title: 'Données au Canada', desc: 'Vos données demeurent au Canada, toujours. Conformité SOC 2 incluse.' },
+            ].map(item => (
+              <div key={item.title} className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0" style={{ background: 'rgba(47,74,58,0.06)' }}>{item.icon}</div>
+                <div>
+                  <h3 className="font-display text-[20px] font-medium text-forest-green mb-1">{item.title}</h3>
+                  <p className="text-[14px] text-dark-text/60 leading-relaxed">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── CARTE DU CANADA ── */}
+      <section className="bg-white py-16 md:py-20 px-5 md:px-8">
+        <div className="max-w-3xl mx-auto flex flex-col items-center">
+          <CanadaMap caption="Conçu pour chaque province. Conforme dès le premier jour." />
+        </div>
+      </section>
+
+      {/* ══════════════ PARTIE 3: CONÇU AUTOUR DES FLUX DE TRAVAIL QUOTIDIENS ══════════════ */}
+      <PartLabel number="03 /" title="Conçu autour des flux de travail quotidiens des services de garde" bg="bg-white" />
+
+      {/* ── SECTION: TABLEAU DE BORD ──────────────────────── */}
+      <section className="bg-white pb-20 md:pb-24 px-5 md:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
           <div className="order-2 lg:order-1">
             <div className="rounded-2xl overflow-hidden">
@@ -208,24 +264,8 @@ export default function FrenchHomePage() {
         </div>
       </section>
 
-      {/* ── SECTION 5: VISITE INTERACTIVE ───────────────────────── */}
+      {/* ── SECTION: COMMENT ÇA FONCTIONNE ───────────────────── */}
       <section className="bg-cream py-20 md:py-24 px-5 md:px-8">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-12">
-            <SectionLabel>Visite Interactive</SectionLabel>
-            <h2 className="font-display font-medium text-forest-green leading-[1.08] mb-4" style={{ fontSize: 'clamp(34px, 4vw, 52px)' }}>
-              Voyez comment ça fonctionne
-            </h2>
-            <p className="text-[16px] text-dark-text/55 max-w-xl mx-auto">
-              Explorez les flux de travail quotidiens: enregistrement du matin, rapport quotidien et autorisation de collecte.
-            </p>
-          </div>
-          <ProductTour />
-        </div>
-      </section>
-
-      {/* ── SECTION 6: COMMENT ÇA FONCTIONNE ───────────────────── */}
-      <section className="bg-white py-20 md:py-24 px-5 md:px-8">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-14">
             <SectionLabel>Comment Ça Fonctionne</SectionLabel>
@@ -250,7 +290,7 @@ export default function FrenchHomePage() {
         </div>
       </section>
 
-      {/* ── SECTION 7: POUR LES ÉDUCATEURS ─────────────────────── */}
+      {/* ── SECTION: POUR LES ÉDUCATEURS ─────────────────────── */}
       <section className="bg-cream py-20 px-5 md:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
           <div>
@@ -521,42 +561,26 @@ export default function FrenchHomePage() {
         </div>
       </section>
 
-      {/* ── SECTION 8: FAIT POUR LE CANADA ──────────────────────── */}
-      <section className="bg-cream py-20 md:py-24 px-5 md:px-8">
-        <div className="max-w-4xl mx-auto">
-          <SectionLabel>Fait Pour le Canada</SectionLabel>
-          <h2 className="font-display font-medium text-forest-green leading-[1.08] mb-6" style={{ fontSize: 'clamp(34px, 4vw, 50px)' }}>
-            La seule plateforme construite autour du PÉLCN dès le départ.
-          </h2>
-          <p className="text-[16px] text-dark-text/65 leading-relaxed mb-12 max-w-2xl">
-            Le paysage des services de garde au Canada est unique. Sprout &amp; Vine est conçu spécifiquement pour les opérateurs canadiens, avec le suivi des subventions PÉLCN, le support bilingue (FR/EN) et la conformité provinciale intégrés dès le premier jour.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { icon: '🍁', title: 'Suivi des subventions PÉLCN', desc: 'Calculez, réconciliez et soumettez vos subventions automatiquement. Fini les feuilles de calcul.' },
-              { icon: '🌐', title: 'Entièrement bilingue FR/EN', desc: "La plateforme et l'application Vine sont entièrement disponibles en français et en anglais." },
-              { icon: '🔒', title: 'Données au Canada', desc: 'Vos données demeurent au Canada, toujours. Conformité SOC 2 incluse.' },
-            ].map(item => (
-              <div key={item.title} className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0" style={{ background: 'rgba(47,74,58,0.06)' }}>{item.icon}</div>
-                <div>
-                  <h3 className="font-display text-[20px] font-medium text-forest-green mb-1">{item.title}</h3>
-                  <p className="text-[14px] text-dark-text/60 leading-relaxed">{item.desc}</p>
-                </div>
-              </div>
-            ))}
+      {/* ══════════════ PARTIE 4: CE QUE NOUS CONSTRUISONS EN PREMIER ══════════════ */}
+      <PartLabel number="04 /" title="Ce que nous construisons en premier" bg="bg-cream" />
+
+      {/* ── SECTION: VISITE INTERACTIVE ───────────────────────── */}
+      <section className="bg-cream pb-20 md:pb-24 px-5 md:px-8">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <SectionLabel>Visite Interactive</SectionLabel>
+            <h2 className="font-display font-medium text-forest-green leading-[1.08] mb-4" style={{ fontSize: 'clamp(34px, 4vw, 52px)' }}>
+              Voyez comment ça fonctionne
+            </h2>
+            <p className="text-[16px] text-dark-text/55 max-w-xl mx-auto">
+              Explorez les flux de travail quotidiens: enregistrement du matin, rapport quotidien et autorisation de collecte.
+            </p>
           </div>
+          <ProductTour />
         </div>
       </section>
 
-      {/* ── CARTE DU CANADA ── */}
-      <section className="bg-white py-16 md:py-20 px-5 md:px-8">
-        <div className="max-w-3xl mx-auto flex flex-col items-center">
-          <CanadaMap caption="Conçu pour chaque province. Conforme dès le premier jour." />
-        </div>
-      </section>
-
-      {/* ── SECTION 9: TARIFICATION ─────────────────────────────── */}
+      {/* ── SECTION: TARIFICATION ─────────────────────────────── */}
       <section className="bg-white py-20 md:py-24 px-5 md:px-8">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-14">
@@ -575,13 +599,16 @@ export default function FrenchHomePage() {
         </div>
       </section>
 
-      {/* ── SECTION 10: CALCULATEUR DE ROI ──────────────────────── */}
+      {/* ── SECTION: CALCULATEUR DE ROI ──────────────────────── */}
       <section className="py-20 px-5 md:px-8" style={{ background: '#2F4A3A' }}>
         <ROICalculator />
       </section>
 
+      {/* ══════════════ PARTIE 5: AIDEZ À FAÇONNER SPROUT & VINE CARE ══════════════ */}
+      <PartLabel number="05 /" title="Aidez à façonner Sprout & Vine Care" bg="bg-forest-green" dark />
+
       {/* ── LETTRE DE LA FONDATRICE ─────────────────────────────── */}
-      <section className="bg-forest-green py-20 md:py-24 px-5 md:px-8">
+      <section className="bg-forest-green pb-20 md:pb-24 px-5 md:px-8">
         <div className="max-w-3xl mx-auto">
           <p className="text-[11px] uppercase tracking-[0.16em] text-sage-green font-semibold mb-8">
             Un mot de la fondatrice
