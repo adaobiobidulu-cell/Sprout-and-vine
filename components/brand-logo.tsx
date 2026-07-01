@@ -74,6 +74,13 @@ export default function BrandLogo({
         preserveAspectRatio="xMidYMid meet"
       />
       {/* wordmark */}
+      {/* The leading "S" is drawn as part of the vine-shaped image above for
+          visual polish, but that leaves it invisible to plain-text extraction
+          (copy/paste, SEO crawlers) — this transparent glyph fills that gap
+          without changing what's visually rendered. */}
+      <text x={100} y={217} style={{ ...wordStyle, fontSize: 154, fill: 'transparent' }} aria-hidden="true">
+        S
+      </text>
       <text x={195} y={217} style={{ ...wordStyle, fontSize: 154 }}>
         prout
       </text>

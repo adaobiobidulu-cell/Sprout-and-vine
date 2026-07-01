@@ -13,10 +13,10 @@ function ChevronDown() {
   )
 }
 
-function SoonBadge({ isFr }: { isFr: boolean }) {
+function ComingSoon({ isFr }: { isFr: boolean }) {
   return (
-    <span className="text-[9px] uppercase tracking-wide font-semibold text-terracotta bg-terracotta/10 rounded-full px-1.5 py-[1px] whitespace-nowrap">
-      {isFr ? 'Bientôt' : 'Soon'}
+    <span className="text-dark-text/40 font-normal whitespace-nowrap">
+      {' '}— {isFr ? 'Bientôt disponible' : 'Coming Soon'}
     </span>
   )
 }
@@ -132,10 +132,10 @@ export default function Nav() {
           <LangToggle />
           <Link
             href="/login"
-            className="inline-flex items-center gap-1.5 text-[14px] font-medium text-dark-text/80 hover:text-forest-green transition-colors"
+            className="text-[14px] font-medium text-dark-text/80 hover:text-forest-green transition-colors whitespace-nowrap"
           >
             {isFr ? 'Connexion' : 'Log in'}
-            <SoonBadge isFr={isFr} />
+            <ComingSoon isFr={isFr} />
           </Link>
           <Link
             href={p('/founding')}
@@ -145,11 +145,10 @@ export default function Nav() {
           </Link>
 
           <span
-            className="inline-flex items-center gap-1.5 text-[14px] font-medium text-dark-text/40 cursor-default"
-            title={isFr ? 'Bientôt disponible' : 'Coming soon'}
+            className="text-[14px] font-medium text-dark-text/80 cursor-default whitespace-nowrap"
           >
             {isFr ? 'Trouver une garderie' : 'Find childcare'}
-            <SoonBadge isFr={isFr} />
+            <ComingSoon isFr={isFr} />
           </span>
         </div>
 
@@ -208,19 +207,18 @@ export default function Nav() {
               </div>
 
               <span
-                className="inline-flex items-center gap-1.5 text-[14px] font-medium text-dark-text/40 cursor-default"
-                title={isFr ? 'Bientôt disponible' : 'Coming soon'}
+                className="text-[15px] font-medium text-dark-text/70 cursor-default"
               >
                 {isFr ? 'Trouver une garderie' : 'Find childcare'}
-                <SoonBadge isFr={isFr} />
+                <ComingSoon isFr={isFr} />
               </span>
               <Link
                 href="/login"
-                className="inline-flex items-center gap-1.5 text-[15px] font-medium text-dark-text/70 hover:text-forest-green transition-colors"
+                className="text-[15px] font-medium text-dark-text/70 hover:text-forest-green transition-colors"
                 onClick={() => setMobileOpen(false)}
               >
                 {isFr ? 'Connexion' : 'Log in'}
-                <SoonBadge isFr={isFr} />
+                <ComingSoon isFr={isFr} />
               </Link>
               <Link
                 href={p('/founding')}

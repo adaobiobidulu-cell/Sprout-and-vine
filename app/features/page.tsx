@@ -787,7 +787,7 @@ export default function FeaturesPage() {
               Built for Canada. Every feature,<br />every regulation, every family.
             </h2>
             <p className="text-[16px] text-dark-text/65 leading-relaxed max-w-2xl mx-auto">
-              Every AI feature is built around Canadian childcare: CWELCC requirements, Ontario ratios, BC CCFRI, and the CPE system in Quebec. This is the depth no US competitor can replicate.
+              Every AI feature is built around Canadian childcare: CWELCC requirements, Ontario ratios, BC CCFRI, and the CPE system in Quebec.
             </p>
           </div>
 

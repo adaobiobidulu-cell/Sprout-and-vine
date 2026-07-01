@@ -311,12 +311,12 @@ export default function FrenchHomePage() {
               {
                 icon: '🇫🇷',
                 title: 'Entièrement bilingue',
-                desc: "Anglais et français dans toute la plateforme et l'application Vine. Un avantage concurrentiel qu'aucun compétiteur américain ne peut égaler.",
+                desc: "Anglais et français dans toute la plateforme et l'application Vine, intégrés dès le départ.",
               },
               {
                 icon: '📋',
                 title: 'Conformité Provinciale',
-                desc: 'Listes de vérification de permis et suivi des ratios pour chaque province, préchargés et mis à jour automatiquement.',
+                desc: 'Listes de vérification de permis et suivi des ratios prévus, conçus selon les exigences provinciales.',
               },
             ].map(item => (
               <div key={item.title}>

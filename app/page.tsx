@@ -296,7 +296,7 @@ export default function Home() {
             A platform built around<br />CWELCC from the ground up.
           </h2>
           <p className="text-[16px] text-dark-text/65 leading-relaxed mb-12 max-w-2xl">
-            Canada's childcare landscape is unlike any other. Sprout &amp; Vine is built specifically for Canadian operators, with CWELCC subsidy tracking, bilingual support (English &amp; French), and provincial compliance built in from day one. No US competitor comes close.
+            Canada's childcare landscape is unlike any other. Sprout &amp; Vine is designed around Canadian childcare from day one — including CWELCC, bilingual support, and provincial workflows.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -309,12 +309,12 @@ export default function Home() {
               {
                 icon: '🇫🇷',
                 title: 'Fully Bilingual',
-                desc: 'English and French throughout the platform and the Vine parent app. A competitive edge no US competitor can match.',
+                desc: 'English and French throughout the platform and the Vine parent app, built in from the start.',
               },
               {
                 icon: '📋',
                 title: 'Provincial Compliance',
-                desc: 'Licensing checklists and ratio tracking for every province, pre-loaded and updated automatically.',
+                desc: 'Planned licensing checklists and ratio tracking designed around provincial requirements.',
               },
             ].map(item => (
               <div key={item.title}>
