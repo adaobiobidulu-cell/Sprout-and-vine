@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import { altEn } from '@/lib/seo'
 import Link from 'next/link'
 import EmailCapture from '@/components/email-capture'
+import JsonLd from '@/components/json-ld'
+import { articleSchema, faqPageSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
   title: 'CWELCC Guide for Canadian Childcare Operators (2026) | Sprout & Vine Care',
@@ -9,6 +11,25 @@ export const metadata: Metadata = {
     'Everything Canadian childcare operators need to know about CWELCC: fee caps, subsidy tracking, provincial compliance, and what changes in 2026. Updated May 2026.',
   alternates: altEn('/resources/cwelcc-guide', '/fr/resources/guide-pelcpn'),
 }
+
+const cwelccFaqs = [
+  {
+    q: 'If I am not enrolled in CWELCC, can my families still get subsidized care?',
+    a: 'Families in non-participating programs cannot receive CWELCC fee reductions from your centre. However, families may separately qualify for the Ontario Child Care Tax Credit or municipal fee subsidy programs regardless of your CWELCC status.',
+  },
+  {
+    q: 'What is the difference between CWELCC, the Child Care Tax Credit, and the Child Care Fee Subsidy?',
+    a: 'These are three separate programs. CWELCC is a federal-provincial program that reduces fees at the provider level. Families do not apply; they benefit automatically at enrolled centres. The Ontario Child Care Tax Credit is a provincial tax credit families claim on their annual tax return (up to 75% of eligible expenses for low-income families). The Fee Subsidy (municipal) is an income-tested municipal program providing additional assistance to qualifying families. Separate application required.',
+  },
+  {
+    q: 'Does CWELCC apply to home daycares?',
+    a: 'Yes. Licensed home child care providers operating through a licensed home child care agency are eligible to participate in CWELCC. Independent (unlicensed) providers are not eligible.',
+  },
+  {
+    q: 'What happens to CWELCC after December 31, 2026?',
+    a: 'The agreement was extended in November 2025 to December 31, 2026. Federal and provincial governments are expected to negotiate a renewed multi-year agreement. The federal government has committed to $9.2 billion annually in permanent funding, suggesting the program will continue in some form beyond 2026.',
+  },
+]
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
@@ -138,6 +159,17 @@ function FaqItem({ q, a }: { q: string; a: React.ReactNode }) {
 export default function CwelccGuidePage() {
   return (
     <>
+      <JsonLd
+        data={articleSchema({
+          headline: 'CWELCC Guide for Canadian Childcare Operators (2026)',
+          description:
+            'Everything Canadian childcare operators need to know about CWELCC: fee caps, subsidy tracking, provincial compliance, and what changes in 2026.',
+          path: '/resources/cwelcc-guide',
+          datePublished: '2026-05-01',
+        })}
+      />
+      <JsonLd data={faqPageSchema(cwelccFaqs)} />
+
       {/* Hero */}
       <section className="bg-forest-green py-16 md:py-24 px-5 md:px-8">
         <div className="max-w-3xl mx-auto">
@@ -298,22 +330,9 @@ export default function CwelccGuidePage() {
           {/* FAQ */}
           <ArticleH2>Frequently Asked Questions</ArticleH2>
 
-          <FaqItem
-            q="If I am not enrolled in CWELCC, can my families still get subsidized care?"
-            a="Families in non-participating programs cannot receive CWELCC fee reductions from your centre. However, families may separately qualify for the Ontario Child Care Tax Credit or municipal fee subsidy programs regardless of your CWELCC status."
-          />
-          <FaqItem
-            q="What is the difference between CWELCC, the Child Care Tax Credit, and the Child Care Fee Subsidy?"
-            a="These are three separate programs. CWELCC is a federal-provincial program that reduces fees at the provider level. Families do not apply; they benefit automatically at enrolled centres. The Ontario Child Care Tax Credit is a provincial tax credit families claim on their annual tax return (up to 75% of eligible expenses for low-income families). The Fee Subsidy (municipal) is an income-tested municipal program providing additional assistance to qualifying families. Separate application required."
-          />
-          <FaqItem
-            q="Does CWELCC apply to home daycares?"
-            a="Yes. Licensed home child care providers operating through a licensed home child care agency are eligible to participate in CWELCC. Independent (unlicensed) providers are not eligible."
-          />
-          <FaqItem
-            q="What happens to CWELCC after December 31, 2026?"
-            a="The agreement was extended in November 2025 to December 31, 2026. Federal and provincial governments are expected to negotiate a renewed multi-year agreement. The federal government has committed to $9.2 billion annually in permanent funding, suggesting the program will continue in some form beyond 2026."
-          />
+          {cwelccFaqs.map(faq => (
+            <FaqItem key={faq.q} q={faq.q} a={faq.a} />
+          ))}
 
           {/* Sources */}
           <div className="mt-14 pt-8 border-t border-[rgba(47,74,58,0.1)]">

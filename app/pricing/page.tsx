@@ -2,6 +2,8 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import { altEn } from '@/lib/seo'
 import PricingTiersClient from '@/components/pricing-tiers-client'
+import JsonLd from '@/components/json-ld'
+import { faqPageSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
   title: 'How Pricing Works | Sprout & Vine Care',
@@ -64,6 +66,8 @@ const faqs = [
 export default function PricingPage() {
   return (
     <>
+      <JsonLd data={faqPageSchema(faqs)} />
+
       {/* Hero */}
       <section className="bg-cream py-20 md:py-24 px-5 md:px-8 text-center">
         <div className="max-w-3xl mx-auto">

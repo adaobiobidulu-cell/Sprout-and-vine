@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { canonicalOnly } from '@/lib/seo'
 import Link from 'next/link'
+import JsonLd from '@/components/json-ld'
+import { blogPostingSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
   title: 'Why we are building Sprout & Vine Care | Blog',
@@ -11,6 +13,16 @@ export const metadata: Metadata = {
 export default function PostPage() {
   return (
     <article className="bg-cream min-h-screen">
+      <JsonLd
+        data={blogPostingSchema({
+          headline: 'Why we are building Sprout & Vine',
+          description:
+            "We're not building another app. We're building infrastructure. Here's what we found when we looked closely at Canadian childcare operations, and why it changed everything.",
+          path: '/blog/why-we-are-building-sprout-and-vine',
+          datePublished: '2026-05-01',
+          authorName: 'Ada',
+        })}
+      />
       {/* Header */}
       <div className="bg-forest-green py-16 md:py-20 px-5 md:px-8">
         <div className="max-w-2xl mx-auto">

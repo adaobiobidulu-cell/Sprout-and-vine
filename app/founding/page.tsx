@@ -3,12 +3,37 @@ import { altEn } from '@/lib/seo'
 import Link from 'next/link'
 import FadeIn from '@/components/fade-in'
 import FoundingForm from '@/components/founding-form'
+import JsonLd from '@/components/json-ld'
+import { faqPageSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
   title: 'Founding Operators Program | Sprout & Vine Care',
   description: 'Join the Founding Operators Program. Early access, founding pricing locked for life, and a direct voice in what we build. Applications open now.',
   alternates: altEn('/founding'),
 }
+
+const foundingFaqs = [
+  {
+    q: 'Is the platform built yet?',
+    a: "We're building it now. The Founding Operators Program exists so that the people who understand this work every day can shape what gets built. We'll share our progress openly, and founding members get access as features become ready.",
+  },
+  {
+    q: 'What does founding pricing mean exactly?',
+    a: 'Founding members lock in a discounted rate that they keep for as long as they remain on the platform. We will share specific numbers during your founding call once we have reviewed your application.',
+  },
+  {
+    q: 'How many founding spots are available?',
+    a: "We're keeping the founding cohort small intentionally. We want to be genuinely responsive to every founding member, and that requires a manageable group to start.",
+  },
+  {
+    q: 'I am not yet open. Can I still apply?',
+    a: 'Yes. If you are planning to open a childcare centre within the next 12 months, we would love to hear from you. The Seeds tier of our platform is designed specifically for aspiring operators.',
+  },
+  {
+    q: 'What happens if I do not like the platform?',
+    a: 'Nothing is signed. There is no commitment until you choose to move forward. The application is a conversation starter, not a contract.',
+  },
+]
 
 const benefits = [
   {
@@ -44,6 +69,8 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
 export default function FoundingPage() {
   return (
     <>
+      <JsonLd data={faqPageSchema(foundingFaqs)} />
+
       {/* Hero */}
       <section className="bg-cream py-20 md:py-24 px-5 md:px-8">
         <div className="max-w-3xl mx-auto text-center">
@@ -177,28 +204,7 @@ export default function FoundingPage() {
             Common questions
           </h2>
           <div className="space-y-0 divide-y divide-[rgba(47,74,58,0.08)]">
-            {[
-              {
-                q: 'Is the platform built yet?',
-                a: "We're building it now. The Founding Operators Program exists so that the people who understand this work every day can shape what gets built. We'll share our progress openly, and founding members get access as features become ready.",
-              },
-              {
-                q: 'What does founding pricing mean exactly?',
-                a: 'Founding members lock in a discounted rate that they keep for as long as they remain on the platform. We will share specific numbers during your founding call once we have reviewed your application.',
-              },
-              {
-                q: 'How many founding spots are available?',
-                a: "We're keeping the founding cohort small intentionally. We want to be genuinely responsive to every founding member, and that requires a manageable group to start.",
-              },
-              {
-                q: 'I am not yet open. Can I still apply?',
-                a: 'Yes. If you are planning to open a childcare centre within the next 12 months, we would love to hear from you. The Seeds tier of our platform is designed specifically for aspiring operators.',
-              },
-              {
-                q: 'What happens if I do not like the platform?',
-                a: 'Nothing is signed. There is no commitment until you choose to move forward. The application is a conversation starter, not a contract.',
-              },
-            ].map(faq => (
+            {foundingFaqs.map(faq => (
               <div key={faq.q} className="py-6">
                 <p className="text-[15px] font-semibold text-dark-text mb-2">{faq.q}</p>
                 <p className="text-[14px] text-dark-text/60 leading-relaxed">{faq.a}</p>

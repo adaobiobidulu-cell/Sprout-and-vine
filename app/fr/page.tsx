@@ -5,10 +5,12 @@ import DashboardPreview from '@/components/dashboard-preview'
 import EmailCapture from '@/components/email-capture'
 import CanadaMap from '@/components/canada-map'
 import PhotoAccent from '@/components/photo-accent'
+import JsonLd from '@/components/json-ld'
 import { PartLabel, GroupLabel } from '@/components/part-label'
 import { testimonial } from '@/lib/testimonial'
 import type { Metadata } from 'next'
 import { altFr } from '@/lib/seo'
+import { softwareApplicationSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
   title: 'Sprout & Vine Care | Gestion de garderie au Canada',
@@ -116,6 +118,8 @@ function PhoneShell({ children }: { children: React.ReactNode }) {
 export default function FrenchHomePage() {
   return (
     <>
+      <JsonLd data={softwareApplicationSchema('fr')} />
+
       {/* ══════════════ PARTIE 1: CE QU'EST SPROUT & VINE CARE ══════════════ */}
       <PartLabel number="01 /" title="Ce qu'est Sprout & Vine Care" bg="bg-cream" />
 

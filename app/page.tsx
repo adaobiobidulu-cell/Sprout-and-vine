@@ -5,10 +5,12 @@ import DashboardPreview from '@/components/dashboard-preview'
 import EmailCapture from '@/components/email-capture'
 import CanadaMap from '@/components/canada-map'
 import PhotoAccent from '@/components/photo-accent'
+import JsonLd from '@/components/json-ld'
 import { PartLabel, GroupLabel } from '@/components/part-label'
 import { testimonial } from '@/lib/testimonial'
 import type { Metadata } from 'next'
 import { altEn } from '@/lib/seo'
+import { softwareApplicationSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
   alternates: altEn('/'),
@@ -114,6 +116,8 @@ function PhoneShell({ children }: { children: React.ReactNode }) {
 export default function Home() {
   return (
     <>
+      <JsonLd data={softwareApplicationSchema('en')} />
+
       {/* ══════════════ PART 1: WHAT SPROUT & VINE CARE IS ══════════════ */}
       <PartLabel number="01 /" title="What Sprout & Vine Care is" bg="bg-cream" />
 

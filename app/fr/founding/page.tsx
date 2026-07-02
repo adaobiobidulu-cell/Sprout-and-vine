@@ -3,12 +3,37 @@ import { altFr } from '@/lib/seo'
 import Link from 'next/link'
 import FadeIn from '@/components/fade-in'
 import FrFoundingForm from '@/components/fr-founding-form'
+import JsonLd from '@/components/json-ld'
+import { faqPageSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
   title: 'Programme des opérateurs fondateurs | Sprout & Vine Care',
   description: 'Rejoignez le Programme des opérateurs fondateurs. Accès anticipé, tarif fondateur verrouillé à vie, et une voix directe dans ce que nous construisons. Inscriptions ouvertes.',
   alternates: altFr('/fr/founding'),
 }
+
+const foundingFaqsFr = [
+  {
+    q: 'La plateforme est-elle déjà construite?',
+    a: "Nous la construisons maintenant. Le Programme des opérateurs fondateurs existe pour que les personnes qui comprennent ce travail au quotidien puissent façonner ce qui est construit. Nous partagerons notre progression ouvertement, et les membres fondateurs auront accès au fur et à mesure que les fonctionnalités seront prêtes.",
+  },
+  {
+    q: 'Que signifie exactement le tarif fondateur?',
+    a: "Les membres fondateurs verrouillent un tarif réduit qu'ils conservent aussi longtemps qu'ils restent sur la plateforme. Nous partagerons les chiffres spécifiques lors de votre appel fondateur une fois que nous aurons examiné votre candidature.",
+  },
+  {
+    q: 'Combien de places fondatrices sont disponibles?',
+    a: "Nous gardons la cohorte fondatrice délibérément petite. Nous voulons être vraiment réactifs à chaque membre fondateur, et cela nécessite un groupe gérable pour commencer.",
+  },
+  {
+    q: "Je ne suis pas encore ouvert. Puis-je quand même postuler?",
+    a: "Oui. Si vous prévoyez ouvrir un centre de garde dans les 12 prochains mois, nous aimerions avoir de vos nouvelles. Le niveau Seeds de notre plateforme est conçu spécifiquement pour les opérateurs aspirants.",
+  },
+  {
+    q: "Que se passe-t-il si la plateforme ne me convient pas?",
+    a: "Rien n'est signé. Il n'y a aucun engagement jusqu'à ce que vous choisissiez d'aller de l'avant. La candidature est un point de départ pour la conversation, pas un contrat.",
+  },
+]
 
 const benefits = [
   {
@@ -44,6 +69,8 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
 export default function FrFoundingPage() {
   return (
     <>
+      <JsonLd data={faqPageSchema(foundingFaqsFr)} />
+
       {/* Hero */}
       <section className="bg-cream py-20 md:py-24 px-5 md:px-8">
         <div className="max-w-3xl mx-auto text-center">
@@ -175,28 +202,7 @@ export default function FrFoundingPage() {
             Questions fréquentes
           </h2>
           <div className="space-y-0 divide-y divide-[rgba(47,74,58,0.08)]">
-            {[
-              {
-                q: 'La plateforme est-elle déjà construite?',
-                a: "Nous la construisons maintenant. Le Programme des opérateurs fondateurs existe pour que les personnes qui comprennent ce travail au quotidien puissent façonner ce qui est construit. Nous partagerons notre progression ouvertement, et les membres fondateurs auront accès au fur et à mesure que les fonctionnalités seront prêtes.",
-              },
-              {
-                q: 'Que signifie exactement le tarif fondateur?',
-                a: "Les membres fondateurs verrouillent un tarif réduit qu'ils conservent aussi longtemps qu'ils restent sur la plateforme. Nous partagerons les chiffres spécifiques lors de votre appel fondateur une fois que nous aurons examiné votre candidature.",
-              },
-              {
-                q: 'Combien de places fondatrices sont disponibles?',
-                a: "Nous gardons la cohorte fondatrice délibérément petite. Nous voulons être vraiment réactifs à chaque membre fondateur, et cela nécessite un groupe gérable pour commencer.",
-              },
-              {
-                q: "Je ne suis pas encore ouvert. Puis-je quand même postuler?",
-                a: "Oui. Si vous prévoyez ouvrir un centre de garde dans les 12 prochains mois, nous aimerions avoir de vos nouvelles. Le niveau Seeds de notre plateforme est conçu spécifiquement pour les opérateurs aspirants.",
-              },
-              {
-                q: "Que se passe-t-il si la plateforme ne me convient pas?",
-                a: "Rien n'est signé. Il n'y a aucun engagement jusqu'à ce que vous choisissiez d'aller de l'avant. La candidature est un point de départ pour la conversation, pas un contrat.",
-              },
-            ].map(faq => (
+            {foundingFaqsFr.map(faq => (
               <div key={faq.q} className="py-6">
                 <p className="text-[15px] font-semibold text-dark-text mb-2">{faq.q}</p>
                 <p className="text-[14px] text-dark-text/60 leading-relaxed">{faq.a}</p>

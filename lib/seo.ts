@@ -1,4 +1,4 @@
-const base = 'https://www.sproutandvinecare.ca'
+export const base = 'https://www.sproutandvinecare.ca'
 
 // For EN pages paired with a FR page (same or different slug).
 // frPath defaults to /fr + enPath when omitted.

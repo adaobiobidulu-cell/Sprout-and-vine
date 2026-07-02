@@ -9,6 +9,8 @@ import AnnouncementBar from '@/components/announcement-bar'
 import MobileStickyCTA from '@/components/mobile-sticky-bar'
 import ExitIntent from '@/components/exit-intent'
 import ScrollVine from '@/components/scroll-vine'
+import JsonLd from '@/components/json-ld'
+import { organizationSchema, websiteSchema } from '@/lib/schema'
 import { Analytics } from '@vercel/analytics/next'
 
 const cormorant = Cormorant_Garamond({
@@ -55,6 +57,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${cormorant.variable} ${dmSans.variable}`}>
       <body className="min-h-full flex flex-col antialiased">
+        <JsonLd data={organizationSchema()} />
+        <JsonLd data={websiteSchema()} />
         <MotionConfig reducedMotion="user" transition={{ duration: 0.42, ease: [0.22, 1, 0.36, 1] }}>
           <AnnouncementBar />
           <LanguageBanner />
