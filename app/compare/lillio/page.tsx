@@ -5,7 +5,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Sprout & Vine Care vs. Lillio (HiMama): An Honest Comparison | Sprout & Vine Care',
   description:
-    'How does Sprout & Vine compare to Lillio (formerly HiMama)? CWELCC support, pricing transparency, home daycare tiers, bilingual support, and Smart Pickup Authorization. An honest feature-by-feature look.',
+    'How does Sprout & Vine Care compare to Lillio (formerly HiMama)? CWELCC support, pricing transparency, home daycare tiers, bilingual support, and Smart Pickup Authorization. An honest feature-by-feature look.',
   alternates: altEn('/compare/lillio'),
 }
 
@@ -157,7 +157,7 @@ export default function LillioComparePage() {
             className="font-display font-medium text-forest-green leading-[1.05] mb-5"
             style={{ fontSize: 'clamp(34px, 5vw, 58px)' }}
           >
-            Sprout &amp; Vine vs. Lillio (HiMama):<br />An honest comparison
+            Sprout &amp; Vine Care vs. Lillio (HiMama):<br />An honest comparison
           </h1>
           <p className="text-[17px] text-dark-text/65 leading-relaxed max-w-2xl">
             Lillio (formerly HiMama) is Canada's most established childcare platform, and it has earned that position. But the childcare landscape changed significantly in 2025 with CWELCC cost-based funding, and operators tell us they need tools that actually reflect that reality. Here is an honest look at how the two platforms compare.
@@ -177,7 +177,7 @@ export default function LillioComparePage() {
               <div className="grid grid-cols-3 border-b-2 border-[rgba(47,74,58,0.1)] bg-cream">
                 <div className="p-5" />
                 <div className="p-5 text-center border-l border-[rgba(47,74,58,0.08)]">
-                  <p className="font-display text-[18px] font-medium text-forest-green">Sprout &amp; Vine</p>
+                  <p className="font-display text-[18px] font-medium text-forest-green">Sprout &amp; Vine Care</p>
                   <p className="text-[11px] text-dark-text/45 mt-0.5">Canadian-built from the ground up</p>
                 </div>
                 <div className="p-5 text-center border-l border-[rgba(47,74,58,0.08)]">
@@ -251,7 +251,7 @@ export default function LillioComparePage() {
             className="font-display font-medium text-cream leading-[1.08] mb-5"
             style={{ fontSize: 'clamp(28px, 4vw, 44px)' }}
           >
-            Sprout &amp; Vine was built because Canadian operators deserved a platform built around how Canada's childcare system actually works.
+            Sprout &amp; Vine Care was built because Canadian operators deserved a platform built around how Canada's childcare system actually works.
           </h2>
           <p className="text-cream/65 text-[15px] leading-relaxed mb-8 max-w-xl mx-auto">
             Not adapted from a US product. Not designed before CWELCC existed. Apply to the Founding Operators Program. The Seeds tier is free forever.

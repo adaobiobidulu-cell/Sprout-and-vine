@@ -3,9 +3,9 @@ import { canonicalOnly } from '@/lib/seo'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Sprout & Vine vs. Brightwheel: An Honest Comparison | Sprout & Vine Care',
+  title: 'Sprout & Vine Care vs. Brightwheel: An Honest Comparison | Sprout & Vine Care',
   description:
-    'How does Sprout & Vine compare to Brightwheel? CWELCC tracking, Canadian data residency, bilingual EN/FR, transparent per-centre pricing, and Smart Pickup Authorization. An honest, feature-by-feature look.',
+    'How does Sprout & Vine Care compare to Brightwheel? CWELCC tracking, Canadian data residency, bilingual EN/FR, transparent per-centre pricing, and Smart Pickup Authorization. An honest, feature-by-feature look.',
   alternates: canonicalOnly('/compare/brightwheel'),
 }
 
@@ -147,7 +147,7 @@ export default function BrightwheelComparePage() {
             className="font-display font-medium text-forest-green leading-[1.05] mb-5"
             style={{ fontSize: 'clamp(34px, 5vw, 58px)' }}
           >
-            Sprout &amp; Vine vs. Brightwheel:<br />An honest comparison
+            Sprout &amp; Vine Care vs. Brightwheel:<br />An honest comparison
           </h1>
           <p className="text-[17px] text-dark-text/65 leading-relaxed max-w-2xl">
             Brightwheel is one of the most polished childcare platforms on the market, and for operators in the United States it is a genuinely strong choice. But it was built for American regulations, American subsidy programs, and American data laws. If you run a centre in Canada, that mismatch quietly costs you time and money every month. Here is an honest look at how the two platforms compare.
@@ -167,7 +167,7 @@ export default function BrightwheelComparePage() {
               <div className="grid grid-cols-3 border-b-2 border-[rgba(47,74,58,0.1)] bg-cream">
                 <div className="p-5" />
                 <div className="p-5 text-center border-l border-[rgba(47,74,58,0.08)]">
-                  <p className="font-display text-[18px] font-medium text-forest-green">Sprout &amp; Vine</p>
+                  <p className="font-display text-[18px] font-medium text-forest-green">Sprout &amp; Vine Care</p>
                   <p className="text-[11px] text-dark-text/45 mt-0.5">Canadian-built from the ground up</p>
                 </div>
                 <div className="p-5 text-center border-l border-[rgba(47,74,58,0.08)]">
@@ -226,7 +226,7 @@ export default function BrightwheelComparePage() {
             Brightwheel earned its reputation. Its interface is among the most refined in the category, its parent app is a pleasure to use, and its billing and payments tooling is mature and dependable. For a US-based centre that does not need CWELCC tracking, bilingual support, or Canadian data residency, Brightwheel is a capable, well-built platform, and many operators are happy on it.
           </p>
           <p className="text-[15px] text-dark-text/65 leading-relaxed">
-            What it was never designed for is the way Canadian childcare actually works in 2025 and 2026: CWELCC cost-based funding, transparent pricing for operators of every size including home daycares, French-language families as first-class users, and data that stays in Canada. Sprout &amp; Vine was built around exactly those realities, not adapted to them after the fact.
+            What it was never designed for is the way Canadian childcare actually works in 2025 and 2026: CWELCC cost-based funding, transparent pricing for operators of every size including home daycares, French-language families as first-class users, and data that stays in Canada. Sprout &amp; Vine Care was built around exactly those realities, not adapted to them after the fact.
           </p>
         </div>
       </section>
@@ -241,7 +241,7 @@ export default function BrightwheelComparePage() {
             className="font-display font-medium text-cream leading-[1.08] mb-5"
             style={{ fontSize: 'clamp(28px, 4vw, 44px)' }}
           >
-            Sprout &amp; Vine was built because Canadian operators deserved a platform built around how Canada's childcare system actually works.
+            Sprout &amp; Vine Care was built because Canadian operators deserved a platform built around how Canada's childcare system actually works.
           </h2>
           <p className="text-cream/65 text-[15px] leading-relaxed mb-8 max-w-xl mx-auto">
             Not adapted from a US product. Not designed before CWELCC existed. Apply to the Founding Operators Program. The Seeds tier is free forever.

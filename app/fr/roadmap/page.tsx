@@ -184,7 +184,7 @@ export default function FrRoadmapPage() {
               source="fr-roadmap-page"
               buttonText="Recevoir les mises à jour"
               emailPlaceholder="votre@centre.ca"
-              consentLabel="J'accepte de recevoir des mises à jour de Sprout & Vine. Je peux me désabonner à tout moment."
+              consentLabel="J'accepte de recevoir des mises à jour de Sprout & Vine Care. Je peux me désabonner à tout moment."
               successTitle="Vous êtes sur la liste."
               successSubtitle="Nous vous contacterons au fil de notre progression."
             />
@@ -202,7 +202,7 @@ export default function FrRoadmapPage() {
             La vision à long terme.
           </h2>
           <p className="text-[15px] text-dark-text/55 leading-relaxed mb-10">
-            Sprout &amp; Vine est conçu pour accompagner un enfant bien au-delà de la garderie. Voici où nous allons, non pas comme un engagement, mais comme un signal de ce que nous croyons que cette plateforme deviendra.
+            Sprout &amp; Vine Care est conçu pour accompagner un enfant bien au-delà de la garderie. Voici où nous allons, non pas comme un engagement, mais comme un signal de ce que nous croyons que cette plateforme deviendra.
           </p>
           <div className="space-y-4">
             {[

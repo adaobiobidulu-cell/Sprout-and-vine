@@ -5,7 +5,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Compare Childcare Software | Sprout & Vine Care',
   description:
-    'See how Sprout & Vine compares to other childcare management platforms. Honest, feature-by-feature comparisons built for Canadian operators.',
+    'See how Sprout & Vine Care compares to other childcare management platforms. Honest, feature-by-feature comparisons built for Canadian operators.',
   alternates: canonicalOnly('/compare'),
 }
 
@@ -22,7 +22,7 @@ const comparisons = [
     competitor: 'Lillio (HiMama)',
     slug: 'lillio',
     description:
-      "Canada's most established childcare platform. See how Sprout & Vine compares on CWELCC support, pricing transparency, home daycare support, and Smart Pickup Authorization.",
+      "Canada's most established childcare platform. See how Sprout & Vine Care compares on CWELCC support, pricing transparency, home daycare support, and Smart Pickup Authorization.",
     highlights: [
       'Transparent flat-rate pricing vs. hidden pricing model',
       'Built-in CWELCC and cost-based funding support',
@@ -35,12 +35,12 @@ const comparisons = [
     competitor: 'Brightwheel',
     slug: 'brightwheel',
     description:
-      'A well-made US childcare platform. See how Sprout & Vine compares on Canadian compliance, CWELCC tracking, bilingual support, and data residency.',
+      'A well-made US childcare platform. See how Sprout & Vine Care compares on Canadian compliance, CWELCC tracking, bilingual support, and data residency.',
     highlights: [
       'Canadian data residency vs. US-based storage',
       'Built-in CWELCC subsidy tracking',
       'Full bilingual EN/FR across the entire platform',
-      'Per-centre flat pricing — not per-child',
+      'Per-centre flat pricing, not per-child',
     ],
     hq: 'San Francisco, CA',
   },
@@ -48,7 +48,7 @@ const comparisons = [
     competitor: 'Procare',
     slug: 'procare',
     description:
-      'Enterprise childcare software built for large US chains. See how Sprout & Vine compares on setup time, pricing simplicity, and Canadian compliance.',
+      'Enterprise childcare software built for large US chains. See how Sprout & Vine Care compares on setup time, pricing simplicity, and Canadian compliance.',
     highlights: [
       'Same-day setup vs. weeks of implementation',
       'Simple flat-rate pricing vs. complex enterprise licensing',
@@ -70,10 +70,10 @@ export default function ComparePage() {
             className="font-display font-medium text-forest-green leading-[1.05] mb-5"
             style={{ fontSize: 'clamp(36px, 5vw, 60px)' }}
           >
-            How does Sprout &amp; Vine compare?
+            How does Sprout &amp; Vine Care compare?
           </h1>
           <p className="text-[17px] text-dark-text/65 leading-relaxed max-w-2xl">
-            We built Sprout &amp; Vine because Canadian operators deserved a platform built around how Canada's childcare system actually works. These comparisons are honest: where others are strong, we say so.
+            We built Sprout &amp; Vine Care because Canadian operators deserved a platform built around how Canada's childcare system actually works. These comparisons are honest: where others are strong, we say so.
           </p>
         </div>
       </section>
@@ -141,7 +141,7 @@ export default function ComparePage() {
             className="font-display font-medium text-cream leading-[1.08] mb-4"
             style={{ fontSize: 'clamp(28px, 4vw, 42px)' }}
           >
-            Ready to see Sprout &amp; Vine for yourself?
+            Ready to see Sprout &amp; Vine Care for yourself?
           </h2>
           <p className="text-cream/65 text-[15px] leading-relaxed mb-8">
             Apply to the Founding Operators Program and get early access. The Seeds tier is free forever.

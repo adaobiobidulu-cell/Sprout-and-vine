@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'À propos | Sprout & Vine Care',
-  description: 'Sprout & Vine a été fondé par Ada et Chuck après l\'arrivée de leur premier enfant et une recherche difficile sur le fonctionnement réel du système de garde d\'enfants au Canada. Lisez leur histoire.',
+  description: 'Sprout & Vine Care a été fondé par Ada et Chuck après l\'arrivée de leur premier enfant et une recherche difficile sur le fonctionnement réel du système de garde d\'enfants au Canada. Lisez leur histoire.',
   alternates: altFr('/fr/about'),
 }
 
@@ -30,7 +30,7 @@ export default function FrAboutPage() {
             Nous avons eu notre premier bébé et nous en sommes tombés complètement amoureux.
           </h1>
           <p className="text-[18px] text-dark-text/65 leading-relaxed">
-            C&apos;est ainsi que Sprout &amp; Vine a commencé. Pas avec un plan d&apos;affaires. Avec un sentiment.
+            C&apos;est ainsi que Sprout &amp; Vine Care a commencé. Pas avec un plan d&apos;affaires. Avec un sentiment.
           </p>
         </div>
       </section>
@@ -71,7 +71,7 @@ export default function FrAboutPage() {
             Le manque n&apos;est pas la passion.<br />Le manque est l&apos;information et l&apos;infrastructure.
           </p>
           <p className="text-[16px] text-cream/65 mt-6 leading-relaxed">
-            C&apos;est pourquoi Sprout &amp; Vine existe.
+            C&apos;est pourquoi Sprout &amp; Vine Care existe.
           </p>
         </div>
       </section>
@@ -86,7 +86,7 @@ export default function FrAboutPage() {
             </p>
 
             <p>
-              Quand j&apos;ai présenté cette idée à Chuck, il n&apos;a pas hésité. C&apos;est ça, Chuck. Il a commencé sa carrière comme chimiste, ce qui lui a donné une façon d&apos;aborder les problèmes qui n&apos;a de sens que lorsqu&apos;on l&apos;a regardé travailler. Il a trouvé son chemin vers le logiciel, a passé des années dans l&apos;univers Salesforce, et est devenu le genre de développeur qui aime vraiment ce qu&apos;il fait. Il ne construit pas Sprout &amp; Vine parce que c&apos;est une bonne opportunité. Il le construit parce qu&apos;il y croit. Cela compte plus pour moi que tout ce qui figure sur son curriculum vitae.
+              Quand j&apos;ai présenté cette idée à Chuck, il n&apos;a pas hésité. C&apos;est ça, Chuck. Il a commencé sa carrière comme chimiste, ce qui lui a donné une façon d&apos;aborder les problèmes qui n&apos;a de sens que lorsqu&apos;on l&apos;a regardé travailler. Il a trouvé son chemin vers le logiciel, a passé des années dans l&apos;univers Salesforce, et est devenu le genre de développeur qui aime vraiment ce qu&apos;il fait. Il ne construit pas Sprout &amp; Vine Care parce que c&apos;est une bonne opportunité. Il le construit parce qu&apos;il y croit. Cela compte plus pour moi que tout ce qui figure sur son curriculum vitae.
             </p>
 
             <p>
@@ -112,7 +112,7 @@ export default function FrAboutPage() {
           </div>
 
           <p className="mt-10 text-[15px] font-medium text-dark-text/60">
-            Ada, cofondatrice, Sprout &amp; Vine
+            Ada, cofondatrice, Sprout &amp; Vine Care
           </p>
         </div>
       </section>
@@ -141,7 +141,7 @@ export default function FrAboutPage() {
               <p className="text-[18px] font-semibold text-dark-text mb-1">Chuck</p>
               <p className="text-[13px] text-dark-text/45 mb-4 uppercase tracking-[0.08em] font-medium">Cofondateur</p>
               <p className="text-[14px] text-dark-text/65 leading-relaxed">
-                A commencé comme chimiste, ce qui s&apos;avère être une excellente formation pour résoudre des problèmes que personne n&apos;a résolus avant. Il a trouvé son chemin vers le logiciel, passé des années à construire dans l&apos;univers Salesforce, et quelque part en cours de route est tombé complètement amoureux de ce que la bonne technologie peut faire pour les gens. Sprout &amp; Vine est la chose la plus importante qu&apos;il ait construite à ce jour.
+                A commencé comme chimiste, ce qui s&apos;avère être une excellente formation pour résoudre des problèmes que personne n&apos;a résolus avant. Il a trouvé son chemin vers le logiciel, passé des années à construire dans l&apos;univers Salesforce, et quelque part en cours de route est tombé complètement amoureux de ce que la bonne technologie peut faire pour les gens. Sprout &amp; Vine Care est la chose la plus importante qu&apos;il ait construite à ce jour.
               </p>
             </div>
           </div>

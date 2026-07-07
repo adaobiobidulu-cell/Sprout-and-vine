@@ -4,7 +4,7 @@ import ComingSoon from '@/components/coming-soon'
 
 export const metadata: Metadata = {
   title: 'Help Centre | Sprout & Vine Care',
-  description: 'Get help with Sprout & Vine. Guides, tutorials, and answers to common questions.',
+  description: 'Get help with Sprout & Vine Care. Guides, tutorials, and answers to common questions.',
   alternates: altEn('/help'),
 }
 

@@ -4,7 +4,7 @@ import LegalLayout from '@/components/legal-layout'
 
 export const metadata: Metadata = {
   title: 'Privacy Policy | Sprout & Vine Care',
-  description: 'How Sprout & Vine collects, uses, and protects your personal information.',
+  description: 'How Sprout & Vine Care collects, uses, and protects your personal information.',
   alternates: altEn('/privacy'),
 }
 
@@ -34,7 +34,7 @@ export default function PrivacyPage() {
     >
       <h2 id="about">1. About This Policy</h2>
       <p>
-        This Privacy Policy explains how <strong>Sprout &amp; Vine</strong> ("we," "our," or "us")
+        This Privacy Policy explains how <strong>Sprout &amp; Vine Care</strong> ("we," "our," or "us")
         collects, uses, discloses, and protects personal information
         when you use our platform, website at sproutandvine.ca, and related services (collectively, the "Services").
       </p>
@@ -45,7 +45,7 @@ export default function PrivacyPage() {
 
       <h2 id="who-we-are">2. Who We Are</h2>
       <p>
-        Sprout &amp; Vine is a Canadian company building childcare management software for Canadian operators.
+        Sprout &amp; Vine Care is a Canadian company building childcare management software for Canadian operators.
         Privacy inquiries may be directed to <a href="mailto:privacy@sproutandvine.ca">privacy@sproutandvine.ca</a>.
       </p>
       <p>
@@ -84,7 +84,7 @@ export default function PrivacyPage() {
       <h2 id="how-we-use">4. How We Use Your Information</h2>
       <p>We use the information we collect to:</p>
       <ul>
-        <li>Provide, operate, and maintain the Sprout &amp; Vine platform and Services.</li>
+        <li>Provide, operate, and maintain the Sprout &amp; Vine Care platform and Services.</li>
         <li>Process payments and manage your subscription.</li>
         <li>Respond to your support requests, questions, and feedback.</li>
         <li>Send you service-related communications (account notices, security alerts, billing receipts).</li>
@@ -105,20 +105,20 @@ export default function PrivacyPage() {
       <ul>
         <li><strong>Service providers:</strong> we share data with trusted vendors who help us operate the platform (hosting, payment processing, email delivery). These vendors are contractually required to protect your data and may only use it as directed by us. See Section 10 for a list of key third parties.</li>
         <li><strong>Legal requirements:</strong> we may disclose information when required by law, court order, or government authority, or when we believe disclosure is necessary to protect our legal rights or prevent harm.</li>
-        <li><strong>Business transfers:</strong> if Sprout &amp; Vine is involved in a merger, acquisition, or sale of assets, your information may be transferred. We will notify you before your personal information is transferred and becomes subject to a different privacy policy.</li>
+        <li><strong>Business transfers:</strong> if Sprout &amp; Vine Care is involved in a merger, acquisition, or sale of assets, your information may be transferred. We will notify you before your personal information is transferred and becomes subject to a different privacy policy.</li>
         <li><strong>With your consent:</strong> we may share information for any other purpose with your explicit consent.</li>
       </ul>
       <p>We do not share personal information with advertisers or data brokers.</p>
 
       <h2 id="storage-security">6. Storage &amp; Security</h2>
       <p>
-        All personal information processed by Sprout &amp; Vine is stored on servers located in <strong>Canada</strong>.
+        All personal information processed by Sprout &amp; Vine Care is stored on servers located in <strong>Canada</strong>.
         We use cloud infrastructure hosted on Canadian data centre regions.
       </p>
       <p>We protect your data using:</p>
       <ul>
         <li>Encryption in transit (TLS 1.2+) and encryption at rest.</li>
-        <li>Role-based access controls limiting who within Sprout &amp; Vine can access user data.</li>
+        <li>Role-based access controls limiting who within Sprout &amp; Vine Care can access user data.</li>
         <li>Regular security assessments and vulnerability monitoring.</li>
         <li>Secure, audited access logs for administrative actions.</li>
       </ul>
@@ -228,7 +228,7 @@ export default function PrivacyPage() {
       </p>
       <p>
         <strong>Privacy Officer</strong><br />
-        Sprout &amp; Vine<br />
+        Sprout &amp; Vine Care<br />
         <a href="mailto:privacy@sproutandvine.ca">privacy@sproutandvine.ca</a>
       </p>
       <p>

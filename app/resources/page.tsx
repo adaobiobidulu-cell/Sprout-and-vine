@@ -166,7 +166,7 @@ export default function ResourcesPage() {
               {
                 icon: '💬',
                 title: 'Help Centre',
-                desc: 'Step-by-step guides and video tutorials for every Sprout & Vine feature. Coming soon.',
+                desc: 'Step-by-step guides and video tutorials for every Sprout & Vine Care feature. Coming soon.',
                 href: '/help',
                 cta: 'Visit Help Centre',
               },
@@ -180,7 +180,7 @@ export default function ResourcesPage() {
               {
                 icon: '🗺️',
                 title: 'Product Roadmap',
-                desc: "See what we are building next. We share our roadmap publicly so you know where Sprout & Vine is headed.",
+                desc: "See what we are building next. We share our roadmap publicly so you know where Sprout & Vine Care is headed.",
                 href: '/roadmap',
                 cta: 'View Roadmap',
               },
@@ -208,7 +208,7 @@ export default function ResourcesPage() {
               Ready to put all of this into practice?
             </h2>
             <p className="text-cream/65 text-[14px] leading-relaxed mb-6">
-              Sprout &amp; Vine handles the CWELCC tracking, licensing documentation, and compliance automatically.
+              Sprout &amp; Vine Care handles the CWELCC tracking, licensing documentation, and compliance automatically.
             </p>
             <Link
               href="/founding"

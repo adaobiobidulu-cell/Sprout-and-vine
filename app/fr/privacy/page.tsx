@@ -4,7 +4,7 @@ import LegalLayout from '@/components/legal-layout'
 
 export const metadata: Metadata = {
   title: 'Politique de confidentialité | Sprout & Vine Care',
-  description: 'Comment Sprout & Vine collecte, utilise et protège vos renseignements personnels.',
+  description: 'Comment Sprout & Vine Care collecte, utilise et protège vos renseignements personnels.',
   alternates: altFr('/fr/privacy'),
 }
 
@@ -34,7 +34,7 @@ export default function FrPrivacyPage() {
     >
       <h2 id="about">1. À propos de cette politique</h2>
       <p>
-        La présente politique de confidentialité explique comment <strong>Sprout &amp; Vine</strong>{' '}
+        La présente politique de confidentialité explique comment <strong>Sprout &amp; Vine Care</strong>{' '}
         («&nbsp;nous&nbsp;», «&nbsp;notre&nbsp;» ou «&nbsp;nos&nbsp;») collecte, utilise, divulgue et protège les renseignements personnels
         lorsque vous utilisez notre plateforme, le site web sproutandvine.ca et les services connexes
         (collectivement, les «&nbsp;Services&nbsp;»).
@@ -47,7 +47,7 @@ export default function FrPrivacyPage() {
 
       <h2 id="who-we-are">2. Qui nous sommes</h2>
       <p>
-        Sprout &amp; Vine est une entreprise canadienne. Notre plateforme de gestion de services de garde
+        Sprout &amp; Vine Care est une entreprise canadienne. Notre plateforme de gestion de services de garde
         est conçue pour les exploitants canadiens. Les demandes relatives à la vie privée peuvent être
         acheminées à{' '}
         <a href="mailto:privacy@sproutandvine.ca">privacy@sproutandvine.ca</a>.
@@ -89,7 +89,7 @@ export default function FrPrivacyPage() {
       <h2 id="how-we-use">4. Utilisation de vos renseignements</h2>
       <p>Nous utilisons les renseignements collectés pour :</p>
       <ul>
-        <li>Fournir, exploiter et maintenir la plateforme et les Services Sprout &amp; Vine.</li>
+        <li>Fournir, exploiter et maintenir la plateforme et les Services Sprout &amp; Vine Care.</li>
         <li>Traiter les paiements et gérer votre abonnement.</li>
         <li>Répondre à vos demandes d'assistance, questions et commentaires.</li>
         <li>Vous envoyer des communications relatives au service (avis de compte, alertes de sécurité, reçus de facturation).</li>
@@ -110,14 +110,14 @@ export default function FrPrivacyPage() {
 
       <h2 id="storage-security">6. Stockage et sécurité</h2>
       <p>
-        Tous les renseignements personnels traités par Sprout &amp; Vine sont stockés sur des serveurs situés
+        Tous les renseignements personnels traités par Sprout &amp; Vine Care sont stockés sur des serveurs situés
         au <strong>Canada</strong>. Nous utilisons une infrastructure infonuagique hébergée dans des régions
         canadiennes.
       </p>
       <p>Nous protégeons vos données grâce à :</p>
       <ul>
         <li>Le chiffrement en transit (TLS 1.2+) et au repos.</li>
-        <li>Des contrôles d'accès basés sur les rôles limitant qui, au sein de Sprout &amp; Vine, peut accéder aux données des utilisateurs.</li>
+        <li>Des contrôles d'accès basés sur les rôles limitant qui, au sein de Sprout &amp; Vine Care, peut accéder aux données des utilisateurs.</li>
         <li>Des évaluations de sécurité régulières et une surveillance des vulnérabilités.</li>
         <li>Des journaux d'accès sécurisés et audités pour les actions administratives.</li>
       </ul>
@@ -203,7 +203,7 @@ export default function FrPrivacyPage() {
       </p>
       <p>
         <strong>Responsable de la protection des renseignements personnels</strong><br />
-        Sprout &amp; Vine<br />
+        Sprout &amp; Vine Care<br />
         <a href="mailto:privacy@sproutandvine.ca">privacy@sproutandvine.ca</a>
       </p>
       <p>

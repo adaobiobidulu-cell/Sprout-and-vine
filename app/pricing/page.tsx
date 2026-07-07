@@ -27,7 +27,7 @@ const faqs = [
   },
   {
     q: 'Do you charge per child or per staff member?',
-    a: 'Neither. Sprout & Vine is flat-rate per tier based on enrollment range. No per-child fees, no per-staff fees.',
+    a: 'Neither. Sprout & Vine Care is flat-rate per tier based on enrollment range. No per-child fees, no per-staff fees.',
   },
   {
     q: 'Is there a contract or commitment?',

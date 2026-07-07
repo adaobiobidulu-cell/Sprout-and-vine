@@ -4,7 +4,7 @@ import { altEn } from '@/lib/seo'
 
 export const metadata: Metadata = {
   title: 'Contact | Sprout & Vine Care',
-  description: 'Book a demo or get in touch with the Sprout & Vine team. We respond within 1 business day.',
+  description: 'Book a demo or get in touch with the Sprout & Vine Care team. We respond within 1 business day.',
   alternates: altEn('/contact'),
 }
 

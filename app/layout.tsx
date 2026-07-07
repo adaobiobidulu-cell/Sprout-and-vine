@@ -68,12 +68,15 @@ export default function RootLayout({
         <LangSync />
         <JsonLd data={organizationSchema()} />
         <JsonLd data={websiteSchema()} />
+        <a href="#main-content" className="skip-link">
+          Skip to main content
+        </a>
         <MotionConfig reducedMotion="user" transition={{ duration: 0.42, ease: [0.22, 1, 0.36, 1] }}>
           <AnnouncementBar />
           <LanguageBanner />
           <Nav />
           <ScrollVine />
-          <main className="flex-1">{children}</main>
+          <main id="main-content" className="flex-1">{children}</main>
           <Footer />
           <MobileStickyCTA />
           <ExitIntent />

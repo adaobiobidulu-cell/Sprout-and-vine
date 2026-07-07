@@ -314,10 +314,10 @@ export default function CwelccGuidePage() {
             for CPE governance, staff qualifications, ratios, and the new 2025 registration portal.
           </ArticleP>
 
-          {/* CWELCC in Sprout and Vine */}
-          <ArticleH2>CWELCC Tracking in Sprout and Vine</ArticleH2>
+          {/* CWELCC in Sprout and Vine Care */}
+          <ArticleH2>CWELCC Tracking in Sprout and Vine Care</ArticleH2>
           <ArticleP>
-            Manually tracking CWELCC subsidies, verifying fee caps, and preparing documentation for your program advisor is one of the most time-consuming administrative tasks operators face today. Sprout and Vine automates this:
+            Manually tracking CWELCC subsidies, verifying fee caps, and preparing documentation for your program advisor is one of the most time-consuming administrative tasks operators face today. Sprout and Vine Care automates this:
           </ArticleP>
           <ArticleUL>
             <ArticleLI>Automatic subsidy calculation per enrolled child based on your CWELCC funding agreement</ArticleLI>

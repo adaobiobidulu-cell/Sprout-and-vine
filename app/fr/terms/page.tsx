@@ -4,7 +4,7 @@ import LegalLayout from '@/components/legal-layout'
 
 export const metadata: Metadata = {
   title: "Conditions d'utilisation | Sprout & Vine Care",
-  description: "Les conditions régissant votre utilisation de la plateforme et des services Sprout & Vine.",
+  description: "Les conditions régissant votre utilisation de la plateforme et des services Sprout & Vine Care.",
   alternates: altFr('/fr/terms'),
 }
 
@@ -36,7 +36,7 @@ export default function FrTermsPage() {
       <h2 id="agreement">1. Acceptation des conditions</h2>
       <p>
         Les présentes conditions d'utilisation («&nbsp;Conditions&nbsp;») constituent un accord légalement
-        contraignant entre vous et <strong>Sprout &amp; Vine</strong> («&nbsp;nous&nbsp;», «&nbsp;notre&nbsp;»
+        contraignant entre vous et <strong>Sprout &amp; Vine Care</strong> («&nbsp;nous&nbsp;», «&nbsp;notre&nbsp;»
         ou «&nbsp;nos&nbsp;»), régissant votre utilisation de notre plateforme de gestion de services de garde, du site web
         sproutandvine.ca et des services connexes (collectivement, les «&nbsp;Services&nbsp;»).
       </p>
@@ -51,7 +51,7 @@ export default function FrTermsPage() {
 
       <h2 id="services">2. Description des services</h2>
       <p>
-        Sprout &amp; Vine est une plateforme de gestion de services de garde hébergée dans le nuage pour les
+        Sprout &amp; Vine Care est une plateforme de gestion de services de garde hébergée dans le nuage pour les
         exploitants canadiens. La plateforme comprend des fonctionnalités pour le suivi des présences, la
         facturation et les paiements, la gestion des subventions PÉLCN, la communication avec les familles,
         les rapports quotidiens, la gestion des inscriptions et des listes d'attente, et l'Autorisation de
@@ -146,8 +146,8 @@ export default function FrTermsPage() {
 
       <h2 id="ip">7. Propriété intellectuelle</h2>
       <p>
-        La plateforme Sprout &amp; Vine, y compris ses logiciels, sa conception, son interface utilisateur,
-        ses marques de commerce, ses logos et toute propriété intellectuelle connexe, appartient à Sprout &amp; Vine
+        La plateforme Sprout &amp; Vine Care, y compris ses logiciels, sa conception, son interface utilisateur,
+        ses marques de commerce, ses logos et toute propriété intellectuelle connexe, appartient à Sprout &amp; Vine Care
         et est protégée par les lois canadiennes et internationales sur la propriété intellectuelle.
       </p>
       <p>
@@ -189,7 +189,7 @@ export default function FrTermsPage() {
 
       <h2 id="indemnification">11. Indemnisation</h2>
       <p>
-        Vous acceptez d'indemniser et de dégager de toute responsabilité Sprout &amp; Vine et ses affiliés,
+        Vous acceptez d'indemniser et de dégager de toute responsabilité Sprout &amp; Vine Care et ses affiliés,
         dirigeants, administrateurs, employés et agents contre toute réclamation, responsabilité, dommage, perte
         et dépense (y compris les honoraires d'avocat raisonnables) découlant de votre utilisation des Services,
         de votre violation des présentes Conditions ou de vos Données client.
@@ -221,7 +221,7 @@ export default function FrTermsPage() {
         Pour toute question concernant les présentes Conditions, communiquez avec nous à :
       </p>
       <p>
-        <strong>Sprout &amp; Vine</strong><br />
+        <strong>Sprout &amp; Vine Care</strong><br />
         <a href="mailto:legal@sproutandvine.ca">legal@sproutandvine.ca</a>
       </p>
       <p>

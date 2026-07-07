@@ -3,9 +3,9 @@ import { canonicalOnly } from '@/lib/seo'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Sprout & Vine vs. Procare: An Honest Comparison | Sprout & Vine Care',
+  title: 'Sprout & Vine Care vs. Procare: An Honest Comparison | Sprout & Vine Care',
   description:
-    'How does Sprout & Vine compare to Procare? Same-day setup vs. weeks, flat per-centre pricing vs. enterprise licensing, plus CWELCC tracking, bilingual EN/FR, and Canadian data residency. An honest, feature-by-feature look.',
+    'How does Sprout & Vine Care compare to Procare? Same-day setup vs. weeks, flat per-centre pricing vs. enterprise licensing, plus CWELCC tracking, bilingual EN/FR, and Canadian data residency. An honest, feature-by-feature look.',
   alternates: canonicalOnly('/compare/procare'),
 }
 
@@ -147,7 +147,7 @@ export default function ProcareComparePage() {
             className="font-display font-medium text-forest-green leading-[1.05] mb-5"
             style={{ fontSize: 'clamp(34px, 5vw, 58px)' }}
           >
-            Sprout &amp; Vine vs. Procare:<br />An honest comparison
+            Sprout &amp; Vine Care vs. Procare:<br />An honest comparison
           </h1>
           <p className="text-[17px] text-dark-text/65 leading-relaxed max-w-2xl">
             Procare is a powerful, deeply featured platform with a long track record, and for large American childcare chains it is a serious tool. It is also complex, expensive, and slow to set up. Most Canadian centres running one to five locations do not need enterprise software. They need calm, capable tools that fit how they actually work. Here is an honest look at how the two compare.
@@ -167,7 +167,7 @@ export default function ProcareComparePage() {
               <div className="grid grid-cols-3 border-b-2 border-[rgba(47,74,58,0.1)] bg-cream">
                 <div className="p-5" />
                 <div className="p-5 text-center border-l border-[rgba(47,74,58,0.08)]">
-                  <p className="font-display text-[18px] font-medium text-forest-green">Sprout &amp; Vine</p>
+                  <p className="font-display text-[18px] font-medium text-forest-green">Sprout &amp; Vine Care</p>
                   <p className="text-[11px] text-dark-text/45 mt-0.5">Canadian-built from the ground up</p>
                 </div>
                 <div className="p-5 text-center border-l border-[rgba(47,74,58,0.08)]">
@@ -226,7 +226,7 @@ export default function ProcareComparePage() {
             Procare has been building for decades, and the depth shows. Its back-office, accounting, and reporting tooling is comprehensive, its multi-location management is robust, and for a large American chain that needs enterprise-grade administration, it is a legitimately powerful system. If you are running dozens of locations with a dedicated back-office team, that depth is an asset, not overhead.
           </p>
           <p className="text-[15px] text-dark-text/65 leading-relaxed">
-            For a Canadian operator running one to five centres, though, that same depth becomes weight: weeks of setup, enterprise pricing and implementation fees, a mobile experience that takes a back seat to the desktop suite, and still no CWELCC tracking, no bilingual support, and no Canadian data residency. Sprout &amp; Vine deliberately trades enterprise breadth for clarity, speed, and a product built around the Canadian system from day one.
+            For a Canadian operator running one to five centres, though, that same depth becomes weight: weeks of setup, enterprise pricing and implementation fees, a mobile experience that takes a back seat to the desktop suite, and still no CWELCC tracking, no bilingual support, and no Canadian data residency. Sprout &amp; Vine Care deliberately trades enterprise breadth for clarity, speed, and a product built around the Canadian system from day one.
           </p>
         </div>
       </section>
@@ -241,7 +241,7 @@ export default function ProcareComparePage() {
             className="font-display font-medium text-cream leading-[1.08] mb-5"
             style={{ fontSize: 'clamp(28px, 4vw, 44px)' }}
           >
-            Sprout &amp; Vine was built because Canadian operators deserved a platform built around how Canada's childcare system actually works.
+            Sprout &amp; Vine Care was built because Canadian operators deserved a platform built around how Canada's childcare system actually works.
           </h2>
           <p className="text-cream/65 text-[15px] leading-relaxed mb-8 max-w-xl mx-auto">
             Not enterprise software adapted for a market it was never designed for. Apply to the Founding Operators Program. The Seeds tier is free forever.

@@ -6,7 +6,7 @@ import EmailCapture from '@/components/email-capture'
 export const metadata: Metadata = {
   title: 'Smart Pickup Authorization | Sprout & Vine Care',
   description:
-    'Photo-verified pickup lists, instant parent notifications, and a complete audit log for every child release. Smart Pickup Authorization by Sprout & Vine, built for Canadian childcare centres.',
+    'Photo-verified pickup lists, instant parent notifications, and a complete audit log for every child release. Smart Pickup Authorization by Sprout & Vine Care, built for Canadian childcare centres.',
   alternates: altEn('/features/smart-pickup', '/fr/features/autorisation-ramassage'),
 }
 
@@ -110,7 +110,7 @@ export default function SmartPickupPage() {
             Know exactly who picked up your child.<br />Every time.
           </h1>
           <p className="text-[18px] text-cream/65 mb-10 max-w-xl mx-auto leading-relaxed">
-            Most apps tell parents their child was picked up. Sprout &amp; Vine tells them <em className="not-italic font-semibold text-cream/80">who</em> picked up, shows a photo, and sends an instant notification before they have left the parking lot.
+            Most apps tell parents their child was picked up. Sprout &amp; Vine Care tells them <em className="not-italic font-semibold text-cream/80">who</em> picked up, shows a photo, and sends an instant notification before they have left the parking lot.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
             <Link
@@ -281,7 +281,7 @@ export default function SmartPickupPage() {
               In Canada, custody disputes, unauthorized pickups, and child safety incidents at pickup time are among the most stressful situations a childcare director faces. Smart Pickup Authorization gives your staff a clear, documented process, and gives parents certainty they have never had before.
             </p>
             <p className="text-[13px] text-dark-text/40 font-medium uppercase tracking-[0.1em]">
-              Sprout &amp; Vine, Built for Canadian Childcare
+              Sprout &amp; Vine Care, Built for Canadian Childcare
             </p>
           </div>
         </div>
@@ -298,7 +298,7 @@ export default function SmartPickupPage() {
               Ready to protect every pickup?
             </h2>
             <p className="text-cream/65 text-[15px] leading-relaxed mb-6">
-              Smart Pickup Authorization is included in all paid Sprout &amp; Vine tiers. Join the Founding Operators Program to get early access.
+              Smart Pickup Authorization is included in all paid Sprout &amp; Vine Care tiers. Join the Founding Operators Program to get early access.
             </p>
             <Link
               href="/founding"

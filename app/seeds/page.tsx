@@ -101,7 +101,7 @@ export default function SeedsPage() {
             Can I actually do this?
           </p>
           <p className="text-[17px] text-dark-text/65 leading-relaxed max-w-2xl mb-10">
-            The answer is yes. But the path from idea to open doors is real work. Sprout and Vine's Seeds program gives aspiring operators the tools, checklists, and guides to get there. Free. No credit card. No catches.
+            The answer is yes. But the path from idea to open doors is real work. Sprout and Vine Care's Seeds program gives aspiring operators the tools, checklists, and guides to get there. Free. No credit card. No catches.
           </p>
           <div className="flex flex-wrap gap-4">
             <Link
@@ -244,7 +244,7 @@ export default function SeedsPage() {
               Ready to take the first step?
             </h2>
             <p className="text-cream/65 text-[15px] leading-relaxed mb-7">
-              Join operators across Canada who are using Sprout and Vine to plan, launch, and run their childcare programs.
+              Join operators across Canada who are using Sprout and Vine Care to plan, launch, and run their childcare programs.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link

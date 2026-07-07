@@ -347,7 +347,7 @@ export default function ChildcareCentreGuidePage() {
               </ul>
               <Callout variant="info">
                 <p className="text-[14px] text-dark-text/75">
-                  Sprout and Vine handles all of the above in one platform, built specifically for Canadian CWELCC-enrolled operators. <Link href="/founding" className="text-forest-green font-medium hover:underline">Apply to our Founding Operators Program</Link> to get early access.
+                  Sprout and Vine Care handles all of the above in one platform, built specifically for Canadian CWELCC-enrolled operators. <Link href="/founding" className="text-forest-green font-medium hover:underline">Apply to our Founding Operators Program</Link> to get early access.
                 </p>
               </Callout>
             </div>
@@ -405,7 +405,7 @@ export default function ChildcareCentreGuidePage() {
               Ready to take the next step?
             </h2>
             <p className="text-cream/65 text-[15px] leading-relaxed mb-6">
-              Join operators across Canada who are using Sprout and Vine to plan and run their childcare programs.
+              Join operators across Canada who are using Sprout and Vine Care to plan and run their childcare programs.
             </p>
             <Link
               href="/founding"

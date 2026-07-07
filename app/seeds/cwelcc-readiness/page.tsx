@@ -82,7 +82,7 @@ const readinessPhases = [
       },
       {
         text: 'Ensure your financial tracking system can generate the reports CWELCC requires: daily attendance, subsidy reconciliation, fee records',
-        note: 'Sprout and Vine generates all required CWELCC reports automatically',
+        note: 'Sprout and Vine Care generates all required CWELCC reports automatically',
       },
       {
         text: 'Document your staff qualifications to confirm eligibility for wage enhancement grants',
@@ -320,7 +320,7 @@ export default function CwelccReadinessPage() {
               className="font-display font-medium text-cream leading-[1.08] mb-4"
               style={{ fontSize: 'clamp(26px, 3.5vw, 38px)' }}
             >
-              Let Sprout and Vine handle the CWELCC tracking.
+              Let Sprout and Vine Care handle the CWELCC tracking.
             </h2>
             <p className="text-cream/65 text-[15px] leading-relaxed mb-6">
               Our platform is built around CWELCC from the ground up: attendance records, subsidy reconciliation, fee cap compliance, and reporting are all built in.

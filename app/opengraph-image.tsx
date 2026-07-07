@@ -50,6 +50,8 @@ export default function Image() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={vineSCreamDataUri} alt="" width={56} height={104} style={{ width: 56, height: 104 }} />
           <div style={{ display: 'flex', flexDirection: 'column' }}>
+            {/* Wordmark + the CARE tagline below it together form the full
+                "Sprout & Vine Care" lockup, mirroring the real logo. */}
             <span style={{ fontSize: 52, color: '#F7F2E8', fontWeight: 700, letterSpacing: '-0.01em', lineHeight: 1 }}>
               Sprout &amp; Vine
             </span>

@@ -22,6 +22,31 @@ body {
   color: #1C2B22;
 }
 
+/* Visible keyboard focus everywhere. :focus-visible keeps mouse clicks
+   clean while giving keyboard users a clear ring in the brand green. */
+:focus-visible {
+  outline: 2px solid #2F4A3A;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Skip-to-content link: visually hidden until focused via keyboard. */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  z-index: 100;
+  background: #2F4A3A;
+  color: #F7F2E8;
+  padding: 10px 18px;
+  border-radius: 0 0 8px 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+.skip-link:focus {
+  left: 0;
+  top: 0;
+}
+
 /* Site-wide motion tokens — "calm arrival" easing shared by every reveal */
 :root {
   --ease-sprout: cubic-bezier(0.22, 1, 0.36, 1);

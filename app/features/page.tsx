@@ -427,7 +427,7 @@ export default function FeaturesPage() {
               The record that belongs to the family.
             </h2>
             <p className="text-[16px] text-dark-text/65 leading-relaxed mb-7">
-              Every child enrolled in Sprout &amp; Vine has a profile that is theirs, not the centre's. Educators add to it daily. Parents see it in real time. And when a child moves on, the complete record moves with them: every update, every milestone, every photo, every document. Nothing is lost. Nothing is locked away.
+              Every child enrolled in Sprout &amp; Vine Care has a profile that is theirs, not the centre's. Educators add to it daily. Parents see it in real time. And when a child moves on, the complete record moves with them: every update, every milestone, every photo, every document. Nothing is lost. Nothing is locked away.
             </p>
             <ul className="space-y-3">
               {[
@@ -524,7 +524,7 @@ export default function FeaturesPage() {
               Professional profiles for the people who show up every day.
             </h2>
             <p className="text-[16px] text-dark-text/65 leading-relaxed mb-7 max-w-3xl">
-              Every educator deserves to feel like a professional, not just a name on a rota. Sprout &amp; Vine gives each staff member a profile they control: a parent-facing presence with their photo, bio, and verified credentials. Directors get the full picture: certifications, expiry dates, compliance status across the entire team, and every document they need for a licensing inspection. All in one place.
+              Every educator deserves to feel like a professional, not just a name on a rota. Sprout &amp; Vine Care gives each staff member a profile they control: a parent-facing presence with their photo, bio, and verified credentials. Directors get the full picture: certifications, expiry dates, compliance status across the entire team, and every document they need for a licensing inspection. All in one place.
             </p>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 max-w-3xl">
               {[
@@ -878,7 +878,7 @@ export default function FeaturesPage() {
             Works with the tools you already use.
           </h2>
           <p className="text-[15px] text-dark-text/65 leading-relaxed mb-10 max-w-2xl">
-            Sprout &amp; Vine connects with QuickBooks Online and Xero so your billing data flows directly to your bookkeeper without double-entry. Payment processing is built in through Stripe, with no separate merchant account needed.
+            Sprout &amp; Vine Care connects with QuickBooks Online and Xero so your billing data flows directly to your bookkeeper without double-entry. Payment processing is built in through Stripe, with no separate merchant account needed.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
             {[
@@ -945,7 +945,7 @@ export default function FeaturesPage() {
           <div className="bg-white rounded-2xl p-7">
             <EmailCapture
               heading="Get notified when we launch."
-              subheading="We will let you know when Sprout and Vine is ready, and share what we are building along the way."
+              subheading="We will let you know when Sprout and Vine Care is ready, and share what we are building along the way."
               source="features-page"
             />
           </div>

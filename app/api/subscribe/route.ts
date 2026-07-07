@@ -10,7 +10,7 @@ async function sendFallbackEmail(email: string, firstName: string, source: strin
     auth: { user: process.env.EMAIL_USER, pass: process.env.EMAIL_PASSWORD },
   })
   await transporter.sendMail({
-    from: `"Sprout & Vine" <${process.env.EMAIL_USER}>`,
+    from: `"Sprout & Vine Care" <${process.env.EMAIL_USER}>`,
     to: 'hello@sproutandvinecare.ca',
     subject: `New email signup: ${email}`,
     text: `New subscriber\nEmail: ${email}\nFirst name: ${firstName || 'not provided'}\nSource: ${source || 'unknown'}\n\nAdd to Loops manually if needed.`,

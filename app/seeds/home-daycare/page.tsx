@@ -561,7 +561,7 @@ export default function HomeDaycareGuidePage() {
               Ready to take the next step?
             </h2>
             <p className="text-cream/65 text-[15px] leading-relaxed mb-6">
-              Join operators across Canada who are using Sprout and Vine to plan and run their childcare programs.
+              Join operators across Canada who are using Sprout and Vine Care to plan and run their childcare programs.
             </p>
             <Link
               href="/founding"

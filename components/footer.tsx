@@ -113,7 +113,7 @@ export default function Footer() {
       <div className="border-b border-cream/10">
         <div className="max-w-7xl mx-auto px-5 md:px-8 py-3 text-center">
           <p className="text-[11px] text-cream/35 leading-relaxed">
-            Sprout &amp; Vine is currently in development. Founding operators are helping shape the platform before launch through feedback, research, and early-access participation.
+            Sprout &amp; Vine Care is currently in development. Founding operators are helping shape the platform before launch through feedback, research, and early-access participation.
           </p>
         </div>
       </div>
@@ -124,14 +124,14 @@ export default function Footer() {
 
           {/* Left: brand block */}
           <FadeIn margin="-20px" className="flex-shrink-0 lg:max-w-[260px]">
-            <Link href={isFr ? '/fr' : '/'} className="inline-flex mb-5" aria-label="Sprout & Vine home">
+            <Link href={isFr ? '/fr' : '/'} className="inline-flex mb-5" aria-label="Sprout & Vine Care home">
               <BrandLogo tone="cream" height={64} />
             </Link>
             <p className="text-[11px] text-cream/60 uppercase tracking-[0.12em] mb-5 font-medium">
               {isFr ? 'Créer des liens. Nourrir les avenirs.' : 'Growing connections. Nurturing futures.'}
             </p>
             <p className="text-[12px] text-cream/40 mt-3">
-              {isFr ? '© 2026 Sprout & Vine. Tous droits réservés.' : '© 2026 Sprout & Vine. All rights reserved.'}
+              {isFr ? '© 2026 Sprout & Vine Care. Tous droits réservés.' : '© 2026 Sprout & Vine Care. All rights reserved.'}
             </p>
             <div className="flex flex-col gap-1 mt-4">
               <p className="text-[11px] text-cream/40">iOS app coming Q4 2026</p>

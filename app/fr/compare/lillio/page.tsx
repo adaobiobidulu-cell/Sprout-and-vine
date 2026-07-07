@@ -5,7 +5,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Sprout & Vine Care vs. Lillio (HiMama) : Comparaison honnête | Sprout & Vine Care',
   description:
-    "Comment Sprout & Vine se compare à Lillio (anciennement HiMama) sur le soutien au PÉLCPN, la transparence des prix, le soutien aux garderies en milieu familial et le support bilingue EN/FR.",
+    "Comment Sprout & Vine Care se compare à Lillio (anciennement HiMama) sur le soutien au PÉLCPN, la transparence des prix, le soutien aux garderies en milieu familial et le support bilingue EN/FR.",
   alternates: altFr('/fr/compare/lillio', '/compare/lillio'),
 }
 
@@ -28,7 +28,7 @@ export default function FrLillioComparePage() {
             className="font-display font-medium text-forest-green leading-[1.05] mb-5"
             style={{ fontSize: 'clamp(32px, 5vw, 54px)' }}
           >
-            Sprout &amp; Vine vs. Lillio (HiMama):<br />Une comparaison honnête
+            Sprout &amp; Vine Care vs. Lillio (HiMama):<br />Une comparaison honnête
           </h1>
           <p className="text-[16px] text-dark-text/65 leading-relaxed max-w-2xl">
             Cette page est en cours de traduction. Pour voir la comparaison complète, consultez la version anglaise.

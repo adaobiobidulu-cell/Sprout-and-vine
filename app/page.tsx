@@ -210,7 +210,7 @@ export default function Home() {
           </FadeIn>
           <FadeIn delay={0.15}>
             <p className="text-[16px] text-dark-text/60 mb-6">
-              That's why we built Sprout &amp; Vine for Canada.
+              That's why we built Sprout &amp; Vine Care for Canada.
             </p>
           </FadeIn>
           <FadeIn delay={0.3}>
@@ -233,7 +233,7 @@ export default function Home() {
               One platform. Three stages of growth.
             </h2>
             <p className="text-[16px] text-dark-text/55 mt-4 max-w-xl mx-auto">
-              Whether you're planning to open, running a single centre, or managing multiple locations, Sprout &amp; Vine scales with you.
+              Whether you're planning to open, running a single centre, or managing multiple locations, Sprout &amp; Vine Care scales with you.
             </p>
           </FadeIn>
 
@@ -301,7 +301,7 @@ export default function Home() {
               A platform built around<br />CWELCC from the ground up.
             </h2>
             <p className="text-[16px] text-dark-text/65 leading-relaxed mb-12 max-w-2xl">
-              Canada's childcare landscape is unlike any other. Sprout &amp; Vine is designed around Canadian childcare from day one — including CWELCC, bilingual support, and provincial workflows.
+              Canada's childcare landscape is unlike any other. Sprout &amp; Vine Care is designed around Canadian childcare from day one, including CWELCC, bilingual support, and provincial workflows.
             </p>
           </FadeIn>
 
@@ -407,7 +407,7 @@ export default function Home() {
               Designed for busy centres.<br />Built for what matters most. 🌿
             </h2>
             <p className="text-[16px] text-dark-text/65 leading-relaxed mb-7">
-              From enrollment to everyday operations, Sprout &amp; Vine helps you save time, reduce stress, and focus on the children in your care.
+              From enrollment to everyday operations, Sprout &amp; Vine Care helps you save time, reduce stress, and focus on the children in your care.
             </p>
             <Link
               href="/features"
@@ -446,7 +446,7 @@ export default function Home() {
               Peace of mind,<br />every single pickup.
             </h2>
             <p className="text-[16px] text-cream/65 leading-relaxed mb-8 max-w-lg">
-              Most apps tell parents their child was picked up. Sprout &amp; Vine tells them <em>who</em> picked up their child, shows a photo, and sends an instant notification before they have left the parking lot.
+              Most apps tell parents their child was picked up. Sprout &amp; Vine Care tells them <em>who</em> picked up their child, shows a photo, and sends an instant notification before they have left the parking lot.
             </p>
             <ul className="space-y-4">
               {[
@@ -580,7 +580,7 @@ export default function Home() {
               From first inquiry to<br />first day, beautifully managed.
             </h2>
             <p className="text-[16px] text-dark-text/65 leading-relaxed mb-8">
-              Canadian centres carry waitlists of 2 to 3 years. Sprout &amp; Vine manages the entire journey: inquiry forms, waitlist positions, enrollment packages, e-signature, and subsidy paperwork pre-filled from your CWELCC data. No spreadsheets. No paper. No stress.
+              Canadian centres carry waitlists of 2 to 3 years. Sprout &amp; Vine Care manages the entire journey: inquiry forms, waitlist positions, enrollment packages, e-signature, and subsidy paperwork pre-filled from your CWELCC data. No spreadsheets. No paper. No stress.
             </p>
             <ul className="space-y-4">
               {[
@@ -882,7 +882,7 @@ export default function Home() {
               Every educator. Verified credentials. A face and name, not just a role.
             </p>
             <p className="text-[16px] text-dark-text/65 leading-relaxed mb-8">
-              Every staff member on Sprout &amp; Vine has a profile that belongs to them. Parents see what matters: a name, a photo, how long they have been with their child&#39;s room, and verified credential badges for First Aid, ECE designation, and police check status. Directors see everything they need for compliance, scheduling, and licensing. All in one place.
+              Every staff member on Sprout &amp; Vine Care has a profile that belongs to them. Parents see what matters: a name, a photo, how long they have been with their child&#39;s room, and verified credential badges for First Aid, ECE designation, and police check status. Directors see everything they need for compliance, scheduling, and licensing. All in one place.
             </p>
             <div className="space-y-3 mb-8">
               {[
@@ -918,7 +918,7 @@ export default function Home() {
               Built for the people<br />who show up every day.
             </h2>
             <p className="text-[16px] text-dark-text/65 leading-relaxed mb-10 max-w-2xl mx-auto">
-              Directors choose Sprout &amp; Vine. Educators love it. That's not a coincidence. We designed every daily workflow around the people actually using it.
+              Directors choose Sprout &amp; Vine Care. Educators love it. That's not a coincidence. We designed every daily workflow around the people actually using it.
             </p>
           </FadeIn>
 
@@ -1074,7 +1074,7 @@ export default function Home() {
           </p>
           <blockquote className="space-y-5 mb-10">
             <p className="font-display font-medium text-cream leading-relaxed" style={{ fontSize: 'clamp(20px, 2.5vw, 28px)' }}>
-              &ldquo;Sprout &amp; Vine did not start with a business plan. It started when we had our first baby and I began researching what it would take to open a home daycare in Canada. I hit a wall.
+              &ldquo;Sprout &amp; Vine Care did not start with a business plan. It started when we had our first baby and I began researching what it would take to open a home daycare in Canada. I hit a wall.
             </p>
             <p className="text-[16px] text-cream/70 leading-relaxed">
               Licensing requirements buried in government PDFs. CWELCC funding nearly impossible to navigate. Every piece of information somewhere different, written for people who already knew what they were doing.
@@ -1089,7 +1089,7 @@ export default function Home() {
           <div className="flex items-center gap-4">
             <div>
               <p className="text-cream font-semibold text-[15px]">Ada</p>
-              <p className="text-cream/50 text-[13px]">Co-Founder, Sprout &amp; Vine</p>
+              <p className="text-cream/50 text-[13px]">Co-Founder, Sprout &amp; Vine Care</p>
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-cream/15 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
@@ -1176,7 +1176,7 @@ export default function Home() {
             Be among the first<br />to build with us.
           </h2>
           <p className="text-[17px] text-cream/65 leading-relaxed mb-4">
-            We're building Sprout &amp; Vine in public, with the operators who will use it. Founding members lock in their pricing, shape the roadmap, and get early access before public launch.
+            We're building Sprout &amp; Vine Care in public, with the operators who will use it. Founding members lock in their pricing, shape the roadmap, and get early access before public launch.
           </p>
           <p className="text-[14px] text-cream/60 mb-10">
             <span className="inline-flex items-center gap-1.5">

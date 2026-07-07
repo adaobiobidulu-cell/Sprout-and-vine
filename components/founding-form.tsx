@@ -191,7 +191,7 @@ export default function FoundingForm() {
           className="mt-0.5 w-4 h-4 flex-shrink-0"
         />
         <label htmlFor="marketing-consent" className="text-[12px] text-dark-text/55 leading-relaxed cursor-pointer">
-          I agree to receive updates about the Sprout &amp; Vine platform, the Founding Operators Program, and related announcements from Sprout &amp; Vine. I can unsubscribe at any time.
+          I agree to receive updates about the Sprout &amp; Vine Care platform, the Founding Operators Program, and related announcements from Sprout &amp; Vine Care. I can unsubscribe at any time.
         </label>
       </div>
 
@@ -200,7 +200,7 @@ export default function FoundingForm() {
         <Link href="/privacy" className="underline underline-offset-2 hover:text-forest-green transition-colors">
           Privacy Policy
         </Link>
-        . Sprout &amp; Vine will use your information to process your application and contact you about the Founding Operators Program.
+        . Sprout &amp; Vine Care will use your information to process your application and contact you about the Founding Operators Program.
       </p>
 
       <button

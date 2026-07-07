@@ -4,7 +4,7 @@ import ComingSoon from '@/components/coming-soon'
 
 export const metadata: Metadata = {
   title: 'Journal des modifications | Sprout & Vine Care',
-  description: 'Découvrez les nouveautés de Sprout & Vine: mises à jour du produit, améliorations et correctifs.',
+  description: 'Découvrez les nouveautés de Sprout & Vine Care: mises à jour du produit, améliorations et correctifs.',
   alternates: altFr('/fr/changelog'),
 }
 

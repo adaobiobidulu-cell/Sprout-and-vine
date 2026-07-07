@@ -92,7 +92,7 @@ export default function DashboardPreview() {
       <div className="flex items-center justify-between px-4 py-2.5 border-b border-[rgba(47,74,58,0.08)] bg-white">
         <div className="flex items-center gap-2">
           <LogoMarkSmall />
-          <span className="font-display text-[13px] font-bold text-forest-green tracking-tight">Sprout &amp; Vine</span>
+          <span className="font-display text-[13px] font-bold text-forest-green tracking-tight">Sprout &amp; Vine Care</span>
         </div>
         <div className="flex items-center gap-3">
           <span className="text-[10px] text-dark-text/50 hidden sm:block">Good morning, Emma 👋</span>

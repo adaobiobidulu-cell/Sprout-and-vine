@@ -308,7 +308,7 @@ export default function QualificationsPage() {
               Ready to take the next step?
             </h2>
             <p className="text-cream/65 text-[15px] leading-relaxed mb-6">
-              Once you have your qualifications, Sprout and Vine gives you the platform to run a compliant, professional childcare program.
+              Once you have your qualifications, Sprout and Vine Care gives you the platform to run a compliant, professional childcare program.
             </p>
             <Link
               href="/founding"

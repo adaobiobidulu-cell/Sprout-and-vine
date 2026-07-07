@@ -27,7 +27,7 @@ const faqsFr = [
   },
   {
     q: 'Facturez-vous par enfant ou par membre du personnel?',
-    a: "Non. Sprout & Vine applique un tarif fixe par niveau selon la tranche d'inscription. Pas de frais par enfant, pas de frais par employé.",
+    a: "Non. Sprout & Vine Care applique un tarif fixe par niveau selon la tranche d'inscription. Pas de frais par enfant, pas de frais par employé.",
   },
   {
     q: "Y a-t-il un contrat ou un engagement?",

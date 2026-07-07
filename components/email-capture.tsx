@@ -87,6 +87,8 @@ export default function EmailCapture({
           value={firstName}
           onChange={e => setFirstName(e.target.value)}
           placeholder={firstNamePlaceholder}
+          aria-label={firstNamePlaceholder}
+          autoComplete="given-name"
           className="w-full border border-[rgba(47,74,58,0.2)] rounded-lg px-4 py-2.5 text-[14px] text-dark-text bg-white focus:outline-none focus:border-forest-green transition-colors mb-2"
         />
       )}
@@ -98,6 +100,8 @@ export default function EmailCapture({
           value={email}
           onChange={e => setEmail(e.target.value)}
           placeholder={emailPlaceholder}
+          aria-label={emailPlaceholder}
+          autoComplete="email"
           className="flex-1 border border-[rgba(47,74,58,0.2)] rounded-lg px-4 py-2.5 text-[14px] text-dark-text bg-white focus:outline-none focus:border-forest-green transition-colors"
         />
         <button
@@ -121,7 +125,7 @@ export default function EmailCapture({
         <label htmlFor={`consent-${source}`} className="text-[11px] text-dark-text/50 leading-relaxed cursor-pointer">
           {consentLabel ?? (
             <>
-              I agree to receive updates from Sprout &amp; Vine. I can unsubscribe at any time.{' '}
+              I agree to receive updates from Sprout &amp; Vine Care. I can unsubscribe at any time.{' '}
               <Link href="/privacy" className="underline underline-offset-2 hover:text-forest-green transition-colors">
                 Privacy Policy
               </Link>

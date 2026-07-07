@@ -212,12 +212,12 @@ export default function FrenchHomePage() {
           </FadeIn>
           <FadeIn delay={0.15}>
             <p className="text-[16px] text-dark-text/60 mb-6">
-              C&apos;est pourquoi nous avons construit Sprout &amp; Vine pour le Canada.
+              C&apos;est pourquoi nous avons construit Sprout &amp; Vine Care pour le Canada.
             </p>
           </FadeIn>
           <FadeIn delay={0.3}>
             <p className="text-[15px] font-semibold text-forest-green mb-6">
-              Sprout &amp; Vine est bâti avec les opérateurs, pas pour eux.
+              Sprout &amp; Vine Care est bâti avec les opérateurs, pas pour eux.
             </p>
             <Link href="/fr/about" className="text-[14px] font-medium text-forest-green hover:underline">
               Lire notre histoire →
@@ -235,7 +235,7 @@ export default function FrenchHomePage() {
               Une seule plateforme. Trois étapes de croissance.
             </h2>
             <p className="text-[16px] text-dark-text/55 mt-4 max-w-xl mx-auto">
-              Que vous prévoyiez ouvrir, gériez un seul centre ou plusieurs emplacements, Sprout &amp; Vine évolue avec vous.
+              Que vous prévoyiez ouvrir, gériez un seul centre ou plusieurs emplacements, Sprout &amp; Vine Care évolue avec vous.
             </p>
           </FadeIn>
 
@@ -300,10 +300,10 @@ export default function FrenchHomePage() {
           <FadeIn>
             <SectionLabel>Fait Pour le Canada</SectionLabel>
             <h2 className="font-display font-medium text-forest-green leading-[1.08] mb-6" style={{ fontSize: 'clamp(34px, 4vw, 50px)' }}>
-              La seule plateforme construite autour du PÉLCN dès le départ.
+              Une plateforme construite autour du PÉLCN dès le départ.
             </h2>
             <p className="text-[16px] text-dark-text/65 leading-relaxed mb-12 max-w-2xl">
-              Le paysage des services de garde au Canada est unique. Sprout &amp; Vine est conçu spécifiquement pour les opérateurs canadiens, avec le suivi des subventions PÉLCN, le support bilingue (FR/EN) et la conformité provinciale intégrés dès le premier jour.
+              Le paysage des services de garde au Canada est unique. Sprout &amp; Vine Care est conçu spécifiquement pour les opérateurs canadiens, avec le suivi des subventions PÉLCN, le support bilingue (FR/EN) et la conformité provinciale intégrés dès le premier jour.
             </p>
           </FadeIn>
 
@@ -409,7 +409,7 @@ export default function FrenchHomePage() {
               Conçu pour les centres occupés.<br />Bâti pour ce qui compte le plus. 🌿
             </h2>
             <p className="text-[16px] text-dark-text/65 leading-relaxed mb-7">
-              De l&apos;inscription aux opérations quotidiennes, Sprout &amp; Vine vous aide à économiser du temps, réduire le stress et vous concentrer sur les enfants dont vous avez la charge.
+              De l&apos;inscription aux opérations quotidiennes, Sprout &amp; Vine Care vous aide à économiser du temps, réduire le stress et vous concentrer sur les enfants dont vous avez la charge.
             </p>
             <Link
               href="/fr/features"
@@ -448,7 +448,7 @@ export default function FrenchHomePage() {
               Tranquillité d&apos;esprit,<br />à chaque ramassage.
             </h2>
             <p className="text-[16px] text-cream/65 leading-relaxed mb-8 max-w-lg">
-              La plupart des applications informent les parents que leur enfant a été récupéré. Sprout &amp; Vine leur indique <em>qui</em> a récupéré leur enfant, montre une photo, et envoie une notification instantanée avant même qu&apos;ils n&apos;aient quitté le stationnement.
+              La plupart des applications informent les parents que leur enfant a été récupéré. Sprout &amp; Vine Care leur indique <em>qui</em> a récupéré leur enfant, montre une photo, et envoie une notification instantanée avant même qu&apos;ils n&apos;aient quitté le stationnement.
             </p>
             <ul className="space-y-4">
               {[
@@ -582,7 +582,7 @@ export default function FrenchHomePage() {
               De la première demande au<br />premier jour, géré avec élégance.
             </h2>
             <p className="text-[16px] text-dark-text/65 leading-relaxed mb-8">
-              Les centres canadiens ont des listes d&apos;attente de 2 à 3 ans. Sprout &amp; Vine gère tout le parcours: formulaires de demande, positions sur liste d&apos;attente, dossiers d&apos;inscription, signature électronique, et documents de subvention pré-remplis à partir de vos données PÉLCN. Aucune feuille de calcul. Aucun papier. Aucun stress.
+              Les centres canadiens ont des listes d&apos;attente de 2 à 3 ans. Sprout &amp; Vine Care gère tout le parcours: formulaires de demande, positions sur liste d&apos;attente, dossiers d&apos;inscription, signature électronique, et documents de subvention pré-remplis à partir de vos données PÉLCN. Aucune feuille de calcul. Aucun papier. Aucun stress.
             </p>
             <ul className="space-y-4">
               {[
@@ -872,7 +872,7 @@ export default function FrenchHomePage() {
               Chaque éducateur. Des accréditations vérifiées. Un visage et un nom, pas juste un rôle.
             </p>
             <p className="text-[16px] text-dark-text/65 leading-relaxed mb-8">
-              Chaque membre du personnel sur Sprout &amp; Vine a un profil qui lui appartient. Les parents voient ce qui compte: un nom, une photo, depuis combien de temps cette personne s&apos;occupe de leur enfant, et des badges d&apos;accréditation vérifiés. Les directeurs voient tout ce dont ils ont besoin pour la conformité, la planification et les licences. En un seul endroit.
+              Chaque membre du personnel sur Sprout &amp; Vine Care a un profil qui lui appartient. Les parents voient ce qui compte: un nom, une photo, depuis combien de temps cette personne s&apos;occupe de leur enfant, et des badges d&apos;accréditation vérifiés. Les directeurs voient tout ce dont ils ont besoin pour la conformité, la planification et les licences. En un seul endroit.
             </p>
             <div className="space-y-3 mb-8">
               {[
@@ -905,7 +905,7 @@ export default function FrenchHomePage() {
               Bâti pour les gens<br />qui se présentent chaque jour.
             </h2>
             <p className="text-[16px] text-dark-text/65 leading-relaxed mb-10 max-w-2xl mx-auto">
-              Les directeurs choisissent Sprout &amp; Vine. Les éducateurs l&apos;adorent. Ce n&apos;est pas un hasard. Nous avons conçu chaque flux de travail autour des personnes qui l&apos;utilisent vraiment.
+              Les directeurs choisissent Sprout &amp; Vine Care. Les éducateurs l&apos;adorent. Ce n&apos;est pas un hasard. Nous avons conçu chaque flux de travail autour des personnes qui l&apos;utilisent vraiment.
             </p>
           </FadeIn>
 
@@ -1061,7 +1061,7 @@ export default function FrenchHomePage() {
           </p>
           <blockquote className="space-y-5 mb-10">
             <p className="font-display font-medium text-cream leading-relaxed" style={{ fontSize: 'clamp(20px, 2.5vw, 28px)' }}>
-              &ldquo;Sprout &amp; Vine n'a pas commencé avec un plan d'affaires. Tout a commencé quand nous avons eu notre premier bébé et que j'ai commencé à chercher ce qu'il faudrait pour ouvrir une garderie familiale au Canada. J'ai frappé un mur.
+              &ldquo;Sprout &amp; Vine Care n'a pas commencé avec un plan d'affaires. Tout a commencé quand nous avons eu notre premier bébé et que j'ai commencé à chercher ce qu'il faudrait pour ouvrir une garderie familiale au Canada. J'ai frappé un mur.
             </p>
             <p className="text-[16px] text-cream/70 leading-relaxed">
               Les exigences de licence enfouies dans des PDF gouvernementaux. Le financement PÉLCN presque impossible à naviguer. Chaque information dans un endroit différent, écrite pour des gens qui savaient déjà ce qu'ils faisaient.
@@ -1076,7 +1076,7 @@ export default function FrenchHomePage() {
           <div className="flex items-center gap-4">
             <div>
               <p className="text-cream font-semibold text-[15px]">Ada</p>
-              <p className="text-cream/50 text-[13px]">Co-Fondatrice, Sprout &amp; Vine</p>
+              <p className="text-cream/50 text-[13px]">Co-Fondatrice, Sprout &amp; Vine Care</p>
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-cream/15 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
@@ -1163,7 +1163,7 @@ export default function FrenchHomePage() {
             Faites partie des premiers<br />à construire avec nous.
           </h2>
           <p className="text-[17px] text-cream/65 leading-relaxed mb-4">
-            Nous construisons Sprout &amp; Vine en public, avec les opérateurs qui l'utiliseront. Les membres fondateurs verrouillent leur tarif, façonnent la feuille de route et obtiennent un accès anticipé avant le lancement public.
+            Nous construisons Sprout &amp; Vine Care en public, avec les opérateurs qui l'utiliseront. Les membres fondateurs verrouillent leur tarif, façonnent la feuille de route et obtiennent un accès anticipé avant le lancement public.
           </p>
           <p className="text-[14px] text-cream/60 mb-10">
             <span className="inline-flex items-center gap-1.5">
@@ -1212,7 +1212,7 @@ export default function FrenchHomePage() {
               source="fr-homepage-strip"
               emailPlaceholder="votre@centre.ca"
               firstNamePlaceholder="Prénom"
-              consentLabel="J'accepte de recevoir des mises à jour de Sprout & Vine. Je peux me désabonner à tout moment."
+              consentLabel="J'accepte de recevoir des mises à jour de Sprout & Vine Care. Je peux me désabonner à tout moment."
               successTitle="Vous êtes sur la liste."
               successSubtitle="Nous vous contacterons au fil de notre progression."
             />

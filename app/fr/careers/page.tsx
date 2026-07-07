@@ -4,7 +4,7 @@ import ComingSoon from '@/components/coming-soon'
 
 export const metadata: Metadata = {
   title: 'Carrières | Sprout & Vine Care',
-  description: 'Rejoignez l\'équipe Sprout & Vine. Aidez-nous à créer de meilleurs outils pour les services de garde canadiens.',
+  description: 'Rejoignez l\'équipe Sprout & Vine Care. Aidez-nous à créer de meilleurs outils pour les services de garde canadiens.',
   alternates: altFr('/fr/careers'),
 }
 

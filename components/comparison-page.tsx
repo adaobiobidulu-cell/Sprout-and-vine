@@ -64,7 +64,7 @@ export default function ComparisonPage({
       {/* Hero */}
       <section className="bg-cream py-20 md:py-28 px-5 md:px-8 text-center">
         <div className="max-w-3xl mx-auto">
-          <SectionLabel>{`Sprout & Vine vs ${competitorName}`}</SectionLabel>
+          <SectionLabel>{`Sprout & Vine Care vs ${competitorName}`}</SectionLabel>
           <h1
             className="font-display font-medium text-forest-green leading-[1.05] mb-6"
             style={{ fontSize: 'clamp(40px, 5.5vw, 68px)' }}
@@ -109,7 +109,7 @@ export default function ComparisonPage({
             <div className="grid grid-cols-3 border-b border-[rgba(47,74,58,0.1)]">
               <div className="p-5" />
               <div className="p-5 text-center border-l border-[rgba(47,74,58,0.07)] bg-forest-green/5">
-                <p className="font-display text-[18px] font-medium text-forest-green">Sprout &amp; Vine</p>
+                <p className="font-display text-[18px] font-medium text-forest-green">Sprout &amp; Vine Care</p>
                 <p className="text-[11px] text-sage-green font-semibold mt-0.5">Canadian</p>
               </div>
               <div className="p-5 text-center border-l border-[rgba(47,74,58,0.07)]">
@@ -152,7 +152,7 @@ export default function ComparisonPage({
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-white rounded-2xl p-7 border-2 border-forest-green" style={{ boxShadow: '0 8px 32px rgba(47,74,58,0.12)' }}>
-              <p className="text-[11px] font-semibold text-sage-green uppercase tracking-wide mb-3">Sprout &amp; Vine</p>
+              <p className="text-[11px] font-semibold text-sage-green uppercase tracking-wide mb-3">Sprout &amp; Vine Care</p>
               <p className="font-display text-[36px] font-medium text-forest-green leading-none mb-2">{usPrice}</p>
               <p className="text-[13px] text-dark-text/50 mb-5">per centre, flat rate. No per-child fees.</p>
               <ul className="space-y-2 text-left">

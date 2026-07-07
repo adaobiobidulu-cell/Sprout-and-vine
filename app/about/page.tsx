@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'About | Sprout & Vine Care',
-  description: 'Sprout and Vine was built by Ada and Chuck after the arrival of their first child and a frustrating search for how Canada\'s childcare system actually works. Read their story.',
+  description: 'Sprout and Vine Care was built by Ada and Chuck after the arrival of their first child and a frustrating search for how Canada\'s childcare system actually works. Read their story.',
   alternates: altEn('/about'),
 }
 
@@ -82,7 +82,7 @@ export default function AboutPage() {
             The gap is not passion.<br />The gap is information and infrastructure.
           </p>
           <p className="text-[16px] text-cream/65 mt-6 leading-relaxed">
-            This is why Sprout &amp; Vine exists.
+            This is why Sprout &amp; Vine Care exists.
           </p>
         </div>
       </section>
@@ -97,7 +97,7 @@ export default function AboutPage() {
             </p>
 
             <p>
-              When I brought this idea to Chuck, he didn't hesitate. That's Chuck. He started his career as a chemist, which gave him a way of looking at problems that I think only makes sense once you have watched him work. He found his way into software, spent years deep in the Salesforce world, and became the kind of developer who genuinely loves what he does. He isn't building Sprout &amp; Vine because it's a good opportunity. He's building it because he believes in it. That matters to me more than anything else on his resume.
+              When I brought this idea to Chuck, he didn't hesitate. That's Chuck. He started his career as a chemist, which gave him a way of looking at problems that I think only makes sense once you have watched him work. He found his way into software, spent years deep in the Salesforce world, and became the kind of developer who genuinely loves what he does. He isn't building Sprout &amp; Vine Care because it's a good opportunity. He's building it because he believes in it. That matters to me more than anything else on his resume.
             </p>
 
             <p>
@@ -123,7 +123,7 @@ export default function AboutPage() {
           </div>
 
           <p className="mt-10 text-[15px] font-medium text-dark-text/60">
-            Ada, Co-Founder, Sprout &amp; Vine
+            Ada, Co-Founder, Sprout &amp; Vine Care
           </p>
         </div>
       </section>
@@ -152,7 +152,7 @@ export default function AboutPage() {
               <p className="text-[18px] font-semibold text-dark-text mb-1">Chuck</p>
               <p className="text-[13px] text-dark-text/45 mb-4 uppercase tracking-[0.08em] font-medium">Co-Founder</p>
               <p className="text-[14px] text-dark-text/65 leading-relaxed">
-                Started out as a chemist, which turns out to be excellent training for solving problems nobody has solved before. Found his way into software, spent years building in the Salesforce world, and somewhere along the way fell completely in love with what good technology can do for people. Sprout &amp; Vine is the most important thing he's built yet.
+                Started out as a chemist, which turns out to be excellent training for solving problems nobody has solved before. Found his way into software, spent years building in the Salesforce world, and somewhere along the way fell completely in love with what good technology can do for people. Sprout &amp; Vine Care is the most important thing he's built yet.
               </p>
             </div>
           </div>

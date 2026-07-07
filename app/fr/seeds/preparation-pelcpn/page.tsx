@@ -40,7 +40,7 @@ export default function FrCwelccReadinessPage() {
                 { title: "Identifier votre gestionnaire de services local", body: "Tout le financement PÉLCPN passe par votre gestionnaire de services municipal (CMSM) ou votre DSSAB. En Ontario, il y a 47 CMSM et 10 DSSAB. Trouvez le vôtre à ontario.ca/page/service-system-managers." },
                 { title: "Comprendre les plafonds de frais", body: "En Ontario (à partir du 1er janvier 2025): les frais quotidiens aux parents sont plafonnés à 22 $/jour pour les enfants admissibles de moins de 6 ans. L'objectif est une moyenne de 10 $/jour d'ici la fin de 2026." },
                 { title: "Rassembler votre documentation", body: "Contrat de financement PÉLCPN en dossier et disponible pour votre conseiller de programme. Manuel des parents indiquant le statut de participation au PÉLCPN. Processus d'avis de changement de frais de 30 jours documenté." },
-                { title: "Configurer le suivi des subventions", body: "Sprout et Vine automatise le calcul des subventions par enfant inscrit, les alertes de plafond de frais, le suivi du rehaussement salarial pour les ÉEJE et les rapports prêts pour l'inspection." },
+                { title: "Configurer le suivi des subventions", body: "Sprout et Vine Care automatise le calcul des subventions par enfant inscrit, les alertes de plafond de frais, le suivi du rehaussement salarial pour les ÉEJE et les rapports prêts pour l'inspection." },
               ].map((item, i) => (
                 <div key={i} className="flex gap-4 p-5 rounded-xl border border-[rgba(47,74,58,0.1)] bg-cream">
                   <div className="flex-shrink-0 w-6 h-6 rounded-full border-2 border-forest-green/30 mt-0.5" />

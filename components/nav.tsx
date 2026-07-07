@@ -20,9 +20,8 @@ function ChevronDown() {
    wrap "Feuille de route" / "Programme fondateur" onto multiple lines. */
 function ComingSoon({ isFr, compact = false }: { isFr: boolean; compact?: boolean }) {
   return (
-    <span className={`text-dark-text/40 font-normal whitespace-nowrap ${compact ? 'text-[11px]' : ''}`}>
-      {' '}
-      {compact ? '· ' : '— '}
+    <span className={`text-dark-text/50 font-normal whitespace-nowrap ${compact ? 'text-[11px]' : ''}`}>
+      {' '}&middot;{' '}
       {compact ? (isFr ? 'Bientôt' : 'Soon') : isFr ? 'Bientôt disponible' : 'Coming Soon'}
     </span>
   )

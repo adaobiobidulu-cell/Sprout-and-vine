@@ -339,6 +339,8 @@ export default function ProductTour() {
               <button
                 key={i}
                 onClick={() => setFrame(i)}
+                aria-label={`Go to step ${i + 1} of ${total}`}
+                aria-current={i === frame ? 'step' : undefined}
                 className={`rounded-full transition-all duration-200 ${
                   i === frame ? 'w-5 h-2 bg-forest-green' : 'w-2 h-2 bg-forest-green/20 hover:bg-forest-green/40'
                 }`}
@@ -351,16 +353,18 @@ export default function ProductTour() {
             <button
               onClick={() => setFrame(f => Math.max(0, f - 1))}
               disabled={frame === 0}
+              aria-label="Previous step"
               className="w-9 h-9 rounded-lg border border-[rgba(47,74,58,0.15)] flex items-center justify-center text-dark-text/50 hover:border-forest-green hover:text-forest-green disabled:opacity-30 transition-colors"
             >
-              ←
+              <span aria-hidden="true">←</span>
             </button>
             <button
               onClick={() => setFrame(f => Math.min(total - 1, f + 1))}
               disabled={frame === total - 1}
+              aria-label="Next step"
               className="w-9 h-9 rounded-lg bg-forest-green flex items-center justify-center text-white disabled:opacity-30 hover:bg-[#243d2f] transition-colors"
             >
-              →
+              <span aria-hidden="true">→</span>
             </button>
           </div>
         </div>

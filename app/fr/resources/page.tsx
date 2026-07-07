@@ -158,7 +158,7 @@ export default function FrResourcesPage() {
               {
                 icon: '💬',
                 title: "Centre d'aide",
-                desc: "Guides étape par étape et tutoriels vidéo pour toutes les fonctionnalités de Sprout & Vine. Bientôt disponible.",
+                desc: "Guides étape par étape et tutoriels vidéo pour toutes les fonctionnalités de Sprout & Vine Care. Bientôt disponible.",
                 href: '/fr/help',
                 cta: "Visiter le centre d'aide",
               },
@@ -199,7 +199,7 @@ export default function FrResourcesPage() {
             Prêt à mettre tout cela en pratique?
           </h2>
           <p className="text-cream/65 text-[15px] leading-relaxed mb-8">
-            Sprout &amp; Vine gère automatiquement le suivi PÉLCN, la documentation des permis et la conformité, afin que votre équipe puisse se concentrer sur les enfants, pas sur la paperasse.
+            Sprout &amp; Vine Care gère automatiquement le suivi PÉLCN, la documentation des permis et la conformité, afin que votre équipe puisse se concentrer sur les enfants, pas sur la paperasse.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link

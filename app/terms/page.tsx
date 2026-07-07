@@ -4,7 +4,7 @@ import LegalLayout from '@/components/legal-layout'
 
 export const metadata: Metadata = {
   title: 'Terms of Service | Sprout & Vine Care',
-  description: 'The terms governing your use of the Sprout & Vine platform and services.',
+  description: 'The terms governing your use of the Sprout & Vine Care platform and services.',
   alternates: altEn('/terms'),
 }
 
@@ -36,7 +36,7 @@ export default function TermsPage() {
       <h2 id="agreement">1. Agreement to Terms</h2>
       <p>
         These Terms of Service ("Terms") are a legally binding agreement between you and{' '}
-        <strong>Sprout &amp; Vine</strong> ("we," "our," or "us"), governing your use of our childcare management platform, website at
+        <strong>Sprout &amp; Vine Care</strong> ("we," "our," or "us"), governing your use of our childcare management platform, website at
         sproutandvine.ca, and related services (collectively, the "Services").
       </p>
       <p>
@@ -55,7 +55,7 @@ export default function TermsPage() {
 
       <h2 id="services">2. Description of Services</h2>
       <p>
-        Sprout &amp; Vine is a cloud-based childcare management platform for Canadian childcare operators.
+        Sprout &amp; Vine Care is a cloud-based childcare management platform for Canadian childcare operators.
         The platform includes features for attendance tracking, billing and payments, CWELCC subsidy management,
         family communication, daily reporting, enrollment and waitlist management, and Smart Pickup Authorization.
       </p>
@@ -184,8 +184,8 @@ export default function TermsPage() {
 
       <h2 id="ip">7. Intellectual Property</h2>
       <p>
-        The Sprout &amp; Vine platform, including its software, design, user interface, trademarks, logos,
-        and all related intellectual property, is owned by Sprout &amp; Vine and protected by Canadian and
+        The Sprout &amp; Vine Care platform, including its software, design, user interface, trademarks, logos,
+        and all related intellectual property, is owned by Sprout &amp; Vine Care and protected by Canadian and
         international copyright, trademark, and other intellectual property laws.
       </p>
       <p>
@@ -247,7 +247,7 @@ export default function TermsPage() {
 
       <h2 id="indemnification">11. Indemnification</h2>
       <p>
-        You agree to indemnify, defend, and hold harmless Sprout &amp; Vine and its affiliates, officers,
+        You agree to indemnify, defend, and hold harmless Sprout &amp; Vine Care and its affiliates, officers,
         directors, employees, and agents from and against any claims, liabilities, damages, losses, and expenses
         (including reasonable legal fees) arising out of or relating to (a) your use of the Services, (b) your
         violation of these Terms, (c) your violation of any third-party right, including privacy rights, or
@@ -285,7 +285,7 @@ export default function TermsPage() {
         For questions about these Terms, contact us at:
       </p>
       <p>
-        <strong>Sprout &amp; Vine</strong><br />
+        <strong>Sprout &amp; Vine Care</strong><br />
         <a href="mailto:legal@sproutandvine.ca">legal@sproutandvine.ca</a>
       </p>
       <p>

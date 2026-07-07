@@ -5,7 +5,7 @@ import EmailCapture from '@/components/email-capture'
 
 export const metadata: Metadata = {
   title: 'For Educators | Sprout & Vine Care',
-  description: 'Sprout & Vine is built around your day, not just your director\'s. Reports in 2 minutes, milestone tagging on your phone, and parent messaging without your personal number.',
+  description: 'Sprout & Vine Care is built around your day, not just your director\'s. Reports in 2 minutes, milestone tagging on your phone, and parent messaging without your personal number.',
   alternates: canonicalOnly('/for-educators'),
 }
 
@@ -37,7 +37,7 @@ export default function ForEducatorsPage() {
             Built for the people who show up every day.
           </h1>
           <p className="text-[17px] text-dark-text/65 leading-relaxed max-w-xl mx-auto">
-            Directors choose Sprout &amp; Vine. Educators love it. Here's why.
+            Directors choose Sprout &amp; Vine Care. Educators love it. Here's why.
           </p>
         </div>
       </section>
@@ -55,7 +55,7 @@ export default function ForEducatorsPage() {
                 Your day is harder than most people realise.
               </h2>
               <p className="text-[16px] text-dark-text/65 leading-relaxed">
-                You're the one logging meals, writing daily reports, tagging milestones, managing drop-offs, and communicating with 15 families. We built Sprout &amp; Vine around your day, not just your director's.
+                You're the one logging meals, writing daily reports, tagging milestones, managing drop-offs, and communicating with 15 families. We built Sprout &amp; Vine Care around your day, not just your director's.
               </p>
             </div>
 
@@ -239,7 +239,7 @@ export default function ForEducatorsPage() {
               Share this with your director.
             </p>
             <p className="text-[15px] text-dark-text/55 leading-relaxed mb-5">
-              Sprout and Vine is designed for educators, but directors make the call. The Founding Operators Program is open now.
+              Sprout and Vine Care is designed for educators, but directors make the call. The Founding Operators Program is open now.
             </p>
             <Link href="/founding" className="inline-block bg-forest-green text-white text-[14px] font-medium px-6 py-3.5 rounded-lg hover:bg-[#243d2f] transition-colors">
               Learn about the Founding Program

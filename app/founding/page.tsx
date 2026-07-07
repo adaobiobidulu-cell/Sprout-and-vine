@@ -49,7 +49,7 @@ const benefits = [
   {
     icon: '🚀',
     title: 'Early access before public launch',
-    desc: 'Founding members get access to the platform before it opens to the public. You will be running on Sprout and Vine while others are still on the waitlist.',
+    desc: 'Founding members get access to the platform before it opens to the public. You will be running on Sprout and Vine Care while others are still on the waitlist.',
   },
   {
     icon: '🌱',
@@ -89,7 +89,7 @@ export default function FoundingPage() {
             The Founding Operators Program
           </h1>
           <p className="text-[17px] text-dark-text/65 leading-relaxed max-w-xl mx-auto">
-            We're building Sprout &amp; Vine in public, with the Canadian childcare operators who will use it every day. Founding members get early access, founding pricing, and a real voice in what we build.
+            We're building Sprout &amp; Vine Care in public, with the Canadian childcare operators who will use it every day. Founding members get early access, founding pricing, and a real voice in what we build.
           </p>
         </div>
       </section>

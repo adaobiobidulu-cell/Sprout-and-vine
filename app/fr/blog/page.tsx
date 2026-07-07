@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Blogue | Sprout & Vine Care',
-  description: "Nous construisons Sprout & Vine en public. Suivez notre progression, ce que nous apprenons des opérateurs canadiens de services de garde, et pourquoi nous construisons de cette façon.",
+  description: "Nous construisons Sprout & Vine Care en public. Suivez notre progression, ce que nous apprenons des opérateurs canadiens de services de garde, et pourquoi nous construisons de cette façon.",
   alternates: altFr('/fr/blog'),
 }
 
@@ -43,7 +43,7 @@ export default function FrBlogPage() {
                 </span>
               </div>
               <h2 className="font-display font-medium text-forest-green leading-[1.1] mb-3 group-hover:underline underline-offset-4 decoration-1" style={{ fontSize: 'clamp(24px, 3vw, 32px)' }}>
-                Pourquoi nous construisons Sprout &amp; Vine
+                Pourquoi nous construisons Sprout &amp; Vine Care
               </h2>
               <p className="text-[15px] text-dark-text/65 leading-relaxed mb-5">
                 Nous ne construisons pas une autre application. Nous construisons une infrastructure. Voici ce que nous avons trouvé en regardant de près les opérations des garderies canadiennes, et pourquoi cela a tout changé.

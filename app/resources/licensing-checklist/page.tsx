@@ -406,10 +406,10 @@ export default function LicensingChecklistPage() {
             <ChecklistItem>Document inclusion supports and apply for inclusion funding where applicable</ChecklistItem>
           </ChecklistGroup>
 
-          {/* Sprout and Vine support */}
-          <ArticleH2>How Sprout and Vine Supports Compliance</ArticleH2>
+          {/* Sprout and Vine Care support */}
+          <ArticleH2>How Sprout and Vine Care Supports Compliance</ArticleH2>
           <ArticleP>
-            Sprout and Vine comes pre-loaded with:
+            Sprout and Vine Care comes pre-loaded with:
           </ArticleP>
           <ArticleUL>
             <ArticleLI>Province-specific ratio tracking and real-time alerts when ratios are at risk</ArticleLI>

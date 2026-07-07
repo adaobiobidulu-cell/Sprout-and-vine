@@ -49,7 +49,7 @@ const benefits = [
   {
     icon: '🚀',
     title: 'Accès anticipé avant le lancement public',
-    desc: "Les membres fondateurs ont accès à la plateforme avant son ouverture au public. Vous serez sur Sprout et Vine pendant que d'autres sont encore sur la liste d'attente.",
+    desc: "Les membres fondateurs ont accès à la plateforme avant son ouverture au public. Vous serez sur Sprout et Vine Care pendant que d'autres sont encore sur la liste d'attente.",
   },
   {
     icon: '🌱',
@@ -89,7 +89,7 @@ export default function FrFoundingPage() {
             Le Programme des opérateurs fondateurs
           </h1>
           <p className="text-[17px] text-dark-text/65 leading-relaxed max-w-xl mx-auto">
-            Nous construisons Sprout &amp; Vine en public, avec les opérateurs canadiens de services de garde qui l'utiliseront chaque jour. Les membres fondateurs obtiennent un accès anticipé, un tarif fondateur et une vraie voix dans ce que nous construisons.
+            Nous construisons Sprout &amp; Vine Care en public, avec les opérateurs canadiens de services de garde qui l'utiliseront chaque jour. Les membres fondateurs obtiennent un accès anticipé, un tarif fondateur et une vraie voix dans ce que nous construisons.
           </p>
         </div>
       </section>

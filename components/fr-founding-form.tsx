@@ -189,7 +189,7 @@ export default function FrFoundingForm() {
           className="mt-0.5 w-4 h-4 flex-shrink-0"
         />
         <label htmlFor="fr-marketing-consent" className="text-[12px] text-dark-text/55 leading-relaxed cursor-pointer">
-          J'accepte de recevoir des mises à jour sur la plateforme Sprout &amp; Vine, le Programme des opérateurs fondateurs et les annonces connexes. Je peux me désabonner à tout moment.
+          J'accepte de recevoir des mises à jour sur la plateforme Sprout &amp; Vine Care, le Programme des opérateurs fondateurs et les annonces connexes. Je peux me désabonner à tout moment.
         </label>
       </div>
 
@@ -198,7 +198,7 @@ export default function FrFoundingForm() {
         <Link href="/privacy" className="underline underline-offset-2 hover:text-forest-green transition-colors">
           Politique de confidentialité
         </Link>
-        . Sprout &amp; Vine utilisera vos informations pour traiter votre candidature et vous contacter au sujet du Programme des opérateurs fondateurs.
+        . Sprout &amp; Vine Care utilisera vos informations pour traiter votre candidature et vous contacter au sujet du Programme des opérateurs fondateurs.
       </p>
 
       <button

@@ -5,7 +5,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: "Autorisation de ramassage intelligent | Sprout & Vine Care",
   description:
-    "Listes de ramassage vérifiées par photo, notifications instantanées aux parents et journal complet pour chaque départ d'enfant. Disponible sur Sprout & Vine.",
+    "Listes de ramassage vérifiées par photo, notifications instantanées aux parents et journal complet pour chaque départ d'enfant. Disponible sur Sprout & Vine Care.",
   alternates: altFr('/fr/features/autorisation-ramassage', '/features/smart-pickup'),
 }
 
@@ -24,7 +24,7 @@ export default function AutorisationRamassagePage() {
             Sachez exactement qui a récupéré votre enfant. Chaque fois.
           </h1>
           <p className="text-[17px] text-cream/65 mb-10 max-w-xl mx-auto leading-relaxed">
-            La plupart des applications informent les parents que leur enfant a été récupéré. Sprout &amp; Vine leur dit <em className="not-italic font-semibold text-cream/80">qui</em> est venu, affiche une photo et envoie une notification instantanée avant qu'ils n'aient quitté le stationnement.
+            La plupart des applications informent les parents que leur enfant a été récupéré. Sprout &amp; Vine Care leur dit <em className="not-italic font-semibold text-cream/80">qui</em> est venu, affiche une photo et envoie une notification instantanée avant qu'ils n'aient quitté le stationnement.
           </p>
           <Link
             href="/fr"

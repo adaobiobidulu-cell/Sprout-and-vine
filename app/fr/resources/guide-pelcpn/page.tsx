@@ -71,9 +71,9 @@ export default function FrCwelccGuidePage() {
           </div>
 
           <div>
-            <h2 className="font-display text-[26px] font-medium text-forest-green mb-4">Le PÉLCPN dans Sprout et Vine</h2>
+            <h2 className="font-display text-[26px] font-medium text-forest-green mb-4">Le PÉLCPN dans Sprout et Vine Care</h2>
             <p className="text-[15px] text-dark-text/65 leading-relaxed mb-4">
-              Sprout et Vine automatise le suivi du PÉLCPN pour que vous n'ayez pas à gérer des feuilles de calcul:
+              Sprout et Vine Care automatise le suivi du PÉLCPN pour que vous n'ayez pas à gérer des feuilles de calcul:
             </p>
             <ul className="space-y-2">
               {[

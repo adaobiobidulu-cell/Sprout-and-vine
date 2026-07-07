@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const posts = [
   {
     slug: 'why-we-are-building-sprout-and-vine',
-    title: 'Why we are building Sprout & Vine',
+    title: 'Why we are building Sprout & Vine Care',
     excerpt: 'We are not building another app. We are building infrastructure. Here is what we found when we looked closely at Canadian childcare operations, and why it changed everything.',
     author: 'Ada',
     date: 'May 1, 2026',

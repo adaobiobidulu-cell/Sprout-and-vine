@@ -22,7 +22,7 @@ export async function POST(request: Request) {
     })
 
     await transporter.sendMail({
-      from: `"Sprout & Vine" <${process.env.EMAIL_USER}>`,
+      from: `"Sprout & Vine Care" <${process.env.EMAIL_USER}>`,
       to: 'hello@sproutandvinecare.ca',
       replyTo: email,
       subject: `Resource request: ${label}`,

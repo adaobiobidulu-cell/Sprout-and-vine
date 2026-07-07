@@ -237,7 +237,7 @@ export default function RoadmapPage() {
             The longer vision.
           </h2>
           <p className="text-[15px] text-dark-text/55 leading-relaxed mb-10">
-            Sprout &amp; Vine is built to follow a child further than daycare. Here is where we are headed, not as a commitment, but as a signal of what we believe this platform becomes.
+            Sprout &amp; Vine Care is built to follow a child further than daycare. Here is where we are headed, not as a commitment, but as a signal of what we believe this platform becomes.
           </p>
           <div className="space-y-4">
             {[

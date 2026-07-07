@@ -23,7 +23,7 @@ const features = [
   {
     label: 'Subventions PÉLCN',
     headline: "Gestion des subventions sans feuilles de calcul.",
-    body: "Sprout & Vine calcule automatiquement votre admissibilité aux subventions PÉLCN, réconcilie les paiements et génère les rapports requis pour votre province.",
+    body: "Sprout & Vine Care calcule automatiquement votre admissibilité aux subventions PÉLCN, réconcilie les paiements et génère les rapports requis pour votre province.",
     bullets: ['Calcul automatique des subventions', 'Réconciliation des paiements', 'Rapports prêts pour la soumission', 'Prise en charge de toutes les provinces'],
   },
   {
@@ -259,7 +259,7 @@ export default function FrFeaturesPage() {
               Des profils professionnels pour les personnes qui se présentent chaque jour.
             </h2>
             <p className="text-[16px] text-dark-text/65 leading-relaxed mb-7 max-w-3xl">
-              Chaque éducateur mérite de se sentir comme un professionnel, pas juste un nom sur un tableau. Sprout &amp; Vine donne à chaque membre du personnel un profil qu&apos;il contrôle: une présence visible par les familles avec sa photo, sa bio et ses accréditations vérifiées. Les directeurs voient le tableau complet: certifications, dates d&apos;expiration, statut de conformité pour toute l&apos;équipe, et chaque document nécessaire pour une inspection de licence. Le tout en un seul endroit.
+              Chaque éducateur mérite de se sentir comme un professionnel, pas juste un nom sur un tableau. Sprout &amp; Vine Care donne à chaque membre du personnel un profil qu&apos;il contrôle: une présence visible par les familles avec sa photo, sa bio et ses accréditations vérifiées. Les directeurs voient le tableau complet: certifications, dates d&apos;expiration, statut de conformité pour toute l&apos;équipe, et chaque document nécessaire pour une inspection de licence. Le tout en un seul endroit.
             </p>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 max-w-3xl">
               {[
@@ -409,11 +409,11 @@ export default function FrFeaturesPage() {
           <div className="bg-white rounded-2xl p-7">
             <EmailCapture
               heading="Recevoir une notification au lancement."
-              subheading="Nous vous informerons quand Sprout et Vine est prêt, et partagerons ce que nous construisons en chemin."
+              subheading="Nous vous informerons quand Sprout et Vine Care est prêt, et partagerons ce que nous construisons en chemin."
               source="fr-features-page"
               buttonText="Me notifier"
               emailPlaceholder="votre@centre.ca"
-              consentLabel="J'accepte de recevoir des mises à jour de Sprout & Vine. Je peux me désabonner à tout moment."
+              consentLabel="J'accepte de recevoir des mises à jour de Sprout & Vine Care. Je peux me désabonner à tout moment."
               successTitle="Vous êtes sur la liste."
               successSubtitle="Nous vous contacterons au fil de notre progression."
             />

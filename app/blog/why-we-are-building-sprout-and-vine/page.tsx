@@ -15,7 +15,7 @@ export default function PostPage() {
     <article className="bg-cream min-h-screen">
       <JsonLd
         data={blogPostingSchema({
-          headline: 'Why we are building Sprout & Vine',
+          headline: 'Why we are building Sprout & Vine Care',
           description:
             "We're not building another app. We're building infrastructure. Here's what we found when we looked closely at Canadian childcare operations, and why it changed everything.",
           path: '/blog/why-we-are-building-sprout-and-vine',
@@ -42,7 +42,7 @@ export default function PostPage() {
             className="font-display font-medium text-cream leading-[1.05] mb-6"
             style={{ fontSize: 'clamp(34px, 5vw, 52px)' }}
           >
-            Why we are building Sprout &amp; Vine
+            Why we are building Sprout &amp; Vine Care
           </h1>
           <div className="flex items-center gap-4 text-cream/45 text-[13px]">
             <span>Ada</span>
@@ -63,7 +63,7 @@ export default function PostPage() {
           </p>
 
           <p>
-            I am writing this because I believe the people who will use Sprout and Vine deserve to know exactly where we are and why we are doing this. Not the polished version. The real version.
+            I am writing this because I believe the people who will use Sprout and Vine Care deserve to know exactly where we are and why we are doing this. Not the polished version. The real version.
           </p>
 
           <h2 className="font-display font-medium text-forest-green text-[28px] mt-10 mb-4">
@@ -135,7 +135,7 @@ export default function PostPage() {
           </h2>
 
           <p>
-            We are not building Sprout and Vine in a room by ourselves and releasing it to the world when it is perfect. We do not think that approach works for software that has to fit as specifically as this does.
+            We are not building Sprout and Vine Care in a room by ourselves and releasing it to the world when it is perfect. We do not think that approach works for software that has to fit as specifically as this does.
           </p>
 
           <p>
@@ -172,9 +172,9 @@ export default function PostPage() {
             </div>
             <div>
               <p className="text-[14px] font-semibold text-dark-text">Ada</p>
-              <p className="text-[13px] text-dark-text/50 mt-0.5">Co-founder, Sprout &amp; Vine</p>
+              <p className="text-[13px] text-dark-text/50 mt-0.5">Co-founder, Sprout &amp; Vine Care</p>
               <p className="text-[13px] text-dark-text/55 mt-2 leading-relaxed">
-                Building Sprout &amp; Vine with the Canadian childcare operators who will use it every day.
+                Building Sprout &amp; Vine Care with the Canadian childcare operators who will use it every day.
               </p>
             </div>
           </div>
@@ -186,7 +186,7 @@ export default function PostPage() {
             Ready to be part of this?
           </p>
           <p className="text-[14px] text-cream/60 mb-6 leading-relaxed">
-            The Founding Operators Program is open. Apply and help shape what Sprout &amp; Vine becomes.
+            The Founding Operators Program is open. Apply and help shape what Sprout &amp; Vine Care becomes.
           </p>
           <Link
             href="/founding"
