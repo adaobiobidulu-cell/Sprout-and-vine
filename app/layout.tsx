@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Cormorant_Garamond, DM_Sans } from 'next/font/google'
 import { MotionConfig } from 'framer-motion'
+import Script from 'next/script'
 import './globals.css'
 import Nav from '@/components/nav'
 import Footer from '@/components/footer'
@@ -9,6 +10,7 @@ import AnnouncementBar from '@/components/announcement-bar'
 import MobileStickyCTA from '@/components/mobile-sticky-bar'
 import ExitIntent from '@/components/exit-intent'
 import ScrollVine from '@/components/scroll-vine'
+import LangSync from '@/components/lang-sync'
 import JsonLd from '@/components/json-ld'
 import { organizationSchema, websiteSchema } from '@/lib/schema'
 import { Analytics } from '@vercel/analytics/next'
@@ -55,8 +57,15 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${dmSans.variable}`}>
+    <html lang="en" suppressHydrationWarning className={`${cormorant.variable} ${dmSans.variable}`}>
       <body className="min-h-full flex flex-col antialiased">
+        {/* Sets <html lang> before hydration so French pages don't announce
+            as English to screen readers or a JS-disabled crawler. See
+            components/lang-sync.tsx for the client-side-navigation half. */}
+        <Script id="lang-sync-initial" strategy="beforeInteractive">
+          {`document.documentElement.lang = location.pathname.indexOf('/fr') === 0 ? 'fr' : 'en';`}
+        </Script>
+        <LangSync />
         <JsonLd data={organizationSchema()} />
         <JsonLd data={websiteSchema()} />
         <MotionConfig reducedMotion="user" transition={{ duration: 0.42, ease: [0.22, 1, 0.36, 1] }}>
