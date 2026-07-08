@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { altEn } from '@/lib/seo'
 import Link from 'next/link'
 import EmailCapture from '@/components/email-capture'
+import InteractiveChecklist, { ChecklistToolbar } from '@/components/interactive-checklist'
 
 export const metadata: Metadata = {
   title: 'Canadian Childcare Licensing Checklist by Province (2026) | Sprout & Vine Care',
@@ -114,34 +115,6 @@ function DataTable({ headers, rows }: { headers: string[]; rows: string[][] }) {
   )
 }
 
-function ChecklistItem({ children }: { children: React.ReactNode }) {
-  return (
-    <li className="flex items-start gap-3.5">
-      {/* Checkbox SVG icon */}
-      <svg
-        width="18"
-        height="18"
-        viewBox="0 0 18 18"
-        fill="none"
-        aria-hidden="true"
-        className="flex-shrink-0 mt-0.5"
-      >
-        <rect x="1" y="1" width="16" height="16" rx="4" stroke="#2F4A3A" strokeWidth="1.5" fill="none" />
-        <rect x="3.5" y="3.5" width="11" height="11" rx="2.5" fill="#2F4A3A" fillOpacity="0.06" />
-      </svg>
-      <span className="text-[15px] text-dark-text/75 leading-[1.75]">{children}</span>
-    </li>
-  )
-}
-
-function ChecklistGroup({ children }: { children: React.ReactNode }) {
-  return (
-    <ul className="space-y-3 my-6">
-      {children}
-    </ul>
-  )
-}
-
 function ProvinceCard({ children }: { children: React.ReactNode }) {
   return (
     <div className="bg-cream/40 rounded-xl border border-[rgba(47,74,58,0.1)] px-6 py-5 my-6">
@@ -172,6 +145,8 @@ export default function LicensingChecklistPage() {
       {/* Article body */}
       <section className="bg-white py-14 md:py-20 px-5 md:px-8">
         <div className="max-w-3xl mx-auto">
+
+          <ChecklistToolbar />
 
           {/* Ontario */}
           <ArticleH2 id="ontario">Ontario: Child Care and Early Years Act, 2014 (CCEYA)</ArticleH2>
@@ -216,43 +191,52 @@ export default function LicensingChecklistPage() {
           </ArticleUL>
 
           <ArticleH3>Licensing Checklist: Centre Application</ArticleH3>
-          <ChecklistGroup>
-            <ChecklistItem>Apply to the Ministry of Education for a licence under the CCEYA</ChecklistItem>
-            <ChecklistItem>Submit floor plan showing room dimensions and capacity calculations (2.8 m2/child)</ChecklistItem>
-            <ChecklistItem>Fire safety certificate</ChecklistItem>
-            <ChecklistItem>Public health inspection clearance</ChecklistItem>
-            <ChecklistItem>Building permit (if applicable: renovations, new build)</ChecklistItem>
-            <ChecklistItem>Criminal reference checks (including vulnerable sector screening) for all staff</ChecklistItem>
-            <ChecklistItem>Proof of supervisor qualifications and Ministry director approval</ChecklistItem>
-            <ChecklistItem>Policies and procedures manual (prohibited practices, illness, nutrition, etc.)</ChecklistItem>
-            <ChecklistItem>Emergency and evacuation plan</ChecklistItem>
-            <ChecklistItem>Parent handbook including CWELCC participation status</ChecklistItem>
-            <ChecklistItem>Insurance documentation</ChecklistItem>
-            <ChecklistItem>Program statement aligned with Minister's Policy Statement on Programming and Pedagogy</ChecklistItem>
-          </ChecklistGroup>
+          <InteractiveChecklist
+            groupId="on-application"
+            items={[
+              'Apply to the Ministry of Education for a licence under the CCEYA',
+              'Submit floor plan showing room dimensions and capacity calculations (2.8 m2/child)',
+              'Fire safety certificate',
+              'Public health inspection clearance',
+              'Building permit (if applicable: renovations, new build)',
+              'Criminal reference checks (including vulnerable sector screening) for all staff',
+              'Proof of supervisor qualifications and Ministry director approval',
+              'Policies and procedures manual (prohibited practices, illness, nutrition, etc.)',
+              'Emergency and evacuation plan',
+              'Parent handbook including CWELCC participation status',
+              'Insurance documentation',
+              "Program statement aligned with Minister's Policy Statement on Programming and Pedagogy",
+            ]}
+          />
 
           <ArticleH3>Ongoing Compliance Requirements</ArticleH3>
-          <ChecklistGroup>
-            <ChecklistItem>Maintain required staff-to-child ratios at all times</ChecklistItem>
-            <ChecklistItem>Post licensing certificate visibly in the centre</ChecklistItem>
-            <ChecklistItem>Record for every child on file (section 72 of O. Reg. 137/15)</ChecklistItem>
-            <ChecklistItem>Daily attendance records</ChecklistItem>
-            <ChecklistItem>Staff training records and ongoing professional development policy</ChecklistItem>
-            <ChecklistItem>Annual review of policies and procedures</ChecklistItem>
-            <ChecklistItem>Renewal of vulnerable sector checks every 5 years per staff member</ChecklistItem>
-            <ChecklistItem>Annual offence declarations where vulnerable sector check is not renewed</ChecklistItem>
-            <ChecklistItem>Ministry inspection cooperation</ChecklistItem>
-          </ChecklistGroup>
+          <InteractiveChecklist
+            groupId="on-ongoing"
+            items={[
+              'Maintain required staff-to-child ratios at all times',
+              'Post licensing certificate visibly in the centre',
+              'Record for every child on file (section 72 of O. Reg. 137/15)',
+              'Daily attendance records',
+              'Staff training records and ongoing professional development policy',
+              'Annual review of policies and procedures',
+              'Renewal of vulnerable sector checks every 5 years per staff member',
+              'Annual offence declarations where vulnerable sector check is not renewed',
+              'Ministry inspection cooperation',
+            ]}
+          />
 
           <ArticleH3>If Enrolled in CWELCC (Ontario)</ArticleH3>
-          <ChecklistGroup>
-            <ChecklistItem>Maintain fees at or below $22/day (as of January 1, 2025)</ChecklistItem>
-            <ChecklistItem>CWELCC funding agreement on file and available to program advisor</ChecklistItem>
-            <ChecklistItem>Parent handbook states CWELCC participation status</ChecklistItem>
-            <ChecklistItem>30-day fee change notice process documented</ChecklistItem>
-            <ChecklistItem>RECE and supervisor wage enhancement compliance tracked</ChecklistItem>
-            <ChecklistItem>Fee structure set per Ontario Regulation funding table</ChecklistItem>
-          </ChecklistGroup>
+          <InteractiveChecklist
+            groupId="on-cwelcc"
+            items={[
+              'Maintain fees at or below $22/day (as of January 1, 2025)',
+              'CWELCC funding agreement on file and available to program advisor',
+              'Parent handbook states CWELCC participation status',
+              '30-day fee change notice process documented',
+              'RECE and supervisor wage enhancement compliance tracked',
+              'Fee structure set per Ontario Regulation funding table',
+            ]}
+          />
 
           {/* British Columbia */}
           <ArticleH2 id="bc">British Columbia: Community Care and Assisted Living Act (CCALA)</ArticleH2>
@@ -274,27 +258,33 @@ export default function LicensingChecklistPage() {
           />
 
           <ArticleH3>Licensing Checklist: BC Centre Application</ArticleH3>
-          <ChecklistGroup>
-            <ChecklistItem>Apply for a facility licence under the Community Care and Assisted Living Act</ChecklistItem>
-            <ChecklistItem>Submit facility plan showing play space and ratio compliance</ChecklistItem>
-            <ChecklistItem>Health authority inspection and approval</ChecklistItem>
-            <ChecklistItem>Fire safety inspection and clearance</ChecklistItem>
-            <ChecklistItem>Criminal record check for all staff and operators (MCFD Criminal Records Review)</ChecklistItem>
-            <ChecklistItem>Qualified staff (ECE Certificate holders for funded programs)</ChecklistItem>
-            <ChecklistItem>Policies: nutrition, illness, discipline, emergency procedures</ChecklistItem>
-            <ChecklistItem>Post licence visibly at facility</ChecklistItem>
-            <ChecklistItem>Apply for Child Care Operating Funding (CCOF) if seeking provincial funding</ChecklistItem>
-            <ChecklistItem>Opt in to CCFRI (fee reduction) and/or ECE Wage Enhancement through CCOF application</ChecklistItem>
-          </ChecklistGroup>
+          <InteractiveChecklist
+            groupId="bc-application"
+            items={[
+              'Apply for a facility licence under the Community Care and Assisted Living Act',
+              'Submit facility plan showing play space and ratio compliance',
+              'Health authority inspection and approval',
+              'Fire safety inspection and clearance',
+              'Criminal record check for all staff and operators (MCFD Criminal Records Review)',
+              'Qualified staff (ECE Certificate holders for funded programs)',
+              'Policies: nutrition, illness, discipline, emergency procedures',
+              'Post licence visibly at facility',
+              'Apply for Child Care Operating Funding (CCOF) if seeking provincial funding',
+              'Opt in to CCFRI (fee reduction) and/or ECE Wage Enhancement through CCOF application',
+            ]}
+          />
 
           <ArticleH3>Ongoing Compliance (BC)</ArticleH3>
-          <ChecklistGroup>
-            <ChecklistItem>Maintain CCALA Facility Licence (required for CCOF base funding)</ChecklistItem>
-            <ChecklistItem>Annual renewal of Child Care Operating Funding agreement (expires March 31)</ChecklistItem>
-            <ChecklistItem>Report changes to enrollment, hours, or programs via Change Notification Form</ChecklistItem>
-            <ChecklistItem>Maintain staff wage, benefit, and hours obligations if in fee reduction program</ChecklistItem>
-            <ChecklistItem>Ensure 9.5-hour minimum operating day if charging optional extended-hours fees (April 2026 onward)</ChecklistItem>
-          </ChecklistGroup>
+          <InteractiveChecklist
+            groupId="bc-ongoing"
+            items={[
+              'Maintain CCALA Facility Licence (required for CCOF base funding)',
+              'Annual renewal of Child Care Operating Funding agreement (expires March 31)',
+              'Report changes to enrollment, hours, or programs via Change Notification Form',
+              'Maintain staff wage, benefit, and hours obligations if in fee reduction program',
+              'Ensure 9.5-hour minimum operating day if charging optional extended-hours fees (April 2026 onward)',
+            ]}
+          />
 
           {/* Alberta */}
           <ArticleH2 id="alberta">Alberta</ArticleH2>
@@ -390,21 +380,24 @@ export default function LicensingChecklistPage() {
           />
 
           <ArticleH3>Licensing Checklist: Quebec CPE/Garderie</ArticleH3>
-          <ChecklistGroup>
-            <ChecklistItem>Obtain operating permit from Ministere de la Famille</ChecklistItem>
-            <ChecklistItem>Obtain municipal occupancy permit from city/borough</ChecklistItem>
-            <ChecklistItem>Establish non-profit corporation with parent-majority board (CPEs only)</ChecklistItem>
-            <ChecklistItem>Hire qualified General Manager (DEC-level or equivalent, Ministere approval)</ChecklistItem>
-            <ChecklistItem>Ensure 2/3 of direct-care staff hold DEC or AEC plus 3 years experience</ChecklistItem>
-            <ChecklistItem>Complete police background checks for all staff</ChecklistItem>
-            <ChecklistItem>Meet physical space requirements: 4 m2/child (infants); age-group room separation</ChecklistItem>
-            <ChecklistItem>Obtain umbrella insurance tailored for Quebec childcare operations</ChecklistItem>
-            <ChecklistItem>Register facility on Ministere de la Famille childcare locator</ChecklistItem>
-            <ChecklistItem>Execute annual funding agreement (regles budgetaires) with Ministere</ChecklistItem>
-            <ChecklistItem>Set parent contribution at provincial reduced rate ($9.65/day for 2026)</ChecklistItem>
-            <ChecklistItem>Issue Releve 24 receipts to parents</ChecklistItem>
-            <ChecklistItem>Document inclusion supports and apply for inclusion funding where applicable</ChecklistItem>
-          </ChecklistGroup>
+          <InteractiveChecklist
+            groupId="qc-application"
+            items={[
+              'Obtain operating permit from Ministere de la Famille',
+              'Obtain municipal occupancy permit from city/borough',
+              'Establish non-profit corporation with parent-majority board (CPEs only)',
+              'Hire qualified General Manager (DEC-level or equivalent, Ministere approval)',
+              'Ensure 2/3 of direct-care staff hold DEC or AEC plus 3 years experience',
+              'Complete police background checks for all staff',
+              'Meet physical space requirements: 4 m2/child (infants); age-group room separation',
+              'Obtain umbrella insurance tailored for Quebec childcare operations',
+              'Register facility on Ministere de la Famille childcare locator',
+              'Execute annual funding agreement (regles budgetaires) with Ministere',
+              'Set parent contribution at provincial reduced rate ($9.65/day for 2026)',
+              'Issue Releve 24 receipts to parents',
+              'Document inclusion supports and apply for inclusion funding where applicable',
+            ]}
+          />
 
           {/* Sprout and Vine Care support */}
           <ArticleH2>How Sprout and Vine Care Supports Compliance</ArticleH2>
@@ -425,11 +418,30 @@ export default function LicensingChecklistPage() {
               <strong className="font-semibold text-dark-text/55">Sources:</strong> Ontario Ministry of Education (ontario.ca), BC Ministry of Children and Family Development (gov.bc.ca), Alberta Ministry of Education, Manitoba Families, Ministere de la Famille du Quebec. Last reviewed May 2026.
             </p>
           </div>
+
+          {/* Related Seeds resources */}
+          <div className="mt-10 rounded-xl bg-cream/60 border border-[rgba(47,74,58,0.1)] px-6 py-5 print:hidden" data-print-hide>
+            <p className="text-[12px] uppercase tracking-[0.12em] font-semibold text-sage-green mb-3">
+              Keep going
+            </p>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/resources/cwelcc-guide" className="text-[14px] font-medium text-forest-green hover:underline underline-offset-4">
+                  CWELCC Guide for Canadian operators (2026) →
+                </Link>
+              </li>
+              <li>
+                <Link href="/seeds" className="text-[14px] font-medium text-forest-green hover:underline underline-offset-4">
+                  Seeds: free planning tools for aspiring operators →
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 
       {/* Email capture CTA */}
-      <section className="bg-forest-green py-16 px-5 md:px-8">
+      <section className="bg-forest-green py-16 px-5 md:px-8" data-print-hide>
         <div className="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
             <h2
@@ -453,7 +465,7 @@ export default function LicensingChecklistPage() {
       </section>
 
       {/* Back to resources */}
-      <section className="bg-cream py-8 px-5 md:px-8">
+      <section className="bg-cream py-8 px-5 md:px-8" data-print-hide>
         <div className="max-w-3xl mx-auto">
           <Link
             href="/resources"

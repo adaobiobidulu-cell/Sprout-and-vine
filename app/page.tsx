@@ -1202,7 +1202,7 @@ export default function Home() {
       </section>
 
       {/* ── EMAIL CAPTURE STRIP ── */}
-      <section className="bg-white py-16 md:py-20 px-5 md:px-8 border-t border-[rgba(47,74,58,0.08)]">
+      <section id="updates" className="bg-white py-16 md:py-20 px-5 md:px-8 border-t border-[rgba(47,74,58,0.08)] scroll-mt-28">
         <FadeIn className="max-w-xl mx-auto text-center">
           <p className="text-[11px] uppercase tracking-[0.14em] text-sage-green font-semibold mb-3">
             Stay in the loop

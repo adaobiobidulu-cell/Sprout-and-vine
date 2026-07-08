@@ -97,6 +97,25 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Print: strip the site chrome so checklist/guide pages print as a clean
+   document. Sections opt out of printing with the `print:hidden` utility. */
+@media print {
+  header,
+  footer,
+  nav,
+  .skip-link,
+  [data-print-hide] {
+    display: none !important;
+  }
+  body {
+    background: white;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
 /* Hero notification card float */
 @keyframes float {
   0%, 100% { transform: translateY(0px); }

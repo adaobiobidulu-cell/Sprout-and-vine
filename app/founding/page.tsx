@@ -208,6 +208,11 @@ export default function FoundingPage() {
               <div key={faq.q} className="py-6">
                 <p className="text-[15px] font-semibold text-dark-text mb-2">{faq.q}</p>
                 <p className="text-[14px] text-dark-text/60 leading-relaxed">{faq.a}</p>
+                {faq.q === 'Is the platform built yet?' && (
+                  <Link href="/changelog" className="inline-block mt-2 text-[13px] font-medium text-forest-green hover:underline underline-offset-4">
+                    Follow what we ship on the changelog →
+                  </Link>
+                )}
               </div>
             ))}
           </div>
