@@ -3,6 +3,7 @@ import { altEn } from '@/lib/seo'
 import Link from 'next/link'
 import FadeIn from '@/components/fade-in'
 import EmailCapture from '@/components/email-capture'
+import { CWELCC_FIGURES } from '@/lib/cwelcc-calculator'
 
 export const metadata: Metadata = {
   title: 'Resources | Sprout & Vine Care',
@@ -58,6 +59,35 @@ export default function ResourcesPage() {
       {/* Resources */}
       <section className="bg-white py-16 md:py-20 px-5 md:px-8">
         <div className="max-w-5xl mx-auto space-y-10">
+
+          {/* CWELCC Calculator — appears once the figures in
+              lib/cwelcc-calculator.ts are expert-verified */}
+          {CWELCC_FIGURES.verified && (
+            <FadeIn>
+              <div className="rounded-2xl border border-[rgba(47,74,58,0.12)] overflow-hidden" style={{ boxShadow: '0 4px 24px rgba(47,74,58,0.07)' }}>
+                <div className="bg-cream px-8 py-6 flex items-start gap-5 border-b border-[rgba(47,74,58,0.1)]">
+                  <div className="text-4xl flex-shrink-0 mt-0.5">🧮</div>
+                  <div>
+                    <p className="text-[11px] uppercase tracking-[0.14em] text-sage-green font-semibold mb-1">Free Tool</p>
+                    <h2 className="font-display font-medium text-forest-green leading-tight" style={{ fontSize: 'clamp(22px, 3vw, 30px)' }}>
+                      CWELCC Calculator for Ontario Operators
+                    </h2>
+                  </div>
+                </div>
+                <div className="px-8 py-7 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5">
+                  <p className="text-[15px] text-dark-text/65 leading-relaxed max-w-xl">
+                    See the capped parent fee, what it means monthly for your enrolment, and how the funding model works in plain language. Results appear instantly. No email required.
+                  </p>
+                  <Link
+                    href="/tools/cwelcc-calculator"
+                    className="flex-shrink-0 text-center bg-forest-green text-white text-[13px] font-medium px-5 py-3 rounded-lg hover:bg-[#243d2f] transition-colors"
+                  >
+                    Open the calculator →
+                  </Link>
+                </div>
+              </div>
+            </FadeIn>
+          )}
 
           {/* CWELCC Guide */}
           <FadeIn>

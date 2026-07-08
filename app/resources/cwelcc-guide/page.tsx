@@ -4,6 +4,7 @@ import Link from 'next/link'
 import EmailCapture from '@/components/email-capture'
 import JsonLd from '@/components/json-ld'
 import { articleSchema, faqPageSchema } from '@/lib/schema'
+import { CWELCC_FIGURES } from '@/lib/cwelcc-calculator'
 
 export const metadata: Metadata = {
   title: 'CWELCC Guide for Canadian Childcare Operators (2026) | Sprout & Vine Care',
@@ -333,6 +334,21 @@ export default function CwelccGuidePage() {
           {cwelccFaqs.map(faq => (
             <FaqItem key={faq.q} q={faq.q} a={faq.a} />
           ))}
+
+          {/* Calculator cross-link — appears once figures are expert-verified */}
+          {CWELCC_FIGURES.verified && (
+            <div className="mt-10 rounded-xl bg-cream/60 border border-[rgba(47,74,58,0.1)] px-6 py-5">
+              <p className="text-[12px] uppercase tracking-[0.12em] font-semibold text-sage-green mb-2">
+                Try the numbers yourself
+              </p>
+              <p className="text-[14px] text-dark-text/65 leading-relaxed mb-3">
+                Enter your enrolment and fees to see what the capped parent fee means for your centre, monthly and in plain language.
+              </p>
+              <Link href="/tools/cwelcc-calculator" className="text-[14px] font-medium text-forest-green hover:underline underline-offset-4">
+                Open the CWELCC calculator →
+              </Link>
+            </div>
+          )}
 
           {/* Sources */}
           <div className="mt-14 pt-8 border-t border-[rgba(47,74,58,0.1)]">

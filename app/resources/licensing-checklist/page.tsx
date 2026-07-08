@@ -3,6 +3,7 @@ import { altEn } from '@/lib/seo'
 import Link from 'next/link'
 import EmailCapture from '@/components/email-capture'
 import InteractiveChecklist, { ChecklistToolbar } from '@/components/interactive-checklist'
+import { CWELCC_FIGURES } from '@/lib/cwelcc-calculator'
 
 export const metadata: Metadata = {
   title: 'Canadian Childcare Licensing Checklist by Province (2026) | Sprout & Vine Care',
@@ -430,6 +431,13 @@ export default function LicensingChecklistPage() {
                   CWELCC Guide for Canadian operators (2026) →
                 </Link>
               </li>
+              {CWELCC_FIGURES.verified && (
+                <li>
+                  <Link href="/tools/cwelcc-calculator" className="text-[14px] font-medium text-forest-green hover:underline underline-offset-4">
+                    CWELCC calculator for Ontario operators →
+                  </Link>
+                </li>
+              )}
               <li>
                 <Link href="/seeds" className="text-[14px] font-medium text-forest-green hover:underline underline-offset-4">
                   Seeds: free planning tools for aspiring operators →
