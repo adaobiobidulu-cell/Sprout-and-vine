@@ -336,15 +336,11 @@ export default function FrenchHomePage() {
           <FadeIn delay={0.15}>
             <div className="mt-12 pt-8 border-t border-[rgba(47,74,58,0.1)]">
               <p className="text-[12px] font-medium text-dark-text/40 uppercase tracking-[0.12em] mb-3">
-                Nous accueillons maintenant des opérateurs fondateurs en
+                Nous accueillons maintenant des opérateurs fondateurs
               </p>
-              <div className="flex flex-wrap gap-x-4 gap-y-2">
-                {['Ontario', 'Colombie-Britannique', 'Alberta', 'Manitoba', 'Québec'].map((province, i, arr) => (
-                  <span key={province} className="text-[14px] font-medium text-dark-text/55">
-                    {province}{i < arr.length - 1 ? <span className="text-dark-text/25"> · </span> : null}
-                  </span>
-                ))}
-              </div>
+              <p className="text-[14px] font-medium text-dark-text/55">
+                De toutes les provinces et de tous les territoires du Canada.
+              </p>
             </div>
           </FadeIn>
         </div>
@@ -1115,7 +1111,7 @@ export default function FrenchHomePage() {
             className="font-display font-medium text-forest-green leading-snug mb-4"
             style={{ fontSize: 'clamp(24px, 3vw, 36px)' }}
           >
-            Nous invitons des opérateurs fondateurs de l'Ontario, de la C.-B., de l'Alberta,<br className="hidden sm:block" /> du Manitoba et du Québec à contribuer à façonner la plateforme.
+            Nous invitons des opérateurs fondateurs de partout au Canada<br className="hidden sm:block" /> à contribuer à façonner la plateforme.
           </p>
           <p className="text-[15px] text-dark-text/55 mb-8 leading-relaxed">
             Les candidatures sont examinées dans l'ordre de réception.
