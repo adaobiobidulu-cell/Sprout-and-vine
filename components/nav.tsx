@@ -36,6 +36,7 @@ const frenchPages: Record<string, string> = {
   '/about': '/fr/about',
   '/contact': '/fr/contact',
   '/roadmap': '/fr/roadmap',
+  '/families': '/fr/families',
 }
 
 function LangToggle() {
@@ -155,12 +156,12 @@ export default function Nav() {
             {isFr ? 'Programme fondateur' : 'Founding Program'}
           </Link>
 
-          <span
-            className="text-[13px] font-medium text-dark-text/80 cursor-default whitespace-nowrap"
+          <Link
+            href={p('/families')}
+            className="text-[13px] font-medium text-dark-text/80 hover:text-forest-green transition-colors whitespace-nowrap"
           >
-            {isFr ? 'Trouver une garderie' : 'Find childcare'}
-            <ComingSoon isFr={isFr} compact />
-          </span>
+            {isFr ? 'Pour les familles' : 'For families'}
+          </Link>
         </div>
 
         {/* Mobile hamburger */}
@@ -217,12 +218,13 @@ export default function Nav() {
                 <LangToggle />
               </div>
 
-              <span
-                className="text-[15px] font-medium text-dark-text/70 cursor-default"
+              <Link
+                href={p('/families')}
+                className="text-[15px] font-medium text-dark-text/70 hover:text-forest-green transition-colors"
+                onClick={() => setMobileOpen(false)}
               >
-                {isFr ? 'Trouver une garderie' : 'Find childcare'}
-                <ComingSoon isFr={isFr} />
-              </span>
+                {isFr ? 'Pour les familles' : 'For families'}
+              </Link>
               <Link
                 href="/login"
                 className="text-[15px] font-medium text-dark-text/70 hover:text-forest-green transition-colors"

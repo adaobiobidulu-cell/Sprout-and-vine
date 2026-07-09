@@ -98,6 +98,7 @@ const frenchPages: Record<string, string> = {
   '/privacy': '/fr/privacy',
   '/terms': '/fr/terms',
   '/security': '/fr/security',
+  '/families': '/fr/families',
 }
 
 export default function Footer() {
@@ -133,9 +134,12 @@ export default function Footer() {
             <p className="text-[12px] text-cream/40 mt-3">
               {isFr ? '© 2026 Sprout & Vine Care. Tous droits réservés.' : '© 2026 Sprout & Vine Care. All rights reserved.'}
             </p>
-            <div className="flex flex-col gap-1 mt-4">
-              <p className="text-[11px] text-cream/40">iOS app coming Q4 2026</p>
-              <p className="text-[11px] text-cream/40">Android app planned for 2027</p>
+            <div className="mt-4">
+              <p className="text-[11px] text-cream/40 leading-relaxed">
+                {isFr
+                  ? 'Application pour les familles à venir au T4 2026, installable sur iPhone et Android dès le premier jour.'
+                  : 'Parent app coming Q4 2026, installable on iPhone and Android from day one.'}
+              </p>
             </div>
           </FadeIn>
 

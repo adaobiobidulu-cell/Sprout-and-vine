@@ -91,6 +91,12 @@ export default function FoundingPage() {
           <p className="text-[17px] text-dark-text/65 leading-relaxed max-w-xl mx-auto">
             We're building Sprout &amp; Vine Care in public, with the Canadian childcare operators who will use it every day. Founding members get early access, founding pricing, and a real voice in what we build.
           </p>
+          <Link
+            href="/demo"
+            className="inline-block mt-7 text-[14px] font-medium text-forest-green border-2 border-forest-green px-6 py-3 rounded-lg hover:bg-forest-green hover:text-white transition-colors"
+          >
+            Try the guided demo first →
+          </Link>
         </div>
       </section>
 
