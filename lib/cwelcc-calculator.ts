@@ -5,39 +5,54 @@
  * guideline update is a one-file change. Do not scatter numbers into
  * components.
  *
- * RULES FOR THIS FILE (from the improvement brief):
- * - Every figure below must come from Ada, validated through the CWELCC
- *   licensing expert. Nothing here may be sourced or inferred by anyone
- *   else, including from other pages of this site.
- * - When a figure is entered or updated, record the guideline version and
- *   the date it was verified in `guidelineVersion` and `verifiedDate`.
- * - The calculator page stays redirected to the CWELCC guide until
- *   `verified` is true. Flip it only when the licensing expert has
- *   confirmed every figure AND the explanatory copy in the calculator
- *   component.
+ * Figures below were supplied by Ada and validated through the CWELCC
+ * licensing expert. Sources: 2026 CWELCC centre-based guideline v.1;
+ * O. Reg. 137/15 s. 77.2; Child Care Centre Licensing Manual Part 2;
+ * Canada-Ontario agreement extension (Dec 2025). Verified July 8, 2026.
+ *
+ * Rules the math must respect (from the expert's notes):
+ * - $22/day is a MAXIMUM and a yearly AVERAGE: all mandatory fees
+ *   (registration, deposits, admin, mandatory food) are "base fees" and
+ *   count toward the cap. One-time mandatory fees are amortized over the
+ *   service days in the year: (daily base fee) + (one-time fees / service
+ *   days) must average $22 or less.
+ * - Capped fee = min(intended fee, $22), BUT an already-enrolled program
+ *   charging under $22 is frozen at its December 31, 2024 rate and cannot
+ *   raise its fee up toward the cap.
+ * - The $10/day target is stalled with no scheduled date. Do not promise
+ *   it. The cap holds through December 31, 2026; the federal-provincial
+ *   agreement is extended to March 31, 2027.
+ * - Charging above the cap can draw an administrative penalty of $750 per
+ *   child charged above it.
+ * - The same cap applies to eligible children in participating licensed
+ *   home child care, administered through the agency.
  */
 
 export const CWELCC_FIGURES = {
-  /* Flip to true only when Ada confirms the licensing expert has
-     validated every figure and formula in this file. */
-  verified: false,
+  verified: true,
 
-  /* e.g. '2026 Ontario CWELCC funding guidelines' — set when verified. */
-  guidelineVersion: null as string | null,
-
-  /* yyyy-mm-dd the figures were last verified — rendered on the page as
-     "Figures last verified: [date]". Set when verified. */
-  verifiedDate: null as string | null,
+  /* Rendered on the page as the verification line. */
+  guidelineVersion: '2026 CWELCC guidelines and O. Reg. 137/15' as string | null,
+  verifiedDate: 'July 8, 2026' as string | null,
 
   ontario: {
-    /* Capped parent fee in CAD per day for CWELCC-participating
-       programs. ADA INPUT: confirm current value and effective date. */
-    dailyFeeCapCad: null as number | null,
+    /* Maximum base fee per day for CWELCC-eligible children (under 6) in
+       participating licensed programs. Effective Jan 1, 2025; unchanged
+       for 2026; holds until December 31, 2026. */
+    dailyFeeCapCad: 22 as number | null,
 
-    /* Average operating days per month used to express the daily cap as
-       a monthly amount. ADA INPUT: confirm the convention the licensing
-       expert wants (calendar-month average vs. fixed 21-day convention). */
-    operatingDaysPerMonth: null as number | null,
+    /* Context figure only (not used in math): the current provincial
+       average base fee the extended agreement maintains through 2026. */
+    provincialAverageDailyFeeCad: 19,
+
+    /* Administrative penalty for contravening the fee cap: $750 times the
+       number of children charged above the cap. */
+    overCapPenaltyPerChildCad: 750,
+
+    /* Default service days per year for amortizing one-time mandatory
+       fees, from the guideline's own worked example ($500 over a
+       250-service-day year contributes $2/day). User-adjustable. */
+    defaultServiceDaysPerYear: 250 as number | null,
   },
 }
 
@@ -48,35 +63,79 @@ export interface CalculatorInputs {
   operatorType: OperatorType
   childrenUnderSix: number
   currentDailyFeeCad: number
+  /* Mandatory one-time fees per child per year: registration, deposits,
+     administration. These are base fees and count toward the cap. */
+  oneTimeMandatoryFeesCad: number
+  serviceDaysPerYear: number
   participation: ParticipationStatus
 }
 
 export interface CalculatorResults {
+  /* One-time mandatory fees spread across the year's service days. */
+  amortizedDailyCad: number
+  /* Daily fee + amortized one-time fees: the figure the cap tests. */
+  effectiveDailyBaseFeeCad: number
   cappedDailyFeeCad: number
+  /* Approximate: daily figure x (service days / 12). */
   cappedMonthlyPerChildCad: number
   dailyGapCad: number
   monthlyGapAllChildrenCad: number
+  overCap: boolean
+  potentialPenaltyCad: number
+  /* True when the entered fee is already under the cap: frozen programs
+     cannot raise a sub-$22 fee up toward the cap. */
+  belowCap: boolean
 }
 
-/* Draft formula, isolated here for the licensing expert to confirm or
-   correct before `verified` is flipped: monthly per child is the daily
-   cap times the agreed operating-days convention; the gap is current
-   fee minus cap (zero-floored: a fee already at or below the cap has
-   no reduction to show). */
 export function calculate(inputs: CalculatorInputs): CalculatorResults | null {
-  const { dailyFeeCapCad, operatingDaysPerMonth } = CWELCC_FIGURES.ontario
-  if (dailyFeeCapCad == null || operatingDaysPerMonth == null) return null
+  const { dailyFeeCapCad, overCapPenaltyPerChildCad } = CWELCC_FIGURES.ontario
+  if (dailyFeeCapCad == null || inputs.serviceDaysPerYear <= 0) return null
 
-  const dailyGap = Math.max(0, inputs.currentDailyFeeCad - dailyFeeCapCad)
+  const amortizedDaily = inputs.oneTimeMandatoryFeesCad / inputs.serviceDaysPerYear
+  const effectiveDaily = inputs.currentDailyFeeCad + amortizedDaily
+  const monthlyFactor = inputs.serviceDaysPerYear / 12
+  const cappedDaily = Math.min(effectiveDaily, dailyFeeCapCad)
+  const dailyGap = Math.max(0, effectiveDaily - dailyFeeCapCad)
+  const overCap = effectiveDaily > dailyFeeCapCad
+
   return {
-    cappedDailyFeeCad: dailyFeeCapCad,
-    cappedMonthlyPerChildCad: dailyFeeCapCad * operatingDaysPerMonth,
+    amortizedDailyCad: amortizedDaily,
+    effectiveDailyBaseFeeCad: effectiveDaily,
+    cappedDailyFeeCad: cappedDaily,
+    cappedMonthlyPerChildCad: cappedDaily * monthlyFactor,
     dailyGapCad: dailyGap,
-    monthlyGapAllChildrenCad: dailyGap * operatingDaysPerMonth * inputs.childrenUnderSix,
+    monthlyGapAllChildrenCad: dailyGap * monthlyFactor * inputs.childrenUnderSix,
+    overCap,
+    potentialPenaltyCad: overCap ? overCapPenaltyPerChildCad * inputs.childrenUnderSix : 0,
+    belowCap: effectiveDaily < dailyFeeCapCad,
   }
 }
 
-/* FAQ entries for the calculator page (rendered with FAQPage JSON-LD).
-   ADA INPUT: 4 to 6 entries, every answer validated by the licensing
-   expert. The page renders the FAQ section only when entries exist. */
-export const CALCULATOR_FAQS: { q: string; a: string }[] = []
+/* FAQ entries, written by Ada and validated by the licensing expert
+   (July 8, 2026). Rendered on the page with FAQPage JSON-LD. */
+export const CALCULATOR_FAQS: { q: string; a: string }[] = [
+  {
+    q: 'Is $22/day what CWELCC pays me, or what I charge parents?',
+    a: "It's the most you can charge a parent for base child care. Your funding is separate: your CMSM/DSSAB pays you a cost-based allocation and then subtracts your parent-fee revenue from it. You do not receive \"old fee minus $22\" per child.",
+  },
+  {
+    q: 'I already charge less than $22 a day. Can I raise my fee up to the cap?',
+    a: "No. Programs charging under $22 are frozen at their December 31, 2024 rate and can't raise fees up to $22. The cap is a ceiling, not a target.",
+  },
+  {
+    q: 'Do registration fees and deposits count toward the cap?',
+    a: 'Yes. Any mandatory fee (registration, deposit, administration) is a "base fee." One-time fees are spread across your service days for the year: a $500 registration fee over 250 service days adds $2 to your daily rate for cap purposes. Only genuinely optional charges (field trips, transportation you can decline) sit outside the cap.',
+  },
+  {
+    q: 'Will fees drop to $10 a day soon?',
+    a: "That remains the long-term goal, but the date has been pushed back more than once and there's currently no firm timeline. The $22 cap is in place through December 31, 2026.",
+  },
+  {
+    q: 'Can I even join CWELCC right now?',
+    a: 'It depends entirely on your region. Most CMSMs/DSSABs have fully allocated their 2026 spaces and aren\'t taking new applications. See our "Can you join CWELCC right now?" page for what to do in the meantime.',
+  },
+  {
+    q: 'Does the cap apply to home child care?',
+    a: 'Yes. For eligible children in a participating licensed home child care agency, the same $22/day cap applies, administered through the agency.',
+  },
+]

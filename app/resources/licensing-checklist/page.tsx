@@ -439,6 +439,11 @@ export default function LicensingChecklistPage() {
                 </li>
               )}
               <li>
+                <Link href="/resources/cwelcc-intake" className="text-[14px] font-medium text-forest-green hover:underline underline-offset-4">
+                  Can you join CWELCC right now? →
+                </Link>
+              </li>
+              <li>
                 <Link href="/seeds" className="text-[14px] font-medium text-forest-green hover:underline underline-offset-4">
                   Seeds: free planning tools for aspiring operators →
                 </Link>

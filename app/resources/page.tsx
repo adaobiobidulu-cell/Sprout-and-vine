@@ -89,6 +89,29 @@ export default function ResourcesPage() {
             </FadeIn>
           )}
 
+          {/* CWELCC intake reality check */}
+          <FadeIn>
+            <div className="rounded-2xl border border-[rgba(47,74,58,0.12)] overflow-hidden" style={{ boxShadow: '0 4px 24px rgba(47,74,58,0.07)' }}>
+              <div className="px-8 py-7 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5">
+                <div>
+                  <p className="text-[11px] uppercase tracking-[0.14em] text-sage-green font-semibold mb-1">Honest Answer</p>
+                  <h2 className="font-display font-medium text-forest-green leading-tight mb-2" style={{ fontSize: 'clamp(20px, 2.5vw, 26px)' }}>
+                    Can you join CWELCC right now?
+                  </h2>
+                  <p className="text-[14px] text-dark-text/60 leading-relaxed max-w-xl">
+                    For most of Ontario in 2026, intake is closed or fully allocated. How directed growth works, a dated regional snapshot, and your realistic playbook.
+                  </p>
+                </div>
+                <Link
+                  href="/resources/cwelcc-intake"
+                  className="flex-shrink-0 text-center border-2 border-forest-green text-forest-green text-[13px] font-medium px-5 py-3 rounded-lg hover:bg-forest-green hover:text-white transition-colors"
+                >
+                  Read the reality check →
+                </Link>
+              </div>
+            </div>
+          </FadeIn>
+
           {/* CWELCC Guide */}
           <FadeIn>
             <div className="rounded-2xl border border-[rgba(47,74,58,0.12)] overflow-hidden" style={{ boxShadow: '0 4px 24px rgba(47,74,58,0.07)' }}>
