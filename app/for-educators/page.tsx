@@ -20,7 +20,7 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
 const mailtoHref = [
   'mailto:?',
   'subject=A%20platform%20your%20educators%20will%20actually%20love&',
-  'body=Hi%20there%2C%0A%0AI%20came%20across%20Sprout%20%26%20Vine%20and%20think%20it%20could%20make%20a%20real%20difference%20for%20our%20team.%20Worth%20a%20look%3A%20https%3A%2F%2Fsproutandvine.ca',
+  'body=Hi%20there%2C%0A%0AI%20came%20across%20Sprout%20%26%20Vine%20Care%20and%20think%20it%20could%20make%20a%20real%20difference%20for%20our%20team.%20Worth%20a%20look%3A%20https%3A%2F%2Fwww.sproutandvinecare.ca',
 ].join('')
 
 export default function ForEducatorsPage() {

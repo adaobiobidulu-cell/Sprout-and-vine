@@ -2,6 +2,7 @@ import Link from 'next/link'
 import FadeIn from '@/components/fade-in'
 import ProductTour from '@/components/product-tour'
 import DashboardPreview from '@/components/dashboard-preview'
+import PreviewLabel from '@/components/preview-label'
 import EmailCapture from '@/components/email-capture'
 import CanadaMap from '@/components/canada-map'
 import PhotoAccent from '@/components/photo-accent'
@@ -425,6 +426,7 @@ export default function FrenchHomePage() {
           </FadeIn>
 
           <FadeIn delay={0.15} className="min-w-0">
+            <PreviewLabel lang="fr" />
             <DashboardPreview />
           </FadeIn>
         </div>
@@ -1019,6 +1021,7 @@ export default function FrenchHomePage() {
             </p>
           </FadeIn>
           <FadeIn delay={0.15}>
+            <PreviewLabel lang="fr" />
             <ProductTour />
           </FadeIn>
         </div>

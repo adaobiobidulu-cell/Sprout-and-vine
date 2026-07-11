@@ -30,13 +30,14 @@ export default function PrivacyPage() {
       title="Privacy Policy"
       effectiveDate="January 1, 2026"
       lastUpdated="May 1, 2026"
+      banner="Pre-launch policy draft. This document is in final legal review before platform access begins. It reflects how we intend to operate, and we will post the reviewed version before any family's data is collected."
       toc={toc}
     >
       <h2 id="about">1. About This Policy</h2>
       <p>
         This Privacy Policy explains how <strong>Sprout &amp; Vine Care</strong> ("we," "our," or "us")
         collects, uses, discloses, and protects personal information
-        when you use our platform, website at sproutandvine.ca, and related services (collectively, the "Services").
+        when you use our platform, website at sproutandvinecare.ca, and related services (collectively, the "Services").
       </p>
       <p>
         By accessing or using our Services, you agree to the collection and use of your information as described
@@ -46,7 +47,7 @@ export default function PrivacyPage() {
       <h2 id="who-we-are">2. Who We Are</h2>
       <p>
         Sprout &amp; Vine Care is a Canadian company building childcare management software for Canadian operators.
-        Privacy inquiries may be directed to <a href="mailto:privacy@sproutandvine.ca">privacy@sproutandvine.ca</a>.
+        Privacy inquiries may be directed to <a href="mailto:hello@sproutandvinecare.ca">hello@sproutandvinecare.ca</a>.
       </p>
       <p>
         We are subject to the <strong>Personal Information Protection and Electronic Documents Act (PIPEDA)</strong>{' '}
@@ -141,7 +142,7 @@ export default function PrivacyPage() {
       </p>
       <p>
         You may request deletion of your account and associated personal information by emailing
-        <a href="mailto:privacy@sproutandvine.ca"> privacy@sproutandvine.ca</a>. We will action your request
+        <a href="mailto:hello@sproutandvinecare.ca"> hello@sproutandvinecare.ca</a>. We will action your request
         within 30 days, subject to legal retention requirements.
       </p>
 
@@ -167,7 +168,7 @@ export default function PrivacyPage() {
 
       <p>
         To exercise any of these rights, email us at{' '}
-        <a href="mailto:privacy@sproutandvine.ca">privacy@sproutandvine.ca</a>. We will respond within
+        <a href="mailto:hello@sproutandvinecare.ca">hello@sproutandvinecare.ca</a>. We will respond within
         30 days of receiving your request.
       </p>
 
@@ -229,7 +230,7 @@ export default function PrivacyPage() {
       <p>
         <strong>Privacy Officer</strong><br />
         Sprout &amp; Vine Care<br />
-        <a href="mailto:privacy@sproutandvine.ca">privacy@sproutandvine.ca</a>
+        <a href="mailto:hello@sproutandvinecare.ca">hello@sproutandvinecare.ca</a>
       </p>
       <p>
         We will acknowledge your inquiry within 2 business days and respond fully within 30 calendar days.

@@ -31,6 +31,7 @@ export default function FrTermsPage() {
       title="Conditions d'utilisation"
       effectiveDate="1er janvier 2026"
       lastUpdated="1er mai 2026"
+      banner="Version préliminaire des conditions d'utilisation, avant le lancement. La révision juridique finale est en cours avant l'ouverture de l'accès à la plateforme."
       toc={toc}
     >
       <h2 id="agreement">1. Acceptation des conditions</h2>
@@ -38,7 +39,7 @@ export default function FrTermsPage() {
         Les présentes conditions d'utilisation («&nbsp;Conditions&nbsp;») constituent un accord légalement
         contraignant entre vous et <strong>Sprout &amp; Vine Care</strong> («&nbsp;nous&nbsp;», «&nbsp;notre&nbsp;»
         ou «&nbsp;nos&nbsp;»), régissant votre utilisation de notre plateforme de gestion de services de garde, du site web
-        sproutandvine.ca et des services connexes (collectivement, les «&nbsp;Services&nbsp;»).
+        sproutandvinecare.ca et des services connexes (collectivement, les «&nbsp;Services&nbsp;»).
       </p>
       <p>
         En créant un compte, en cliquant sur «&nbsp;J'accepte&nbsp;» ou en utilisant les Services, vous confirmez
@@ -204,7 +205,7 @@ export default function FrTermsPage() {
         Tout différend qui ne peut être résolu à l'amiable sera soumis à la juridiction exclusive des tribunaux
         de la province d'Ontario, Canada. Avant d'engager toute procédure légale, vous acceptez de tenter de
         résoudre les différends en nous contactant à{' '}
-        <a href="mailto:legal@sproutandvine.ca">legal@sproutandvine.ca</a> en nous accordant 30 jours pour
+        <a href="mailto:hello@sproutandvinecare.ca">hello@sproutandvinecare.ca</a> en nous accordant 30 jours pour
         répondre.
       </p>
 
@@ -222,12 +223,12 @@ export default function FrTermsPage() {
       </p>
       <p>
         <strong>Sprout &amp; Vine Care</strong><br />
-        <a href="mailto:legal@sproutandvine.ca">legal@sproutandvine.ca</a>
+        <a href="mailto:hello@sproutandvinecare.ca">hello@sproutandvinecare.ca</a>
       </p>
       <p>
         Pour les questions relatives à la vie privée, consultez notre{' '}
         <a href="/fr/privacy">Politique de confidentialité</a> ou écrivez à{' '}
-        <a href="mailto:privacy@sproutandvine.ca">privacy@sproutandvine.ca</a>.
+        <a href="mailto:hello@sproutandvinecare.ca">hello@sproutandvinecare.ca</a>.
       </p>
     </LegalLayout>
   )

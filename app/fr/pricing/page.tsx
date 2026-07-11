@@ -3,10 +3,10 @@ import type { Metadata } from 'next'
 import { altFr } from '@/lib/seo'
 import PricingTiersClient from '@/components/pricing-tiers-client'
 import JsonLd from '@/components/json-ld'
-import { faqPageSchema } from '@/lib/schema'
+import { faqPageSchema, softwareApplicationSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: 'Tarification | Sprout & Vine Care',
+  title: 'Tarification de Sprout & Vine Care | Forfaits pour les services de garde canadiens',
   description:
     'Tarification basée sur les inscriptions pour les opérateurs de garde au Canada. Sept niveaux, du gratuit au sur mesure. Tarif fixe par tranche d\'inscription, sans frais par enfant. Tous les prix en dollars canadiens.',
   alternates: altFr('/fr/pricing'),
@@ -67,6 +67,7 @@ export default function FrenchPricingPage() {
   return (
     <>
       <JsonLd data={faqPageSchema(faqsFr)} />
+      <JsonLd data={softwareApplicationSchema('fr')} />
 
       {/* Héro */}
       <section className="bg-cream py-20 md:py-24 px-5 md:px-8 text-center">
@@ -79,7 +80,7 @@ export default function FrenchPricingPage() {
             Tarification selon les inscriptions.<br />Pas de frais cachés. Pas de frais par enfant.
           </h1>
           <p className="text-[16px] text-dark-text/60 leading-relaxed mb-8 max-w-xl mx-auto">
-            Une tarification qui évolue avec votre centre. Que vous soyez une garderie en milieu familial avec 6 enfants ou un grand centre avec 80 enfants, vous payez un tarif fixe selon votre tranche d'inscription. Tous les prix en dollars canadiens.
+            La tarification de Sprout &amp; Vine Care évolue avec votre centre. Que vous soyez une garderie en milieu familial avec 6 enfants ou un grand centre avec 80 enfants, vous payez un tarif fixe selon votre tranche d'inscription. Tous les prix en dollars canadiens.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
             <Link

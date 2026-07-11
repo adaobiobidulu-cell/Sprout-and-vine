@@ -31,13 +31,14 @@ export default function TermsPage() {
       title="Terms of Service"
       effectiveDate="January 1, 2026"
       lastUpdated="May 1, 2026"
+      banner="Pre-launch terms draft. Final legal review is in progress before platform access begins."
       toc={toc}
     >
       <h2 id="agreement">1. Agreement to Terms</h2>
       <p>
         These Terms of Service ("Terms") are a legally binding agreement between you and{' '}
         <strong>Sprout &amp; Vine Care</strong> ("we," "our," or "us"), governing your use of our childcare management platform, website at
-        sproutandvine.ca, and related services (collectively, the "Services").
+        sproutandvinecare.ca, and related services (collectively, the "Services").
       </p>
       <p>
         By creating an account, clicking "I agree," or using the Services, you confirm that you have read,
@@ -266,7 +267,7 @@ export default function TermsPage() {
       </p>
       <p>
         Before initiating any legal proceedings, you agree to attempt to resolve disputes by contacting us at{' '}
-        <a href="mailto:legal@sproutandvine.ca">legal@sproutandvine.ca</a> and giving us 30 days to respond.
+        <a href="mailto:hello@sproutandvinecare.ca">hello@sproutandvinecare.ca</a> and giving us 30 days to respond.
       </p>
 
       <h2 id="changes">13. Changes to These Terms</h2>
@@ -286,11 +287,11 @@ export default function TermsPage() {
       </p>
       <p>
         <strong>Sprout &amp; Vine Care</strong><br />
-        <a href="mailto:legal@sproutandvine.ca">legal@sproutandvine.ca</a>
+        <a href="mailto:hello@sproutandvinecare.ca">hello@sproutandvinecare.ca</a>
       </p>
       <p>
         For privacy questions, see our <a href="/privacy">Privacy Policy</a> or email{' '}
-        <a href="mailto:privacy@sproutandvine.ca">privacy@sproutandvine.ca</a>.
+        <a href="mailto:hello@sproutandvinecare.ca">hello@sproutandvinecare.ca</a>.
       </p>
     </LegalLayout>
   )

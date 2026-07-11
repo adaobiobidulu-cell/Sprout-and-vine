@@ -30,13 +30,14 @@ export default function FrPrivacyPage() {
       title="Politique de confidentialité"
       effectiveDate="1er janvier 2026"
       lastUpdated="1er mai 2026"
+      banner="Version préliminaire de la politique, avant le lancement. Ce document fait l'objet d'une révision juridique finale avant l'ouverture de l'accès à la plateforme. Il reflète la manière dont nous entendons fonctionner, et nous publierons la version révisée avant toute collecte de données d'une famille."
       toc={toc}
     >
       <h2 id="about">1. À propos de cette politique</h2>
       <p>
         La présente politique de confidentialité explique comment <strong>Sprout &amp; Vine Care</strong>{' '}
         («&nbsp;nous&nbsp;», «&nbsp;notre&nbsp;» ou «&nbsp;nos&nbsp;») collecte, utilise, divulgue et protège les renseignements personnels
-        lorsque vous utilisez notre plateforme, le site web sproutandvine.ca et les services connexes
+        lorsque vous utilisez notre plateforme, le site web sproutandvinecare.ca et les services connexes
         (collectivement, les «&nbsp;Services&nbsp;»).
       </p>
       <p>
@@ -50,7 +51,7 @@ export default function FrPrivacyPage() {
         Sprout &amp; Vine Care est une entreprise canadienne. Notre plateforme de gestion de services de garde
         est conçue pour les exploitants canadiens. Les demandes relatives à la vie privée peuvent être
         acheminées à{' '}
-        <a href="mailto:privacy@sproutandvine.ca">privacy@sproutandvine.ca</a>.
+        <a href="mailto:hello@sproutandvinecare.ca">hello@sproutandvinecare.ca</a>.
       </p>
       <p>
         Nous sommes assujettis à la <strong>Loi sur la protection des renseignements personnels et les documents
@@ -131,7 +132,7 @@ export default function FrPrivacyPage() {
       <p>
         Vous pouvez demander la suppression de votre compte et des renseignements personnels associés en
         envoyant un courriel à{' '}
-        <a href="mailto:privacy@sproutandvine.ca">privacy@sproutandvine.ca</a>. Nous donnerons suite à votre
+        <a href="mailto:hello@sproutandvinecare.ca">hello@sproutandvinecare.ca</a>. Nous donnerons suite à votre
         demande dans les 30 jours, sous réserve des exigences de conservation légales.
       </p>
 
@@ -157,7 +158,7 @@ export default function FrPrivacyPage() {
 
       <p>
         Pour exercer l'un de ces droits, envoyez un courriel à{' '}
-        <a href="mailto:privacy@sproutandvine.ca">privacy@sproutandvine.ca</a>. Nous répondrons dans les
+        <a href="mailto:hello@sproutandvinecare.ca">hello@sproutandvinecare.ca</a>. Nous répondrons dans les
         30 jours suivant la réception de votre demande.
       </p>
 
@@ -204,7 +205,7 @@ export default function FrPrivacyPage() {
       <p>
         <strong>Responsable de la protection des renseignements personnels</strong><br />
         Sprout &amp; Vine Care<br />
-        <a href="mailto:privacy@sproutandvine.ca">privacy@sproutandvine.ca</a>
+        <a href="mailto:hello@sproutandvinecare.ca">hello@sproutandvinecare.ca</a>
       </p>
       <p>
         Nous accuserons réception de votre demande dans les 2 jours ouvrables et y répondrons dans les

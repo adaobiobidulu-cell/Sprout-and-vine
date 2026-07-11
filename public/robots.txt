@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sproutandvine.ca/sitemap.xml
+Sitemap: https://www.sproutandvinecare.ca/sitemap.xml

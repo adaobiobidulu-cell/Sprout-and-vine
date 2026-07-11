@@ -107,7 +107,7 @@ export default function Image() {
               fontFamily: 'system-ui, sans-serif',
             }}
           >
-            sproutandvine.ca
+            sproutandvinecare.ca
           </span>
           <div
             style={{

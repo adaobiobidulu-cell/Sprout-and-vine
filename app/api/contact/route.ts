@@ -30,7 +30,7 @@ function buildHtml(data: Record<string, string>) {
       ${data.message ? '' : ''}
     </div>
     <div style="background:#f9fafb;padding:16px 32px;border-top:1px solid #e5e7eb">
-      <p style="margin:0;font-size:12px;color:#9ca3af">Sent from sproutandvine.ca contact form</p>
+      <p style="margin:0;font-size:12px;color:#9ca3af">Sent from sproutandvinecare.ca contact form</p>
     </div>
   </div>
 </body>

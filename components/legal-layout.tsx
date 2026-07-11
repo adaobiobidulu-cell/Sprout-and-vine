@@ -8,20 +8,17 @@ interface Props {
   effectiveDate: string
   lastUpdated: string
   toc: TocItem[]
+  /* Interim pre-launch banner shown above the document. */
+  banner: string
   children: React.ReactNode
 }
 
-export default function LegalLayout({ title, effectiveDate, lastUpdated, toc, children }: Props) {
+export default function LegalLayout({ title, effectiveDate, lastUpdated, toc, banner, children }: Props) {
   return (
     <div className="bg-white min-h-screen">
-      {/* Draft banner */}
+      {/* Pre-launch review banner */}
       <div className="bg-amber-50 border-b border-amber-200 px-5 py-3 text-center">
-        <p className="text-[13px] text-amber-800 font-medium">
-          Draft document, pending professional legal review. Not yet final.{' '}
-          <a href="mailto:legal@sproutandvine.ca" className="underline hover:text-amber-900">
-            Questions? Email legal@sproutandvine.ca
-          </a>
-        </p>
+        <p className="text-[13px] text-amber-800 font-medium">{banner}</p>
       </div>
 
       {/* Header */}

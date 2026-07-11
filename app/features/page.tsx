@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { altEn } from '@/lib/seo'
 import Link from 'next/link'
 import ProductTour from '@/components/product-tour'
+import PreviewLabel from '@/components/preview-label'
 import EmailCapture from '@/components/email-capture'
 
 export const metadata: Metadata = {
@@ -411,6 +412,7 @@ export default function FeaturesPage() {
       {/* ── PRODUCT TOUR ──────────────────────────────────────── */}
       <section className="bg-white py-20 px-5 md:px-8">
         <div className="max-w-7xl mx-auto">
+          <PreviewLabel />
           <ProductTour />
         </div>
       </section>

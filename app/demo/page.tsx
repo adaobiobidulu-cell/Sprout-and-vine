@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { canonicalOnly } from '@/lib/seo'
 import FadeIn from '@/components/fade-in'
 import ProductTour from '@/components/product-tour'
+import PreviewLabel from '@/components/preview-label'
 
 export const metadata: Metadata = {
   title: 'Guided Product Demo | Sprout & Vine Care',
@@ -64,9 +65,10 @@ export default function DemoPage() {
       {/* The tour, with a persistent sample-data label */}
       <section className="bg-cream py-12 md:py-16 px-5 md:px-8">
         <div className="max-w-3xl mx-auto">
-          <p className="text-center text-[12px] font-medium text-dark-text/45 bg-white/70 border border-[rgba(47,74,58,0.1)] rounded-full px-4 py-1.5 w-fit mx-auto mb-8">
+          <p className="text-center text-[12px] font-medium text-dark-text/45 bg-white/70 border border-[rgba(47,74,58,0.1)] rounded-full px-4 py-1.5 w-fit mx-auto mb-6">
             Sample data. This is a guided preview of the real product.
           </p>
+          <PreviewLabel />
           <ProductTour />
         </div>
       </section>

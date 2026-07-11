@@ -3,12 +3,12 @@ import type { Metadata } from 'next'
 import { altEn } from '@/lib/seo'
 import PricingTiersClient from '@/components/pricing-tiers-client'
 import JsonLd from '@/components/json-ld'
-import { faqPageSchema } from '@/lib/schema'
+import { faqPageSchema, softwareApplicationSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: 'How Pricing Works | Sprout & Vine Care',
+  title: 'Sprout & Vine Care Pricing | Plans for Canadian Childcare Operators',
   description:
-    'Simple, enrollment-based pricing for Canadian childcare operators. From home daycares at CAD $49/mo to multi-location networks. No hidden fees. No per-child charges. All prices in CAD.',
+    'Sprout & Vine Care pricing is simple and enrollment-based. From home daycares at CAD $49/mo to multi-location networks. No hidden fees. No per-child charges. All prices in CAD.',
   alternates: altEn('/pricing'),
 }
 
@@ -67,6 +67,7 @@ export default function PricingPage() {
   return (
     <>
       <JsonLd data={faqPageSchema(faqs)} />
+      <JsonLd data={softwareApplicationSchema('en')} />
 
       {/* Hero */}
       <section className="bg-cream py-20 md:py-24 px-5 md:px-8 text-center">
@@ -79,7 +80,7 @@ export default function PricingPage() {
             Enrollment-based pricing.<br />No hidden fees. No per-child charges.
           </h1>
           <p className="text-[16px] text-dark-text/60 leading-relaxed mb-8 max-w-xl mx-auto">
-            Pricing that scales with your centre. Whether you're a home daycare with 6 children or a large centre with 80, you pay a flat rate based on your enrollment range. All prices in CAD.
+            Sprout &amp; Vine Care pricing scales with your centre. Whether you're a home daycare with 6 children or a large centre with 80, you pay a flat rate based on your enrollment range. All prices in CAD.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
             <Link
